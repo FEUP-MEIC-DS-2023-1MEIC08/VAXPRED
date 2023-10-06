@@ -1,0 +1,5 @@
+- This is a very basic prototype
+- Still need to verify if there's a better approach regarding the repetition of imports on components and on the app module
+- You can study the tutorials in <https://angular.io/tutorial>, I recommend Tour of Heroes.
+- You'll need to install Angular CLI <https://angular.io/cli>
+- Angular flex <https://github.com/angular/flex-layout> and Angular material <https://material.angular.io/components/categories> will be used to help with Frontend development
