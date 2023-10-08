@@ -2,27 +2,23 @@
 
 ## Product Vision
 
-Explain in few paragraphs what is the product vision that will guide the development of your product. Keep within ~1500 characters and user as reference the _Vision_ pattern in [The Scrum Book](http://scrumbook.org/).
+## Vision Statement
 
-### Vision Statement
+Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations providing a cloud-based system that supports different datasets from various sources, a workspace pipeline that allows researchers to run simulations in order to generate predictions of the efficiency of immune responses against pathogenes, and the support of pluggable tools.  
 
-Towards a healthier future. VAXPRED aims to improve the field of vaccine development by allying the power of artificial intelligence, computational modeling and big data, creating a powerful workspace that allows researchers and scientists to quickly advance their investigations. 
+## Key Features
 
-### Key Features
-
-- The application will provide various workspaces, corresponding to experiments, offering different datasets, simulations and tools, allowing researchers to manage and organize their projects seamlessly.
-- It will be possible to use data of various types users can data uploaded to the workspace, or data available at existing remote repositories;
-- Synthetic data generation tools will be available, also data curation and quality-check tools for the considered data types;
-- Incorporating new models and new analytical tools, provided under the form of software containers;
-- Providing convenient interfaces for the most costumary simulation parameters;
-- Providing a set of envisions for the most relevant simulation outputs;
-- Allowing the definition of custom pipelines from the chaining of different processing tools.
+- The application will offer a simulation enviroment with a few simulations, with parameters that can be tweaked, and the support to pluggable tools, allowing researchers to run an experiment and see the prediction results;
+- It will be possible to use data of various types and sources. Users can upload data to the simulation enviroment or use data available at existing remote repositories;
+- The platform will incorporate some models and the support to add new analytical tools provided under the form of software containers;
+- The simulation outputs will be provided in convenient interfaces for the most common simulation parameters;
+- The application will provide a set of envisions for the most relevant simulation outputs.
 
 
-### Who Benefits from VAXPRED:
+## Who Benefits from VAXPRED:
 
 VAXPRED aims to improve the lives of several people:
-- equips researchers and scientists, with advanced tools to accelerate vaccine development;
+- equips researchers and scientists with simulations to accelerate vaccine development;
 - the platform reduces development costs and risks to the academic and biotech sectors of the industry;
 - since faster vaccine development allows quicker and better responses to new virus and pathogens, public health is more safeguarded.
 
