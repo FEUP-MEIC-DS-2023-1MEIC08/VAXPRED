@@ -27,7 +27,7 @@ This guide was developed to kickoff the development in the best way possible, en
 </ul>
 
 
-## <a name="#angular-1">1. AngularJS prototype</a>
+## <a name="angular-1">1. AngularJS prototype</a>
 
 - This is a very basic prototype
 - Still need to verify if there's a better approach regarding the repetition of imports on components and on the app module
@@ -35,13 +35,13 @@ This guide was developed to kickoff the development in the best way possible, en
 - You'll need to install Angular CLI <https://angular.io/cli>
 - Angular flex <https://github.com/angular/flex-layout> and Angular material <https://material.angular.io/components/categories> will be used to help with Frontend development
 
-## <a name="#git-2">2. Using Git and GitHub</a>
+## <a name="git-2">2. Using Git and GitHub</a>
 
 Hey there, this is Nuno from T3!
 
 Below, you'll find some instructions and tips about using Git and GitHub properly during the development of this project. We're also presenting some useful Git commands that should enhance the synergy of version control both inside and between teams.
 
-### <a name="#branches-2.1">2.1 How teams and developers will branch</a>
+### <a name="branches-2.1">2.1 How teams and developers will branch</a>
 Branches are primal to work on the central repository, avoiding multiple merge conflicts. So, **each team will have a branch**, created from the `prototype` one. Confused? Take a look at the following image.
 
 ![branching_1](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/93390807/4deafb6f-c346-4f42-978d-2ee48c795311)
@@ -72,7 +72,7 @@ The following image illustrates the previous 3 paragraphs
 
 - **Absolutely no developer** will be pushing directly on the `main` branch. Mistakes can happen and that's fine, but please avoid to do so. Any commit that breaks this boundaries, is to be removed and placed on its respective branch upon detection. Opportunities to merge to the `main` branch will still be discussed. For now, you should only worry about your own team branch, which can be merged as you like.
 
-### <a name="#git-suggestions-2.2">2.2 Other Git and GitHub related suggestions</a>
+### <a name="git-suggestions-2.2">2.2 Other Git and GitHub related suggestions</a>
 - You should use **Pull Requests**. Why? Because it takes someone else to review your code and not you. And no, you can't validate your own Pull Requests, that will be checked for!
 
 - Your commit messages shouldn't be based on some 5-year-old-baby-like sentences, like "aaaaaaaaaaaaaaaaaaa" or "done" or "more stuff". Keep in mind, you are working with several people. These messages can be crucial for a developer to understand what was done so far. The message should contain a message describing what changed on that commit
@@ -85,13 +85,13 @@ Category: message.
 
 - Don't forget to make your commits as often as you implement an important piece of code. Delaying the commit until the end of the day, will gather a lot of changes in one commit, which costs to describe in the commit message. Also, if the code comes out as faulty, you'll need to figure out exacly which part of the commit is causing the malfunctioning.
 
-### <a name="#git-commands-2.3">2.3 Git commands and variations</a>
+### <a name="git-commands-2.3">2.3 Git commands and variations</a>
 
 As promised, here goes a list of commands and flags combinations that can promise to be of high impact on your workflow. The following descriptions are short and you should search and experiment on your own as well.
 
 ---------------------------------------------------
 
-#### <a name="#git-stash-2.3.1">2.3.1 git stash</a>
+#### <a name="git-stash-2.3.1">2.3.1 git stash</a>
 
 If you need to discard the current changes but still save them, this is the perfect command. When applying `git stash`, the changes since the last commit will be removed from the current working directory, but saved on the stash locally.
 
@@ -112,7 +112,7 @@ This one is quite powerful. If you start developing on the wrong branch, you can
 
 ---------------------------------------------------
 
-#### <a name="#git-branch-2.3.2">2.3.2 git branch</a>
+#### <a name="git-branch-2.3.2">2.3.2 git branch</a>
 
 Used to create branches, but not only. Remember that local branches (the one created on your computer) do not always have an **upstream** (a remote branch to link to) Sometimes, we need to also delete, rename branches or link a local branch with a remote one. This command provides flags to help on those configurations, among others.
 
@@ -133,7 +133,7 @@ Used to create branches, but not only. Remember that local branches (the one cre
 
 ---------------------------------------------------
 
-#### <a name="#git-checkout-2.3.3">2.3.3 git checkout</a>
+#### <a name="git-checkout-2.3.3">2.3.3 git checkout</a>
 
 Used to switch between branches, there's not much to say about it, just a nice flag that you can use.
 
@@ -147,7 +147,7 @@ Switched to a new branch 'branch-team-3'
 
 ---------------------------------------------------
 
-#### <a name="#git-add-2.3.4">2.3.4 git add</a>
+#### <a name="git-add-2.3.4">2.3.4 git add</a>
 
 Adds the specified files to the staging area, so those files can be prepared to the next commit.
 
@@ -177,7 +177,7 @@ index 4439738..2f873ad 100644
 
 ---------------------------------------------------
 
-#### <a name="#git-reset-2.3.5">2.3.5 git reset</a>
+#### <a name="git-reset-2.3.5">2.3.5 git reset</a>
 
 `HEAD` in git is a reference to a commit. When switching branches, the HEAD revision changes to the tip of that branch. The `git reset` command allows to re-position the `HEAD` reference and discard changes made in the reseted commits.
 
@@ -191,7 +191,7 @@ index 4439738..2f873ad 100644
 
 ---------------------------------------------------
 
-#### <a name="#git-commit-2.3.6">2.3.6 git commit</a>
+#### <a name="git-commit-2.3.6">2.3.6 git commit</a>
 
 Takes the files from the staging area and saves those changes on your local repository (in the `.git` folder). At this point, the remote repository doesn't know about this changes yet.
 
@@ -199,7 +199,7 @@ Takes the files from the staging area and saves those changes on your local repo
 
 ---------------------------------------------------
 
-#### <a name="#git-log-2.3.7">2.3.7 git log</a>
+#### <a name="git-log-2.3.7">2.3.7 git log</a>
 
 Displays a list of the latest commits informations, including commit hashes, commit dates and commit messages.
 
@@ -252,7 +252,7 @@ f0d068d INFO.md: added a temporary command list to update tommorrow.
 
 ---------------------------------------------------
 
-#### <a name="#git-rebase-2.3.8">2.3.8 git rebase</a>
+#### <a name="git-rebase-2.3.8">2.3.8 git rebase</a>
 
 Appends the commits of a branch on the tip of another branch. It is often confused with git merge, even thought it has big differences. 
 
@@ -288,7 +288,7 @@ pick 4567890 Commit message for commit 3
 
 ---------------------------------------------------
 
-#### <a name="#git-aliases-2.3.9">2.3.9 git aliases</a>
+#### <a name="git-aliases-2.3.9">2.3.9 git aliases</a>
 
 It's not a command, but the title introduces a command. Just like shell command aliases, you can create your own alias to execute a complicated command or multiple commands at once, using a synonym.
 
@@ -300,7 +300,7 @@ It's not a command, but the title introduces a command. Just like shell command 
 
 ---------------------------------------------------
 
-#### <a name="#git-status-2.3.10">2.3.10 git status</a>
+#### <a name="git-status-2.3.10">2.3.10 git status</a>
 
 Displays the working tree status (modified files, staged and unstaged files, deleted files, etc).
 
@@ -316,7 +316,7 @@ D file4.txt - deleted file
 
 ---------------------------------------------------
 
-#### <a name="#git-remote-2.3.11">2.3.11 git remote</a>
+#### <a name="git-remote-2.3.11">2.3.11 git remote</a>
 
 Used to track remote repositories.
 
