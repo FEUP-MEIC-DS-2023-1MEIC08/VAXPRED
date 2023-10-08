@@ -10,6 +10,19 @@ This guide was developed to kickoff the development in the best way possible, en
 		<li><a href="#branches-2.1">2.1 How teams and developers will branch</a></li>
 		<li><a href="#git-suggestions-2.2">2.2 Other Git and GitHub related suggestions</a></li>
 		<li><a href="#git-commands-2.3">2.3 Git commands and variations</a></li>
+		<ul>
+			<li><a href="#git-stash-2.3.1">2.3.1. git stash</a></li>
+			<li><a href="#git-branch-2.3.2">2.3.2. git branch</a></li>
+			<li><a href="#git-checkout-2.3.3">2.3.3. git checkout</a></li>
+			<li><a href="#git-add-2.3.4">2.3.4. git add</a></li>
+			<li><a href="#git-reset-2.3.5">2.3.5. git reset</a></li>
+			<li><a href="#git-commit-2.3.6">2.3.6. git commit</a></li>
+			<li><a href="#git-log-2.3.7">2.3.7. git log</a></li>
+			<li><a href="#git-rebase-2.3.8">2.3.8. git rebase</a></li>
+			<li><a href="#git-aliases-2.3.9">2.3.9. git aliases</a></li>
+			<li><a href="#git-status-2.3.10">2.3.10. git status</a></li>
+			<li><a href="#git-remote-2.3.11">2.3.11. git remote</a></li>
+		</ul>
 	</ul>
 </ul>
 
@@ -78,7 +91,7 @@ As promised, here goes a list of commands and flags combinations that can promis
 
 ---------------------------------------------------
 
-**git stash**
+#### <a name="#git-stash-2.3.1">2.3.1 git stash</a>
 
 If you need to discard the current changes but still save them, this is the perfect command. When applying `git stash`, the changes since the last commit will be removed from the current working directory, but saved on the stash locally.
 
@@ -99,7 +112,7 @@ This one is quite powerful. If you start developing on the wrong branch, you can
 
 ---------------------------------------------------
 
-**git branch**
+#### <a name="#git-branch-2.3.2">2.3.2 git branch</a>
 
 Used to create branches, but not only. Remember that local branches (the one created on your computer) do not always have an **upstream** (a remote branch to link to) Sometimes, we need to also delete, rename branches or link a local branch with a remote one. This command provides flags to help on those configurations, among others.
 
@@ -120,7 +133,7 @@ Used to create branches, but not only. Remember that local branches (the one cre
 
 ---------------------------------------------------
 
-**git checkout**
+#### <a name="#git-checkout-2.3.3">2.3.3 git checkout</a>
 
 Used to switch between branches, there's not much to say about it, just a nice flag that you can use.
 
@@ -134,7 +147,7 @@ Switched to a new branch 'branch-team-3'
 
 ---------------------------------------------------
 
-**git add**
+#### <a name="#git-add-2.3.4">2.3.4 git add</a>
 
 Adds the specified files to the staging area, so those files can be prepared to the next commit.
 
@@ -164,7 +177,7 @@ index 4439738..2f873ad 100644
 
 ---------------------------------------------------
 
-**git reset**
+#### <a name="#git-reset-2.3.5">2.3.5 git reset</a>
 
 `HEAD` in git is a reference to a commit. When switching branches, the HEAD revision changes to the tip of that branch. The `git reset` command allows to re-position the `HEAD` reference and discard changes made in the reseted commits.
 
@@ -178,7 +191,7 @@ index 4439738..2f873ad 100644
 
 ---------------------------------------------------
 
-**git commit**
+#### <a name="#git-commit-2.3.6">2.3.6 git commit</a>
 
 Takes the files from the staging area and saves those changes on your local repository (in the `.git` folder). At this point, the remote repository doesn't know about this changes yet.
 
@@ -186,7 +199,7 @@ Takes the files from the staging area and saves those changes on your local repo
 
 ---------------------------------------------------
 
-**git log**
+#### <a name="#git-log-2.3.7">2.3.7 git log</a>
 
 Displays a list of the latest commits informations, including commit hashes, commit dates and commit messages.
 
@@ -239,7 +252,7 @@ f0d068d INFO.md: added a temporary command list to update tommorrow.
 
 ---------------------------------------------------
 
-**git rebase**
+#### <a name="#git-rebase-2.3.8">2.3.8 git rebase</a>
 
 Appends the commits of a branch on the tip of another branch. It is often confused with git merge, even thought it has big differences. 
 
@@ -275,7 +288,7 @@ pick 4567890 Commit message for commit 3
 
 ---------------------------------------------------
 
-**git aliases**
+#### <a name="#git-aliases-2.3.9">2.3.9 git aliases</a>
 
 It's not a command, but the title introduces a command. Just like shell command aliases, you can create your own alias to execute a complicated command or multiple commands at once, using a synonym.
 
@@ -287,7 +300,7 @@ It's not a command, but the title introduces a command. Just like shell command 
 
 ---------------------------------------------------
 
-**git status**
+#### <a name="#git-status-2.3.10">2.3.10 git status</a>
 
 Displays the working tree status (modified files, staged and unstaged files, deleted files, etc).
 
@@ -303,7 +316,7 @@ D file4.txt - deleted file
 
 ---------------------------------------------------
 
-**git remote**
+#### <a name="#git-remote-2.3.11">2.3.11 git remote</a>
 
 Used to track remote repositories.
 
