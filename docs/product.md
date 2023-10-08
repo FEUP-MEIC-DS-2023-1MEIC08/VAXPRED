@@ -4,7 +4,7 @@
 
 ## Vision Statement
 
-Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations providing a cloud-based system that supports different datasets from various sources, a workspace pipeline that allows researchers to run simulations in order to generate predictions of the efficiency of immune responses against pathogenes, and the support of pluggable tools.  
+Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations providing a cloud-based system that supports different datasets from various sources, the support of pluggable tools, and a model pipeline that allows researchers to run simulations, in order to, generate predictions that test the efficacy of immune responses against pathogenes.  
 
 ## Key Features
 
@@ -41,8 +41,7 @@ Sources: http://research.baidu.com/Blog/index-view?id=131, https://www.technolog
 
 Include high-level class diagram with key domain concepts. Complement this diagram with other high-level diagrams has appropriate (activity, sequence, etc.).
 
-![image](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/72468538/3db4998a-e5aa-4259-8602-aeb08ef6da8b)
-
+![domainmodel](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/72468538/900d561b-80c3-42d4-8a13-e6a9a1faced8)
 
 ## Sprint Reviews
 
