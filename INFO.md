@@ -74,22 +74,47 @@ Category: message.
 
 ### <a name="#git-commands-2.3">2.3 Git commands and variations</a>
 
-As promised, here goes a list of commands and flags combinations that can promise to be of high impact on your workflow.
+As promised, here goes a list of commands and flags combinations that can promise to be of high impact on your workflow. The following descriptions are short and you should search and experiment on your own as well.
 
-- git stash
-- git stash pop
-- git stash clear
-- git checkout -b branch
+**git stash**
+If you need to discard the current changes but still save them, this is the perfect command. When applying `git stash`, the changes since the last commit will be removed from the current working directory, but saved on the stash locally.
+
+When stashing changes, you are creating a new version that was discarded, but you won't be overwritting previous stashes.
+
+- `git stash pop` - the opposite of `git stash`, it re-applies the last changes into the current working directory and removes the entry from the stash list
+- `git stash apply <reference>` - identical to `git stash pop`, but it doesn't remove the entry from the stash list
+- `git stash list` - lists all the stash entries done so far
+- `git stash clear` - empties out the stash list
+
+This one is quite powerful. If you start developing on the wrong branch, you can just stash the changes, checkout to the correct branch and pop the last stash entry.
+
+**git branch**
+Used to create branches, but not only. Remember that local branches (the one created on your computer) do not always have an **upstream** (a remote branch to link to) Sometimes, we need to also delete, rename branches or link a local branch with a remote one. This command provides flags to help on those configurations, among others.
+
+- `git branch -u origin <name-of-the-remote-branch>` - Given you're in a branch named X, this command allows to connect your local branch X to a remote branch named after the parameter passed on the command. This can also be done in push-time by running `git push --set-upstream origin <name-of-the-remote-branch>`.
+- `git branch -M <old-branch-name> <new-branch-name>` - renames a branch together with its configurations
+
+**git checkout**
+Used to switch between branches, there's not much to say about it, just a nice flag that you can use.
+
+- `git checkout -b <branch-name>` - Creates a new branch locally with a given name and immediately checkouts out to it. It's the same as running `git branch <branch-name>` and `git checkout <branch-name>` sequentially.
+
+**git reset**
 - git reset
+
 - git add -A
 - git add .
 - git add [files]
 - git add -p
+
 - git commit --amend -m message
-- git push --set-upstream/-u origin name-of-the-remote-branch
-- git branch -M old-branch-name new-branch-name
+
+
 - git log --graph --decorate --oneline
+
 - git rebase branch-name
 - git rebase -i branch-name
+
 - git config --global alias.send '!git add -A && git commit -m'
+
 - git remote update --prune (removes branches locally that are not present remotely)
