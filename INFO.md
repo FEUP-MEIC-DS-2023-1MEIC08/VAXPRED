@@ -76,7 +76,10 @@ Category: message.
 
 As promised, here goes a list of commands and flags combinations that can promise to be of high impact on your workflow. The following descriptions are short and you should search and experiment on your own as well.
 
+---------------------------------------------------
+
 **git stash**
+
 If you need to discard the current changes but still save them, this is the perfect command. When applying `git stash`, the changes since the last commit will be removed from the current working directory, but saved on the stash locally.
 
 When stashing changes, you are creating a new version that was discarded, but you won't be overwritting previous stashes.
@@ -88,33 +91,81 @@ When stashing changes, you are creating a new version that was discarded, but yo
 
 This one is quite powerful. If you start developing on the wrong branch, you can just stash the changes, checkout to the correct branch and pop the last stash entry.
 
+---------------------------------------------------
+
 **git branch**
+
 Used to create branches, but not only. Remember that local branches (the one created on your computer) do not always have an **upstream** (a remote branch to link to) Sometimes, we need to also delete, rename branches or link a local branch with a remote one. This command provides flags to help on those configurations, among others.
 
 - `git branch -u origin <name-of-the-remote-branch>` - Given you're in a branch named X, this command allows to connect your local branch X to a remote branch named after the parameter passed on the command. This can also be done in push-time by running `git push --set-upstream origin <name-of-the-remote-branch>`.
 - `git branch -M <old-branch-name> <new-branch-name>` - renames a branch together with its configurations
+- `git branch -D <branch-name>` - forcefull deletes a local branch, even if the branch is not fully merged.
+- `git branch -C <old-branch-name> <new-branch-name>` - copies a branch to a new one
+
+---------------------------------------------------
 
 **git checkout**
+
 Used to switch between branches, there's not much to say about it, just a nice flag that you can use.
 
 - `git checkout -b <branch-name>` - Creates a new branch locally with a given name and immediately checkouts out to it. It's the same as running `git branch <branch-name>` and `git checkout <branch-name>` sequentially.
 
-**git reset**
-- git reset
+---------------------------------------------------
 
-- git add -A
-- git add .
-- git add [files]
-- git add -p
+**git add**
+Adds the specified files to the staging area, so those files can be prepared to the next commit.
+
+- `git add -A` - adds any file that had any change whatsoever to the staging area, no matter its place in the working directory
+- `git add .` - adds only the current directory to the staging area
+
+> **Warning**
+> This command is often mistaked with `git add -A`. If you're in a nested directory and execute `git add .`, any changes surrounding the nested directory won't be included!
+
+- `git add <files>` - the most common way to use this command, by specifying a list of files or folders are to be submitted to the staging area. 
+- `git add -p` - by using the `-p` flag, you're allowed to choose which snippets of changes you'll be submitting. To know what snippets you'll be able to choose from, use `git diff`.
+
+---------------------------------------------------
+
+**git reset**
+`HEAD` in git is a reference to a commit. When switching branches, the HEAD revision changes to the tip of that branch. The `git reset` command allows to re-position the `HEAD` reference and discard changes made in the reseted commits.
+
+> **Warning**
+> This command is to be used with caution, as it might result in data loss. If you're not sure about what you're about to do, please use git stash to keep a version of the discarded changes.
+
+- `git reset HEAD` - goes back on the last commit
+- `git reset HEAD~3` - goes back on the last 3 commits
+- `git reset --hard <hash>` - moves the HEAD pointer to the commit specified by `<hash>`, reseting the staging area to match that commit and discards any changes made after that commit as well.
+- `git reset -p` - this flag allows you to choose with changes you want to discard and which not, the opposite of `git add -p`.
+
+---------------------------------------------------
+
+**git commit**
 
 - git commit --amend -m message
 
+---------------------------------------------------
+
+**git log**
 
 - git log --graph --decorate --oneline
+
+---------------------------------------------------
+
+**git rebase**
 
 - git rebase branch-name
 - git rebase -i branch-name
 
+---------------------------------------------------
+
+**git alias**
+
 - git config --global alias.send '!git add -A && git commit -m'
 
+---------------------------------------------------
+
+**git remote**
+
 - git remote update --prune (removes branches locally that are not present remotely)
+
+---------------------------------------------------
