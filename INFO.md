@@ -84,6 +84,12 @@ If you need to discard the current changes but still save them, this is the perf
 
 When stashing changes, you are creating a new version that was discarded, but you won't be overwritting previous stashes.
 
+``` bash
+➜  ds git:(prototype) ✗ git stash
+Saved working directory and index state WIP on prototype: c5be1cd INFO.md: added information about git status and git remote.
+➜  ds git:(prototype)
+```
+
 - `git stash pop` - the opposite of `git stash`, it re-applies the last changes into the current working directory and removes the entry from the stash list
 - `git stash apply <reference>` - identical to `git stash pop`, but it doesn't remove the entry from the stash list
 - `git stash list` - lists all the stash entries done so far
@@ -100,9 +106,15 @@ Used to create branches, but not only. Remember that local branches (the one cre
 - `git branch -u origin <name-of-the-remote-branch>` - Given you're in a branch named X, this command allows to connect your local branch X to a remote branch named after the parameter passed on the command. This can also be done in push-time by running `git push --set-upstream origin <name-of-the-remote-branch>`.
 
 > **Note**
-> If this is not performed, each git push command should follow the syntax: `git push origin <remote-branch-name>`. After setting the upstream, you can just simply use `git push`.
+> If this is not performed, each `git push` on a branch command should follow the syntax: `git push <remote-name> <remote-branch-name>`. Usually `<remote-name>` is named **origin**. After setting the upstream, you can just simply use `git push`.
 
 - `git branch -M <old-branch-name> <new-branch-name>` - renames a branch together with its configurations
+
+```shell
+➜  ds git:(branch-team-3) ✗ git branch -M branch-team-3 t3/hotfix/broken-link
+➜  ds git:(t3/hotfix/broken-link) ✗
+```
+
 - `git branch -D <branch-name>` - forcefull deletes a local branch, even if the branch is not fully merged.
 - `git branch -C <old-branch-name> <new-branch-name>` - copies a branch to a new one
 
@@ -113,6 +125,12 @@ Used to create branches, but not only. Remember that local branches (the one cre
 Used to switch between branches, there's not much to say about it, just a nice flag that you can use.
 
 - `git checkout -b <branch-name>` - Creates a new branch locally with a given name and immediately checkouts out to it. It's the same as running `git branch <branch-name>` and `git checkout <branch-name>` sequentially.
+
+```shell
+➜  ds git:(prototype) ✗ git checkout -b branch-team-3
+Switched to a new branch 'branch-team-3'
+➜  ds git:(branch-team-3) ✗
+```
 
 ---------------------------------------------------
 
@@ -128,6 +146,21 @@ Adds the specified files to the staging area, so those files can be prepared to 
 
 - `git add <files>` - the most common way to use this command, by specifying a list of files or folders are to be submitted to the staging area. 
 - `git add -p` - by using the `-p` flag, you're allowed to choose which snippets of changes you'll be submitting. To know what snippets you'll be able to choose from, use `git diff`.
+
+```shell
+➜  ds git:(prototype) ✗ git add -p
+diff --git a/INFO.md b/INFO.md
+index 4439738..2f873ad 100644 
+--- a/INFO.md
++++ b/INFO.md
+@@ -84,6 +84,12 @@ If you need to discard the current changes but still save them, this is the perf
+
++➜  ds git:(prototype) ✗ git stash
++Saved working directory and index state WIP on prototype: c5be1cd INFO.md: added information about git status and git remote.
++➜  ds git:(prototype)
++
+(1/4) Stage this hunk [y,n,q,a,d,j,J,g,/,e,?]? 
+```
 
 ---------------------------------------------------
 
@@ -158,9 +191,51 @@ Takes the files from the staging area and saves those changes on your local repo
 Displays a list of the latest commits informations, including commit hashes, commit dates and commit messages.
 
 - `git log --oneline` - logs using the 7 first characters of a commit hash and the commit message, squashing the commit display to 1 line, most of the times.
+
+```bash
+➜  ds git:(prototype) ✗ git log --oneline
+c5be1cd (HEAD -> prototype, origin/prototype) INFO.md: added information about git status and git remote.
+e846313 INFO.md: added information about git commit, log, aliases and rebase.
+a9c7a8a INFO.md: added new git branch commands and info about git add and reset.
+027ca62 (local) INFO.md: added information about git stash, branch and checkout.
+f0d068d INFO.md: added a temporary command list to update tommorrow.
+➜  ds git:(prototype) ✗
+```
+
 - `git log --decorate` - prints out the references for each commit (like branches or tags), if any
 - `git log --graph` - prints the commit list alongside a commit graph, highlighting branches formation
+
+```bash
+* commit c5be1cd19c444f9f86cbae8f744f0c4516ed05d9 (HEAD -> prototype, origin/prototype)
+| Author: Nuno Jesus <up201905477@edu.fe.up.pt>
+| Date:   Sun Oct 8 15:40:06 2023 +0100
+|
+|     INFO.md: added information about git status and git remote.
+|
+* commit e846313b799fd32822e7463b5a4aea071da64ee0
+| Author: Nuno Jesus <up201905477@edu.fe.up.pt>
+| Date:   Sun Oct 8 15:28:33 2023 +0100
+|
+|     INFO.md: added information about git commit, log, aliases and rebase.
+|
+* commit a9c7a8a37b1fc5e9aad539cef045b800c0bb90ff
+| Author: Nuno Jesus <up201905477@edu.fe.up.pt>
+| Date:   Sun Oct 8 14:51:03 2023 +0100
+|
+|     INFO.md: added new git branch commands and info about git add and reset.
+...
+```
 - `git log --graph --decorate --oneline` - combining all the above, outputs the commit list using a small notation, organized in a commit graph.
+
+```bash
+* b8c4d75 (HEAD -> main, tag: v1.0.0) Latest commit message
+|\
+| * 42a9b1f (feature-branch) Another feature commit
+| * a1b2c3d Add new feature
+|/
+* 789abc1 Fix a bug
+* 1234567 Initial commit
+```
 
 ---------------------------------------------------
 
@@ -174,6 +249,29 @@ Rebasing is mostly used with private branches (where you're working alone and yo
 
 - `git rebase branch-name` - takes the commits from `branch-name` and applies them on top of the current branch
 - `git rebase -i branch-name` - rebases in iterative mode. Opens a window displaying the commits about to be added to the branch stream. You can edit how these commits will be integrated by using several keywords (which will not be covered here).
+
+```bash
+pick abc1234 Commit message for commit 1
+pick def5678 Commit message for commit 2
+pick 4567890 Commit message for commit 3
+
+# Rebase cdef987 onto 1234567
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+```
 
 ---------------------------------------------------
 
@@ -195,11 +293,13 @@ Displays the working tree status (modified files, staged and unstaged files, del
 
 - `git status -s` - minimizes output by using symbols to characterizing the status of a file.
 
-		M file1.txt - modified
-		?? file2.txt - untracked file
-		A  file3.txt - added to the staging area
-		D file4.txt - deleted file
-		...
+```bash
+M file1.txt - modified
+?? file2.txt - untracked file
+A  file3.txt - added to the staging area
+D file4.txt - deleted file
+...
+```
 
 ---------------------------------------------------
 
