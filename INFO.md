@@ -98,6 +98,10 @@ This one is quite powerful. If you start developing on the wrong branch, you can
 Used to create branches, but not only. Remember that local branches (the one created on your computer) do not always have an **upstream** (a remote branch to link to) Sometimes, we need to also delete, rename branches or link a local branch with a remote one. This command provides flags to help on those configurations, among others.
 
 - `git branch -u origin <name-of-the-remote-branch>` - Given you're in a branch named X, this command allows to connect your local branch X to a remote branch named after the parameter passed on the command. This can also be done in push-time by running `git push --set-upstream origin <name-of-the-remote-branch>`.
+
+> **Note**
+> If this is not performed, each git push command should follow the syntax: `git push origin <remote-branch-name>`. After setting the upstream, you can just simply use `git push`.
+
 - `git branch -M <old-branch-name> <new-branch-name>` - renames a branch together with its configurations
 - `git branch -D <branch-name>` - forcefull deletes a local branch, even if the branch is not fully merged.
 - `git branch -C <old-branch-name> <new-branch-name>` - copies a branch to a new one
@@ -113,6 +117,7 @@ Used to switch between branches, there's not much to say about it, just a nice f
 ---------------------------------------------------
 
 **git add**
+
 Adds the specified files to the staging area, so those files can be prepared to the next commit.
 
 - `git add -A` - adds any file that had any change whatsoever to the staging area, no matter its place in the working directory
@@ -127,6 +132,7 @@ Adds the specified files to the staging area, so those files can be prepared to 
 ---------------------------------------------------
 
 **git reset**
+
 `HEAD` in git is a reference to a commit. When switching branches, the HEAD revision changes to the tip of that branch. The `git reset` command allows to re-position the `HEAD` reference and discard changes made in the reseted commits.
 
 > **Warning**
@@ -135,32 +141,57 @@ Adds the specified files to the staging area, so those files can be prepared to 
 - `git reset HEAD` - goes back on the last commit
 - `git reset HEAD~3` - goes back on the last 3 commits
 - `git reset --hard <hash>` - moves the HEAD pointer to the commit specified by `<hash>`, reseting the staging area to match that commit and discards any changes made after that commit as well.
-- `git reset -p` - this flag allows you to choose with changes you want to discard and which not, the opposite of `git add -p`.
+- `git reset -p` - this flag allows you to choose which changes you want to discard and which not, the opposite of `git add -p`.
 
 ---------------------------------------------------
 
 **git commit**
 
-- git commit --amend -m message
+Takes the files from the staging area and saves those changes on your local repository (in the `.git` folder). At this point, the remote repository doesn't know about this changes yet.
+
+- `git commit --amend -m <commit-message>` - replaces the latest commit message with a new one specified in the parameter
 
 ---------------------------------------------------
 
 **git log**
 
-- git log --graph --decorate --oneline
+Displays a list of the latest commits informations, including commit hashes, commit dates and commit messages.
+
+- `git log --oneline` - logs using the 7 first characters of a commit hash and the commit message, squashing the commit display to 1 line, most of the times.
+- `git log --decorate` - prints out the references for each commit (like branches or tags), if any
+- `git log --graph` - prints the commit list alongside a commit graph, highlighting branches formation
+- `git log --graph --decorate --oneline` - combining all the above, outputs the commit list using a small notation, organized in a commit graph.
 
 ---------------------------------------------------
 
 **git rebase**
 
-- git rebase branch-name
-- git rebase -i branch-name
+Appends the commits of a branch on the tip of another branch. It is often confused with git merge, even thought it has big differences. 
+
+Merging implies creating a new commit, unlike rebasing, which integrates the changes from one branch into another by appending. Merging preserves chronological changes, but rebasing does not, since it takes other commits into the current branch.
+
+Rebasing is mostly used with private branches (where you're working alone and you know no other interferences will change the original branch) and merging is used with public branches (inputs can come from multiple users).
+
+- `git rebase branch-name` - takes the commits from `branch-name` and applies them on top of the current branch
+- `git rebase -i branch-name` - rebases in iterative mode. Opens a window displaying the commits about to be added to the branch stream. You can edit how these commits will be integrated by using several keywords (which will not be covered here).
 
 ---------------------------------------------------
 
-**git alias**
+**git aliases**
 
-- git config --global alias.send '!git add -A && git commit -m'
+It's not a command, but the title introduces a command. Just like shell command aliases, you can create your own alias to execute a complicated command or multiple commands at once, using a synonym.
+
+- `git config --global alias.graph 'git log --oneline --graph --decorate'` - creates a new command called `git graph`, which is then expanded onto `git log --oneline --graph --decorate`
+- `git config --global alias.send '!git add -A && git commit -m'` - creates a new command called `git send`, which is then expanded to `git add -A && git commit -m`.
+
+> **Note**
+> The `!` is used on the second command to specify that more than 1 command is to be used in the alias.
+
+---------------------------------------------------
+
+**git status**
+
+- git status -s
 
 ---------------------------------------------------
 
