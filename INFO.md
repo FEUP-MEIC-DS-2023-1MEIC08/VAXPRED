@@ -191,12 +191,25 @@ It's not a command, but the title introduces a command. Just like shell command 
 
 **git status**
 
-- git status -s
+Displays the working tree status (modified files, staged and unstaged files, deleted files, etc).
+
+- `git status -s` - minimizes output by using symbols to characterizing the status of a file.
+
+		M file1.txt - modified
+		?? file2.txt - untracked file
+		A  file3.txt - added to the staging area
+		D file4.txt - deleted file
+		...
 
 ---------------------------------------------------
 
 **git remote**
 
-- git remote update --prune (removes branches locally that are not present remotely)
+Used to track remote repositories.
+
+- `git remote add <name> <URL>` - We often skip this command, since we directly clone repos from GitHub or GitLab. This command links a remote repository to link to the local one, using it's URL and giving it a name.
+- `git remote remove <name>` - removes an added remote repository by it's name.
+- `git remote show <name>` - displays information about an added remote repo
+- `git remote update --prune` - removes local branches that had their corresponding remote branches deleted, basically cleaning your local repository.
 
 ---------------------------------------------------
