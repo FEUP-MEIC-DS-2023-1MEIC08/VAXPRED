@@ -24,6 +24,8 @@ This guide was developed to kickoff the development in the best way possible, en
 
 ## <a name="#git-2">2. Using Git and GitHub</a>
 
+Hey there, this is Nuno from T3!
+
 Below, you'll find some instructions and tips about using Git and GitHub properly during the development of this project. We're also presenting some useful Git commands that should enhance the synergy of version control both inside and between teams.
 
 ### <a name="#branches-2.1">2.1 How teams and developers will branch</a>
@@ -73,3 +75,21 @@ Category: message.
 ### <a name="#git-commands-2.3">2.3 Git commands and variations</a>
 
 As promised, here goes a list of commands and flags combinations that can promise to be of high impact on your workflow.
+
+- git stash
+- git stash pop
+- git stash clear
+- git checkout -b branch
+- git reset
+- git add -A
+- git add .
+- git add [files]
+- git add -p
+- git commit --amend -m message
+- git push --set-upstream/-u origin name-of-the-remote-branch
+- git branch -M old-branch-name new-branch-name
+- git log --graph --decorate --oneline
+- git rebase branch-name
+- git rebase -i branch-name
+- git config --global alias.send '!git add -A && git commit -m'
+- git remote update --prune (removes branches locally that are not present remotely)
