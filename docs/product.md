@@ -2,25 +2,25 @@
 
 ## Product Vision
 
-## Vision Statement
+### Vision Statement
 
-Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations providing a cloud-based system that supports different datasets from various sources, the support of pluggable tools, and a model pipeline that allows researchers to run simulations, in order to, generate predictions that test the efficacy of immune responses against pathogenes.  
-
-## Key Features
-
-- The application will offer a simulation enviroment with a few simulations, with parameters that can be tweaked, and the support to pluggable tools, allowing researchers to run an experiment and see the prediction results;
-- It will be possible to use data of various types and sources. Users can upload data to the simulation enviroment or use data available at existing remote repositories;
-- The platform will incorporate some models and the support to add new analytical tools provided under the form of software containers;
-- The simulation outputs will be provided in convenient interfaces for the most common simulation parameters;
-- The application will provide a set of envisions for the most relevant simulation outputs.
+Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations. Providing a cloud-based system that supports different datasets, from various sources, and model pipelines, researchers can run simulations, in order to, generate predictions that test the efficacy of immune responses against pathogenes. This tools are provided through plugins that can be chosen accordingly to the experiment ran by the researcher in a cloud-based store.
 
 
-## Who Benefits from VAXPRED:
+### Key Features
 
-VAXPRED aims to improve the lives of several people:
-- equips researchers and scientists with simulations to accelerate vaccine development;
-- the platform reduces development costs and risks to the academic and biotech sectors of the industry;
-- since faster vaccine development allows quicker and better responses to new virus and pathogens, public health is more safeguarded.
+- A plugin store, from which researchers will be able to donwload the desired plugins for their experiments.
+- It should be user-friendly, allowing a smooth utilisation by its users.
+- The plugin store will be divided in diferent categories, allowing the researchers to choose different types of plugins for the many phases of their experiments.
+- The researcher will be able to check the plugin's description, allowing them to know more about them.
+- Synthetic data generation tools will be available, also data curation and quality-check tools for the considered data types through plugins.
+- It will be available models and analytical tools, provided under the form of plugins at the store.
+
+
+### Who Benefits from VAXPRED:
+
+VAXPRED aims to improve the lives of:
+- researchers and scientists, since their work will be made easier by being able to use, in a simple way, the plugins available in the plugin store.
 
 ## Market Research
 
