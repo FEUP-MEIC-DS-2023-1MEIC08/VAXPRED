@@ -2,28 +2,25 @@
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
-
-
 ### The two user stories that I am most proud of
 
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
+ * #1 "As a researcher, I want to be able to search for a plugin's name in the store, so that I can find it quickly." (issue #23)
+ * #2 "As a researcher, I want to be able to filter the plugins by various tags, so that I can find the one that suits better the experiment I want to do."  (issue #24)
 
- * #1
- * #2
+ I wrote these two user stories thinking that being able to better search for plugins in the store will improve the user-friendliness of the platform. The other POs helped revising the user stories.
 
 
 ### The two pull requests that I am most proud of
 
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
+No pull requests were made during this sprint.
 
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+ * #1 The writing of the Product Vision (product.md)
+ * #2 The creation of the Domain Model  (product.md)
+
+ Writing the Product Vision and creating the Domain Model together with the other POs was especially important for understanding what is supposed to be done on this project and will certainly be of much help in future sprints to be able to guide the teams and achieve the best results.
 
 
 
