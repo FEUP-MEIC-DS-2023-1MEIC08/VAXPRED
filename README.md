@@ -35,7 +35,7 @@ Link to the factsheets of each team and of each team-member. For example:
    * [Nuno Jesus](factsheets/nuno_jesus.md) (SM)
    * [David Fang](factsheets/david_fang.md)
    * [Frederico Lopes](factsheets/frederico_lopes.md)
-   * [José Ribeiro](factsheets/josé_ribeiro.md)
+   * [José Ribeiro](factsheets/jose_ribeiro.md)
    * [Pedro Correia](factsheets/pedro_correia.md)
 
 
