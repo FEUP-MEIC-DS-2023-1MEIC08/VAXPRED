@@ -10,7 +10,7 @@ No user stories have been added or reviews by me.
 
 ### The two pull requests that I am most proud of
 
-No user stories have been added or reviews by me.
+No important pull requests have been made by me.
 
 ### Two contributions of other types that I am most proud of
 
