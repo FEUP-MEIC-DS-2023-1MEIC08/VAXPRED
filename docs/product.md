@@ -4,17 +4,17 @@
 
 ### Vision Statement
 
-Towards an healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance their investigations. Providing a cloud-based system that supports different datasets, from various sources, and model pipelines, researchers can run simulations, in order to, generate predictions that test the efficacy of immune responses against pathogenes. This tools are provided through plugins that can be chosen accordingly to the experiment ran by the researcher in a cloud-based store.
+Towards a healthier future, VAXPRED aims to improve the field of vaccine development by allying the power of several technologies to allow researchers and scientists to advance in their investigations. Supplying a cloud-based system that supports different datasets from various sources and model pipelines, researchers can run simulations to generate predictions that assess the efficacy of immune responses against pathogens. These tools are provided through plugins that can be chosen accordingly to the experiment ran by the researcher in a cloud-based store.
 
 
 ### Key Features
 
-- A plugin store, from which researchers will be able to donwload the desired plugins for their experiments.
-- It should be user-friendly, allowing a smooth utilisation by its users.
-- The plugin store will be divided in diferent categories, allowing the researchers to choose different types of plugins for the many phases of their experiments.
-- The researcher will be able to check the plugin's description, allowing them to know more about them.
-- Synthetic data generation tools will be available, also data curation and quality-check tools for the considered data types through plugins.
-- It will be available models and analytical tools, provided under the form of plugins at the store.
+- A plugin store, from which researchers will be able to download the desired plugins for their experiments;
+- Models and analytical tools will be made available, provided under the form of plugins at the store;
+- The plugin store will be divided in distinct categories, allowing the researchers to choose several types of plugins for the many phases of their experiments;
+- The researcher will be able to check the plugin's description, allowing them to know more about them;
+- Synthetic data generation tools will be available and also data curation and quality-check tools for the considered data types;
+- It should be user-friendly, allowing a smooth use by its users.
 
 
 ### Who Benefits from VAXPRED:
@@ -24,12 +24,10 @@ VAXPRED aims to improve the lives of:
 
 ## Market Research
 
-Survey of similar projects and analysis of their pros and cons when compared to the product to be developed. 
-
 ### Azure AI | Machine Learning Studio
 
 The “Azure AI | Machine Learning Studio” aims to help developers and data scientists creating their own machine learning models faster using the AI services available in the platform. Various tools are available to be used on the platform, like Jupyter Notebooks and Visual Studio Code, as well as open-source frameworks like TensorFlow and PyTorch. High-quality vision, speech, language, and decision-making AI models are also made available. The users have access to their Workspaces, where they can keep track of all the artifacts they create while performing experiments, to Feature Stores to create features, Registries that make it possible to share models with other people, and users can also store their data in the platform. 
-The “Azure Ai | Machine Learning Studio” bears similarities with the VAXPRED platform on the presence of workspaces, various tools and models to chose from and the ability to store data, as well as having been created with the intention of being used by scientists. However, unlike VAXPRED, Azure AI is not focused on the study of epitopes, lacking tools related to that.
+The “Azure Ai | Machine Learning Studio” bears similarities with the VAXPRED platform on the presence of workspaces, various tools and models to choose from and the ability to store data, as well as having been created with the intention of being used by scientists. However, unlike VAXPRED, Azure AI is not focused on the study of epitopes, lacking tools related to that.
 
 ### Baidu's LinearFold
 
@@ -39,7 +37,7 @@ Sources: http://research.baidu.com/Blog/index-view?id=131, https://www.technolog
 
 ## Domain Analysis
 
-Include high-level class diagram with key domain concepts. Complement this diagram with other high-level diagrams has appropriate (activity, sequence, etc.).
+An high-level class diagram with key domain concepts.
 
 ![domainmodel](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/72468538/900d561b-80c3-42d4-8a13-e6a9a1faced8)
 
