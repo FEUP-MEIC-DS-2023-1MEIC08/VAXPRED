@@ -2,30 +2,19 @@
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
-
+In this first sprint, I have been part of initial product vision and domain model building, which were better discussed and implemented between the PO's and the SM's.
 
 ### The two user stories that I am most proud of
 
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
+No user stories have been added or reviews by me.
 
 ### The two pull requests that I am most proud of
 
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
+No user stories have been added or reviews by me.
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
+Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
