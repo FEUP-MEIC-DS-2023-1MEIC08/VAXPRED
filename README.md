@@ -30,5 +30,12 @@ Link to the factsheets of each team and of each team-member. For example:
    * [Richard Doe](factsheets/richard_doe.md) (SM)
  * [Team 2](factsheets/team2.md)
    * ...
+ * [Team 3](factsheets/team3.md)
+   * [Mariana Azevedo](factsheets/mariana_azevedo.md) (PO)
+   * [Nuno Jesus](factsheets/nuno_jesus.md) (SM)
+   * [David Fang](factsheets/david_fang.md)
+   * [Frederico Lopes](factsheets/frederico_lopes.md)
+   * [José Ribeiro](factsheets/josé_ribeiro.md)
+   * [Pedro Correia](factsheets/pedro_correia.md)
 
 
