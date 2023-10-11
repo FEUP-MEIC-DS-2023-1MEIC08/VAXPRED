@@ -24,18 +24,17 @@ Explain how to package, deploy and run the system to a production (or production
 
 Link to the factsheets of each team and of each team-member. For example:
 
- * [Team 1](factsheets/team1.md)
-   * [John Doe](factsheets/john_doe.md) (SPO)
-   * [Jane Doe](factsheets/jane_doe.md)
-   * [Richard Doe](factsheets/richard_doe.md) (SM)
- * [Team 2](factsheets/team2.md)
+ * [Team 1](factsheets/t1/team1.md)
+   * [John Doe](factsheets/template/john_doe.md) (SPO)
+   * [Jane Doe](factsheets/template/jane_doe.md)  (SM)
+ * [Team 2](factsheets/t2/team2.md)
    * ...
- * [Team 3](factsheets/team3.md)
-   * [Mariana Azevedo](factsheets/mariana_azevedo.md) (PO)
-   * [Nuno Jesus](factsheets/nuno_jesus.md) (SM)
-   * [David Fang](factsheets/david_fang.md)
-   * [Frederico Lopes](factsheets/frederico_lopes.md)
-   * [José Ribeiro](factsheets/jose_ribeiro.md)
-   * [Pedro Correia](factsheets/pedro_correia.md)
+ * [Team 3](factsheets/t3/team3.md)
+   * [Mariana Azevedo](factsheets/t3/mariana_azevedo.md) (PO)
+   * [Nuno Jesus](factsheets/t3/nuno_jesus.md) (SM)
+   * [David Fang](factsheets/t3/david_fang.md)
+   * [Frederico Lopes](factsheets/t3/frederico_lopes.md)
+   * [José Ribeiro](factsheets/t3/jose_ribeiro.md)
+   * [Pedro Correia](factsheets/t3/pedro_correia.md)
 
 
