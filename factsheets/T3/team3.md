@@ -2,28 +2,24 @@
 
 ## Sprint 0
 
-Briefly state what you believe were the team's best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other teams, state explicitly that that was the case, not forgetting to explain what was your team's role in it.
-
-
 ### The four user stories that we are most proud of
 
-This can include user stories that the team has written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
+On this Sprint no user story was completed and they were all written and revised by the POs and estimated by the Scrum Masters.
 
 
 ### The four pull requests that we are most proud of
 
-This can include PRs that the team has implemented or reviewed during the sprint.
-
- * #3
- * #4
+No pull requests were made during this sprint.
 
 
 ### Four contributions of other types that we are most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+These are the four contributions from our team members that we are most proud of:
+
+ * Some members of the team helped creating a first version of the Domain Model and Product Vision, which were later improved by the POs
+ * The team members asked various questions to the clients during the meetings, which was important for a better understanding of what is expected of the teams to do
+ * The team's Scrum Master created a guide (INFO.md) to help the team have a better usage of GitHub 
+ * The team's PO took part in the creation of the user stories and other documents that will be important for the project in the long run
 
 
 

@@ -28,7 +28,7 @@ VAXPRED aims to improve the lives of:
 
 The “Azure AI | Machine Learning Studio” aims to help developers and data scientists creating their own machine learning models faster using the AI services available in the platform. Various tools are available to be used on the platform, like Jupyter Notebooks and Visual Studio Code, as well as open-source frameworks like TensorFlow and PyTorch. High-quality vision, speech, language, and decision-making AI models are also made available. The users have access to their Workspaces, where they can keep track of all the artifacts they create while performing experiments, to Feature Stores to create features, Registries that make it possible to share models with other people, and users can also store their data in the platform. 
 The “Azure Ai | Machine Learning Studio” bears similarities with the VAXPRED platform on the presence of workspaces, various tools and models to choose from and the ability to store data, as well as having been created with the intention of being used by scientists. However, unlike VAXPRED, Azure AI is not focused on the study of epitopes, lacking tools related to that.
-Source: https://azure.microsoft.com/en-us/solutions/ai/
+[Source.](https://azure.microsoft.com/en-us/solutions/ai/)
 
 ### Baidu's LinearFold
 
