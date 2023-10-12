@@ -6,7 +6,7 @@ In this first sprint, I have been part of initial product vision and domain mode
 
 ### The two user stories that I am most proud of
 
-No user stories have been added or reviews by me.
+No user stories have been added or reviewed by me.
 
 ### The two pull requests that I am most proud of
 
