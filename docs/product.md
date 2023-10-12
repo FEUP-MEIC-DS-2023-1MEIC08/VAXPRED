@@ -36,6 +36,26 @@ Baidu's LinearFold is an AI powered tool designed to predict the secondary struc
 Both LinearFold and Inno4Vac use advanced technology to accelerate vaccine research using large datasets. Inno4Vac incorporates scientific and technological advances into vaccine development, while LinearFold applies AI to predict RNA structures for virus research. Both initiatives highlight the importance of AI in addressing public health challenges. Inno4Vac incorporates AI for predictive modeling and data analysis in vaccine development, while LinearFold directly applies AI to RNA structure prediction.
 Sources: http://research.baidu.com/Blog/index-view?id=131, https://www.technologyreview.com/2020/03/11/905366/how-baidu-is-bringing-ai-to-the-fight-against-coronavirus/
 
+
+### Market IEDB
+
+
+https://www.iedb.org
+
+IEDB is a well-known resource for immunology and vaccine development. It provides information on immune epitopes, which are important for vaccine design.
+
+The Immune Epitope Database and Analysis Resource (IEDB) is a collaborative project led by researchers at the La Jolla Institute for Allergy and Immunology (LIAI), with generous support from the National Institute of Allergy and Infectious Diseases (NIAID), a division of the National Institutes of Health (NIH), and the Department of Health and Human Services (HHS). The primary aim of this project is to disseminate comprehensive information about immune epitopes, this way facilitating the development of new research tools, diagnostic techniques, vaccines, and therapeutic solutions.
+The IEDB is a repository of data concerned to antibody and T cell epitopes, encompassing various species, including humans, non-human primates, rodents, and other animals. A significant emphasis is placed on selecting data related to NIAID's Category A, B, and C priority pathogens, including Influenza, as well as emerging and re-emerging infectious diseases. This selecting effort is continuous and constantly updated. Furthermore, the database includes epitope information from other infectious agents, allergens, and autoantigens.
+The IEDB also houses valuable MHC binding data originating from a wide range of antigenic sources, as well as immune epitope data contributed by trusted databases such as FIMM (Brusic), HLA Ligand (Hildebrand), TopBank (Sette), and MHC binding (Buus). These databases and their investigators are significant contributors to the IEDB's wealth of knowledge.
+In addition to its database, the IEDB website offers an Analysis Resource, comprising a suite of tools designed for the prediction and analysis of epitopes.
+
+Similarities with VaxPred:
+
+- Catalogs experimental data on epitopes and T-cells studied in humans or other animal species, in the context of infectious diseases, allergies, transplants, etc.
+
+- It allows the researcher to pinput info about what they are experimenting (in this, case, about epitopes and their source, host,...) and returns a listo f epitopes, antigens, papers on the searched matter, the receptores and references.
+
+
 ## Domain Analysis
 
 An high-level class diagram with key domain concepts.
