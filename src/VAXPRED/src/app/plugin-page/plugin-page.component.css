@@ -1,0 +1,13 @@
+mat-card {
+    margin: 0 1em;
+    padding: 1em;
+    width: 80%;
+}
+
+mat-card-content {
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}

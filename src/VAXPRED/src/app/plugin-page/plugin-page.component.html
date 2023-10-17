@@ -1,5 +1,24 @@
-<div>
-    <h1>Plugin {{this.id}}</h1>
-    <h2>title: {{this.plugin.title}}</h2>
-    <h3>description: {{this.plugin.description}}</h3>
-</div>
+<mat-card>
+  <mat-chip-listbox aria-label="Tab selection">
+    <mat-chip>
+      Details
+    </mat-chip>
+    <mat-chip color="primary">
+      Info
+    </mat-chip>
+    <mat-chip color="accent">
+      Changelog
+    </mat-chip>
+  </mat-chip-listbox>
+
+  <mat-card-title>
+    <h1>{{ this.plugin.title }}</h1>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <h3>Plugin #{{ this.id }}</h3>
+    <hr />
+  </mat-card-subtitle>
+  <mat-card-content>
+    {{ this.plugin.description }}
+  </mat-card-content>
+</mat-card>
