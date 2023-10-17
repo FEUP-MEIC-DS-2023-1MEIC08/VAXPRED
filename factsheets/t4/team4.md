@@ -12,7 +12,7 @@ No pull requests were made during this sprint.
 
 ### Four contributions of other types that we are most proud of
 
-TODO
+Contributions from our PO with project vision, planning & initial organisation, from our SM with tasks discussion and assignment, and from our remaining members with brainstorming and setup.
 
 
 ## Sprint 1
