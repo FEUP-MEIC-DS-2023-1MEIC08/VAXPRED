@@ -20,14 +20,23 @@ class PluginRepository:
     def get_plugin_by_name(self, name: str) -> Plugin:
         return self.db.query(Plugin).filter(Plugin.name == name).first()
 
-
     def get_all_plugins(self) -> List[Plugin]:
         return self.db.query(Plugin).all()
-
 
     def delete_plugin_by_id(self, plugin_id : int) -> None:
       plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
       if plugin is not None:
         self.db.delete(plugin)
         self.db.commit()
+
+    def update_plugin(self, plugin_id: int, name: str, version: str) -> Plugin:
+      existing_plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
+
+      if existing_plugin is None:
+        return None
+
+      existing_plugin.name = name
+      existing_plugin.version = version
+      self.db.commit()
+      return existing_plugin
 
