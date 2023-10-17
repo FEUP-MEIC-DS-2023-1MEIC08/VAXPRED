@@ -2,17 +2,17 @@ from typing import List
 from pydantic import BaseModel
 
 class UserCreate(BaseModel):
-    name: str
+    username: str
     email: str
 
 class UserUpdate(BaseModel):
-    name:str
+    username:str
     email: str
 
 class UserResponse(BaseModel):
     id: int
-    name: str
-    version: str
+    username: str
+    email: str
 
 class UserListResponse(BaseModel):
-    plugins: List[UserResponse]
+    users: List[UserResponse]
