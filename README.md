@@ -47,3 +47,4 @@ Link to the factsheets of each team and of each team-member. For example:
   * [Pedro Moreira](factsheets/t4/pedro_moreira.md)
   * [Rodrigo Figueiredo](factsheets/t4/rodrigo_figueiredo.md)
   * [Juan Ignacio Medone](factsheets/t4/juan_medone.md)
+  * [João Félix](factsheets/t4/joao_felix.md)
