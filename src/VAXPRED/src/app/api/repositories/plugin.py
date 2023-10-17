@@ -1,7 +1,7 @@
 from typing import List
 
 from sqlalchemy.orm import Session
-from models.plugin import Plugin
+from models import Plugin
 
 class PluginRepository:
     def __init__(self, db: Session):
