@@ -45,11 +45,9 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
 def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
 
-    existing_plugin = plugin_repository.get_plugin_by_id(plugin_id)
-    if existing_plugin is None:
+    updated_plugin = plugin_repository.update_plugin(plugin_id, plugin_update.name, plugin_update.version)
+
+    if updated_plugin is None:
         raise HTTPException(status_code=404, detail="Plugin not found")
 
-    existing_plugin.name = plugin_update.name
-    existing_plugin.version = plugin_update.version
-
-    return existing_plugin
+    return updated_plugin
