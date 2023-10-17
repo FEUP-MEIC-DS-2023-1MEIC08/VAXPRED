@@ -326,4 +326,3 @@ Used to track remote repositories.
 - `git remote update --prune` - removes local branches that had their corresponding remote branches deleted, basically cleaning your local repository.
 
 ---------------------------------------------------
-
