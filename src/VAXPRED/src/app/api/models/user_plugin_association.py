@@ -1,5 +1,5 @@
 from sqlalchemy import Table, Column, Integer, ForeignKey
-from ..database import Base
+from database import Base
 
 user_plugin_association = Table(
     'user_plugin_association',

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from ..database import get_db
-from ..repositories.plugin import PluginRepository
-from ..schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, PluginListResponse
+from database import get_db
+from repositories.plugin import PluginRepository
+from schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, PluginListResponse
 
 router = APIRouter()
 
