@@ -16,8 +16,10 @@ user_plugin_association_db = [
 # Route to list plugins associated with a user
 @router.get("/{user_id}/plugins/", response_model=List[Dict[str, int]])
 def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
-    user_plugins = [{"plugin_id": association["plugin_id"]} for association in db if association["user_id"] == user_id]
+    association_db = UserPluginRepository(db).get_list_dict()
+    user_plugins = [{"plugin_id": association["plugin_id"]} for association in association_db if association["user_id"] == user_id]
     return user_plugins
+
 
 # Route to associate a plugin with a user
 @router.post("/{user_id}/plugins/{plugin_id}/associate/")
