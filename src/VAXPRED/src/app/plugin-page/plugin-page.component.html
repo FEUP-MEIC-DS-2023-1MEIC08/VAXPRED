@@ -1,16 +1,4 @@
 <mat-card>
-  <mat-chip-listbox aria-label="Tab selection">
-    <mat-chip>
-      Details
-    </mat-chip>
-    <mat-chip color="primary">
-      Info
-    </mat-chip>
-    <mat-chip color="accent">
-      Changelog
-    </mat-chip>
-  </mat-chip-listbox>
-
   <mat-card-title>
     <h1>{{ this.plugin.title }}</h1>
   </mat-card-title>
@@ -21,4 +9,26 @@
   <mat-card-content>
     {{ this.plugin.description }}
   </mat-card-content>
+
+  <mat-chip-listbox aria-label="Tab selection">
+    <mat-chip (click)="selectTab('details')" [class.active]="selectedTab === 'details'">
+      Details
+    </mat-chip>
+    <mat-chip (click)="selectTab('info')" [class.active]="selectedTab === 'info'">
+      Info
+    </mat-chip>
+    <mat-chip (click)="selectTab('changelog')" [class.active]="selectedTab === 'changelog'">
+      Changelog
+    </mat-chip>
+  </mat-chip-listbox>
+
+  <div *ngIf="selectedTab === 'details'">
+    <h3>Details about {{ this.plugin.title }}</h3>
+  </div>
+  <div *ngIf="selectedTab === 'info'">
+    <h3>Information about {{ this.plugin.title }}</h3>
+  </div>
+  <div *ngIf="selectedTab === 'changelog'">
+    <h3>Changelog</h3>
+  </div>
 </mat-card>
