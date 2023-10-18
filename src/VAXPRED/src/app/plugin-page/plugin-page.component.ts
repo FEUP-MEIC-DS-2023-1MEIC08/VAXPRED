@@ -10,7 +10,7 @@ import { PluginService } from '../services/plugin.service';
 })
 export class PluginPageComponent {
   id: number = 0;
-  selectedTab: string = 'details'; // Default selected tab
+  selectedTab: number = 0;
 
   plugin : Plugin = new Plugin(0, "", "");
   constructor(private route: ActivatedRoute, private service: PluginService) {}
@@ -20,9 +20,5 @@ export class PluginPageComponent {
       this.id = params['id'];
       this.plugin = this.service.getPlugin(this.id);
     });
-  }
-  
-  selectTab(tab: string): void {
-    this.selectedTab = tab;
   }
 }
