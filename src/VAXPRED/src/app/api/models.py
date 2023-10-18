@@ -9,6 +9,7 @@ user_plugin_association = Table(
     Column('plugin_id', Integer, ForeignKey('plugins.id'))
 )
 
+
 class Plugin(Base):
     __tablename__ = 'plugins'
     id = Column(Integer, primary_key=True, index=True)
