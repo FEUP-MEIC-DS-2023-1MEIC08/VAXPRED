@@ -18,7 +18,6 @@ def get_users(db: Session = Depends(get_db)):
 def get_user(user_id: int, db: Session = Depends(get_db)):
     user_repository = UserRepository(db)
     user = user_repository.get_user_by_id(user_id)
-    user = next((user for user in db if user.id == user_id), None)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
     return user

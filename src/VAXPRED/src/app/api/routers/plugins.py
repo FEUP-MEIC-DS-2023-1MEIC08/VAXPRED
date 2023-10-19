@@ -36,7 +36,12 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
     if existing_plugin:
         raise HTTPException(status_code=400, detail="Plugin with this name already exists")
 
-    new_plugin = plugin_repository.create_plugin(name=plugin.name, version=plugin.version)
+    new_plugin = plugin_repository.create_plugin(
+      name=plugin.name,
+      version=plugin.version,
+      description=plugin.description,
+      developer = plugin.developer
+    )
     return new_plugin
 
 
@@ -45,7 +50,13 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
 def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
 
-    updated_plugin = plugin_repository.update_plugin(plugin_id, plugin_update.name, plugin_update.version)
+    updated_plugin = plugin_repository.update_plugin(
+      plugin_id,
+      name = plugin_update.name,
+      version = plugin_update.version,
+      description = plugin_update.description,
+      developer = plugin_update.developer
+    )
 
     if updated_plugin is None:
         raise HTTPException(status_code=404, detail="Plugin not found")

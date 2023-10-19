@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Table
+from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime, text
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -14,9 +14,12 @@ class Plugin(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False, unique=True, index=True)
     version = Column(String, nullable=False)
+    description = Column(String, nullable = False)
+    developer = Column(String, nullable = False)
+    release_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
+    last_update_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
-
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True, index=True)
