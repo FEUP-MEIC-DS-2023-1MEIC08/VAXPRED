@@ -6,56 +6,12 @@ mat-card {
     flex-direction: column;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 mat-card-content {
     padding: 0;
 }
 
 h1 {
     margin: 0;
-}
-
-.tab-menu {
-    width: 70%;
-}
-
-.right-menu {
-    width: 30%;
-    margin: 0;
-}
-
-.right-menu .categories,
-.right-menu .more-info {
-    /* border: 1px solid #ccc; */
-    border: none;
-    box-shadow: none;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.right-menu .categories h3 {
-    font-size: 16px;
-    margin-top: 0;
-}
-
-.right-menu .more-info h3 {
-    font-size: 16px;
-    margin-top: 0;
-}
-
-.right-menu .categories mat-list-item {
-    padding: 5px 0;
-}
-
-.right-menu .more-info p {
-    font-size: 14px;
-    margin: 0;
-    color: #555;
 }
 
 hr.solid{
