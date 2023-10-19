@@ -6,8 +6,11 @@
     <h3>Plugin #{{ this.id }}</h3>
     <hr />
   </mat-card-subtitle>
-  <div class="menu">
-    <div class="tab-menu">
+  <!-- <div class="menu"> -->
+  <div fxLayout="row">
+
+    <!-- <div class="tab-menu"> -->
+    <div fxLayout="column">
       <mat-tab-group [(selectedIndex)]="selectedTab" id="plugin-menu">
         <mat-tab label="Description">
           <ng-template matTabContent>
@@ -46,8 +49,9 @@
         </mat-tab>
       </mat-tab-group>
     </div>
-    <hr class="solid">
-    <div class="right-menu">
+    <!-- <hr class="solid"> -->
+    <!-- <div class="right-menu"> -->
+    <div fxLayout="column">
       <mat-card class="categories">
         <mat-card-title>
           <h3>Categories</h3>
@@ -60,7 +64,7 @@
           </mat-list>
         </mat-card-content>
       </mat-card>
-    <hr class="solid">
+      <!-- <hr class="solid" id="middle-line"> -->
       <mat-card class="more-info">
         <mat-card-title>
           <h3>More Info</h3>
