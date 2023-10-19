@@ -28,8 +28,8 @@ Link to the factsheets of each team and of each team-member. For example:
   * [Henrique Silva](factsheets/t1/henrique_silva.md)
   * [José Luís Rodrigues](factsheets/t1/jose_rodrigues.md)
 * [Team 2](factsheets/t2/team2.md)
-  * [André Morais](factsheets/t2/andre_morais.md) PO
-  * [Eduardo Ramos](factsheets/t2/eduardo_ramos.md) SM
+  * [André Morais](factsheets/t2/andre_morais.md) (PO)
+  * [Eduardo Ramos](factsheets/t2/eduardo_ramos.md) (SM)
   * [André Soares](factsheets/t2/andre_soares.md)
   * [Aníbal Ferreira](factsheets/t2/anibal_ferreira.md)
   * [João Araújo](factsheets/t2/joao_araujo.md)
@@ -42,7 +42,7 @@ Link to the factsheets of each team and of each team-member. For example:
   * [José Ribeiro](factsheets/t3/jose_ribeiro.md)
   * [Pedro Correia](factsheets/t3/pedro_correia.md)
 * [Team 4](factsheets/t4/team4.md)
-  * [Martin Henriques](factsheets/t4/martin_henriques.md) (PO)
+  * [Martim Henriques](factsheets/t4/martim_henriques.md) (PO)
   * [Fernando Rocha](factsheets/t4/fernando_rocha.md) (SM)
   * [Pedro Moreira](factsheets/t4/pedro_moreira.md)
   * [Rodrigo Figueiredo](factsheets/t4/rodrigo_figueiredo.md)
