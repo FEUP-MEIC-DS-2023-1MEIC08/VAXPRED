@@ -31,7 +31,9 @@ h1 {
 
 .right-menu .categories,
 .right-menu .more-info {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    border: none;
+    box-shadow: none;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -56,3 +58,6 @@ h1 {
     color: #555;
 }
 
+hr.solid{
+    border-top: 2px solid #bbb;
+}
