@@ -31,8 +31,10 @@ def associate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(ge
 # Route to disassociate a plugin from a user
 @router.delete("/{user_id}/plugins/{plugin_id}/disassociate/")
 def disassociate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(get_db)):
-    if {"user_id": user_id, "plugin_id": plugin_id} not in user_plugin_association_db:
+    association = UserPluginRepository(db)
+    association_db = UserPluginRepository(db).get_list_dict()
+    if {"user_id": user_id, "plugin_id": plugin_id} not in association_db:
         raise HTTPException(status_code=404, detail="Association not found")
 
-    user_plugin_association_db.remove({"user_id": user_id, "plugin_id": plugin_id})
+    association.delete_association(user_id, plugin_id)
     return {"message": "Association removed successfully"}
