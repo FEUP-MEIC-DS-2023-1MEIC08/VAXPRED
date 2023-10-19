@@ -26,11 +26,11 @@ class UserPluginRepository:
         except Exception:
             raise HTTPException(status_code=404, detail="Could not add plugin.")
     
-    def delete_association(self, user_id: int, plugin_id: int) -> User:        
-        query = text("DELETE FROM user_plugin_association WHERE user_id = :user_id AND plugin_id = :plugin_id")
-        params = {'user_id': user_id, 'plugin_id': plugin_id}
+    def delete_association(self, user_id: int, plugin_id: int) -> User:  
+        user = self.db.query(User).filter(User.id == user_id).first()     
+        plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
         try:
-            self.db.execute(query, params)
+            user.plugins.remove(plugin)
             self.db.commit()
         except Exception:
             self.db.rollback()
