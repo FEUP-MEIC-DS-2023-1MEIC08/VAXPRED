@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { PluginPageComponent } from './plugin-page/plugin-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     FormsModule,
     ReactiveFormsModule,
     MatTabsModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
