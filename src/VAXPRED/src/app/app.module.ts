@@ -15,6 +15,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { PluginPageComponent } from './plugin-page/plugin-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
+import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-page-menu.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatListModule } from '@angular/material/list';
     WorkspaceComponent,
     SideMenuComponent,
     PluginPageComponent,
+    PluginPageMenuComponent,
   ],
   imports: [
     BrowserModule,
