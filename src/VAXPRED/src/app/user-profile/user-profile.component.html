@@ -1,37 +1,62 @@
-<c-container>
+<c-container fluid class="pt-4 pb-4">
+  Navbar
+</c-container>
+<c-container fluid class="ps-4 pe-4">
   <c-row>
-    <c-col>1 of 2</c-col>
-    <c-col>2 of 2</c-col>
+    <c-col>
+      <c-card class="mb-4">
+        <c-card-body>
+          <c-container>
+            <c-row>
+              <c-col sm="1">
+                <c-avatar size="xl" color="secondary" status="success">JD</c-avatar>
+              </c-col>
+              <c-col sm="6" class="ms-2">
+                <h2 class="mb-0">John Doe</h2>
+                <p class="fw-medium m-0">Senior Researcher</p>
+                <p class="m-0">Faculdade de Engenharia da Universidade do Porto</p>
+              </c-col>
+              <c-col sm="2">
+                <button class="position-absolute end-0 me-3" cButton color="primary" variant="outline" i18n>Edit Profile</button>
+              </c-col>
+            </c-row>
+          </c-container>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col></c-col>
   </c-row>
   <c-row>
-    <c-col>1 of 3</c-col>
-    <c-col>2 of 3</c-col>
-    <c-col>3 of 3</c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          <h2 class="mb-0" i18n="@@myPlugins">My Plugins</h2>
+        </c-card-header>
+        <c-card-body>
+          List
+        </c-card-body>
+        <c-card-footer>
+          <div class="mt-2">
+            <c-pagination aria-label="Page navigation example">
+              <li cPageItem [disabled]="true">
+                <span cPageLink>Previous</span>
+              </li>
+              <li cPageItem>
+                <a cPageLink>1</a>
+              </li>
+              <li cPageItem [active]="true">
+                <span cPageLink>2</span>
+              </li>
+              <li cPageItem>
+                <a cPageLink>3</a>
+              </li>
+              <li cPageItem>
+                <a cPageLink>Next</a>
+              </li>
+            </c-pagination>
+          </div>
+        </c-card-footer>
+      </c-card>
+    </c-col>
   </c-row>
 </c-container>
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
-<button mat-raised-button>Basic</button>
-<button mat-raised-button color="primary">Primary</button>
-<button mat-raised-button color="accent">Accent</button>
-<button mat-raised-button color="warn">Warn</button>
-<button mat-raised-button disabled>Disabled</button>
-
-<button cButton color="success">Success</button>
