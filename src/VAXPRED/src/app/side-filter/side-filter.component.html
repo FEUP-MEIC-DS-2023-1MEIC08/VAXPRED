@@ -1,0 +1,23 @@
+<!-- Side bar filter -->
+
+<!-- <button (click)="sortItems()">Sort Alphabetically</button> -->
+<h4>Order By</h4>
+<label>
+    <input type="radio" [(ngModel)]="sortingOption" [value]="'aToZ'" (change)="toggleSorting()"> Ascending (A-Z)
+</label>
+<label>
+    <input type="radio" [(ngModel)]="sortingOption" [value]="'zToA'" (change)="toggleSorting()"> Descending (Z-A)
+</label>
+
+<button (click)="resetListToInitialFormat()" *ngIf="isRadioSelected">Reset to Initial Format</button>
+
+<h4>Filter By</h4>
+<label *ngFor="let item of toolTypes">
+    <input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+</label>
+  
+<ul>
+    <li *ngFor="let item of items">
+      {{ item.title }} - {{ item.description }} - {{ item.type }}
+    </li>
+  </ul>

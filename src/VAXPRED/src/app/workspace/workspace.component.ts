@@ -10,7 +10,7 @@ import { WorkspaceService } from '../workspace.service';
 })
 export class WorkspaceComponent {
   id: number = 0;
-  workspace : Workspace = new Workspace(0, "", "");
+  workspace : Workspace = new Workspace(0, "", "", "");
   constructor(private route: ActivatedRoute, private service: WorkspaceService) {}
 
   ngOnInit() {
