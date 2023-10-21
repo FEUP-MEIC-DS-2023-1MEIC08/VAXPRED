@@ -1,0 +1,40 @@
+/* Sidebar Container */
+:host .sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Heading Styles */
+:host h4 {
+    border-top: 1px solid #000000;
+    margin-top: 0;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size:x-large;
+}
+
+/* Radio Buttons and Labels */
+:host label {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Checkboxes and Labels */
+:host label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Reset Button */
+:host button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: medium;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
