@@ -13,5 +13,22 @@ import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  }
 })
 export class UserProfileComponent {
 
+  user = {
+    name: 'John Doe',
+    title: 'Senior Researcher',
+  };
+
+  editProfile() {
+    // Lógica de edição do perfil
+  }
+
+  goToNextPage() {
+    // Lógica para ir para a próxima página
+  }
+
+  goToPreviousPage() {
+    // Lógica para ir para a página anterior
+  }
+
   constructor() { }
 }
