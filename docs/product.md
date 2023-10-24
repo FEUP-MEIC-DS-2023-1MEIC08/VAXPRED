@@ -62,12 +62,9 @@ Within our store, users will find a wealth of information about each plugin, inc
 
 ### GitHub Profile
 
-[GitHub](https://github.com)'s repository overview, where developers showcase their projects in boxes, has revolutionized how users present their work. In our project, we're bringing this same concept to user profiles, specifically focusing on the list of plugins installed. Much like GitHub repositories, our user profiles will feature neatly organized boxes, displaying the plugins users have installed. This approach offers several key advantages:
+[GitHub](https://github.com)'s repository overview, where developers showcase their projects in boxes, has revolutionized how users present their work. In our project, we're bringing this same concept to user profiles, specifically focusing on the list of plugins installed. Much like GitHub repositories, our user profiles will feature neatly organized boxes, displaying the plugins users have installed.
 
-- Visual Appeal: Users' profiles become visual narratives of their choices and interests, enhancing the aesthetic appeal and usability of the platform. 
-- Efficient Navigation: Just as GitHub's layout simplifies navigation, our design ensures easy access to essential information, improving the overall user experience.
-
-By adopting this approach, our project takes user personalization and engagement to the next level, transforming user profiles into dynamic, data-rich showcases of users' plugin choices and preferences.
+This approach offers several key advantages, such as visual appeal, enhancing the aesthetic appeal and usability of the platform, and efficient navigation and management, where as GitHub's layout simplifies navigation, our design ensures easy access to essential information and easy control to add and remove plugins, improving the overall user experience.
 
 ## Domain Analysis
 
