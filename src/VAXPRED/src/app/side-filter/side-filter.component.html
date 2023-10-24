@@ -1,0 +1,28 @@
+<aside class="filter-section">
+    <h4>Order By</h4>
+    <label>
+        <input type="radio" [(ngModel)]="sortingOption" [value]="'aToZ'" (change)="toggleSorting()"> Ascending (A-Z)
+    </label>
+    <label>
+        <input type="radio" [(ngModel)]="sortingOption" [value]="'zToA'" (change)="toggleSorting()"> Descending (Z-A)
+    </label>
+    <button (click)="resetListToInitialFormat()" *ngIf="isRadioSelected">Reset to Initial Format</button>
+
+    <h4>Filter By</h4>
+    <label *ngFor="let item of toolTypes">
+        <input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+    </label>
+</aside>
+ 
+<main class="results-section">
+    <h1>Search Results</h1>
+    
+    <div class="results-grid">
+        <!-- Display search results -->
+        <div *ngFor="let item of items" class="result-item">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.description }}</p>
+            <p>{{ item.type }}</p>
+        </div> 
+    </div>
+</main>

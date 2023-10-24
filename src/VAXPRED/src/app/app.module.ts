@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { SideFilterComponent } from './side-filter/side-filter.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     UserProfileComponent,
     WorkspaceComponent,
     SideMenuComponent,
+    SideFilterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
