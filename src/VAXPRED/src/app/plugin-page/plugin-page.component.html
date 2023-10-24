@@ -1,10 +1,4 @@
 <mat-card>
-  <mat-card-title>
-    <h1>{{ this.plugin.title }}</h1>
-  </mat-card-title>
-  <mat-card-subtitle>
-    <h3>Plugin #{{ this.id }}</h3>
-    <hr />
-  </mat-card-subtitle>
+  <app-plugin-page-header [plugin]="plugin"></app-plugin-page-header>
   <app-plugin-page-menu [selectedTab]="selectedTab" [plugin]="plugin"></app-plugin-page-menu>
 </mat-card>
