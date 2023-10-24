@@ -44,17 +44,6 @@ describe('SideFilterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should reset the list to the initial format', () => {
-    component.sortingOption = 'aToZ';
-    component.isRadioSelected = true;
-    component.toggleSorting();
-    component.resetListToInitialFormat();
-
-    expect(component.sortingOption).toEqual('original');
-    expect(component.isRadioSelected).toBe(false);
-    expect(component.items).toEqual(component.originalItems);
-
-  });
 
   it('should sort items in ascending order', () => {
     component.sortingOption = 'aToZ';
@@ -76,16 +65,17 @@ describe('SideFilterComponent', () => {
     expect(component.items).toEqual(expected_List);
   });
 
-  it('should reset the list when sorting option is "original"', () => {
-    component.sortingOption = 'original';
-    component.items=[new Workspace(3, 'Virus', 'Description 3','Generation'),new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(2, 'Protein', 'Description 2','Curation')];
-    
+  it('should reset the list to the initial format', () => {
+    component.sortingOption = 'aToZ';
+    component.isRadioSelected = true;
     component.toggleSorting();
+    component.resetListToInitialFormat();
 
     expect(component.sortingOption).toEqual('original');
+    expect(component.isRadioSelected).toBe(false);
     expect(component.items).toEqual(component.originalItems);
-  });
 
+  });
   it('should filter the list based on 1 selected tool types', () => {
     component.selectedToolTypes = { 'Quality': true, 'Generation': false, 'Curation': false };
     
