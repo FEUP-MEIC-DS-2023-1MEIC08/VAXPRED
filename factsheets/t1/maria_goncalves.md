@@ -39,7 +39,7 @@ No pull requests were made be me during this sprint, with the exception of addin
 * Writing user stories with the other POs.
 * Defining the definitions of Ready and Done with the other POs.
 
-We managed to prepare good user stories for the next sprint's planning, unlike what happened last time.
+We managed to prepare good user stories for the next sprint's planning.
 
 
 ## Sprint 2
