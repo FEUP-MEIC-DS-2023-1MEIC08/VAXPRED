@@ -18,8 +18,21 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this sprint, I have been enrolled in the development of the feature related to the implementation of the side filter for the plugin store page (Issue #66 Create the store's side filters). Acceptance tests were written and implemented for the item.
 
+### The two user stories that I am most proud of
+
+- [#66 Create the store's side filters](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/66)
+- [#48 Acceptance tests for the plugin store grid are created](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/48)
+
+### The two pull requests that I am most proud of
+
+- [#86 T3 feature side filter & home page](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/86)
+
+### Two contributions of other types that I am most proud of
+
+Even though it may not be a contribution, compreenhending the way to test the feature was one of the most proud moments of this sprint.
+Beside that the merge of page schema with feature.
 
 ## Sprint 2
 
