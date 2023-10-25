@@ -17,7 +17,10 @@ export class UserProfileComponent {
   user = {
     name: 'John Doe',
     title: 'Senior Researcher',
+    org: "Faculdade de Engenharia da Universidade do Porto"
   };
+
+  user_plugins = [];
 
   editProfile() {
     // Lógica de edição do perfil

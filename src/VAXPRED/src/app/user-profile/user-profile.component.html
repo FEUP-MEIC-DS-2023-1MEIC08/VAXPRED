@@ -12,9 +12,9 @@
                 <c-avatar size="xl" color="secondary" status="success">JD</c-avatar>
               </c-col>
               <c-col sm="6" class="ms-2">
-                <h2 class="mb-0">John Doe</h2>
-                <p class="fw-medium m-0">Senior Researcher</p>
-                <p class="m-0">Faculdade de Engenharia da Universidade do Porto</p>
+                <h2 class="mb-0">{{user.name}}</h2>
+                <p class="fw-medium m-0">{{user.title}}</p>
+                <p class="m-0">{{user.org}}</p>
               </c-col>
               <c-col sm="2">
                 <button class="position-absolute end-0 me-3" cButton color="primary" variant="outline" i18n>Edit Profile</button>
@@ -174,7 +174,7 @@
               </c-col>
             </c-row>
           </c-container>
-          
+
         </c-card-body>
         <c-card-footer>
           <div class="mt-2">
