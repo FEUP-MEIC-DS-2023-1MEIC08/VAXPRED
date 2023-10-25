@@ -15,5 +15,9 @@ export class PluginPageComponent {
     public dialogRef: MatDialogRef<PluginPageComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent> }
   ) {}
+
+  closeDialog() {
+    this.data.dialogRef.close();
+  }
 }
 
