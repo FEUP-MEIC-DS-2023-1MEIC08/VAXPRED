@@ -17,7 +17,20 @@ Contributions from our PO with project vision, planning & initial organisation, 
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The four user stories that we are most proud of
+
+We are proud of one user story that consists of several tasks which was the sole focus of our team during this sprint.
+
+- [(#34) As a researcher, I want to have a profile page, so that I can see all the plugins I am using.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/34)
+
+### The four pull requests that we are most proud of
+
+- [(#90) User profile page (work by Team 4)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/90)
+
+### Four contributions of other types that we are most proud of
+
+- We were pioneers in creating a common Figma project for everyone to share their UI Mockups in.
+- Communicating with other teams in order to reach agreements regarding UI style & components, as well as integrating the API by Team 2.
 
 
 ## Sprint 2
