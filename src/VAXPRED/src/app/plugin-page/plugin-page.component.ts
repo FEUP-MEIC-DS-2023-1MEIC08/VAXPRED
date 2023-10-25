@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Plugin } from '../plugin';
-import { ActivatedRoute } from '@angular/router';
-import { PluginService } from '../services/plugin.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-plugin-page',
@@ -9,16 +8,16 @@ import { PluginService } from '../services/plugin.service';
   styleUrls: ['./plugin-page.component.css']
 })
 export class PluginPageComponent {
-  id: number = 0;
   selectedTab: number = 0;
 
-  plugin : Plugin = new Plugin(0, "", "");
-  constructor(private route: ActivatedRoute, private service: PluginService) {}
+  plugin: Plugin = new Plugin(0, "Plugin Title", "Plugin Description");
+  constructor(
+    public dialogRef: MatDialogRef<PluginPageComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent> }
+  ) {}
 
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.id = params['id'];
-      this.plugin = this.service.getPlugin(this.id);
-    });
+  closeDialog() {
+    this.data.dialogRef.close();
   }
 }
+

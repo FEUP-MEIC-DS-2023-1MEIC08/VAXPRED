@@ -17,6 +17,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-page-menu.component';
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plug
     ReactiveFormsModule,
     MatTabsModule,
     MatListModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
