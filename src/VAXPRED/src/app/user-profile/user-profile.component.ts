@@ -11,6 +11,7 @@ import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  }
     GridModule, ButtonModule, AvatarModule, CardModule, PaginationModule
   ],
 })
+
 export class UserProfileComponent {
 
   user = {
@@ -28,6 +29,10 @@ export class UserProfileComponent {
 
   goToPreviousPage() {
     // Lógica para ir para a página anterior
+  }
+
+  openPluginDetails(){
+
   }
 
   constructor() { }
