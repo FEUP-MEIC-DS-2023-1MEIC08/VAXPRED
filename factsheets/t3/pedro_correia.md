@@ -23,8 +23,19 @@ I helped in reviewing the initial stages of the conceptual model and asked quest
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+As a developer, in this sprint I contributed in making the feature related to the implementation of the side filter for the plugin stor page, issue https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/66 . Acceptance tests were written and implemented for them.
 
+### The two user stories that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/66
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/48
+  
+### The two pull requests that I am most proud of
+
+I did no pull request.
+
+### Two contributions of other types that I am most proud of
+
+Along with David Fang, understanding how to test the feature we implemented was the proudest moment for myself in this sprint. I also contributed in the merge of the page schema ( issue https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/48 ) with the side filter
 
 ## Sprint 2
 
