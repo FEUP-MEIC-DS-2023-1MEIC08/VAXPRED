@@ -9,15 +9,15 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class PluginPageComponent {
   selectedTab: number = 0;
-
-  plugin: Plugin = new Plugin(0, "Plugin Title", "Plugin Description");
+  plugin: Plugin = new Plugin(0, '', '');
   constructor(
     public dialogRef: MatDialogRef<PluginPageComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent> }
-  ) {}
+    @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent, any>; plugin: Plugin }
+  ) {
+    this.plugin = data.plugin;
+  }
 
   closeDialog() {
     this.data.dialogRef.close();
   }
 }
-
