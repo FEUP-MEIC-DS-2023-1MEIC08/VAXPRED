@@ -8,11 +8,6 @@ def test_list_plugins():
     assert response.status_code == 200
     assert "plugins" in response.json()
 
-def test_get_plugin_by_id():
-    response = client.get("/plugins/1")
-    assert response.status_code == 200
-    assert "id" in response.json()
-
 def test_create_plugin():
     plugin_data = {
         "name": "New Plugin",
@@ -24,3 +19,8 @@ def test_create_plugin():
     assert response.status_code == 200
     assert "id" in response.json()
 
+
+def test_get_plugin_by_id():
+  response = client.get("/plugins/1")
+  assert response.status_code == 200
+  assert "id" in response.json()

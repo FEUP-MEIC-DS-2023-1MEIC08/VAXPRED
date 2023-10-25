@@ -8,11 +8,6 @@ def test_list_users():
     assert response.status_code == 200
     assert "users" in response.json()
 
-def test_get_user_by_id():
-    response = client.get("/users/1")
-    assert response.status_code == 200
-    assert "id" in response.json()
-
 def test_create_user():
     user_data = {
         "username": "NewUser",
@@ -22,3 +17,7 @@ def test_create_user():
     assert response.status_code == 200
     assert "id" in response.json()
 
+def test_get_user_by_id():
+  response = client.get("/users/1")
+  assert response.status_code == 200
+  assert "id" in response.json()
