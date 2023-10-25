@@ -18,15 +18,10 @@ export class UserProfileComponent implements OnInit {
     private userProfileService: UserProfileService
   ) { }
 
-  // user = {
-  //   name: 'John Doe',
-  //   title: 'Senior Researcher',
-  //   org: "Faculdade de Engenharia da Universidade do Porto"
-  // };
   user = {
-    name: 'Loading',
-    title: 'Loading',
-    org: "Loading"
+    name: 'Loading...',
+    title: '',
+    org: ''
   }
 
   user_plugins = [];
