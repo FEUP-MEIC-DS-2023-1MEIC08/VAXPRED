@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 0px;
+  background-color: #fff;
+  height: 40px;
+  color: #333;
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to right, #3980dc, #31a23a) 1;
+  --nav-link-gap: 50px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--nav-link-gap);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.nav-links a:not(:last-child):not(:nth-last-child(2)):after{
+    /*border-right: 1px solid #ccc;*/
+    content: '';
+    position: absolute;
+    right: calc((0px - var(--nav-link-gap) / 2));
+    width: 1px;
+    height: 20px;
+    background: #ccc;
+}
+
+.user-profile img {
+  width: 40px; /* Adjust the profile picture size as needed */
+  border-radius: 50%;
+}
