@@ -28,7 +28,7 @@ It was difficult to compreend how to divide the work throught the sprints and to
 * As a researcher, I want to have access to the plugin's FAQ, so that I can clarify some common questions about the plugin.#83 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/83)
 * As a researcher, I want to see the dependencies of a plugin, so that I can be aware if a specific plugin is compatible with the tools on my workspace.#80 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/80)
 
-The reason why is because I believe that the implementation of this features will make the user experience more easier.
+The reason why is because I believe that the implementation of this features will make the user experience easier.
 
 ### The two pull requests that I am most proud of
 
