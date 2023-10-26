@@ -30,7 +30,7 @@ Not a user story, but the [Issue #67](https://github.com/FEUP-MEIC-DS-2023-1MEIC
 
 ### The two pull requests that I am most proud of
 
-I did not create pull requests this sprint.
+I did not create pull requests this sprint but I reviwed the Nav bar pull request toghether with Nuno.
 
 ### Two contributions of other types that I am most proud of
 
