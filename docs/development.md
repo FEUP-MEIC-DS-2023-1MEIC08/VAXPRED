@@ -2,12 +2,10 @@
 
 ## Architecture and design
 
-This deployment diagram represents the selected technologies by the team/imposed by the client and how they interact with eachother:
+This deployment diagram represents the selected technologies by the team/imposed by the client and how they interact with each other:
 
 ![deployment_diagram](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/deployment_diagram.drawio.png)
 
-Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different. 
-Identify main risks and justify the most important choices to show the soundness of the architecture and design that you have implemented or plan to implement.
 
 
 ## Technology
@@ -20,8 +18,6 @@ The main technologies used are:
 
 All of the technologies used by the teams were proposed by the client. The small summary next to each of the technologies names acts as an explanation why the client chose it for the development of the project.
 
-Identify the main technologies, languages and frameworks used. Clearly identify which ones were restrictions imposed by the client and which were your own choices. Justify your choices and explain in your own words the motivation for the restrictions of your client.
-
 The prototype implemented in Sprint 0 consisted of a simple plugin page, with the possibility to search for another workspaces. Besides that, it has access to the plugin's description, requirements, changelog and extra items. Besides that, the plugin still has a designated space for its (future) categories and hpw to contact the supplier.
 
 
@@ -29,7 +25,6 @@ The prototype implemented in Sprint 0 consisted of a simple plugin page, with th
 
 The guidelines for the project are present here: https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/GUIDELINES.md .
 
-Explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment. 
 
 ## Security concerns
 
@@ -38,7 +33,6 @@ Since the project mainly consists in the construction of a plugin store, there w
 
 ## Quality assurance
 
-Describe which tools are used for quality assurance and link to relevant resources. Namely, provide access to reports for coverage and mutation analysis, static analysis, and other tools that may be used for QA.
 
 Acceptance tests were made by the teams to test if the final product of each user story made goes accordingly to what was expected (based on the description of the user story).
 
