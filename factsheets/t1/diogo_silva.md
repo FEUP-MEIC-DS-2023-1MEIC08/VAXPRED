@@ -2,7 +2,7 @@
 
 ## Sprint 0
 
-In this first sprint, I have been part of initial product vision and domain model building, which were better discussed and implemented between the PO's and the SM's.
+- I have been part of initial product vision and domain model building, which were better discussed and implemented between the PO's and the SM's.
 
 ### The two user stories that I am most proud of
 
@@ -24,7 +24,7 @@ No important pull requests have been made by me.
 
 ### The two pull requests that I am most proud of
 
-- I performed a single pull request which merges the `t1-test-plugin-page` branch to `t1` [[pull #91](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/91)].
+- I have performed a single pull request which merges the `t1-test-plugin-page` branch to `t1` [[pull #91](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/91)].
 
 ### Two contributions of other types that I am most proud of
 
