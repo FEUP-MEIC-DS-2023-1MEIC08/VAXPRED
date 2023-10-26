@@ -18,7 +18,31 @@ Review and monitor the accomplished work.
 
 
 ## Sprint 1
-... (repeat structure of the section for Sprint 0)
+At this sprint I was initially involved on the development of the mockups for the user profile page. Later, I started doing acceptance tests, getting some to work.
+I also took some time before starting the development to learn more about angular, to find out how to make the tests.
+
+### The two user stories that I am most proud of
+
+During this sprint I worked on the following user story:
+
+- [(#38) Create mockups for the researcher's profile.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/38)
+
+The whole team worked on this user story and all of us were proud about it since this user story included all the tasks our team needed to do in this sprint.
+
+- [(#52) Acceptance tests are created for the profile page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/52)
+
+I worked on developing the tests, I found the task challenging as I had never used the technology.
+
+### The two pull requests that I am most proud of
+
+- [(#90) User profile page (work by Team 4)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/90)
+
+The only pull request for this sprint was the one that merges all the work from our team into the dev branch.
+
+### Two contributions of other types that I am most proud of
+
+- I made myself available to every team member in order to help in what was necessary.
+- I helped assuring everything for this sprint was well organized. 
 
 ## Sprint 2
 
