@@ -38,9 +38,12 @@ In particular, I worked on the following:
 
 This is the team's pull request that merges all of our common work into the dev branch which will form the next release into main.
 
+- [(#30) Sprint 0 release](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/30)
+
 ### Two contributions of other types that I am most proud of
 
 - As a scrum master, I believe I did my job well in orienting and supporting my team in accomplishing their tasks. I provided organisation and kept everyone up to date with each other's progress. We kept the team's to-do list updated nad were always communicating with each other. I managed to get every one to meet before the closure of Sprint 1.
+- I also participated with other Scrum Masters in weighing user story efforts and discussing the product and sprint backlogs.
 
 ## Sprint 2
 
