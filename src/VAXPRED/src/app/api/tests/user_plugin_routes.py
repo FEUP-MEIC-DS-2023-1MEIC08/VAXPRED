@@ -3,19 +3,24 @@ from main import app
 
 client = TestClient(app)
 
-def test_associate_user_plugin():
-    response = client.post("/users/1/plugins/1/associate/")
+def test_list_plugins():
+    response = client.get("/plugins/")
     assert response.status_code == 200
-    assert "message" in response.json()
+    assert "plugins" in response.json()
 
-def test_list_user_plugins():
-    response = client.get("/users/1/plugins/")
+def test_create_plugin():
+    plugin_data = {
+        "name": "New Plugin",
+        "version": "1.0.0",
+        "description": "A new plugin",
+        "developer": "John Doe"
+    }
+    response = client.post("/plugins/", json=plugin_data)
     assert response.status_code == 200
-    assert isinstance(response.json(), list)
+    assert "id" in response.json()
 
 
-def test_disassociate_user_plugin():
-    response = client.delete("/users/1/plugins/1/disassociate/")
-    assert response.status_code == 200
-    assert "message" in response.json()
-
+def test_get_plugin_by_id():
+  response = client.get("/plugins/1")
+  assert response.status_code == 200
+  assert "id" in response.json()

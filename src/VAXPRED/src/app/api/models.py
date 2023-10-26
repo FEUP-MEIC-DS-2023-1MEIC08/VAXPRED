@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime, text
+from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime, text, UniqueConstraint
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -6,7 +6,8 @@ user_plugin_association = Table(
     'user_plugin_association',
     Base.metadata,
     Column('user_id', Integer, ForeignKey('users.id')),
-    Column('plugin_id', Integer, ForeignKey('plugins.id'))
+    Column('plugin_id', Integer, ForeignKey('plugins.id')),
+    UniqueConstraint('user_id', 'plugin_id', name='unique_user_plugin')
 )
 
 
