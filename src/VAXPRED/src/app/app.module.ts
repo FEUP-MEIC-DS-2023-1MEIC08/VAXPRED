@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UserProfileComponent } from './user-profile/user-profile.component';
-
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent,
+    WorkspaceComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,
