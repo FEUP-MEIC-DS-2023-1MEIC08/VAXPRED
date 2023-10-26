@@ -57,7 +57,7 @@ export class UserProfileComponent implements OnInit {
     // Lógica para ir para a página anterior
   }
 
-  openPluginDetails(){
+  onPageChange(){
 
   }
 }
