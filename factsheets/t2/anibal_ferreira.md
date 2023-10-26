@@ -18,8 +18,19 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this second sprint, I have been part of the integration of the web framework FastAPI as well as part of the creation and population of the database for the product.
 
+### The two user stories that I am most proud of
+
+In this sprint I was involved with user story #32. Even though we only had 1 user story assigned to our team in this sprint, I worked on 2 items #60 and #54 where I and André Soares developed the web routes regarding the relation between users and plugins as well as populating the plugins table, respectively.
+
+### The two pull requests that I am most proud of
+
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+
+In this sprint I also helped my team in the decision of which attributes we would need to store concerning users and plugins and helped populate the users table. 
 
 ## Sprint 2
 
