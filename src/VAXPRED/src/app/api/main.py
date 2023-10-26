@@ -8,7 +8,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    "http://localhost:4200",
+    "http://localhost:4200"
 ]
 
 
