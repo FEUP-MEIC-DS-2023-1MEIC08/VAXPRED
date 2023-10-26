@@ -5,8 +5,14 @@
   background-size: cover;
 }
 
-.plugin-row {
-  margin-bottom: 20px;
+.plugin-container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.plugin-container {
+  float: left;
 }
 
 .plugin-icon {

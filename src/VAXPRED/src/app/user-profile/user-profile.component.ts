@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  } from '@coreui/angular';
 
 import { UserProfileService } from '../user-profile.service';
@@ -10,7 +10,7 @@ import { UserProfileService } from '../user-profile.service';
   styleUrls: ['./user-profile.component.css'],
   standalone: true,
   imports: [
-    GridModule, ButtonModule, AvatarModule, CardModule, PaginationModule
+    GridModule, ButtonModule, AvatarModule, CardModule, PaginationModule, CommonModule
   ],
 })
 export class UserProfileComponent implements OnInit {
@@ -24,7 +24,7 @@ export class UserProfileComponent implements OnInit {
     org: ''
   }
 
-  user_plugins = [];
+  plugins: any[] = [];
 
   ngOnInit(): void {
     console.log("init");
@@ -35,6 +35,11 @@ export class UserProfileComponent implements OnInit {
       this.user.title = user['email'];
       this.user.org = user['email'];
     });
+
+    this.userProfileService.getUserPlugins(1).subscribe((data) => {
+      console.log(data);
+      this.plugins = data;
+    })
   }
 
   editProfile() {
