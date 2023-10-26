@@ -22,7 +22,17 @@ My main contributions of this sprint were acquiring information about the produc
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this sprint designed the UI and created a mockup for the Plugin Store (with Nuno) and I also implemented in Angular the main page for this store
+
+### The two user stories that I am most proud of
+
+Not a user story, but the [Issue #67](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/67) item
+
+### The two pull requests that I am most proud of
+
+I did not create pull requests this sprint.
+
+### Two contributions of other types that I am most proud of
 
 
 ## Sprint 2
