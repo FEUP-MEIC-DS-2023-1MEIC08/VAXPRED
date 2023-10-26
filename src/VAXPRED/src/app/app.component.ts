@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'VAXPRED';
-  API_URL = 'http://127.0.0.1:8000';
 }
