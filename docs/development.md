@@ -40,7 +40,7 @@ Since the project mainly consists in the construction of a plugin store, there w
 
 Describe which tools are used for quality assurance and link to relevant resources. Namely, provide access to reports for coverage and mutation analysis, static analysis, and other tools that may be used for QA.
 
-Acceptance tests were made by the teams to test
+Acceptance tests were made by the teams to test if the final product of each user story made goes accordingly to what was expected (based on the description of the user story).
 
 
 ## Metrics
