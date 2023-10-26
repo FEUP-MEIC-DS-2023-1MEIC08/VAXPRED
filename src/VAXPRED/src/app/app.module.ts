@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     SideMenuComponent,
     SideFilterComponent,
     HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
