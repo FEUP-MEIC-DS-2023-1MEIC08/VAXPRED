@@ -22,7 +22,7 @@ Identify the main technologies, languages and frameworks used. Clearly identify 
 
 Explain the prototype or base implementation that you have implemented in Sprint 0, and how that has informed the rest of the development.
 
-The prototype implemented in Sprint 0 consisted of a simple 
+The prototype implemented in Sprint 0 consisted of a simple plugin page, with the possibility to search for another workspaces. Besides that, it has access to the plugin's description, requirements, changelog and extra items. Besides that, the plugin still has a designated space for its (future) categories and hpw to contact the supplier.
 
 
 ##  Development guide
