@@ -2,35 +2,52 @@
 
 ## Sprint 0
 
-Briefly state what you believe were the team's best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other teams, state explicitly that that was the case, not forgetting to explain what was your team's role in it.
-
+During Sprint 0, the work was more concentradted on each team's PO, since this sprint's main objective was to have the first contact with the project, understand what was expected by the client and write user stories that translated that well enough, so that the developers could start working in sprint 1 as soons as it started. This teams PO participated in all the before-mentioned activities. The team's Scrum Master played a pivotal role in orienting the vertical prototype creation, as well as helping the PO understand better which first steps shoul first be taken.
 
 ### The four user stories that we are most proud of
 
-This can include user stories that the team has written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
+No user story was written by the entire team, as that was the four team's POs job, but the entire team helped the POs in getting a better understanding of how the work should start.
 
 
 ### The four pull requests that we are most proud of
 
-This can include PRs that the team has implemented or reviewed during the sprint.
-
- * #3
- * #4
+No pull requests were made during this sprint.
 
 
 ### Four contributions of other types that we are most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+* The entire team was always very available to help out when needed, as it was demonstraded during the first sprint 1 class, when the POs needed help to figure out how to write better user stories considering the change of path the project's objective had taken.
+* The team participated in the creation of the vertical prototype.
+* The team's PO was responsible for creating some user stories and helped to develop others.
+* The team's Scrum Master helped to orient the other teams' Scrum Masters to what work needed to be done.
 
 
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+During Sprint 0, the team was responsible for creating a plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO also worked with the other teams' POs in the creation of the next sprint's user stories.
 
+### The four user stories that we are most proud of
+
+* Create plugin page mockups.#62 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/62)
+* Create a plugin page.#40 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/40)
+* Create the tabs section of the plugin page.#61 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/61)
+* Acceptance tests are created for the plugin's page.#47 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/47)
+
+
+### The four pull requests that we are most proud of
+
+*
+*
+*
+*
+
+### Four contributions of other types that we are most proud of
+
+*
+*
+*
+*
 
 ## Sprint 2
 
