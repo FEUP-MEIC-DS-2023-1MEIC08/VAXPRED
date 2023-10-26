@@ -37,8 +37,8 @@ During Sprint 0, the team was responsible for creating a plugin's page, its mock
 
 ### The four pull requests that we are most proud of
 
-* Plugin page acceptance tests #91
-* Plugin Page #81
+* Plugin page acceptance tests #91 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/91)
+* Plugin Page #81 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/81)
 
 There aren't anymore pull requests worth considering.
 
