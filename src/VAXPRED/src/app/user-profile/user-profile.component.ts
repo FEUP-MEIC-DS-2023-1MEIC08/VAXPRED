@@ -4,6 +4,9 @@ import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  }
 
 import { UserProfileService } from '../user-profile.service';
 
+// TEMP - logged in user ID
+const loggedUserId = 1;
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -28,7 +31,7 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("init");
-    this.userProfileService.getUser(1).subscribe((user: any) => {
+    this.userProfileService.getUser(loggedUserId).subscribe((user: any) => {
       console.log(user);
       this.user.name = user['username'];
       // TEMP
@@ -36,7 +39,7 @@ export class UserProfileComponent implements OnInit {
       this.user.org = user['email'];
     });
 
-    this.userProfileService.getUserPlugins(1).subscribe((data) => {
+    this.userProfileService.getUserPlugins(loggedUserId).subscribe((data) => {
       console.log(data);
       this.plugins = data;
     })
