@@ -18,17 +18,17 @@ The main technologies used are:
 
 All of the technologies used by the teams were proposed by the client. The small summary next to each of the technologies names acts as an explanation why the client chose it for the development of the project.
 
-The prototype implemented in Sprint 0 consisted of a simple plugin page, with the possibility to search for another workspaces. Besides that, it has access to the plugin's description, requirements, changelog and extra items. Besides that, the plugin still has a designated space for its (future) categories and hpw to contact the supplier.
+The prototype implemented in Sprint 0 consisted of a simple plugin page, with the possibility to search for another workspaces. Besides that, it has access to the plugin's description, requirements, changelog and extra items. In addition, the plugin still has a designated space for its (future) categories and how to contact the supplier.
 
 
 ##  Development guide
 
-The guidelines for the project are present here: https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/GUIDELINES.md .
+The guidelines for the project are present here: https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/GUIDELINES.md.
 
 
 ## Security concerns
 
-Since the project mainly consists in the construction of a plugin store, there weren't many security vulnerabilities that concerned the development. Since the reseracher will need to be logged in in order to use the plugin store and its plugins, there may be a security concerned relative to the accessing of another researcher's account, but that part of the project is not of this teams concern.
+Since the project mainly consists of the construction of a plugin store, there weren't many security vulnerabilities that concerned the development. Since the reseracher will need to be logged in in order to use the plugin store and its plugins, there may be a security concerned relative to the accessing of another researcher's account, but that part of the project is not of this teams concern.
 
 
 ## Quality assurance
