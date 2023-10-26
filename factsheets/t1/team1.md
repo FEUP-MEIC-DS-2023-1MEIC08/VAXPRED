@@ -37,17 +37,17 @@ During Sprint 0, the team was responsible for creating a plugin's page, its mock
 
 ### The four pull requests that we are most proud of
 
-*
-*
-*
-*
+* Plugin page acceptance tests #91
+* Plugin Page #81
+
+There aren't anymore pull requests worth considering.
 
 ### Four contributions of other types that we are most proud of
 
-*
-*
-*
-*
+* All the team's member wrote their factsheets.
+* The Scrum Master contributed to the smooth flow of the project, besides doing the work assigned to him.
+* The PO wrote some user stories for sprint 2.
+* Mockups were created for the improvement of the user stories by the devs.
 
 ## Sprint 2
 
