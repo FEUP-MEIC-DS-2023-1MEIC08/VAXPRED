@@ -12,12 +12,20 @@ Identify main risks and justify the most important choices to show the soundness
 
 ## Technology
 
+The main technologies used are:
+* Fast API (restriction by the client);
+* Angular (restriction by the client);
+* Core UI;
+* Figma (for the mockups).
+
 Identify the main technologies, languages and frameworks used. Clearly identify which ones were restrictions imposed by the client and which were your own choices. Justify your choices and explain in your own words the motivation for the restrictions of your client.
 
 Explain the prototype or base implementation that you have implemented in Sprint 0, and how that has informed the rest of the development.
 
 
 ##  Development guide
+
+The guidelines for the project are present here: https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/GUIDELINES.md .
 
 Explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment. 
 
@@ -28,7 +36,7 @@ Describe coding conventions and other guidelines adopted by the project.
 
 ## Security concerns
 
-Identify potential security vulnerabilities classes and explain what the team has done to mitigate them.
+Since the project mainly consists in the construction of a plugin store, there weren't many security vulnerabilities that concerned the development. Since the reseracher will need to be logged in in order to use the plugin store and its plugins, there may be a security concerned relative to the accessing of another researcher's account, but that part of the project is not of this teams concern.
 
 
 ## Quality assurance
