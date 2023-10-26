@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "VAXPRED": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt": {
+            "translation": "src/locale/messages.pt.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",

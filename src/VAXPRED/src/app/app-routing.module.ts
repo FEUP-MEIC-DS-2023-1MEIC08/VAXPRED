@@ -4,7 +4,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 
 const routes: Routes = [
-  { path: 'user', component: UserProfileComponent },
+  { path: 'profile', component: UserProfileComponent },
   { path: 'workspace/:id', component: WorkspaceComponent},
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 ];

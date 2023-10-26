@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,10 +19,13 @@ import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-p
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
+// For API calls
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent,
     WorkspaceComponent,
     SideMenuComponent,
     PluginPageComponent,
@@ -40,6 +43,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatTabsModule,
     MatListModule,
     MatDialogModule,
