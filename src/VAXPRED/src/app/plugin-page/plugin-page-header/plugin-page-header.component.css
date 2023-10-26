@@ -1,0 +1,53 @@
+.plugin-header {
+  border-radius: 2em;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-image: url('/assets/images/bg-pixel.jpeg');
+  background-size: cover;
+}
+
+.plugin-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: white 2px solid;
+}
+
+.plugin-header-2 {
+  background-color: rgba(107, 135, 177, 0.75);
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em;
+  color: white;
+  width: 100%;
+}
+
+#install-plugin {
+  background-color: #18a661;
+  border: none;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.plugin-version-tag {
+  background-color: #88A3E7;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+h1, h4 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+h4 {
+    margin-bottom: 1.5em;
+    font-weight: 400;
+}
