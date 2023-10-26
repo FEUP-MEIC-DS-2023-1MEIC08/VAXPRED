@@ -2,9 +2,9 @@
 
 ## Architecture and design
 
-![deployment_diagram](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/deployment_diagram.drawio.png)
+This deployment diagram represents the selected technologies by the team/imposed by the client and how they interact with eachother:
 
-Describe the architecture and design of the system. Use component/deployment diagrams. If needed, resort to package diagrams to organize them into more manageable parts. 
+![deployment_diagram](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/deployment_diagram.drawio.png)
 
 Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different. 
 Identify main risks and justify the most important choices to show the soundness of the architecture and design that you have implemented or plan to implement.
@@ -16,11 +16,13 @@ The main technologies used are:
 * Fast API (restriction by the client);
 * Angular (restriction by the client);
 * Core UI;
-* Figma (for the mockups).
+* Figma (for the mockups, already being used by the client).
 
 Identify the main technologies, languages and frameworks used. Clearly identify which ones were restrictions imposed by the client and which were your own choices. Justify your choices and explain in your own words the motivation for the restrictions of your client.
 
 Explain the prototype or base implementation that you have implemented in Sprint 0, and how that has informed the rest of the development.
+
+The prototype implemented in Sprint 0 consisted of a simple 
 
 
 ##  Development guide
