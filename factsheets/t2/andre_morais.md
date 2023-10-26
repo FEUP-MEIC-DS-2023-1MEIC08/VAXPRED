@@ -1,3 +1,4 @@
+
 # Factsheet for André Morais
 
 ## Sprint 0
@@ -21,6 +22,7 @@ As a PO, I did not participate in any pull request.
 
 Writing the Product Vision and creating the Domain Model together with the other POs was really important for understanding the direction that our future product must follows and the needs of our clients.
 
+
 ## Sprint 1
 
 ... (repeat structure of the section for Sprint 0)
@@ -41,21 +43,3 @@ Writing the Product Vision and creating the Domain Model together with the other
 ...
 
 
-## Overall Product
-
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
-### Technical Soundness
-
-...
-
-
-### Product Realization
-
-...
-
-
-### Value for the Client
-
-...

@@ -33,6 +33,7 @@ No important pull requests have been made by me.
 - Reviweing pull requests and assuring they match the previously designed mockups.
 
 
+
 ## Sprint 2
 
 ...
