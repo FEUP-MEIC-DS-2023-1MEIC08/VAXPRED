@@ -18,7 +18,20 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this sprint, I was responsible for the design of the plugin page and for the assurance that the work developed matches it.
+
+### The user story that I am most proud of
+
+- Create plugin page mockups. #62.
+
+### The pull request that I am most proud of
+
+No important pull requests have been made by me.
+
+### Contributions of other types that I am most proud of
+
+- Reviweing pull requests and assuring they match the previously designed mockups.
+
 
 
 ## Sprint 2

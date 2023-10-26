@@ -1,3 +1,4 @@
+
 # Factsheet for Fernando Rocha
 
 ## Sprint 0
@@ -47,3 +48,4 @@ Reflect on your specific contributions to the product, technically and as percei
 ### Value for the Client
 
 ...
+

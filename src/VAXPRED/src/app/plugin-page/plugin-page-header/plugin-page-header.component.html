@@ -1,0 +1,16 @@
+<div fxLayout="row" fxLayoutAlign="start center" class="plugin-header">
+  <img
+    src="http://placekitten.com/300/300"
+    alt="Plugin Image"
+    class="plugin-image"
+  />
+  <div class="plugin-header-2">
+    <div fxLayout="row" fxLayoutAlign="start center" style="margin-bottom: 0.7em;">
+      <h1>{{ this.plugin.title }}</h1>
+      <p class="plugin-version-tag">1.0.7</p>
+    </div>
+    <h4>Plugin #{{ this.plugin.id }}</h4>
+    <!-- TODO: i18n -->
+    <button (click)="closeDialog()" id="install-plugin">Install</button>
+  </div>
+</div>
