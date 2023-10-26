@@ -54,20 +54,20 @@ Branches are primal to work on the central repository, avoiding multiple merge c
 - Branches naming won't be random as well. Each branch should be named following this syntax
 
 ```
-team_branch_name/category/description-in-kebab-case
+team_branch_name-category-description-in-kebab-case
 ```
 
 For instance, if **team 2** needed to create a branch to deploy a **hotfix** about a **broken link** on an HTML file, the branch name could be something like this
 
 ```
-t2/hotfix/broken-link
+t2-hotfix-broken-link
 ```
 
 Some categories include `test`, `hotfix`, `bug`, `refactoring`, `feature`, `docs`, etc. There are several reasons to choose this type of naming, which can be discussed briefly on the first Sprint Planning.
 
 The following image illustrates the previous 3 paragraphs
 
-![branching_2](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/93390807/c45d3cfd-9ad6-4490-adb8-a5e716265085)
+![branching_2](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/assets/93390807/312f5b81-5ea0-4e6a-900b-50f50e1c54b1)
 
 
 - **Absolutely no developer** will be pushing directly on the `main` branch. Mistakes can happen and that's fine, but please avoid to do so. Any commit that breaks this boundaries, is to be removed and placed on its respective branch upon detection. Opportunities to merge to the `main` branch will still be discussed. For now, you should only worry about your own team branch, which can be merged as you like.
