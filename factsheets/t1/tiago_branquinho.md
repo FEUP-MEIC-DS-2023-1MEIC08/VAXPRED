@@ -20,8 +20,25 @@ No pull requests were created in this sprint.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this sprint, my roles were estimating the efforts of User Stories, and dividing the work between my team, supervising it, since I am a SM. Also converted the work done by my team into a dialog, and modified it to receive real data.
 
+### The two user stories that I am most proud of
+
+- [(#63) Connect plugin page to API (use real data).](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues63)
+
+- [(#87) Convert the plugin page to a dialog.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/87)
+
+### The two pull requests that I am most proud of
+
+- [(#95) T1 - Plugin Page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/95)
+
+- [(#92) T1 feature integrate real data.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/92)
+
+### Two contributions of other types that I am most proud of
+
+- Made merging a lot easier by creating the dialog
+
+- Helped developing the mock-ups
 
 ## Sprint 2
 
