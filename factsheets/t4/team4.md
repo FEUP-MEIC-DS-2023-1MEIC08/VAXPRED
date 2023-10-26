@@ -31,6 +31,7 @@ We are proud of one user story that consists of several tasks which was the sole
 
 - We were pioneers in creating a common Figma project for everyone to share their UI Mockups in.
 - Communicating with other teams in order to reach agreements regarding UI style & components, as well as integrating the API by Team 2.
+- Working with the POs in a joint effort to organize and weigh the project's user stories.
 
 In addition, we recognize that we had some inaccuracies in our GitHub usage. We had only one branch, '*t4-dev*', instead of a main branch and separate branches for each feature. This approach would have led to more pull requests and a better Git practice overall.
 
