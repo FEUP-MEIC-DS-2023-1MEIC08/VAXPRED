@@ -39,6 +39,8 @@ During Sprint 0, the team was responsible for creating a plugin's page, its mock
 
 * Plugin page acceptance tests #91 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/91)
 * Plugin Page #81 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/81)
+* Plugin page #95 [(#95) T1 - Plugin Page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/95)
+* T1 feature integrate real data #92 [(#92) T1 feature integrate real data.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/92)
 
 There aren't anymore pull requests worth considering.
 
