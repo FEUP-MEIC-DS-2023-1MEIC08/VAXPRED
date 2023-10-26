@@ -2,6 +2,8 @@
 
 ## Architecture and design
 
+![deployment_diagram](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/deployment_diagram.drawio.png)
+
 Describe the architecture and design of the system. Use component/deployment diagrams. If needed, resort to package diagrams to organize them into more manageable parts. 
 
 Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different. 
