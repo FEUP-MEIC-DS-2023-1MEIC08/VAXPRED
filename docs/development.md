@@ -45,9 +45,7 @@ Acceptance tests were made by the teams to test if the final product of each use
 
 ## Metrics
 
-Describe how you captured each of the "four key metrics" (e.g., automatic mechanism, survey to the team on the end of each sprint).
-
-Provide here an historical record (for each sprint) of the four key metrics and velocity.
+No metrics were collected for sprint 1. The teams are hoping to understand better what is expected, to capture some metrics in the following sprint.
 
 
 ## Restrospectives
