@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Tool } from './plugin-card/tool';
+import { Tool } from './home/plugin-card/tool';
 
 @Injectable({
 	providedIn: 'root'

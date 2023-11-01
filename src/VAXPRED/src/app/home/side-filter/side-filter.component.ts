@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ToolService } from '../tool.service';
 import { ActivatedRoute } from '@angular/router';
 import { Tool } from '../plugin-card/tool';
+import { ToolService } from 'src/app/tool.service';
 
 @Component({
   selector: 'app-side-filter',

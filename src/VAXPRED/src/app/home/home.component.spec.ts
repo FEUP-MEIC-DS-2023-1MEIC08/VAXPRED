@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { SideFilterComponent } from '../side-filter/side-filter.component';
+import { SideFilterComponent } from './side-filter/side-filter.component';
 import { FormsModule } from '@angular/forms';
 
 const mockActivatedRoute = {
