@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Tool } from './tool';
-import { ToolService } from '../tool.service';
 
 @Component({
   selector: 'app-plugin-card',
@@ -9,10 +8,5 @@ import { ToolService } from '../tool.service';
 })
 export class PluginCardComponent
 {
-	tool: Tool;
-
-	constructor(private service: ToolService,tool: Tool)
-	{
-		this.tool = tool;
-	}
+	@Input() tool: Tool = new Tool(0, '', '', '', '');
 }
