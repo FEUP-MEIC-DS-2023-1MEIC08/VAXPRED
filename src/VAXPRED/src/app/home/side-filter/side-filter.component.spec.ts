@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideFilterComponent } from './side-filter.component';
-import { WorkspaceService } from '../workspace.service';
-import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import { Workspace } from '../workspace';
+import { ToolService } from '../../tool.service';
+import { ActivatedRoute } from '@angular/router';
+import { Tool } from '../plugin-card/tool';
+import { PluginCardComponent } from '../plugin-card/plugin-card.component';
 
 
 const mockActivatedRoute = {
@@ -16,27 +17,37 @@ const mockActivatedRoute = {
 describe('SideFilterComponent', () => {
   let component: SideFilterComponent;
   let fixture: ComponentFixture<SideFilterComponent>;
-  let workspaceService: WorkspaceService;
+  let toolService: ToolService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SideFilterComponent],
       providers: [
-        WorkspaceService,
+        ToolService,
         { provide: ActivatedRoute, useValue: mockActivatedRoute },
       ],
     });
 
     fixture = TestBed.createComponent(SideFilterComponent);
     component = fixture.componentInstance;
-    workspaceService = TestBed.inject(WorkspaceService);
+    toolService = TestBed.inject(ToolService);
     
-    spyOn(workspaceService, 'getWorkspaces').and.returnValue([new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(2, 'Protein', 'Description 2','Curation'),new Workspace(3, 'Virus', 'Description 3','Generation')]);
-    spyOn(workspaceService, 'getToolTypes').and.returnValue(['Generation', 'Curation', 'Quality']);
+    spyOn(toolService, 'getTools').and.returnValue([
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+	]);
+    spyOn(toolService, 'getToolTypes').and.returnValue(['Data Quality', 'Data Curation', 'Synthetic Data Generation']);
    
-    component.items = workspaceService.getWorkspaces().slice();
-    component.originalItems = workspaceService.getWorkspaces();
-    component.toolTypes = workspaceService.getToolTypes().slice();
+    component.items = toolService.getTools().slice();
+    component.originalItems = toolService.getTools();
+    component.toolTypes = toolService.getToolTypes().slice();
    
   });
 
@@ -49,7 +60,17 @@ describe('SideFilterComponent', () => {
     component.sortingOption = 'aToZ';
     component.toggleSorting();
 
-    let expected_List=[new Workspace(2, 'Protein', 'Description 2','Curation'),new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(3, 'Virus', 'Description 3','Generation')];
+    let expected_List=[
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+	];
     
     expect(component.sortingOption).toEqual('aToZ');
     expect(component.items).toEqual(expected_List);
@@ -59,7 +80,17 @@ describe('SideFilterComponent', () => {
     component.sortingOption = 'zToA';
     component.toggleSorting();
 
-    let expected_List=[new Workspace(3, 'Virus', 'Description 3','Generation'),new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(2, 'Protein', 'Description 2','Curation')];
+    let expected_List=[
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+	];
     
     expect(component.sortingOption).toEqual('zToA');
     expect(component.items).toEqual(expected_List);
@@ -77,45 +108,80 @@ describe('SideFilterComponent', () => {
 
   });
   it('should filter the list based on 1 selected tool types', () => {
-    component.selectedToolTypes = { 'Quality': true, 'Generation': false, 'Curation': false };
+    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': false, 'Data Curation': true };
     
     component.filterList();
 
-    let expected_List=[new Workspace(1, 'Vaccine X', 'Description 1', 'Quality')];
+    let expected_List=[		
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+	];
     expect(component.items).toEqual(expected_List);
   });
 
   it('should filter the list based on 2 selected tool types', () => {
-    component.selectedToolTypes = { 'Quality': true, 'Generation': true, 'Curation': false };
+    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     console.log("Initial Component list")
     console.log(component.items)
     component.filterList();
     console.log("after filter")
     console.log(component.items)
-    let expected_List=[new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(3, 'Virus', 'Description 3','Generation')];
+    let expected_List=
+	[
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+	];
     expect(component.items).toEqual(expected_List);
 
   });
 
   it('should filter the list based on 2 selected tool types and order the list in descending order', () => {
-    component.selectedToolTypes = { 'Quality': true, 'Generation': true, 'Curation': false };
+    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     component.filterList();
     component.sortingOption = 'zToA';
     component.toggleSorting();
 
     
-    let expected_List=[new Workspace(3, 'Virus', 'Description 3','Generation'),new Workspace(1, 'Vaccine X', 'Description 1', 'Quality')];
+    let expected_List=[
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+	];
     expect(component.items).toEqual(expected_List);
   });
 
   it('should filter the list based on 2 selected tool types and order the list in descending order and then reset', () => {
-    component.selectedToolTypes = { 'Quality': true, 'Generation': true, 'Curation': false };
+    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     component.filterList();
     component.sortingOption = 'zToA';
     component.toggleSorting();
     component.resetListToInitialFormat();
     
-    let expected_List=[new Workspace(1, 'Vaccine X', 'Description 1', 'Quality'),new Workspace(3, 'Virus', 'Description 3','Generation')];
+    let expected_List=[		
+		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
+			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data'),
+		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
+			or augmented to fill in missing data points. Learn more about '),
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+			requires more than data. It requires a trusted data curation, annotation & validation partner \
+			capable of managing risk while providing proactive insights and predictability.'),
+	];
     expect(component.items).toEqual(expected_List);
   });
 

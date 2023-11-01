@@ -12,10 +12,9 @@ export class ToolService {
 		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about '),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Your ML model\'s success \
+		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.'),
-		
 	];
 
 	constructor() { }
@@ -29,6 +28,6 @@ export class ToolService {
 	}
 
 	getToolTypes(): string[] {
-		return ['Quality', 'Curation', 'Generation'];
+		return ['Data Quality', 'Data Curation', 'Synthetic Data Generation'];
 	}
 }

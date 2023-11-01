@@ -17,10 +17,10 @@ import { SideFilterComponent } from './home/side-filter/side-filter.component';
   declarations: [
     AppComponent,
 	PluginCardComponent,
-    UserProfileComponent,
-    SideFilterComponent,
     HomeComponent,
     NavbarComponent,
+    UserProfileComponent,
+    SideFilterComponent,
   ],
   imports: [
     BrowserModule,

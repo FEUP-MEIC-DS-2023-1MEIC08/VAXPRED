@@ -3,6 +3,7 @@ import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
 import { FormsModule } from '@angular/forms';
+import { PluginCardComponent } from './plugin-card/plugin-card.component';
 
 const mockActivatedRoute = {
   snapshot: {
@@ -17,7 +18,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent,SideFilterComponent],
+      declarations: [HomeComponent,SideFilterComponent, PluginCardComponent],
       imports:[FormsModule],
       providers: [
         { provide: ActivatedRoute, useValue: mockActivatedRoute },
