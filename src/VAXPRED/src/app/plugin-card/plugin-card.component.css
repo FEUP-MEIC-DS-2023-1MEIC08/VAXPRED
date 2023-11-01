@@ -1,0 +1,33 @@
+.card-text
+{
+	max-height: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#plugin-card
+{
+	border-radius: 5%;
+}
+
+#plugin-image
+{
+	width: 100%;
+}
+
+#view-details-button
+{
+	background-color: #00BB55;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#download-button
+{
+	border-radius: 50%;
+}
+
+#download-button:hover
+{
+	color: #FFFFFF;
+}

@@ -20,9 +20,9 @@
     <div class="results-grid">
         <!-- Display search results -->
         <div *ngFor="let item of items" class="result-item">
-            <h2>{{ item.title }}</h2>
+            <h2>{{ item.name }}</h2>
+            <h3>{{ item.type }}</h3>
             <p>{{ item.description }}</p>
-            <p>{{ item.type }}</p>
         </div> 
     </div>
 </main>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Workspace } from '../workspace';
-import { WorkspaceService } from '../workspace.service';
+import { ToolService } from '../tool.service';
 import { ActivatedRoute } from '@angular/router';
+import { Tool } from '../plugin-card/tool';
 
 @Component({
   selector: 'app-side-filter',
@@ -9,16 +9,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./side-filter.component.css']
 })
 export class SideFilterComponent {
-  items: Workspace[] = [];
-  originalItems: Workspace[] = [];
+  items: Tool[] = [];
+  originalItems: Tool[] = [];
   sortingOption: string = 'original';
   isRadioSelected: boolean = false;
   toolTypes: string[]=[];
   selectedToolTypes: { [key: string]: boolean } = {};
 
-  constructor(private workspaceService: WorkspaceService, private route: ActivatedRoute) {
-    this.items = this.workspaceService.getWorkspaces().slice();
-    this.toolTypes=this.workspaceService.getToolTypes();
+  constructor(private toolService: ToolService, private route: ActivatedRoute) {
+    this.items = this.toolService.getTools().slice();
+    this.toolTypes=this.toolService.getToolTypes();
     this.originalItems = this.items.slice();
   }
 
@@ -38,9 +38,9 @@ export class SideFilterComponent {
   toggleSorting(): void {
     this.isRadioSelected = true;
     if (this.sortingOption === 'aToZ') {
-      this.items.sort((a, b) => a.title.localeCompare(b.title));
+      this.items.sort((a, b) => a.name.localeCompare(b.name));
     } else if (this.sortingOption === 'zToA') {
-      this.items.sort((a, b) => b.title.localeCompare(a.title));
+      this.items.sort((a, b) => b.name.localeCompare(a.name));
     } else {
       this.resetListToInitialFormat();
     }
@@ -53,7 +53,7 @@ export class SideFilterComponent {
     if (Object.values(this.selectedToolTypes).every((value: boolean) => !value)) {
       this.items = this.originalItems.slice();
     } else {
-      this.items = this.originalItems.filter((item: Workspace) => {
+      this.items = this.originalItems.filter((item: Tool) => {
         return this.selectedToolTypes[item.type];
       });
     }
