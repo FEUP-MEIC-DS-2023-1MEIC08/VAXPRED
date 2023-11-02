@@ -15,9 +15,10 @@
 </aside>
 
 <main class="results-section">
-	<h1>Search Results</h1>
+	<h1 style="font-size: 1.5rem">Search Results</h1>
+	<p style="font-size: 1.1rem">Your search has produced <strong>{{this.items.length}}</strong> results.</p>
 
 	<div class="results-grid">
-		<app-plugin-card *ngFor="let tool of this.items" [tool] = "tool"></app-plugin-card>
+		<app-plugin-card *ngFor="let tool of this.items" [tool]="tool"></app-plugin-card>
 	</div>
 </main>

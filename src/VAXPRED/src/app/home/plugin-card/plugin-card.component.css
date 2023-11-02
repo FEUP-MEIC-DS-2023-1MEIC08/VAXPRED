@@ -1,7 +1,29 @@
+:host
+{
+	--details-button-color: #00BB55;
+	--details-button-sec-color: #FFFFFF;
+	--details-button-text-color-hover: #00BB55;
+	--download-button-color: #00AAFF;
+	--download-button-sec-color: #FFFFFF;
+	--download-button-text-color-hover: #00AAFF;
+	--download-button-radius: 45px;
+}
+
 .plugin-card
 {
 	font-family: Roboto, "Helvetica Neue", sans-serif;
 	width: 23rem;
+	margin: 10px;
+	border: solid;
+	border-width: 1px;
+	border-radius: 5%;
+	border-color: #BBBBBB;
+	padding: 20px;
+}
+
+.plugin-card:hover
+{
+	box-shadow: 0px 5px 10px lightgrey;
 }
 
 .plugin-card-title
@@ -79,7 +101,7 @@ a {
 /************************************ BUTTONS ************************************/
 
 button {
-	background-color: #4CAF50;
+	background-color: #FF7777;
 	border: solid;
 	border-width: 2px;
 	color: #FFFFFF;
@@ -91,8 +113,6 @@ button {
 }
 
 #view-details-button {
-	--details-button-color: #00BB55;
-	--details-button-sec-color: #FFFFFF;
 	background-color: var(--details-button-color);
 	font-size: 16px;
 	font-weight: bold;
@@ -100,7 +120,7 @@ button {
 
 #view-details-button:hover a
 {
-	color: var(--details-button-color);
+	color: var(--details-button-text-color-hover);
 	font-weight: normal;
 }
 
@@ -110,14 +130,10 @@ button {
 }
 
 #download-button {
-	--download-button-color: #00AAFF;
-	--download-button-sec-color: #FFFFFF;
-	--download-button-text-color-hover: #000000;
-	--button-radius: 45px;
 	background-color: var(--download-button-color);
 	border-radius: 50%;
-	width: var(--button-radius);
-	height: var(--button-radius);
+	width: var(--download-button-radius);
+	height: var(--download-button-radius);
 	font-size: 100%;
 	font-weight: bold;
 	color: var(--download-button-sec-color);
@@ -126,7 +142,7 @@ button {
 #download-button:hover a
 {
 	font-weight: normal;
-	color: var(--download-button-color);
+	color: var(--download-button-text-color-hover);
 }
 
 #download-button:hover {
