@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PluginPageComponent } from './plugin-page/plugin-page.component';
 import { Plugin } from './plugin';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
