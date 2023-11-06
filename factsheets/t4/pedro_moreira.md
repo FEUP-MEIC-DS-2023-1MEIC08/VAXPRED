@@ -1,8 +1,8 @@
-# Factsheet for Rodrigo Figueiredo
+# Factsheet for Pedro Moreira
 
 ## Sprint 0
 
-As a developer there wasn't much I could do at this sprint, so I just helped collecting information about the product and reviewed the work done in this sprint mainly by the PO's and SM's.
+As a developer, there wasn't much I could do at this sprint.
 
 ### The two user stories that I am most proud of
 
@@ -14,11 +14,36 @@ No pull requests were created in this sprint.
 
 ### Two contributions of other types that I am most proud of
 
-Collecting information about the product and reviewing the accomplished work.
+Collecting information about the product.
 
 
 ## Sprint 1
-... (repeat structure of the section for Sprint 0)
+
+In this sprint, I contributed to the implementation of the plugin list of the user profile page component and made it connect to API. 
+
+### The two user stories that I am most proud of
+
+During this sprint, I worked on the following user story: 
+
+- [(#34) As a researcher, I want to have a profile page, so that I can see all the plugins I am using.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/34)
+
+It was the main user story of our team and we all worked on it. 
+
+I worked specifically on these issues:
+
+- Issue #38 (Mockups for the researcher's profile): The mockups for the researcher's profile were collaboratively created by the entire team, including Fernando, João, Juan, and Rodrigo.
+- Issue #50 (Create list with 'my plugins'): The development of the 'My Plugins' list for the user profile page component was a joint effort between me and Juan, primarily focusing on the frontend aspects.
+- Issue #74 (Connect user profile page to API (use real data)): I helped Rodrigo and Fernando with fetching the data for the user and plugins using the API
+
+### The two pull requests that I am most proud of
+
+- [(#90) User profile page (work by Team 4)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/90)
+
+This was the only pull request for this sprint and it was made to merge all the work from our team into the dev branch.
+
+### Two contributions of other types that I am most proud of
+
+- I was ready to meet and work at any time it was required.
 
 ## Sprint 2
 
