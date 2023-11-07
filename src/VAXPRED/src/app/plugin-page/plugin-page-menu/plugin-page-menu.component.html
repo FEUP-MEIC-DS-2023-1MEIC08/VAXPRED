@@ -14,7 +14,7 @@
         <ng-template matTabContent>
           <mat-list>
             <mat-list-item *ngFor="let dependency of plugin.dependencies;" style="height:5em">
-              <div fxLayout="row" fxLayoutAlign="start center">
+              <div fxLayout="row" fxLayoutAlign="start end">
                 <p> {{ dependency.name }} </p>
                 <p class="version-tag">{{ dependency.version }}</p>
               </div>
