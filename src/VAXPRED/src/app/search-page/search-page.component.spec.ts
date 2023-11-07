@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import { HomeComponent } from './home.component';
+import { SearchPageComponent } from './search-page.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
 import { FormsModule } from '@angular/forms';
 import { PluginCardComponent } from './plugin-card/plugin-card.component';
@@ -12,19 +12,19 @@ const mockActivatedRoute = {
     },
   },
 };
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('SearchPageComponent', () => {
+  let component: SearchPageComponent;
+  let fixture: ComponentFixture<SearchPageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent,SideFilterComponent, PluginCardComponent],
+      declarations: [SearchPageComponent,SideFilterComponent, PluginCardComponent],
       imports:[FormsModule],
       providers: [
         { provide: ActivatedRoute, useValue: mockActivatedRoute },
       ],
     });
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(SearchPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

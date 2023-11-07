@@ -12,12 +12,14 @@ export class Tool
 	name: string;
 	type: string;
 	description: string;
+	tags: string[];
 
-	constructor(id: number, name: string, image: string, type: string, description: string) {
+	constructor(id: number, name: string, image: string, type: string, description: string, tags: string[]) {
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.image = image;
 		this.description = description;
+		this.tags = tags;
 	}
 }
