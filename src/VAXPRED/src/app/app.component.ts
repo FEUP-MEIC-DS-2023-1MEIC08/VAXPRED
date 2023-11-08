@@ -17,7 +17,7 @@ export class AppComponent {
       width: '1000px',
       data: {
         dialogRef: null, // Initialize the dialogRef to null
-        plugin: new Plugin(0, "Plugin title changed", "Plugin Description changed") // TODO: INSERT PLUGIN HERE!!!!
+        plugin: new Plugin(0, "Plugin title changed", "Plugin Description changed", '') // TODO: INSERT PLUGIN HERE!!!!
       }
     });
     dialogRef.componentInstance.data.dialogRef = dialogRef;

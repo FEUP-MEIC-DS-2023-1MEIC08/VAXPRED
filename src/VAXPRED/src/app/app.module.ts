@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-page-menu.component';
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 
 // For API calls
@@ -52,6 +53,7 @@ import { SideFilterComponent } from './home/side-filter/side-filter.component';
     MatTabsModule,
     MatListModule,
     MatDialogModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -11,6 +11,21 @@
     </div>
     <h4>Plugin #{{ this.plugin.id }}</h4>
     <!-- TODO: i18n -->
-    <button (click)="closeDialog()" id="install-plugin">Install</button>
+    <div fxLayout="row" fxLayoutAlign="space-between start" style="margin-bottom: 0.7em;">
+      <button (click)="closeDialog()" id="install-plugin">Install</button>
+      <button mat-icon-button (click)="openPopup()" id="contract-button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="assignment icon"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="popup-modal" class="popup-modal">
+  <div class="popup-content">
+    <h2>Contract Agreement</h2>
+    <!-- Add your contract agreement content here -->
+    <p>{{ this.plugin.contract }}</p>
+    <button (click)="closePopup()">Cancel</button>
   </div>
 </div>

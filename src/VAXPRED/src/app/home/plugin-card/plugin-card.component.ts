@@ -19,7 +19,7 @@ export class PluginCardComponent
 		  width: '1000px',
 		  data: {
 			dialogRef: null, // Initialize the dialogRef to null
-			plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description') // TODO: INSERT PLUGIN HERE!!!!
+			plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description', 'Plugin Contract') // TODO: INSERT PLUGIN HERE!!!!
 		  }
 		});
 		dialogRef.componentInstance.data.dialogRef = dialogRef;
