@@ -40,7 +40,9 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
       name=plugin.name,
       version=plugin.version,
       description=plugin.description,
-      developer = plugin.developer
+      developer = plugin.developer,
+      supplier_name = plugin.supplier_name,
+      supplier_email = plugin.supplier_email
     )
     return new_plugin
 
@@ -55,7 +57,9 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
       name = plugin_update.name,
       version = plugin_update.version,
       description = plugin_update.description,
-      developer = plugin_update.developer
+      developer = plugin_update.developer,
+      supplier_name = plugin_update.supplier_name,
+      supplier_email = plugin_update.supplier_email
     )
 
     if updated_plugin is None:

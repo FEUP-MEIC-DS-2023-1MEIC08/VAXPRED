@@ -8,8 +8,18 @@ class PluginRepository:
     def __init__(self, db: Session):
         self.db = db
 
-    def create_plugin(self, name: str, version: str, description: str, developer:str) -> Plugin:
-        plugin = Plugin(name=name, version=version, description = description, developer = developer)
+  
+    def create_plugin(self, name: str, version: str, description: str, developer: str, supplier_name: str, supplier_email: str) -> Plugin:
+        plugin = Plugin(
+            name = name,
+            version = version,
+            description = description,
+            developer = developer,
+            release_date = datetime.now(pytz.utc),
+            last_update_date = datetime.now(pytz.utc),
+            supplier_name = supplier_name,
+            supplier_email = supplier_email
+        )
         self.db.add(plugin)
         self.db.commit()
         self.db.refresh(plugin)
@@ -30,7 +40,7 @@ class PluginRepository:
         self.db.delete(plugin)
         self.db.commit()
 
-    def update_plugin(self, plugin_id: int, name: str, version: str, description : str, developer: str) -> Plugin:
+    def update_plugin(self, plugin_id: int, name: str, version: str, description : str, developer: str, supplier_name: str, supplier_email: str) -> Plugin:
       existing_plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
 
       if existing_plugin is None:
@@ -41,6 +51,8 @@ class PluginRepository:
       existing_plugin.description = description
       existing_plugin.developer = developer
       existing_plugin.last_update_date = datetime.now(pytz.utc)
+      existing_plugin.supplier_name = supplier_name
+      existing_plugin.supplier_email = supplier_email
       self.db.commit()
       return existing_plugin
 

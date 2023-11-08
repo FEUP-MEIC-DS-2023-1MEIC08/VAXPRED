@@ -20,8 +20,12 @@ class Plugin(Base):
     developer = Column(String, nullable = False)
     release_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
     last_update_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
+    supplier_name = Column(String, nullable=False) 
+    supplier_email = Column(String, nullable=False)  
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
+
+
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True, index=True)
