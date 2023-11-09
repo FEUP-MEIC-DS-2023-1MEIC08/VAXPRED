@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  } from '@coreui/angular';
+import { HttpClient } from '@angular/common/http';
 
 import { UserProfileService } from '../user-profile.service';
 
@@ -43,6 +44,15 @@ export class UserProfileComponent implements OnInit {
       console.log(data);
       this.plugins = data;
     })
+  }
+
+  removePlugin(plugin: any) {
+    this.userProfileService.removePlugin(loggedUserId, plugin.id).subscribe((data) => {
+      console.log(data);
+    })
+
+    // Refresh the page
+    window.location.reload();
   }
 
   editProfile() {
