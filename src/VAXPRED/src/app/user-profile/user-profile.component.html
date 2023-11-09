@@ -1,0 +1,88 @@
+<c-container fluid class="ps-4 pe-4">
+  <c-row>
+    <c-col>
+      <c-card class="mb-4">
+        <c-card-body>
+          <c-container>
+            <c-row>
+              <c-col sm="1">
+                <c-avatar size="xl" color="secondary" status="success">JD</c-avatar>
+              </c-col>
+              <c-col sm="6" class="ms-2">
+                <h2 class="mb-0">{{user.name}}</h2>
+                <p class="fw-medium m-0">{{user.title}}</p>
+                <p class="m-0">{{user.org}}</p>
+              </c-col>
+              <c-col sm="2">
+                <button class="position-absolute end-0 me-3" cButton color="primary" variant="outline" i18n>Edit Profile</button>
+              </c-col>
+            </c-row>
+          </c-container>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col></c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          <h2 class="mb-0" i18n="@@myPlugins">My Plugins</h2>
+        </c-card-header>
+        <c-card-body>
+          <c-container class="plugin-container">
+            <div class="grid">
+              <div *ngFor="let plugin of plugins">
+                <c-card>
+                  <c-card-body>
+                    <c-row>
+                      <c-col>
+                        <c-avatar size="xl" src="./../../assets/plugin_image.png" class="plugin-icon"></c-avatar>
+                      </c-col>
+                      <c-col>
+                        <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                      </c-col>
+                    </c-row>
+                    <c-row>
+                      <h5 cCardTitle>{{ plugin.name }}</h5>
+                    </c-row>
+                    <c-row>
+                      <c-col>
+                        <p cCardText>{{ plugin.description }}</p>
+                      </c-col>
+                      <c-col>
+                        <i class="plugin-button-icon material-icons">arrow_outward</i>
+                      </c-col>
+                    </c-row>
+                  </c-card-body>
+                </c-card>
+              </div>
+            </div>
+          </c-container>
+
+        </c-card-body>
+        <c-card-footer>
+          <div class="mt-2">
+            <c-pagination aria-label="Page navigation example">
+              <li cPageItem [disabled]="true">
+                <span cPageLink>Previous</span>
+              </li>
+              <li cPageItem>
+                <a cPageLink>1</a>
+              </li>
+              <li cPageItem [active]="true">
+                <span cPageLink>2</span>
+              </li>
+              <li cPageItem>
+                <a cPageLink>3</a>
+              </li>
+              <li cPageItem>
+                <a cPageLink>Next</a>
+              </li>
+            </c-pagination>
+          </div>
+        </c-card-footer>
+      </c-card>
+    </c-col>
+  </c-row>
+</c-container>

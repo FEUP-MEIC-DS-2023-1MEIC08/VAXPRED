@@ -1,0 +1,65 @@
+:host {
+	display: flex;
+	align-items: flex-start;
+}
+
+:host .filter-section {
+	width: 250px;
+	background-color: #ffffff;
+	padding: 20px;
+	margin-top: 100px;
+	flex: 1fr;
+}
+
+/* Heading Styles */
+:host .filter-section h4 {
+	border-top: 1px solid #000000;
+	margin-top: 0;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+/* Radio Buttons and Labels */
+:host .filter-section label {
+	display: block;
+	margin: 15px 0;
+
+}
+
+/* Checkboxes and Labels */
+:host .filter-section label input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+/* Reset Button */
+:host .filter-section button {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	font-size: medium;
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+
+.results-section {
+	flex: 3;
+	/* Adjust the width as needed */
+}
+
+.results-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+
+.result-item {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+	width: auto;
+}

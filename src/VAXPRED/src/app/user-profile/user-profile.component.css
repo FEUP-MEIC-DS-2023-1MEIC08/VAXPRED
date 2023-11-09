@@ -1,0 +1,28 @@
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.plugin-container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.plugin-container {
+  float: left;
+}
+
+.plugin-icon {
+  margin-bottom: 15px;
+}
+
+.plugin-button-icon {
+  float: right;
+}
+
+.plugin-button-close {
+  color: red;
+}
