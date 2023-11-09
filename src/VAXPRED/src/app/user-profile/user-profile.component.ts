@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from '@angular/router';
 import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  } from '@coreui/angular';
-
 import { UserProfileService } from '../user-profile.service';
 
 // TEMP - logged in user ID
