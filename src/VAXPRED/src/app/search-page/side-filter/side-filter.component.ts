@@ -15,11 +15,13 @@ export class SideFilterComponent {
   isRadioSelected: boolean = false;
   toolTypes: string[]=[];
   selectedToolTypes: { [key: string]: boolean } = {};
-
+  tags: string[] = [];
+  selectedTags: { [key: string]: boolean } = {};
   constructor(private toolService: ToolService, private route: ActivatedRoute) {
     this.items = this.toolService.getTools().slice();
     this.toolTypes=this.toolService.getToolTypes();
     this.originalItems = this.items.slice();
+    this.tags = this.toolService.getTags();
   }
 
   /**
@@ -30,6 +32,7 @@ export class SideFilterComponent {
     this.sortingOption = 'original';
     this.isRadioSelected = false;
     this.filterList();
+   
   }
 
   /**
@@ -46,16 +49,26 @@ export class SideFilterComponent {
     }
   }
 
+  checkTag(item: Tool) : boolean{
+    for(let tag of item.tags){
+      if(this.selectedTags[tag]){
+        return true;
+      }
+    }
+    return false;
+  }
+
   /**
-   * Filters the list based on the selected tool type
+   * Filters the list based on the selected tool type and the tag
    */
   filterList(): void {
-    if (Object.values(this.selectedToolTypes).every((value: boolean) => !value)) {
-      this.items = this.originalItems.slice();
-    } else {
-      this.items = this.originalItems.filter((item: Tool) => {
-        return this.selectedToolTypes[item.type];
-      });
-    }
+    const selectedTypes = Object.keys(this.selectedToolTypes).filter((type) => this.selectedToolTypes[type]);
+    const selectedTags = Object.keys(this.selectedTags).filter((tag) => this.selectedTags[tag]);
+
+    this.items = this.originalItems.filter((item: Tool) => {
+      const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(item.type);
+      const tagMatch = selectedTags.length === 0 || item.tags.some((tag) => selectedTags.includes(tag));
+      return typeMatch && tagMatch;
+    });
   }
 }

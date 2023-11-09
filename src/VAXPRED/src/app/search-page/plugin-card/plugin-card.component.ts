@@ -11,7 +11,7 @@ import { Plugin } from 'src/app/plugin';
 })
 export class PluginCardComponent
 {
-	@Input() tool: Tool = new Tool(0, '', '', '', '');
+	@Input() tool: Tool = new Tool(0, '', '', '', '', []);
 	constructor(public dialog: MatDialog){}
 
 	openDialog(): void { // TODO: THIS IS CALLED WITH HTML, INSERT IN PLUGIN LISTING IN STORE
