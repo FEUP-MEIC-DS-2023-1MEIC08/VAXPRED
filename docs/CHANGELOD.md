@@ -1,4 +1,4 @@
-# Project Changelogs
+# Project Changelog
 
 This file contains the changelogs for each sprint release, each identified with a version number.
 
@@ -10,6 +10,4 @@ This file contains the changelogs for each sprint release, each identified with 
 - Added plugin information modal/popup
 - Added user (researcher) profile page
 
-Refer to the commits made until this release.
-
-Completed PBIs are marked with `Sprint 1` on the Project Board.
+Completed PBIs are marked with `Sprint 1` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
