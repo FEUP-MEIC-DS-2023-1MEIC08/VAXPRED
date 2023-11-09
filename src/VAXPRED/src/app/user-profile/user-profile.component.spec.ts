@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserProfileComponent } from './user-profile.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute } from '@angular/router';
-import { WorkspaceComponent } from '../workspace/workspace.component';
+import { ActivatedRoute } from '@angular/router'; 
+import { WorkspaceComponent } from '../workspace/workspace.component'; 
 
 describe('UserProfileComponent', () => {
   let component: UserProfileComponent;
@@ -22,18 +22,18 @@ describe('UserProfileComponent', () => {
   });
 
   it('should display user data', () => {
-    component.user = { id: 1, name: 'John Doe', title: 'Senior Researcher', org: 'Faculdade de Engenharia da Universidade do Porto' };
+    component.user = { name: 'John Doe', title: 'Senior Researcher', org: 'Faculdade de Engenharia da Universidade do Porto' };
     fixture.detectChanges();
-
+    
     const nameElement = fixture.nativeElement.querySelector('h2');
     const titleElement = fixture.nativeElement.querySelector('.fw-medium');
     const orgElement = fixture.nativeElement.querySelector('p');
-
+    
     expect(nameElement.textContent).toContain('John Doe');
     expect(titleElement.textContent).toContain('Senior Researcher');
     expect(orgElement.textContent).toContain('Faculdade de Engenharia da Universidade do Porto');
   });
-
+  
 
   it('should display Edit Profile button', () => {
     const button = fixture.nativeElement.querySelector('button');
@@ -44,16 +44,16 @@ describe('UserProfileComponent', () => {
     spyOn(component, 'editProfile').and.callThrough();
 
     fixture.detectChanges();
-
+    
     const editButton = fixture.nativeElement.querySelector('button[name="edit-profile-button"]');
-
+    
     expect(editButton).toBeTruthy();
 
     editButton.click();
-
+    
     expect(component.editProfile).toHaveBeenCalled();
   });
-
+  
   /*it('should navigate to the next page', () => {
     spyOn(component, 'goToNextPage');
 
@@ -102,14 +102,14 @@ describe('UserProfileComponent', () => {
       { name: 'Plugin 2', description: 'Description 2' },
     ];
     fixture.detectChanges();
-
+  
     const pluginCards = fixture.nativeElement.querySelectorAll('.plugin-container c-card');
     expect(pluginCards.length).toEqual(2);
-
+  
     const pluginNames = fixture.nativeElement.querySelectorAll('.plugin-container h5');
     expect(pluginNames[0].textContent).toContain('Plugin 1');
     expect(pluginNames[1].textContent).toContain('Plugin 2');
-
+  
     const pluginDescriptions = fixture.nativeElement.querySelectorAll('.plugin-container p[cCardText]');
     expect(pluginDescriptions[0].textContent).toContain('Description 1');
     expect(pluginDescriptions[1].textContent).toContain('Description 2');
