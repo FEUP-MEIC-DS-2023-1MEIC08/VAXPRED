@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, params
 from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin import PluginRepository
@@ -10,9 +10,13 @@ router = APIRouter()
 # Route to list every plugin
 
 @router.get("/", response_model=PluginListResponse)
-def get_plugins(db: Session = Depends(get_db)):
+def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
-    plugins = plugin_repository.get_all_plugins()
+    if (search):
+        print(search)
+        plugins = plugin_repository.get_all_plugins_search(search)
+    else:
+        plugins = plugin_repository.get_all_plugins()
     return {"plugins": plugins}
 
 

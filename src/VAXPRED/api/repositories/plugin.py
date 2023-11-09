@@ -18,7 +18,8 @@ class PluginRepository:
             release_date = datetime.now(pytz.utc),
             last_update_date = datetime.now(pytz.utc),
             supplier_name = supplier_name,
-            supplier_email = supplier_email
+            supplier_email = supplier_email,
+            search_text = name + description
         )
         self.db.add(plugin)
         self.db.commit()
@@ -33,6 +34,9 @@ class PluginRepository:
 
     def get_all_plugins(self) -> List[Plugin]:
         return self.db.query(Plugin).all()
+    
+    def get_all_plugins_search(self,search) -> List[Plugin]:
+        return self.db.query(Plugin).filter(Plugin.search_text.contains(search)).all()
 
     def delete_plugin_by_id(self, plugin_id : int) -> None:
       plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
@@ -53,6 +57,7 @@ class PluginRepository:
       existing_plugin.last_update_date = datetime.now(pytz.utc)
       existing_plugin.supplier_name = supplier_name
       existing_plugin.supplier_email = supplier_email
+      existing_plugin.search_text = name + description
       self.db.commit()
       return existing_plugin
 
