@@ -48,10 +48,9 @@ export class UserProfileComponent implements OnInit {
   removePlugin(plugin: any) {
     this.userProfileService.removePlugin(loggedUserId, plugin.id).subscribe((data) => {
       console.log(data);
+      // Refresh the page
+      window.location.reload();
     })
-
-    // Refresh the page
-    window.location.reload();
   }
 
   editProfile() {
