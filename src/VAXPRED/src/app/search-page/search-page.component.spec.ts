@@ -4,7 +4,7 @@ import { SearchPageComponent } from './search-page.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
 import { FormsModule } from '@angular/forms';
 import { PluginCardComponent } from './plugin-card/plugin-card.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
 const mockActivatedRoute = {
   snapshot: {
     paramMap: {
@@ -19,7 +19,7 @@ describe('SearchPageComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SearchPageComponent,SideFilterComponent, PluginCardComponent],
-      imports:[FormsModule],
+      imports:[FormsModule,MatDialogModule],
       providers: [
         { provide: ActivatedRoute, useValue: mockActivatedRoute },
       ],
