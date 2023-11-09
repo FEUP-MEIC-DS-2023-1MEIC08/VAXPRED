@@ -9,12 +9,12 @@
                 <c-avatar size="xl" color="secondary" status="success">JD</c-avatar>
               </c-col>
               <c-col sm="6" class="ms-2">
-                <h2 class="mb-0">{{user.name}}</h2>
-                <p class="fw-medium m-0">{{user.title}}</p>
-                <p class="m-0">{{user.org}}</p>
+                <h2 name="userName" class="mb-0">{{user.name}}</h2>
+                <p name="userTitle" class="fw-medium m-0">{{user.title}}</p>
+                <p name="userOrg" class="m-0">{{user.org}}</p>
               </c-col>
               <c-col sm="2">
-                <button class="position-absolute end-0 me-3" cButton color="primary" variant="outline" i18n>Edit Profile</button>
+                <button name="editProfileButton" (click)="editProfile()" class="position-absolute end-0 me-3" cButton color="primary" variant="outline" i18n>Edit Profile</button>
               </c-col>
             </c-row>
           </c-container>
@@ -33,7 +33,7 @@
           <c-container class="plugin-container">
             <div class="grid">
               <div *ngFor="let plugin of plugins">
-                <c-card>
+                <c-card class="plugin-card">
                   <c-card-body>
                     <c-row>
                       <c-col>
@@ -44,11 +44,11 @@
                       </c-col>
                     </c-row>
                     <c-row>
-                      <h5 cCardTitle>{{ plugin.name }}</h5>
+                      <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
                     </c-row>
                     <c-row>
                       <c-col>
-                        <p cCardText>{{ plugin.description }}</p>
+                        <p name="pluginDescription" cCardText>{{ plugin.description }}</p>
                       </c-col>
                       <c-col>
                         <i class="plugin-button-icon material-icons">arrow_outward</i>
