@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  } from '@coreui/angular';
-import { HttpClient } from '@angular/common/http';
 
 import { UserProfileService } from '../user-profile.service';
 
