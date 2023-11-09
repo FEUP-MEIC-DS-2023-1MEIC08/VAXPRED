@@ -26,3 +26,10 @@
 .plugin-button-close {
   color: red;
 }
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

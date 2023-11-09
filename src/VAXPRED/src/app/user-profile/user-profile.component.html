@@ -40,7 +40,9 @@
                         <c-avatar size="xl" src="./../../assets/plugin_image.png" class="plugin-icon"></c-avatar>
                       </c-col>
                       <c-col>
-                        <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                        <button class="transparent-button plugin-button-icon" (click)="removePlugin(plugin)">
+                          <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                        </button>
                       </c-col>
                     </c-row>
                     <c-row>
