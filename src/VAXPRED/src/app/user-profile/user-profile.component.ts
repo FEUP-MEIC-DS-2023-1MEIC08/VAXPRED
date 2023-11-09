@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GridModule, CardModule, ButtonModule, AvatarModule, PaginationModule  } from '@coreui/angular';
 import { UserProfileService } from '../user-profile.service';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // TEMP - logged in user ID
 const loggedUserId = 1;
@@ -12,7 +15,7 @@ const loggedUserId = 1;
   styleUrls: ['./user-profile.component.css'],
   standalone: true,
   imports: [
-    GridModule, ButtonModule, AvatarModule, CardModule, PaginationModule, CommonModule
+    CommonModule, MatGridListModule, FlexLayoutModule, MatCardModule, MatDividerModule
   ],
 })
 export class UserProfileComponent implements OnInit {

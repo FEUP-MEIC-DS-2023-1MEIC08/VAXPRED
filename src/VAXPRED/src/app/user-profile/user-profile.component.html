@@ -1,4 +1,4 @@
-<c-container fluid class="ps-4 pe-4">
+<!-- <c-container fluid class="ps-4 pe-4">
   <c-row>
     <c-col>
       <c-card class="mb-4">
@@ -85,4 +85,67 @@
       </c-card>
     </c-col>
   </c-row>
-</c-container>
+</c-container> -->
+
+<div fxLayout="column" fxLayoutGap="10px">
+
+  <div fxLayout="row" class="user-profile">
+    <div class="img" fxFlex="7.5%">
+      <img src="../../assets/img/default_pic.png" alt="User Avatar">
+    </div>
+    <div fxFlex="7.5%">
+      <h2 name="userName" class="mb-0">{{user.name}}</h2>
+      <p name="userTitle" class="fw-medium m-0">{{user.title}}</p>
+      <p name="userOrg" class="m-0">{{user.org}}</p>
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxFlex="100%">
+      <mat-card class="plugin-card">
+        <mat-card-header class="plugin-title">
+          <h2 i18n="@@myPlugins">My Plugins</h2>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <div class="plugin-container">
+            <div class="grid">
+              <div *ngFor="let plugin of plugins">
+                <mat-card>
+                  <mat-card-content>
+                    <div fxLayout="column">
+                      <div fxLayout="row" fxLayoutGap="10px">
+                        <div fxFlex="50%">
+                          <div mat-card-avatar class="plugin-icon"></div>
+                        </div>
+                        <div fxFlex="50%">
+                          <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                        </div>
+                      </div>
+                      <div fxLayout="row">
+                        <div fxFlex="100%">
+                          <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
+                        </div>
+                      </div>
+                      <div fxLayout="row" fxLayoutGap="10px">
+                        <div fxFlex="50%">
+                          <p name="pluginDescription" cCardText>{{ plugin.description }}</p>
+                        </div>
+                        <div fxFlex="50%">
+                          <i class="plugin-button-icon material-icons">arrow_outward</i>
+                        </div>
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
+
+
