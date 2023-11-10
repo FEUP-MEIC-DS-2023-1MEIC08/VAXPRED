@@ -24,6 +24,29 @@ insert into user_plugin_association (user_id, plugin_id) values (18, 18);
 insert into user_plugin_association (user_id, plugin_id) values (19, 19);
 insert into user_plugin_association (user_id, plugin_id) values (20, 20);
 
+
+insert into plugin_category_association (category_id, plugin_id) values (1, 1);
+insert into plugin_category_association (category_id, plugin_id) values (2, 2);
+insert into plugin_category_association (category_id, plugin_id) values (3, 3);
+insert into plugin_category_association (category_id, plugin_id) values (4, 4);
+insert into plugin_category_association (category_id, plugin_id) values (5, 5);
+insert into plugin_category_association (category_id, plugin_id) values (1, 6);
+insert into plugin_category_association (category_id, plugin_id) values (2, 7);
+insert into plugin_category_association (category_id, plugin_id) values (3, 8);
+insert into plugin_category_association (category_id, plugin_id) values (4, 9);
+insert into plugin_category_association (category_id, plugin_id) values (5, 10);
+insert into plugin_category_association (category_id, plugin_id) values (1, 11);
+insert into plugin_category_association (category_id, plugin_id) values (2, 12);
+insert into plugin_category_association (category_id, plugin_id) values (3, 13);
+insert into plugin_category_association (category_id, plugin_id) values (4, 14);
+insert into plugin_category_association (category_id, plugin_id) values (5, 15);
+insert into plugin_category_association (category_id, plugin_id) values (0, 16);
+insert into plugin_category_association (category_id, plugin_id) values (1, 17);
+insert into plugin_category_association (category_id, plugin_id) values (2, 18);
+insert into plugin_category_association (category_id, plugin_id) values (3, 19);
+insert into plugin_category_association (category_id, plugin_id) values (4, 20);
+
+
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('ProductivityMaster', '3.0', 'Boost your productivity with this amazing plugin', 'TechSolutions Inc.', 'TechSolutions Inc.', 'techsolutions@gmail.com');
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('DataAnalyzer Pro', '2.5', 'Analyze data like a pro with this powerful tool', 'DataTech Labs', 'DataTech Labs', 'datatechlabs@gmail.com');
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('SecurityGuard', '1.2', 'Enhance your system security with SecurityGuard', 'SecureSoft', 'SecureSoft', 'securesoft@gmail.com');
@@ -44,6 +67,14 @@ INSERT INTO plugins (name, version, description, developer, supplier_name, suppl
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('CustomerFeedbackPro', '2.6', 'Gather valuable customer feedback with CustomerFeedbackPro', 'FeedbackTech Inc.', 'FeedbackTech Inc.', 'feedbacktech@gmail.com');
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('InventoryTracker', '1.8', 'Track your inventory efficiently with InventoryTracker', 'InventoryTech Ltd.', 'InventoryTech Ltd.', 'inventorytech@gmail.com');
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('MarketingAnalytics', '3.0', 'Get in-depth marketing analytics with MarketingAnalytics', 'Marketing Insights Pro', 'Marketing Insights Pro', 'marketinginsights@gmail.com');
+
+
+
+insert into categories (name) values ('Other');
+insert into categories (name) values ('Virus');
+insert into categories (name) values ('Bacteria');
+insert into categories (name) values ('DNA');
+insert into categories (name) values ('Machine Learning');
 
 
 
