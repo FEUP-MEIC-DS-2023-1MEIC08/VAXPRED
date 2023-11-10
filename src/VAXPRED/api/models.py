@@ -7,6 +7,8 @@ user_plugin_association = Table(
     Base.metadata,
     Column('user_id', Integer, ForeignKey('users.id')),
     Column('plugin_id', Integer, ForeignKey('plugins.id')),
+    Column('association_date', DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False),
+    Column('duration', Integer, nullable=True),
     UniqueConstraint('user_id', 'plugin_id', name='unique_user_plugin')
 )
 
@@ -22,6 +24,7 @@ class Plugin(Base):
     last_update_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
     supplier_name = Column(String, nullable=False) 
     supplier_email = Column(String, nullable=False)
+    contract_duration = Column(Integer, nullable=True)
     search_text = Column(String,default='')
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")

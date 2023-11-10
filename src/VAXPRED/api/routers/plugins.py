@@ -17,6 +17,10 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         plugins = plugin_repository.get_all_plugins_search(search)
     else:
         plugins = plugin_repository.get_all_plugins()
+    
+    if plugins is None:
+        raise HTTPException(status_code=404, detail="No plugins available")
+    
     return {"plugins": plugins}
 
 
@@ -46,7 +50,8 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
       description=plugin.description,
       developer = plugin.developer,
       supplier_name = plugin.supplier_name,
-      supplier_email = plugin.supplier_email
+      supplier_email = plugin.supplier_email,
+      contract_duration = plugin.contract_duration
     )
     return new_plugin
 
@@ -63,7 +68,8 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
       description = plugin_update.description,
       developer = plugin_update.developer,
       supplier_name = plugin_update.supplier_name,
-      supplier_email = plugin_update.supplier_email
+      supplier_email = plugin_update.supplier_email,
+      contract_duration = plugin_update.contract_duration
     )
 
     if updated_plugin is None:
