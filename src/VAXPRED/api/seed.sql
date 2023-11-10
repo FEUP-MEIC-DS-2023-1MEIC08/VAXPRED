@@ -30,21 +30,21 @@ insert into plugin_category_association (category_id, plugin_id) values (2, 2);
 insert into plugin_category_association (category_id, plugin_id) values (3, 3);
 insert into plugin_category_association (category_id, plugin_id) values (4, 4);
 insert into plugin_category_association (category_id, plugin_id) values (5, 5);
-insert into plugin_category_association (category_id, plugin_id) values (6, 6);
-insert into plugin_category_association (category_id, plugin_id) values (7, 7);
-insert into plugin_category_association (category_id, plugin_id) values (8, 8);
-insert into plugin_category_association (category_id, plugin_id) values (9, 9);
-insert into plugin_category_association (category_id, plugin_id) values (10, 10);
-insert into plugin_category_association (category_id, plugin_id) values (11, 11);
-insert into plugin_category_association (category_id, plugin_id) values (12, 12);
-insert into plugin_category_association (category_id, plugin_id) values (13, 13);
-insert into plugin_category_association (category_id, plugin_id) values (14, 14);
-insert into plugin_category_association (category_id, plugin_id) values (15, 15);
-insert into plugin_category_association (category_id, plugin_id) values (16, 16);
-insert into plugin_category_association (category_id, plugin_id) values (17, 17);
-insert into plugin_category_association (category_id, plugin_id) values (18, 18);
-insert into plugin_category_association (category_id, plugin_id) values (19, 19);
-insert into plugin_category_association (category_id, plugin_id) values (20, 20);
+insert into plugin_category_association (category_id, plugin_id) values (1, 6);
+insert into plugin_category_association (category_id, plugin_id) values (2, 7);
+insert into plugin_category_association (category_id, plugin_id) values (3, 8);
+insert into plugin_category_association (category_id, plugin_id) values (4, 9);
+insert into plugin_category_association (category_id, plugin_id) values (5, 10);
+insert into plugin_category_association (category_id, plugin_id) values (1, 11);
+insert into plugin_category_association (category_id, plugin_id) values (2, 12);
+insert into plugin_category_association (category_id, plugin_id) values (3, 13);
+insert into plugin_category_association (category_id, plugin_id) values (4, 14);
+insert into plugin_category_association (category_id, plugin_id) values (5, 15);
+insert into plugin_category_association (category_id, plugin_id) values (0, 16);
+insert into plugin_category_association (category_id, plugin_id) values (1, 17);
+insert into plugin_category_association (category_id, plugin_id) values (2, 18);
+insert into plugin_category_association (category_id, plugin_id) values (3, 19);
+insert into plugin_category_association (category_id, plugin_id) values (4, 20);
 
 
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('ProductivityMaster', '3.0', 'Boost your productivity with this amazing plugin', 'TechSolutions Inc.', 'TechSolutions Inc.', 'techsolutions@gmail.com');
@@ -70,27 +70,11 @@ INSERT INTO plugins (name, version, description, developer, supplier_name, suppl
 
 
 
-insert into categories (name) values ('Plumbing & Medical Gas');
-insert into categories (name) values ('Framing (Steel)');
-insert into categories (name) values ('Structural & Misc Steel Erection');
-insert into categories (name) values ('Plumbing & Medical Gas');
-insert into categories (name) values ('Fire Sprinkler System');
-insert into categories (name) values ('Granite Surfaces');
-insert into categories (name) values ('Ornamental Railings');
-insert into categories (name) values ('Drywall & Acoustical (MOB)');
-insert into categories (name) values ('Glass & Glazing');
-insert into categories (name) values ('Structural & Misc Steel Erection');
-insert into categories (name) values ('Fire Sprinkler System');
-insert into categories (name) values ('Plumbing & Medical Gas');
-insert into categories (name) values ('Fire Sprinkler System');
-insert into categories (name) values ('Plumbing & Medical Gas');
-insert into categories (name) values ('EIFS');
-insert into categories (name) values ('Doors, Frames & Hardware');
-insert into categories (name) values ('Sitework & Site Utilities');
-insert into categories (name) values ('Curb & Gutter');
-insert into categories (name) values ('Structural & Misc Steel Erection');
-insert into categories (name) values ('Framing (Wood)');
-
+insert into categories (name) values ('Other');
+insert into categories (name) values ('Virus');
+insert into categories (name) values ('Bacteria');
+insert into categories (name) values ('DNA');
+insert into categories (name) values ('Machine Learning');
 
 
 
