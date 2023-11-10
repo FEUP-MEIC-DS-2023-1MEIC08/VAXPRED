@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime, text, UniqueConstraint
+from sqlalchemy import Column, Integer, String, ForeignKey, Table, DateTime, text, UniqueConstraint, event, DDL
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -29,10 +29,23 @@ class Plugin(Base):
     release_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
     last_update_date = Column(DateTime, server_default=text('CURRENT_TIMESTAMP'), nullable=False)
     supplier_name = Column(String, nullable=False) 
-    supplier_email = Column(String, nullable=False)  
+    supplier_email = Column(String, nullable=False)
+    search_text = Column(String,default='')
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
     categories = relationship("Category", secondary=plugin_category_association, back_populates="plugins")
+
+update_search_text_trigger = DDL('''
+CREATE TRIGGER set_search_text_trigger 
+AFTER INSERT ON plugins
+BEGIN
+    UPDATE plugins
+    SET search_text = NEW.name || ' ' || NEW.description
+    WHERE id = NEW.id;
+END;
+''')
+
+event.listen(Plugin.__table__, 'after_create', update_search_text_trigger)
 
 
 class User(Base):
