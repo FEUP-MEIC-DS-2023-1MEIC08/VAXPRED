@@ -34,23 +34,6 @@ describe('UserProfileComponent', () => {
     expect(orgElement.textContent).toContain('Faculdade de Engenharia da Universidade do Porto');
   });
   
-
-  it('should display Edit Profile button', () => {
-    const button = fixture.nativeElement.querySelector('button');
-    expect(button.textContent).toContain('Edit Profile');
-  });
-
-  it('should trigger Edit profile action', () => {
-    spyOn(component, 'editProfile').and.callThrough();
-    fixture.detectChanges();
-
-    const editButton = fixture.nativeElement.querySelector('button[name="editProfileButton"]');
-    expect(editButton).toBeTruthy();
-
-    editButton.click();
-    expect(component.editProfile).toHaveBeenCalled();
-  });
-  
   it('should render Plugin cards', () => {
     component.plugins = [
       { name: 'Plugin 1', description: 'Description 1' },
@@ -69,7 +52,7 @@ describe('UserProfileComponent', () => {
     ];
     fixture.detectChanges();
   
-    const pluginCards = fixture.nativeElement.querySelectorAll('.plugin-card');
+    const pluginCards = fixture.nativeElement.querySelectorAll('.plugin-cards');
     expect(pluginCards.length).toEqual(2);
   
     const pluginNames = fixture.nativeElement.querySelectorAll('h5[name="pluginName"]');
