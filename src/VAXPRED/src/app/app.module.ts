@@ -20,10 +20,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 // For API calls
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PluginCardComponent } from './home/plugin-card/plugin-card.component';
-import { SideFilterComponent } from './home/side-filter/side-filter.component';
+import { PluginCardComponent } from './search-page/plugin-card/plugin-card.component';
+import { SideFilterComponent } from './search-page/side-filter/side-filter.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +31,8 @@ import { SideFilterComponent } from './home/side-filter/side-filter.component';
     PluginPageComponent,
     PluginPageMenuComponent,
     PluginPageHeaderComponent,
-	PluginCardComponent,
-    HomeComponent,
+    PluginCardComponent,
+    SearchPageComponent,
     NavbarComponent,
     // UserProfileComponent,
     SideFilterComponent,

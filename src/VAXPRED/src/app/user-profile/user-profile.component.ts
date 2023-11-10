@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
 import { UserProfileService } from '../user-profile.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
@@ -15,7 +16,7 @@ const loggedUserId = 1;
   styleUrls: ['./user-profile.component.css'],
   standalone: true,
   imports: [
-    CommonModule, MatGridListModule, FlexLayoutModule, MatCardModule, MatDividerModule
+    CommonModule, MatGridListModule, FlexLayoutModule, MatCardModule, MatDividerModule, RouterModule
   ],
 })
 export class UserProfileComponent implements OnInit {
@@ -24,6 +25,7 @@ export class UserProfileComponent implements OnInit {
   ) { }
 
   user = {
+    id : loggedUserId,
     name: 'Loading...',
     title: '',
     org: ''
@@ -44,6 +46,14 @@ export class UserProfileComponent implements OnInit {
     this.userProfileService.getUserPlugins(loggedUserId).subscribe((data) => {
       console.log(data);
       this.plugins = data;
+    })
+  }
+
+  removePlugin(plugin: any) {
+    this.userProfileService.removePlugin(loggedUserId, plugin.id).subscribe((data) => {
+      console.log(data);
+      // Refresh the page
+      window.location.reload();
     })
   }
 

@@ -30,7 +30,9 @@
                           <div mat-card-avatar class="plugin-icon"></div>
                         </div>
                         <div fxFlex="50%">
-                          <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                          <button class="transparent-button plugin-button-icon" (click)="removePlugin(plugin)">
+                            <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                          </button>
                         </div>
                       </div>
                       <div fxLayout="row">
@@ -43,7 +45,9 @@
                           <p name="pluginDescription" cCardText>{{ plugin.description }}</p>
                         </div>
                         <div fxFlex="50%">
-                          <i class="plugin-button-icon material-icons">arrow_outward</i>
+                          <a routerLink="/plugincontainer/{{user.id}}/{{plugin.id}}" target="_blank">
+                            <i class="plugin-button-icon material-icons">arrow_outward</i>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -58,5 +62,3 @@
   </div>
 
 </div>
-
-

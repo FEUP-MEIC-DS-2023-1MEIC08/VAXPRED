@@ -30,4 +30,8 @@ export class UserProfileService {
       })
     );
   }
+
+  removePlugin(userID: number, pluginID: number){
+    return this.http.delete('http://localhost:8000/users/' + userID + '/plugins/' + pluginID + '/disassociate/');
+  }
 }
