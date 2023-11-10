@@ -35,19 +35,6 @@
   cursor: pointer;
 }
 
-#contract-button {
-  background-color: #C7C7C7 ;
-  border: none;
-  color: white;
-  padding: 0.5em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.5em;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
 .plugin-version-tag {
   background-color: #88A3E7;
   border-radius: 1em;

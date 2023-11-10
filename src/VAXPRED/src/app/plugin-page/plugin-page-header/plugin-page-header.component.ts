@@ -23,6 +23,15 @@ export class PluginPageHeaderComponent {
     }
   }
 
+  acceptContract() {
+    // Handle the logic for contract acceptance here
+    // This function should close the popup and initiate the download.
+    this.closePopup();
+
+    // Add code to initiate the download after the contract is accepted.
+    this.closeDialog();
+  }
+
   closePopup() {
     const popupModal = document.getElementById('popup-modal');
     if (popupModal) {
