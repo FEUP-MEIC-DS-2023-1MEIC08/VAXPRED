@@ -12,12 +12,12 @@ user_plugin_association = Table(
     UniqueConstraint('user_id', 'plugin_id', name='unique_user_plugin')
 )
 
-plugin_category_association = Table(
-    'plugin_category_association',
+plugin_tag_association = Table(
+    'plugin_tag_association',
     Base.metadata,
     Column('plugin_id', Integer, ForeignKey('plugins.id')),
-    Column('category_id', Integer, ForeignKey('categories.id')),
-    UniqueConstraint('plugin_id', 'category_id', name='unique_plugin_category')
+    Column('tag_id', Integer, ForeignKey('tags.id')),
+    UniqueConstraint('plugin_id', 'tag_id', name='unique_plugin_tag')
 )
 
 
@@ -36,7 +36,7 @@ class Plugin(Base):
     search_text = Column(String,default='')
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
-    categories = relationship("Category", secondary=plugin_category_association, back_populates="plugins")
+    tags = relationship("Tag", secondary=plugin_tag_association, back_populates="plugins")
 
 update_search_text_trigger = DDL('''
 CREATE TRIGGER set_search_text_trigger 
@@ -60,10 +60,10 @@ class User(Base):
     plugins = relationship("Plugin", secondary=user_plugin_association, back_populates="users")
 
 
-class Category(Base):
-    __tablename__ = 'categories'
+class Tag(Base):
+    __tablename__ = 'tags'
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String,  nullable=False, unique=True, index=True)
 
-    plugins = relationship("Plugin", secondary=plugin_category_association, back_populates="categories")
+    plugins = relationship("Plugin", secondary=plugin_tag_association, back_populates="tags")
 
