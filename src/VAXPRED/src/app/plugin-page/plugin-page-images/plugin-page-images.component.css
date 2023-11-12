@@ -1,0 +1,36 @@
+.image-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100vw;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+}
+
+.image-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.image-item {
+  flex: 0 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.plugin-image {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
