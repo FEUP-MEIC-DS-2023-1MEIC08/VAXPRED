@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     defaults:
       run:
         working-directory: ./src/VAXPRED
@@ -36,4 +37,4 @@ jobs:
       - name: Run AngularJS tests
         run: |
           set -e
-          npm run test -- --browsers=ChromeHeadless
+          npm run test -- --browsers=ChromeHeadless --runInBand
