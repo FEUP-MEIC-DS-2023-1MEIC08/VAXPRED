@@ -34,4 +34,6 @@ jobs:
           sleep 3  # Give xvfb some time to start
 
       - name: Run AngularJS tests
-        run: npm run test -- --browsers=ChromeHeadless --bail
+        run: |
+          set -e
+          npm run test -- --browsers=ChromeHeadless
