@@ -8,9 +8,8 @@ on:
       - dev
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     defaults:
       run:
         working-directory: ./src/VAXPRED
@@ -26,15 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Set up headless browser
-        run: |
-          sudo apt-get install -y xvfb
-          export DISPLAY=:99.0
-          Xvfb $DISPLAY -ac -screen 0 1024x768x16 > /dev/null 2>&1 &
-          sleep 3  # Give xvfb some time to start
+      
+      - name: Build
+        run: npm run build -- --configuration=ci
 
       - name: Run AngularJS tests
-        run: |
-          set -e
-          npm run test -- --browsers=ChromeHeadless --runInBand
+        run: npm test -- --configuration=ci
