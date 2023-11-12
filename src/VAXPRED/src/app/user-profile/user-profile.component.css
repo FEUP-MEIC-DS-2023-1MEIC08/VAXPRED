@@ -47,10 +47,11 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1em;
+}
 
 .transparent-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-
+}
