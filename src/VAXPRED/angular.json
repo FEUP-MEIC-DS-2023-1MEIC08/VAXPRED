@@ -39,11 +39,6 @@
             "scripts": []
           },
           "configurations": {
-            "ci": {
-              "watch": false,
-              "progress": false,
-              "browsers": "ChromeHeadlessCI"
-            },
             "production": {
               "budgets": [
                 {
