@@ -2,7 +2,8 @@ export class Plugin {
     id: number;
     title: string;
     description: string;
-    // Add other properties as needed
+	// TODO: connect to db
+	dependencies: any[] = [{name: 'Python', version:'3.9', vendor:'Python Foundation'}, {name: 'Docker', version:'24.0', vendor:'Docker Inc.'}];
   
     constructor(id: number, title: string, description: string) {
       this.id = id;
