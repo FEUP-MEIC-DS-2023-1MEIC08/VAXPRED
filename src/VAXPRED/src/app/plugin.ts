@@ -9,11 +9,11 @@ export class Plugin {
     this.title = title;
     this.description = description;
     this.images = [
-      'http://placekitten.com/300/300',
-      'http://placekitten.com/301/301',
-      'http://placekitten.com/302/302',
-      'http://placekitten.com/303/303',
-      'http://placekitten.com/304/304',
+      'http://placekitten.com/598/300',
+      'http://placekitten.com/599/300',
+      'http://placekitten.com/600/300',
+      'http://placekitten.com/601/300',
+      'http://placekitten.com/602/300',
     ];
   }
 }
