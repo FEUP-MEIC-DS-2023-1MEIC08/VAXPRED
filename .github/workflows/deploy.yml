@@ -1,0 +1,45 @@
+name: Docker Compose Build and Deploy
+
+on:
+  pull_request:
+  push:
+    branches:
+      # - main
+      - dev
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/VAXPRED
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Download wait-for-it.sh
+      run: |
+        wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+        chmod +x wait-for-it.sh
+
+    - name: Set up Docker Compose
+      run: |
+        sudo docker-compose -f docker-compose.yml build
+        sudo docker-compose -f docker-compose.yml up -d
+
+    - name: Wait for containers to be ready
+      run: |
+        chmod +x wait-for-it.sh
+        ./wait-for-it.sh -t 0 localhost:8000 -- echo "Backend is ready."
+        ./wait-for-it.sh -t 0 localhost:4200 -- echo "Frontend is ready."
+
+    - name: Check if containers are running
+      run: |
+        if sudo docker ps -q --filter "name=vaxpred_backend" | grep -q . && \
+           sudo docker ps -q --filter "name=vaxpred_frontend" | grep -q .; then
+          echo "Containers are running."
+        else
+          echo "Containers failed to start."
+          exit 1
+        fi
