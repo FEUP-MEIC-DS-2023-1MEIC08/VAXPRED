@@ -23,7 +23,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: "ghcr.io/${{ github.repository_owner }}/VAXPRED/frontend:latest"
+        tags: "ghcr.io/${{ github.repository_owner }}/vaxpred/frontend:latest"
 
 
     - name: Build and push backend Docker image
@@ -31,7 +31,7 @@ jobs:
       with:
         context: ./api
         push: true
-        tags: "ghcr.io/${{ github.repository_owner }}/VAXPRED/backend:latest"
+        tags: "ghcr.io/${{ github.repository_owner }}/vaxpred/backend:latest"
 
     - name: Deploy with Docker Compose
       run: |
