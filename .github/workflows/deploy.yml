@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  pull_request:
+  push:
+    branches:
+      # - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build and push frontend Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}/frontend:latest
+
+    - name: Build and push backend Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./api
+        push: true
+        tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}/backend:latest
+
+    - name: Deploy with Docker Compose
+      run: |
+        docker-compose -f docker-compose.yml up -d
