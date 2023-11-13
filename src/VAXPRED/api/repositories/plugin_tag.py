@@ -28,7 +28,9 @@ class PluginTagRepository:
     
     def delete_association(self, plugin_id: int, tag_id: int) -> Tag:  
         plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
-        tag = self.db.query(Tag).filter(Tag.id == tag_id).first()     
+        tag = self.db.query(Tag).filter(Tag.id == tag_id).first()
+        print(plugin.id) 
+        print(tag.plugins)   
         try:
             tag.plugins.remove(plugin)
             self.db.commit()

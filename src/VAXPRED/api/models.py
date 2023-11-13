@@ -20,6 +20,14 @@ plugin_tag_association = Table(
     UniqueConstraint('plugin_id', 'tag_id', name='unique_plugin_tag')
 )
 
+plugin_category_association = Table(
+    'plugin_category_association',
+    Base.metadata,
+    Column('plugin_id', Integer, ForeignKey('plugins.id')),
+    Column('category_id', Integer, ForeignKey('categories.id')),
+    UniqueConstraint('plugin_id', 'category_id', name='unique_plugin_category')
+)
+
 plugin_faq_association = Table(
     'plugin_faq_association',
     Base.metadata,
@@ -44,6 +52,7 @@ class Plugin(Base):
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
     tags = relationship("Tag", secondary=plugin_tag_association, back_populates="plugins")
+    categories = relationship("Category", secondary=plugin_category_association, back_populates="plugins")
     faqs = relationship("FAQ", secondary=plugin_faq_association, back_populates="plugins")
 
 update_search_text_trigger = DDL('''
@@ -74,6 +83,13 @@ class Tag(Base):
     name = Column(String,  nullable=False, unique=True, index=True)
 
     plugins = relationship("Plugin", secondary=plugin_tag_association, back_populates="tags")
+
+class Category(Base):
+    __tablename__ = 'categories'
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String,  nullable=False, unique=True, index=True)
+
+    plugins = relationship("Plugin", secondary=plugin_category_association, back_populates="categories")
 
 class FAQ(Base):
     __tablename__ = 'faqs'

@@ -50,5 +50,5 @@ def disassociate_tag_plugin(tag_id: int, plugin_id: int, db: Session = Depends(g
     if {"tag_id": tag_id, "plugin_id": plugin_id} not in association_db:
         raise HTTPException(status_code=404, detail="Association not found")
 
-    association.delete_association(tag_id, plugin_id)
+    association.delete_association(plugin_id, tag_id)
     return {"message": "Association removed successfully"}

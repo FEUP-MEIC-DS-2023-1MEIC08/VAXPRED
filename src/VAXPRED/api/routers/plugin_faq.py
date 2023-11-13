@@ -49,5 +49,5 @@ def disassociate_faq_plugin(faq_id: int, plugin_id: int, db: Session = Depends(g
     if {"faq_id": faq_id, "plugin_id": plugin_id} not in association_db:
         raise HTTPException(status_code=404, detail="Association not found")
 
-    association.delete_association(faq_id, plugin_id)
+    association.delete_association(plugin_id, faq_id)
     return {"message": "Association removed successfully"}
