@@ -17,6 +17,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    
+    - name: Download wait-for-it.sh
+      run: |
+        wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
+        chmod +x wait-for-it.sh
 
     - name: Set up Docker Compose
       run: |
