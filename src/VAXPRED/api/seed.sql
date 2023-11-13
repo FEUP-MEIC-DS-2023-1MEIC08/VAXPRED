@@ -24,28 +24,47 @@ insert into user_plugin_association (user_id, plugin_id) values (18, 18);
 insert into user_plugin_association (user_id, plugin_id) values (19, 19);
 insert into user_plugin_association (user_id, plugin_id) values (20, 20);
 
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 1);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 2);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 3);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 4);
+insert into plugin_tag_association (tag_id, plugin_id) values (5, 5);
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 6);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 7);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 8);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 9);
+insert into plugin_tag_association (tag_id, plugin_id) values (5, 10);
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 11);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 12);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 13);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 14);
+insert into plugin_tag_association (tag_id, plugin_id) values (5, 15);
+insert into plugin_tag_association (tag_id, plugin_id) values (0, 16);
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 17);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 18);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 19);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 20);
 
-insert into plugin_category_association (category_id, plugin_id) values (1, 1);
-insert into plugin_category_association (category_id, plugin_id) values (2, 2);
-insert into plugin_category_association (category_id, plugin_id) values (3, 3);
-insert into plugin_category_association (category_id, plugin_id) values (4, 4);
-insert into plugin_category_association (category_id, plugin_id) values (5, 5);
-insert into plugin_category_association (category_id, plugin_id) values (1, 6);
-insert into plugin_category_association (category_id, plugin_id) values (2, 7);
-insert into plugin_category_association (category_id, plugin_id) values (3, 8);
-insert into plugin_category_association (category_id, plugin_id) values (4, 9);
-insert into plugin_category_association (category_id, plugin_id) values (5, 10);
-insert into plugin_category_association (category_id, plugin_id) values (1, 11);
-insert into plugin_category_association (category_id, plugin_id) values (2, 12);
-insert into plugin_category_association (category_id, plugin_id) values (3, 13);
-insert into plugin_category_association (category_id, plugin_id) values (4, 14);
-insert into plugin_category_association (category_id, plugin_id) values (5, 15);
-insert into plugin_category_association (category_id, plugin_id) values (0, 16);
-insert into plugin_category_association (category_id, plugin_id) values (1, 17);
-insert into plugin_category_association (category_id, plugin_id) values (2, 18);
-insert into plugin_category_association (category_id, plugin_id) values (3, 19);
-insert into plugin_category_association (category_id, plugin_id) values (4, 20);
-
+insert into plugin_faq_association (faq_id, plugin_id) values (1, 1);
+insert into plugin_faq_association (faq_id, plugin_id) values (2, 2);
+insert into plugin_faq_association (faq_id, plugin_id) values (3, 3);
+insert into plugin_faq_association (faq_id, plugin_id) values (4, 4);
+insert into plugin_faq_association (faq_id, plugin_id) values (5, 5);
+insert into plugin_faq_association (faq_id, plugin_id) values (1, 6);
+insert into plugin_faq_association (faq_id, plugin_id) values (2, 7);
+insert into plugin_faq_association (faq_id, plugin_id) values (3, 8);
+insert into plugin_faq_association (faq_id, plugin_id) values (4, 9);
+insert into plugin_faq_association (faq_id, plugin_id) values (5, 10);
+insert into plugin_faq_association (faq_id, plugin_id) values (1, 11);
+insert into plugin_faq_association (faq_id, plugin_id) values (2, 12);
+insert into plugin_faq_association (faq_id, plugin_id) values (3, 13);
+insert into plugin_faq_association (faq_id, plugin_id) values (4, 14);
+insert into plugin_faq_association (faq_id, plugin_id) values (5, 15);
+insert into plugin_faq_association (faq_id, plugin_id) values (0, 16);
+insert into plugin_faq_association (faq_id, plugin_id) values (1, 17);
+insert into plugin_faq_association (faq_id, plugin_id) values (2, 18);
+insert into plugin_faq_association (faq_id, plugin_id) values (3, 19);
+insert into plugin_faq_association (faq_id, plugin_id) values (4, 20);
 
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email,contract_duration ) VALUES ('ProductivityMaster', '3.0', 'Boost your productivity with this amazing plugin', 'TechSolutions Inc.', 'TechSolutions Inc.', 'techsolutions@gmail.com', 2);
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email,contract_duration ) VALUES ('DataAnalyzer Pro', '2.5', 'Analyze data like a pro with this powerful tool', 'DataTech Labs', 'DataTech Labs', 'datatechlabs@gmail.com', NULL);
@@ -68,15 +87,17 @@ INSERT INTO plugins (name, version, description, developer, supplier_name, suppl
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email,contract_duration ) VALUES ('InventoryTracker', '1.8', 'Track your inventory efficiently with InventoryTracker', 'InventoryTech Ltd.', 'InventoryTech Ltd.', 'inventorytech@gmail.com', 2);
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email,contract_duration ) VALUES ('MarketingAnalytics', '3.0', 'Get in-depth marketing analytics with MarketingAnalytics', 'Marketing Insights Pro', 'Marketing Insights Pro', 'marketinginsights@gmail.com', 3);
 
+insert into tags (name) values ('Other');
+insert into tags (name) values ('Virus');
+insert into tags (name) values ('Bacteria');
+insert into tags (name) values ('DNA');
+insert into tags (name) values ('Machine Learning');
 
-
-insert into categories (name) values ('Other');
-insert into categories (name) values ('Virus');
-insert into categories (name) values ('Bacteria');
-insert into categories (name) values ('DNA');
-insert into categories (name) values ('Machine Learning');
-
-
+INSERT INTO faqs (question, answer) VALUES ('What is this Plugin?', 'This Plugin is a powerful tool that helps with...');
+INSERT INTO faqs (question, answer) VALUES ('How do I install this Plugin?', 'To install this Plugin, you need to follow these steps...');
+INSERT INTO faqs (question, answer) VALUES ('Can this Plugin be customized?', 'Yes, It comes with customization options that allow you to...');
+INSERT INTO faqs (question, answer) VALUES ('Is there a tutorial for using this Plugin?', 'Certainly! We have a detailed tutorial on our website that guides you through...');
+INSERT INTO faqs (question, answer) VALUES ('Are there any known issues with the Plugin?', 'As of now, there are no known issues with this Plugin. However, we recommend checking our support page for updates.');
 
 insert into users (username, email) values ('mfridaye0', 'esubhan0@narod.ru');
 insert into users (username, email) values ('mdods1', 'bmartin1@cbslocal.com');
@@ -178,4 +199,3 @@ insert into users (username, email) values ('dmerrell2o', 'rarenson2o@japanpost.
 insert into users (username, email) values ('kmccullouch2p', 'grudsdell2p@marriott.com');
 insert into users (username, email) values ('sbausor2q', 'wkyncl2q@photobucket.com');
 insert into users (username, email) values ('elindfors2r', 'jglyne2r@salon.com');
-

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import plugins, user_plugins, users, tags, plugin_tag, faqs
+from routers import plugins, user_plugins, users, tags, plugin_tag, faqs, plugin_faq
 from database import Base,engine
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -21,7 +21,8 @@ app.add_middleware(
 
 app.include_router(users.router, prefix="/users", tags=["users"])
 app.include_router(plugins.router, prefix="/plugins", tags=["plugins"])
-app.include_router(tags.router, prefix="/tags", tags=["tags"])
 app.include_router(user_plugins.router, prefix="/users", tags=["user_plugins"])
+app.include_router(tags.router, prefix="/tags", tags=["tags"])
+app.include_router(plugin_tag.router, prefix="/tags", tags=["tag_plugins"])
 app.include_router(faqs.router, prefix="/faqs", tags=["faqs"])
-# app.include_router(plugin_tag.router, prefix="/tags", tags=["tag_plugins"])
+app.include_router(plugin_faq.router, prefix="/faqs", tags=["faq_plugins"])
