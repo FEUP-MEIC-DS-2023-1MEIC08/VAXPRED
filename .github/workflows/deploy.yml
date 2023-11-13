@@ -1,4 +1,4 @@
-name: Deploy
+name: Docker Compose Build and Deploy
 
 on:
   pull_request:
@@ -8,31 +8,30 @@ on:
       - dev
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Docker Buildx (optional)
-      uses: docker/setup-buildx-action@v1
-
-    - name: Build and push frontend Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: "ghcr.io/${{ github.repository_owner }}/vaxpred/frontend:latest"
-
-
-    - name: Build and push backend Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: ./api
-        push: true
-        tags: "ghcr.io/${{ github.repository_owner }}/vaxpred/backend:latest"
-
-    - name: Deploy with Docker Compose
+    - name: Set up Docker Compose
       run: |
-        docker-compose -f docker-compose.yml up -d
+        sudo docker-compose -f docker-compose.yml build
+        sudo docker-compose -f docker-compose.yml up -d
+
+    - name: Wait for containers to be ready
+      run: |
+        chmod +x wait-for-it.sh
+        ./wait-for-it.sh -t 0 localhost:8000 -- echo "Backend is ready."
+        ./wait-for-it.sh -t 0 localhost:4200 -- echo "Frontend is ready."
+
+    - name: Check if containers are running
+      run: |
+        if sudo docker ps -q --filter "name=vaxpred_backend" | grep -q . && \
+           sudo docker ps -q --filter "name=vaxpred_frontend" | grep -q .; then
+          echo "Containers are running."
+        else
+          echo "Containers failed to start."
+          exit 1
+        fi

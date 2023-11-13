@@ -2,6 +2,7 @@ version: '3'
 
 services:
   frontend:
+    container_name: vaxpred_frontend
     build:
       context: .
     ports:
@@ -10,6 +11,7 @@ services:
       - backend
 
   backend:
+    container_name: vaxpred_backend
     build:
       context: ./api
     ports:
