@@ -3,8 +3,10 @@ from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin_tag import PluginTagRepository
 from repositories.plugin import PluginRepository
+from repositories.tag import TagRepository
 from typing import List, Dict
 from schemas.plugin import PluginListResponse
+from schemas.tag import TagListResponse
 
 router = APIRouter()
 
@@ -19,6 +21,18 @@ def get_tag_plugins(tag_id: int, db: Session = Depends(get_db)):
             tempPlugin = plugin_repository.get_plugin_by_id(association["plugin_id"])
             tag_plugins.append(tempPlugin)
     return {"plugins": tag_plugins}
+
+# Route to list of tags associated with a plugin
+@router.get("/{plugin_id}/", response_model=TagListResponse)
+def get_plugin_tags(plugin_id: int, db: Session = Depends(get_db)):
+    association_db = PluginTagRepository(db).get_list_dict()
+    plugin_tags = []
+    tag_repository = TagRepository(db)
+    for association in association_db:
+        if association["plugin_id"] == plugin_id:
+            tempPlugin = tag_repository.get_tag_by_id(association["tag_id"])
+            plugin_tags.append(tempPlugin)
+    return {"tags": plugin_tags}
 
 
 # Route to associate a plugin with a tag
