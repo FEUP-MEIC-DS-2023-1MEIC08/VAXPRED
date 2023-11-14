@@ -1,30 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Tool } from './search-page/plugin-card/tool';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ToolService {
-	list = [
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
-			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
-			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
-			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
-			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
-			requires more than data. It requires a trusted data curation, annotation & validation partner \
-			capable of managing risk while providing proactive insights and predictability.',['Tag 1', 'Tag 2']),
-	];
+	constructor(private http: HttpClient) { }
 
-	constructor() { }
-
-	getTools(): Tool[] {
-		return this.list;
+	getPlugins() {
+		return this.http.get('http://localhost:8000/plugins/');
 	}
-
-	getTool(id: number): Tool {
-		return this.list.find((item: Tool) => item.id == id)!;
+	
+	getPlugin(id: number) {
+		return this.http.get('http://localhost:8000/plugins/' + id + '/');
 	}
 
 	getToolTypes(): string[] {

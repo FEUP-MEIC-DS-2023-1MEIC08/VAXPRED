@@ -17,8 +17,28 @@ export class SideFilterComponent {
   selectedToolTypes: { [key: string]: boolean } = {};
   tags: string[] = [];
   selectedTags: { [key: string]: boolean } = {};
-  constructor(private toolService: ToolService, private route: ActivatedRoute) {
-    this.items = this.toolService.getTools().slice();
+
+  constructor(private toolService: ToolService) {
+    // this.items = this.toolService.getTools().slice();
+
+	this.toolService.getPlugins().subscribe((data: any) => {
+		console.log(data);
+
+		for (const plugin of data.plugins)
+		{
+			this.items.push(
+				new Tool(
+					plugin.id,
+					plugin.name,
+					'assets/img/ydata.png',
+					// plugin.image,
+					plugin.type,
+					plugin.description,
+					plugin.tags
+				));
+		}
+  	});
+
     this.toolTypes=this.toolService.getToolTypes();
     this.originalItems = this.items.slice();
     this.tags = this.toolService.getTags();
