@@ -12,12 +12,12 @@ To speed up the building process, we've created a Makefile that encapsulates mul
 - Run `make ps` to list all running containers
 
 
-### 
+If by any kind you're having issues with using the Makefile, you can always run these commands manually
 
 ```bash
 docker-compose build
 docker-compose up -d
-docker-compose ps # check if running
+docker-compose ps # check if the containers are up
 ```
 
 ## Manual Development
