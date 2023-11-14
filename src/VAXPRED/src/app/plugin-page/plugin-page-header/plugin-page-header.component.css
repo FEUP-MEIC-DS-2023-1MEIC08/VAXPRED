@@ -35,13 +35,6 @@
   cursor: pointer;
 }
 
-.plugin-version-tag {
-  background-color: #88A3E7;
-  border-radius: 1em;
-  padding: 0.5em;
-  margin: 0.5em;
-}
-
 h1, h4 {
     margin-top: 0em;
     margin-bottom: 0em;
@@ -50,4 +43,11 @@ h1, h4 {
 h4 {
     margin-bottom: 1.5em;
     font-weight: 400;
+}
+
+.version-tag {
+  background-color: #88A3E7;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 0.5em;
 }

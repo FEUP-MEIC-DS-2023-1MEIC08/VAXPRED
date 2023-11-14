@@ -60,7 +60,7 @@ describe('SideFilterComponent', () => {
     component.sortingOption = 'aToZ';
     component.toggleSorting();
 
-    let expected_List=[
+    const expected_List=[
 		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
@@ -80,7 +80,7 @@ describe('SideFilterComponent', () => {
     component.sortingOption = 'zToA';
     component.toggleSorting();
 
-    let expected_List=[
+    const expected_List=[
       new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
@@ -112,7 +112,7 @@ describe('SideFilterComponent', () => {
     
     component.filterList();
 
-    let expected_List=[		
+    const expected_List=[		
 		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
@@ -127,7 +127,7 @@ describe('SideFilterComponent', () => {
     component.filterList();
     console.log("after filter")
     console.log(component.items)
-    let expected_List=
+    const expected_List=
 	[
 		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
@@ -150,7 +150,7 @@ describe('SideFilterComponent', () => {
     component.toggleSorting();
 
     
-    let expected_List=[
+    const expected_List=[
 		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
@@ -171,7 +171,7 @@ describe('SideFilterComponent', () => {
     component.toggleSorting();
     component.resetListToInitialFormat();
     
-    let expected_List=[		
+    const expected_List=[		
 		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
@@ -189,7 +189,7 @@ describe('SideFilterComponent', () => {
     component.selectedTags = { 'Tag 1': false, 'Tag 2': false, 'Tag 3': true };
     component.filterList();
     
-    let expected_List=[		
+    const expected_List=[		
 		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
@@ -201,7 +201,7 @@ describe('SideFilterComponent', () => {
     component.selectedTags = { 'Tag 1': false, 'Tag 2': true, 'Tag 3': true };
     component.filterList();
     
-    let expected_List=[		
+    const expected_List=[		
 		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
@@ -218,7 +218,7 @@ describe('SideFilterComponent', () => {
 
     component.filterList();
 
-    let expected_List=[
+    const expected_List=[
       		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
