@@ -1,0 +1,43 @@
+name: AngularJS Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      # - main
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: ./src/VAXPRED
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Set up headless browser
+        run: |
+          sudo apt-get install -y xvfb
+          export DISPLAY=:99.0
+          Xvfb $DISPLAY -ac -screen 0 1024x768x16 > /dev/null 2>&1 &
+          sleep 3  # Give xvfb some time to start
+
+      - name: Run AngularJS tests
+        run: |
+          npm run test -- --browsers=ChromeHeadless --no-watch --source-map=false
+
+      - name: Cleanup
+        run: |
+          pkill -f Xvfb

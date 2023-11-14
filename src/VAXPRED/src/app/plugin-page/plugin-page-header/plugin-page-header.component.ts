@@ -9,8 +9,16 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./plugin-page-header.component.css']
 })
 export class PluginPageHeaderComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '', '');
+  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', new Date(), new Date());
   @Input() dialogRef!: MatDialogRef<PluginPageComponent>;
+
+  currentDate: Date = new Date();
+  terminationDate: Date = new Date();
+
+  constructor() {
+    // Calculate the termination date (2 years from the current date)
+    this.terminationDate.setFullYear(this.currentDate.getFullYear() + 2);
+  }
 
   closeDialog() {
     this.dialogRef.close();
@@ -39,3 +47,4 @@ export class PluginPageHeaderComponent {
     }
   }
 }
+
