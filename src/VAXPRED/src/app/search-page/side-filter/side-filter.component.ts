@@ -50,7 +50,7 @@ export class SideFilterComponent {
   }
 
   checkTag(item: Tool) : boolean{
-    for(let tag of item.tags){
+    for(const tag of item.tags){
       if(this.selectedTags[tag]){
         return true;
       }
