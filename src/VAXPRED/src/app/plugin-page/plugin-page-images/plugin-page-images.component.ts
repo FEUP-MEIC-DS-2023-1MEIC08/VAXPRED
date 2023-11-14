@@ -8,4 +8,14 @@ import { Plugin } from '../../plugin';
 })
 export class PluginPageImagesComponent {
   @Input() plugin: Plugin = new Plugin(0, '', '');
+
+  expandedImage: string | null = null;
+
+  expandImage(imageUrl: string) {
+    this.expandedImage = imageUrl;
+  }
+
+  closeExpandedImage() {
+    this.expandedImage = null;
+  }
 }
