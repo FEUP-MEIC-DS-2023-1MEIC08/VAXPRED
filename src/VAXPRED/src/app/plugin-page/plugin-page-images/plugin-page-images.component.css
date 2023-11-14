@@ -1,0 +1,71 @@
+.image-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100vw;
+  margin-bottom: 10px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.image-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.plugin-image {
+  width: 100%;
+}
+
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-image-container {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.expanded-image {
+  width: 900px; 
+  height: 100%;
+  max-height: 80vh; 
+  object-fit: contain; 
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+.image-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 170, 215);
+  border-radius: 2px;
+}
+
+/* Firefox */
+.image-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(65, 170, 215);
+}
+
+.image-container::-moz-scrollbar {
+  height: 6px;
+}
+
+.image-container::-moz-scrollbar-thumb {
+  background-color: rgb(65, 170, 215);
+  border-radius: 2px;
+}
