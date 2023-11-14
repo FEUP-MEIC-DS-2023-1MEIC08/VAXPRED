@@ -7,7 +7,7 @@ import { Plugin } from '../../plugin';
   styleUrls: ['./plugin-page-images.component.css']
 })
 export class PluginPageImagesComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '');
+  @Input() plugin: Plugin = new Plugin(0, '', '', '');
 
   expandedImage: string | null = null;
 

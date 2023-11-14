@@ -20,7 +20,7 @@ export class PluginCardComponent
 		  maxHeight: '90vh',
 		  data: {
 			dialogRef: null, // Initialize the dialogRef to null
-			plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description') // TODO: INSERT PLUGIN HERE!!!!
+			plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description', 'FAQ') // TODO: INSERT PLUGIN HERE!!!!
 		  }
 		});
 		dialogRef.componentInstance.data.dialogRef = dialogRef;
