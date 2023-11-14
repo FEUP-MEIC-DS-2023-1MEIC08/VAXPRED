@@ -1,8 +1,18 @@
 # VAXPRED
 
-## Deployment with Docker
+## Docker Development and Deployment
 
-Requires Docker and Docker Compose.
+Requires Docker, Docker Compose and Make.
+
+To speed up the building process, we've created a Makefile that encapsulates multiple commands in rules. Also, **you can develop while the containers are up**!
+
+- Run `make` to start the containers.
+- Run `make stop` to stop the containers.
+- Run `make re` to restart the containers
+- Run `make ps` to list all running containers
+
+
+### 
 
 ```bash
 docker-compose build
@@ -10,7 +20,7 @@ docker-compose up -d
 docker-compose ps # check if running
 ```
 
-## Local Development
+## Manual Development
 
 ### Frontend
 
