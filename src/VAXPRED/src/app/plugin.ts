@@ -9,8 +9,9 @@ export class Plugin {
 	// TODO: connect to db
 	dependencies: any[] = [{name: 'Python', version:'3.9', vendor:'Python Foundation'}, {name: 'Docker', version:'24.0', vendor:'Docker Inc.'}];
   images: string[];
+  supplier_name: string;
 
-  constructor(id: number, title: string, description : string, version: string, developer : string, release_date : Date, last_update_date : Date) {
+  constructor(id: number, title: string, description : string, version: string, developer : string, release_date : Date, last_update_date : Date, supplier_name: string) {
     this.id = id;
     this.title = title;
     this.description = description;
@@ -25,5 +26,6 @@ export class Plugin {
       'http://placekitten.com/501/300',
       'http://placekitten.com/502/300',
     ];
+    this.supplier_name = supplier_name;
   }
 }

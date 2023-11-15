@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./plugin-page-header.component.css']
 })
 export class PluginPageHeaderComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', new Date(), new Date());
+  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', new Date(), new Date(), '');
   @Input() dialogRef!: MatDialogRef<PluginPageComponent>;
 
   currentDate: Date = new Date();

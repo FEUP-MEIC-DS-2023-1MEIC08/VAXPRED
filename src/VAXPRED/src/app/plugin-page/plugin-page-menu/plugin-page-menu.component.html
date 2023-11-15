@@ -3,7 +3,7 @@
     <mat-tab-group [(selectedIndex)]="selectedTab">
       <mat-tab label="Description">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px;">
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
             <h3>{{ plugin.title }}</h3>
             <h4>VERSION [1.19.1]</h4>
             <p>
@@ -19,7 +19,7 @@
               *ngFor="let dependency of plugin.dependencies"
               style="height:4.5em"
             >
-              <div class="dependency-description">
+              <div class="dependency-description"  style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
                 <div fxLayout="row" fxLayoutAlign="start end">
                   <p class="name">{{ dependency.name }}</p>
                   <p class="version-tag">{{ dependency.version }}</p>
@@ -33,7 +33,7 @@
       </mat-tab>
       <mat-tab label="Changelog">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px;">
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
             <p>
               This is the changelog.
             </p>
@@ -42,8 +42,8 @@
       </mat-tab>
       <mat-tab label="Supplier information">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px;">
-            <p>Supplier: Supplier123</p>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <p>{{ plugin.supplier_name }}</p>
             <p>Supplier e-mail: supplier123@gmail.com</p>
           </div>
         </ng-template>
