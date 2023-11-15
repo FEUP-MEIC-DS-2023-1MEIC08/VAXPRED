@@ -1,4 +1,4 @@
-# Factsheet for Leandro Silva
+# Factsheet for João Araújo
 
 ## Sprint 0
 
@@ -18,7 +18,16 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this second sprint, I have been part of the integration of the web framework FastAPI as well as part of the creation of the database for the product. Only one user story was assigned to our team (#32) that was subdivided into diferent tasks.
+
+### The two user stories that I am most proud of
+In this sprint I was responsible to develop and design the API for the User, so I created and integrated on the app all the routes, schemas, repositories related to the User.
+
+### The two pull requests that I am most proud of
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+In this sprint I was able to help with the integration of the web framework FastAPI and some of its initial obstacles.
 
 
 ## Sprint 2
