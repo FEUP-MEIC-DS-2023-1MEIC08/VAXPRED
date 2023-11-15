@@ -3,37 +3,44 @@
     <mat-tab-group [(selectedIndex)]="selectedTab">
       <mat-tab label="Description">
         <ng-template matTabContent>
-          <h3>{{ plugin.title }}</h3>
-          <h4>VERSION [1.19.1]</h4>
-          <p>
-            {{ plugin.description }}
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px;">
+            <h3>{{ plugin.title }}</h3>
+            <h4>VERSION [1.19.1]</h4>
+            <p>
+              {{ plugin.description }}
+            </p>
+          </div>
         </ng-template>
       </mat-tab>
       <mat-tab label="Requirements">
         <ng-template matTabContent>
-          <p>
-            These are the requirements:
-          </p>
-          <mat-list>
-            <mat-list-item>Requirement 1</mat-list-item>
-            <mat-list-item>Requirement 2</mat-list-item>
-            <mat-list-item>Requirement 3</mat-list-item>
-          </mat-list>
+          <div style="margin-left: 20px; margin-right: 20px;">
+            <p>
+              These are the requirements:
+            </p>
+            <mat-list>
+              <mat-list-item>Requirement 1</mat-list-item>
+              <mat-list-item>Requirement 2</mat-list-item>
+              <mat-list-item>Requirement 3</mat-list-item>
+            </mat-list>
+          </div>
         </ng-template>
       </mat-tab>
       <mat-tab label="Changelog">
         <ng-template matTabContent>
-          <p>
-            This is the changelog.
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px;">
+            <p>
+              This is the changelog.
+            </p>
+          </div>
         </ng-template>
       </mat-tab>
-      <mat-tab label="Extra Item">
+      <mat-tab label="Supplier information">
         <ng-template matTabContent>
-          <p>
-            Some extra content... (yet to determine)
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px;">
+            <p>Supplier: Supplier123</p>
+            <p>Supplier e-mail: supplier123@gmail.com</p>
+          </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
