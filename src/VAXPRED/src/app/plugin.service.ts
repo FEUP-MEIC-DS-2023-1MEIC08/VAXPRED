@@ -24,6 +24,6 @@ export class ToolService {
 	}
 
 	installPlugin(pluginId: number) {
-		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + 1 + '/associate/', {});
+		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 	}
 }
