@@ -21,8 +21,6 @@ export class SideFilterComponent {
 	constructor(private toolService: ToolService)
 	{
 		this.toolService.getPlugins().subscribe((data: any) => {
-			console.log(data);
-
 			data.plugins.forEach((plugin: any) => {
 				this.items.push(
 					new Plugin(
@@ -31,13 +29,10 @@ export class SideFilterComponent {
 						plugin.description,
 						'assets/img/ydata.png', // plugin.image,
 						'Data Quality',			// plugin.type,
-						['Tag 1', 'Tag 2']		//plugin.tags
+						[]		//plugin.tags
 					));
 			});
 
-			for (const plugin of data.plugins) {
-				
-			}
 			this.originalItems = this.items.slice();
 		});
 
