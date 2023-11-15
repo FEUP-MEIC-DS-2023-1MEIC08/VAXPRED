@@ -1,6 +1,7 @@
 :host {
 	display: flex;
 	align-items: flex-start;
+	justify-content: center;
 }
 
 :host .filter-section {
@@ -50,13 +51,14 @@
 
 
 .results-section {
+	margin: 15px;
 	flex: 3;
 	/* Adjust the width as needed */
 }
 
 .results-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 10px;
 }
 

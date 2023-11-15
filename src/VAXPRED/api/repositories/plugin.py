@@ -44,3 +44,11 @@ class PluginRepository:
       self.db.commit()
       return existing_plugin
 
+    def delete_plugin(self, plugin_id: int) -> Plugin:
+        existing_plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
+        if existing_plugin is None:
+            return None
+        self.db.delete(existing_plugin)
+        self.db.commit()
+        return existing_plugin
+
