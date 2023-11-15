@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -27,6 +26,7 @@ import { PluginCardComponent } from './search-page/plugin-card/plugin-card.compo
 import { SideFilterComponent } from './search-page/side-filter/side-filter.component';
 import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plugin-page-images.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +37,10 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     PluginCardComponent,
     SearchPageComponent,
     NavbarComponent,
-    // UserProfileComponent,
     SideFilterComponent,
     PluginPageImagesComponent,
     AdminPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
