@@ -16,4 +16,8 @@ export class AdminPageService {
     );
   }
 
+  removePlugin(pluginID: number){
+    return this.http.delete('http://localhost:8000/plugins/' + pluginID);
+  }
+
 }
