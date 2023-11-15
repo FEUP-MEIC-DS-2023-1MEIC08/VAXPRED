@@ -33,3 +33,32 @@ $VAXPRED-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($VAXPRED-theme);
 
+// CoreUI
+
+// Import styles with default layout.
+@import "@coreui/coreui/scss/coreui";
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/@coreui/coreui/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required CoreUI stylesheets
+@import "../node_modules/@coreui/coreui/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../node_modules/@coreui/coreui/scss/maps";
+@import "../node_modules/@coreui/coreui/scss/mixins";
+@import "../node_modules/@coreui/coreui/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/@coreui/coreui/scss/utilities";
+@import "../node_modules/@coreui/coreui/scss/reboot";
+@import "../node_modules/@coreui/coreui/scss/type";
+@import "../node_modules/@coreui/coreui/scss/images";
+@import "../node_modules/@coreui/coreui/scss/containers";
+@import "../node_modules/@coreui/coreui/scss/grid";
+@import "../node_modules/@coreui/coreui/scss/helpers";
+

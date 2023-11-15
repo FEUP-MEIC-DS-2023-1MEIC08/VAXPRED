@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="start start" class="image-container">
+  <div fxLayout="row" fxLayoutGap="10px" class="image-wrapper">
+    <div *ngFor="let image of plugin.images" class="image-item" fxFlex="300px">
+      <img [src]="image" alt="Plugin Content Image" class="plugin-image" (click)="expandImage(image)">
+    </div>
+  </div>
+</div>
+<div class="expanded-image-overlay" *ngIf="expandedImage" (click)="closeExpandedImage()">
+  <div class="expanded-image-container">
+    <img [src]="expandedImage" alt="Expanded Image" class="expanded-image">
+  </div>
+</div>
