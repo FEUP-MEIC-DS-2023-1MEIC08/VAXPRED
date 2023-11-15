@@ -34,7 +34,7 @@ describe('PluginPageMenuComponent', () => {
 
   it('should correctly set selectedTab and plugin inputs', () => {
     const testSelectedTab = 2;
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test FAQ');
+    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Image', 'Test Type', ['Tag 1']);
 
     component.selectedTab = testSelectedTab;
     component.plugin = testPlugin;
@@ -47,7 +47,7 @@ describe('PluginPageMenuComponent', () => {
 
   it('should display the plugin title', () => {
     const testTitle = 'Test Plugin Title';
-    component.plugin = new Plugin(1, testTitle, 'Test Description', 'Test FAQ');
+    component.plugin = new Plugin(1, testTitle, 'Test Description', 'Test Image', 'Test Type', ['Tag 1']);
     fixture.detectChanges();
   
     const titleElement = fixture.nativeElement.querySelector('h3');

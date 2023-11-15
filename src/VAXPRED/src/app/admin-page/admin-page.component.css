@@ -1,0 +1,49 @@
+.plugin-title {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.plugin-card {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-right: 10em; 
+    margin-top: 2em;
+    background-color: #f0f0f0;
+}
+
+.plugin-cards {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left: 3em;
+}
+
+.plugin-container {
+    margin-top: 1.5em;
+    float: left;
+    height: 70vh; 
+    overflow-y: auto;
+}
+
+.plugin-icon {
+    width: 55px;
+    height: 55px;
+    background-image: url("./../../assets/plugin_image.png");
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.plugin-button-icon {
+    float: right;
+}
+
+.plugin-button-close {
+    color: red;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  

@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-page-menu.component';
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 
 // For API calls
@@ -25,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PluginCardComponent } from './search-page/plugin-card/plugin-card.component';
 import { SideFilterComponent } from './search-page/side-filter/side-filter.component';
 import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plugin-page-images.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plug
     // UserProfileComponent,
     SideFilterComponent,
     PluginPageImagesComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plug
     MatTabsModule,
     MatListModule,
     MatDialogModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

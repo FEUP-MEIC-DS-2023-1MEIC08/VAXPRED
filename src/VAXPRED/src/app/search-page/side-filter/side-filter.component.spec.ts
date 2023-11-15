@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideFilterComponent } from './side-filter.component';
-import { ToolService } from '../../tool.service';
+import { ToolService } from '../../plugin.service';
 import { ActivatedRoute } from '@angular/router';
-import { Tool } from '../plugin-card/tool';
+import { Plugin } from '../plugin-card/tool';
 import { PluginCardComponent } from '../plugin-card/plugin-card.component';
 
 
@@ -33,13 +33,13 @@ describe('SideFilterComponent', () => {
     toolService = TestBed.inject(ToolService);
     
     spyOn(toolService, 'getTools').and.returnValue([
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+		new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.',['Tag 1', 'Tag 2']),
 	]);
@@ -61,13 +61,13 @@ describe('SideFilterComponent', () => {
     component.toggleSorting();
 
     const expected_List=[
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+		new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
 	];
@@ -81,13 +81,13 @@ describe('SideFilterComponent', () => {
     component.toggleSorting();
 
     const expected_List=[
-      new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+      new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-      new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+      new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
-      new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+      new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
 	  ];
@@ -113,7 +113,7 @@ describe('SideFilterComponent', () => {
     component.filterList();
 
     const expected_List=[		
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
 	];
@@ -129,13 +129,13 @@ describe('SideFilterComponent', () => {
     console.log(component.items)
     const expected_List=
 	[
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+		new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
 	];
@@ -151,13 +151,13 @@ describe('SideFilterComponent', () => {
 
     
     const expected_List=[
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+		new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
 	];
@@ -172,13 +172,13 @@ describe('SideFilterComponent', () => {
     component.resetListToInitialFormat();
     
     const expected_List=[		
-		new Tool(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
+		new Plugin(1, 'YData', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Generate synthetic data \
 			that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data',['Tag 1']),
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
 	];
@@ -190,7 +190,7 @@ describe('SideFilterComponent', () => {
     component.filterList();
     
     const expected_List=[		
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
 	];
@@ -202,10 +202,10 @@ describe('SideFilterComponent', () => {
     component.filterList();
     
     const expected_List=[		
-		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
-		new Tool(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
+		new Plugin(3, 'Sama', 'assets/img/ydata.png', 'Data Curation', 'Your ML model\'s success \
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', ['Tag 1', 'Tag 2']),
 	];
@@ -219,7 +219,7 @@ describe('SideFilterComponent', () => {
     component.filterList();
 
     const expected_List=[
-      		new Tool(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
+      		new Plugin(2, 'MOSTLY.AI', 'assets/img/ydata.png', 'Synthetic Data Generation', 'Synthetic data looks and \
 			feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ',['Tag 1', 'Tag 2', 'Tag 3']),
         	];
