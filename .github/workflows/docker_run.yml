@@ -1,4 +1,4 @@
-name: Docker Compose Build and Deploy
+name: Docker Compose Build and Run
 
 on:
   pull_request:

@@ -1,4 +1,4 @@
-name: Backend CI
+name: Backend Tests
 
 on:
   pull_request:
@@ -28,6 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run tests
+    - name: Run Python tests
       run: |
         pytest
