@@ -12,8 +12,8 @@
 .plugin-card
 {
 	font-family: Roboto, "Helvetica Neue", sans-serif;
-	width: 23rem;
-	margin: 10px;
+	width: 21rem;
+	margin: 5px;
 	border: solid;
 	border-width: 1px;
 	border-radius: 5%;
@@ -44,7 +44,7 @@
 .plugin-card-text
 {
 	line-height: 25px;
-	max-height: 100px;
+	max-height: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
