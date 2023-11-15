@@ -28,6 +28,10 @@ export class SideFilterComponent {
 						plugin.name,
 						plugin.description,
 						'assets/img/ydata.png', // plugin.image,
+						plugin.version,
+						plugin.developer,
+						new Date(plugin.release_date),
+						new Date(plugin.last_update_date),
 						'Data Quality',			// plugin.type,
 						[]		//plugin.tags
 					));

@@ -11,6 +11,41 @@
     </div>
     <h4>Plugin #{{ this.plugin.id }}</h4>
     <!-- TODO: i18n -->
-    <button (click)="closeDialog()" id="install-plugin">Install</button>
+    <button (click)="openPopup()" id="install-plugin">Install</button>
   </div>
 </div>
+
+<!-- Popup Modal -->
+<div id="popup-modal" class="popup-modal">
+  <div class="popup-content">
+    <div class="agreement-header">
+      <h1>Plugin Installation Agreement</h1>
+    </div>
+    <div class="agreement-details">
+      <p>This Plugin Installation Agreement is between the user and {{ this.plugin.developer }} effective as of {{ currentDate | date }} and shall remain in effect until {{ terminationDate | date }}.</p>
+      <h2>Plugin Information:</h2>
+      <p>
+        <strong>Name:</strong> {{ this.plugin.name }}<br>
+        <strong>Version:</strong> {{ this.plugin.version }}<br>
+        <strong>Description:</strong> {{ this.plugin.description }}<br>
+        <strong>Developer:</strong> {{ this.plugin.developer }}<br>
+        <strong>Release Date:</strong> {{ this.plugin.release_date | date }}<br>
+        <strong>Last Update Date:</strong> {{ this.plugin.last_update_date | date }}
+      </p>
+      <h2>Agreement Terms:</h2>
+      <p>
+        <strong>Installation:</strong> Provider agrees to provide Client with the necessary files and documentation to facilitate the installation of the plugin within the Client's systems or applications.<br>
+        <strong>Use and Restrictions:</strong> Client agrees to use the plugin solely for its intended purposes as described by Provider. Client shall not modify, redistribute, or resell the plugin without prior written consent from Provider.<br>
+        <strong>Responsibilities:</strong> Provider shall provide reasonable technical support for the installation and initial setup of the plugin. Client is responsible for ensuring the legal and proper use of the plugin within its environment.<br>
+        <strong>Liability:</strong> Provider shall not be liable for any damages or losses incurred by Client due to the use or malfunctioning of the plugin, except in cases of gross negligence or willful misconduct.<br>
+        <strong>Termination:</strong> This Agreement remains in effect until {{ terminationDate | date }}. Either party may terminate this Agreement by providing written notice to the other party.<br>
+        <strong>Miscellaneous:</strong> Any modifications or alterations to the plugin by Client require prior written consent from Provider.
+      </p>
+    </div>
+    <div class="button-container">
+      <button class="accept-button" (click)="acceptContract()">Accept</button>
+      <button class="cancel-button" (click)="closePopup()">Cancel</button>
+    </div>
+  </div>
+</div>
+
