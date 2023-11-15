@@ -62,3 +62,12 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
         raise HTTPException(status_code=404, detail="Plugin not found")
 
     return updated_plugin
+
+# Route to delete a plugin
+@router.delete("/{plugin_id}", response_model=PluginResponse)
+def delete_plugin(plugin_id: int, db: Session = Depends(get_db)):
+    plugin_repository = PluginRepository(db)
+    deleted_plugin = plugin_repository.delete_plugin(plugin_id)
+    if deleted_plugin is None:
+        raise HTTPException(status_code=404, detail="Plugin not found")
+    return deleted_plugin
