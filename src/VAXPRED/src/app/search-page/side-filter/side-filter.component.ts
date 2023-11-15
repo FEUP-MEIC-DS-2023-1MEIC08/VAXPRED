@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Tool } from '../plugin-card/tool';
+import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { ToolService } from 'src/app/plugin.service';
   styleUrls: ['./side-filter.component.css']
 })
 export class SideFilterComponent {
-  items: Tool[] = [];
-  originalItems: Tool[] = [];
+  items: Plugin[] = [];
+  originalItems: Plugin[] = [];
   sortingOption: string = 'original';
   isRadioSelected: boolean = false;
   toolTypes: string[]=[];
@@ -27,12 +27,12 @@ export class SideFilterComponent {
 		for (const plugin of data.plugins)
 		{
 			this.items.push(
-				new Tool(
+				new Plugin(
 					plugin.id,
 					plugin.name,
+					plugin.description,
 					'assets/img/ydata.png', // plugin.image,
 					'Default Plugin Type',  // plugin.type,
-					plugin.description,
 					plugin.tags
 				));
 		}
@@ -68,7 +68,7 @@ export class SideFilterComponent {
     }
   }
 
-  checkTag(item: Tool) : boolean{
+  checkTag(item: Plugin) : boolean{
     for(const tag of item.tags){
       if(this.selectedTags[tag]){
         return true;
@@ -84,7 +84,7 @@ export class SideFilterComponent {
     const selectedTypes = Object.keys(this.selectedToolTypes).filter((type) => this.selectedToolTypes[type]);
     const selectedTags = Object.keys(this.selectedTags).filter((tag) => this.selectedTags[tag]);
 
-    this.items = this.originalItems.filter((item: Tool) => {
+    this.items = this.originalItems.filter((item: Plugin) => {
       const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(item.type);
       const tagMatch = selectedTags.length === 0 || item.tags.some((tag) => selectedTags.includes(tag));
       return typeMatch && tagMatch;

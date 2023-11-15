@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Tool } from './search-page/plugin-card/tool';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

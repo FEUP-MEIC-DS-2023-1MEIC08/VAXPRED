@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./plugin-page-header.component.css']
 })
 export class PluginPageHeaderComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '');
+  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', []);
   @Input()
   dialogRef!: MatDialogRef<PluginPageComponent>;
 

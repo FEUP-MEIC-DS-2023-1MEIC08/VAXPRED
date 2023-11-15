@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Tool } from './tool';
 import { MatDialog } from '@angular/material/dialog';
 import { PluginPageComponent } from 'src/app/plugin-page/plugin-page.component';
 import { Plugin } from 'src/app/plugin';
@@ -12,7 +11,7 @@ import { ToolService } from 'src/app/plugin.service';
 	styleUrls: ['./plugin-card.component.css']
 })
 export class PluginCardComponent {
-	@Input() tool: Tool = new Tool(0, '', '', '', '', []);
+	@Input() tool: Plugin = new Plugin(0, '', '', '', '', []);
 
 	constructor(public dialog: MatDialog) {
 
@@ -23,7 +22,7 @@ export class PluginCardComponent {
 			width: '1000px',
 			data: {
 				dialogRef: null, // Initialize the dialogRef to null
-				plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description') // TODO: INSERT PLUGIN HERE!!!!
+				plugin: this.tool // TODO: INSERT PLUGIN HERE!!!!
 			}
 		});
 		dialogRef.componentInstance.data.dialogRef = dialogRef;
