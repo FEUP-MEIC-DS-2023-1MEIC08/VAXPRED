@@ -51,6 +51,7 @@
 
 
 .results-section {
+	margin: 15px;
 	flex: 3;
 	/* Adjust the width as needed */
 }
