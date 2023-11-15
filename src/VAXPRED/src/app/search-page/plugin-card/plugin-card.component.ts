@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PluginPageComponent } from 'src/app/plugin-page/plugin-page.component';
 import { Plugin } from 'src/app/plugin';
 import { SearchPageComponent } from '../search-page.component';
-import { ToolService } from 'src/app/tool.service';
+import { ToolService } from 'src/app/plugin.service';
 
 @Component({
 	selector: 'app-plugin-card',

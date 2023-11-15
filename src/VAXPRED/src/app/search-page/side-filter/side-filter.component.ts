@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Tool } from '../plugin-card/tool';
-import { ToolService } from 'src/app/tool.service';
+import { ToolService } from 'src/app/plugin.service';
 
 @Component({
   selector: 'app-side-filter',
@@ -30,9 +30,8 @@ export class SideFilterComponent {
 				new Tool(
 					plugin.id,
 					plugin.name,
-					'assets/img/ydata.png',
-					// plugin.image,
-					plugin.type,
+					'assets/img/ydata.png', // plugin.image,
+					'Default Plugin Type',  // plugin.type,
 					plugin.description,
 					plugin.tags
 				));

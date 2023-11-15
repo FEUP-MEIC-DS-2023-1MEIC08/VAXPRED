@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideFilterComponent } from './side-filter.component';
-import { ToolService } from '../../tool.service';
+import { ToolService } from '../../plugin.service';
 import { ActivatedRoute } from '@angular/router';
 import { Tool } from '../plugin-card/tool';
 import { PluginCardComponent } from '../plugin-card/plugin-card.component';
