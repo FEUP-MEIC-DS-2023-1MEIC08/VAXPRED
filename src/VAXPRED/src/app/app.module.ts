@@ -25,6 +25,7 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PluginCardComponent } from './search-page/plugin-card/plugin-card.component';
 import { SideFilterComponent } from './search-page/side-filter/side-filter.component';
+import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plugin-page-images.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SideFilterComponent } from './search-page/side-filter/side-filter.compo
     NavbarComponent,
     // UserProfileComponent,
     SideFilterComponent,
+    PluginPageImagesComponent,
   ],
   imports: [
     BrowserModule,

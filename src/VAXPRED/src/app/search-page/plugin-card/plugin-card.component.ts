@@ -17,6 +17,7 @@ export class PluginCardComponent
 	openDialog(): void { // TODO: THIS IS CALLED WITH HTML, INSERT IN PLUGIN LISTING IN STORE
 		const dialogRef = this.dialog.open(PluginPageComponent, {
 		  width: '1000px',
+		  maxHeight: '90vh',
 		  data: {
 			dialogRef: null, // Initialize the dialogRef to null
 			plugin: new Plugin(this.tool.id, 'Plugin Title', 'Plugin Description', 'Plugin Version', 'Plugin Developer', new Date(), new Date()) // TODO: INSERT PLUGIN HERE!!!!
