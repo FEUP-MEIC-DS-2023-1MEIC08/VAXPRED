@@ -30,9 +30,8 @@ export class SideFilterComponent {
 						plugin.name,
 						plugin.description,
 						'assets/img/ydata.png', // plugin.image,
-
-						'Data Quality',  // plugin.type,
-						plugin.tags
+						'Data Quality',			// plugin.type,
+						['Tag 1', 'Tag 2']		//plugin.tags
 					));
 			});
 
