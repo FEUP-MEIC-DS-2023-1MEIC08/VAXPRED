@@ -27,6 +27,7 @@ import { SideFilterComponent } from './search-page/side-filter/side-filter.compo
 import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plugin-page-images.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PluginPageImagesComponent,
     AdminPageComponent,
     PageNotFoundComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
