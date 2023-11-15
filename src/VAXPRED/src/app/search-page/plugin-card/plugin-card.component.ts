@@ -12,10 +12,9 @@ import { ToolService } from 'src/app/plugin.service';
 	styleUrls: ['./plugin-card.component.css']
 })
 export class PluginCardComponent {
-	@Input() id: number = 0;
 	@Input() tool: Tool = new Tool(0, '', '', '', '', []);
 
-	constructor(public dialog: MatDialog, private service: ToolService) {
+	constructor(public dialog: MatDialog) {
 
 	}
 
