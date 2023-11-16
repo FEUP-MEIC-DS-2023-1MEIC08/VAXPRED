@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-page-not-found',
@@ -8,8 +8,10 @@ import { Router } from '@angular/router';
 })
 export class PageNotFoundComponent {
   constructor(private router: Router) {
-    router.events.subscribe((val) => {
-      this.pageRoute = router.url
+    router.events.forEach((event) => {
+      if(event instanceof NavigationEnd) {
+        this.pageRoute = router.url
+      }
   });
   }
   pageRoute = this.router.url;
