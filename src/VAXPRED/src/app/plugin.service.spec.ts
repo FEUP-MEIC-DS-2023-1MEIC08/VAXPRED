@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ToolService } from './tool.service';
+import { ToolService } from './plugin.service';
 
 describe('WorkspaceService', () => {
   let service: ToolService;
