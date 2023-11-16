@@ -37,10 +37,10 @@ In this sprint we had one major user story assigned to our team and several work
 
 ### The four pull requests that we are most proud of
 
-*
-*
-*
-*
+* "Integrate API into Team 4 branch" [pull #89](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/89)
+* "T2 - DataBase & FastAPI" [pull #101](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/101)
+* "T2 feature integrate fast api to dev" [pull #107](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/107)
+* "Sprint 1 Release (dev -> main)" [pull #140](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/140)
 
 ### Four contributions of other types that we are most proud of
 
@@ -51,7 +51,23 @@ In this sprint we had one major user story assigned to our team and several work
 
 ## Sprint 2
 
-...
+### The four user stories that we are most proud of
+
+* "As a researcher, I want to be able to search for a plugin in the store, so that I can find it quickly, whether I search for its name or details, such as tags or supplier." [issue #23](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/23).
+* "As a researcher, I want to be able to know a plugin's supplier, so that I can be informed more about its creation." [issue #79](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/79).
+* "As a researcher, I want to have tags on the plugins of the store, so that I can quickly see the main relevant characteristics of the plugin." [issue #109](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/109).
+* "As a researcher, I want to see the dependencies of a plugin, so that I can be aware if a specific plugin is compatible with the tools on my workspace." [issue #80](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/80).
+
+### The four pull requests that we are most proud of
+
+* "T2 feature add new database fields" [pull #190](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/190)
+
+### Four contributions of other types that we are most proud of
+
+* Our team contributed team contributed in helping establishing the effort of each user story for this sprint.
+* Our team colaborated with the oher teams to integrate the backend into the frontend.
+* Our team created automated tests for our PBIs.
+* Our team discussed the user stories and work items with the team's PO. 
 
 
 ## Sprint 3
