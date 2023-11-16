@@ -2,6 +2,8 @@ import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 import { Plugin } from '../../plugin';
 import { PluginPageComponent } from '../plugin-page.component';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ToolService } from 'src/app/plugin.service';
+
 
 @Component({
   selector: 'app-plugin-page-header',
@@ -14,8 +16,10 @@ export class PluginPageHeaderComponent {
 
   currentDate: Date = new Date();
   terminationDate: Date = new Date();
+  service: ToolService;
 
   constructor() {
+    this.service = service;
     // Calculate the termination date (using contract duration)
     if (this.plugin.contract_duration && this.plugin.contract_duration > 0) {
       const terminationYears = this.plugin.contract_duration;
@@ -43,11 +47,13 @@ export class PluginPageHeaderComponent {
 
   acceptContract() {
     // Handle the logic for contract acceptance here
+    this.service.installPlugin(this.plugin.id).subscribe((data: any) => {
+      console.log(data);
+    });
     // This function should close the popup and initiate the download.
     this.closePopup();
-
     // Add code to initiate the download after the contract is accepted.
-    this.closeDialog();
+    //this.closeDialog();
   }
 
   closePopup() {
