@@ -46,7 +46,18 @@ I made myself available to the team in order to participate in the calls and hel
 
 ## Sprint 2
 
-...
+In this sprint I mainly worked on the display of the plugins' FAQ in their respective page.
+
+### The two user stories that I am most proud of
+- [Issue #157 (Display a 'Store' Button in the navbar):]([url](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/157))
+- [Issue #124 (Display a plugin's FAQ in its page):]([url](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/124) Work in progress in branch feat-display-faq
+
+### The two pull requests that I am most proud of
+- [(#158) feature: added 'Store' button to the navbar]([url](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/158)) I believed adding this little functionality was worth it for at least the sprint review and demo.
+
+### Two contributions of other types that I am most proud of
+- Was able to detect some bugs in dev branch caused by other PRs while testing the entire application.
+- Reported these bugs to the respective teams and they were able to fix them.
 
 ## Sprint 3
 
