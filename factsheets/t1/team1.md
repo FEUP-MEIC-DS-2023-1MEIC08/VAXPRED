@@ -25,7 +25,7 @@ No pull requests were made during this sprint.
 
 ## Sprint 1
 
-During Sprint 0, the team was responsible for creating a plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO also worked with the other teams' POs in the creation of the next sprint's user stories.
+During Sprint 1, the team was responsible for creating a plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO also worked with the other teams' POs in the creation of the next sprint's user stories.
 
 ### The four user stories that we are most proud of
 
@@ -53,7 +53,31 @@ There aren't anymore pull requests worth considering.
 
 ## Sprint 2
 
-...
+During Sprint 2, the team was responsible for improving the plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO also worked with the other teams' POs in the creation of the next sprint's user stories.
+
+### The four user stories that we are most proud of
+
+* 
+* 
+* 
+* 
+
+
+### The four pull requests that we are most proud of
+
+* 
+* 
+* 
+* 
+
+
+### Four contributions of other types that we are most proud of
+
+* All the team's member wrote their factsheets.
+* The Scrum Master contributed to the smooth flow of the project, besides doing the work assigned to him.
+* The PO wrote some user stories for sprint 2 and meet with the client, assuring that the development its going accordingly with his wants.
+* Mockups were created for the improvement of the user stories by the devs.
+
 
 
 ## Sprint 3
