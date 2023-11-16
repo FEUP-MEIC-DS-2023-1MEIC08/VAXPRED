@@ -58,7 +58,7 @@ During Sprint 2, the team was responsible for improving the plugin's page, its m
 ### The four user stories that we are most proud of
 
 * Show supplier information in plugin page #79 (https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=&pane=issue&itemId=42527513)
-* 
+* Associate plugin to user.#139 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/139)
 * 
 * 
 
@@ -66,7 +66,7 @@ During Sprint 2, the team was responsible for improving the plugin's page, its m
 ### The four pull requests that we are most proud of
 
 * Supplier information in plugin page [#179](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/179)
-* 
+* T1 feature install plugin.#183 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/183)
 * 
 * 
 
