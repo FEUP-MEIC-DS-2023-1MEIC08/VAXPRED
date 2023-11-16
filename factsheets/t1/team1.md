@@ -67,8 +67,8 @@ During Sprint 2, the team was responsible for improving the plugin's page, its m
 
 * Supplier information in plugin page [#179](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/179)
 * T1 feature install plugin.#183 (https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/183)
-* 
-* 
+* T1-hotfix on plugin's fields and db connection #182
+* Feature plugin page dependencies #142
 
 
 ### Four contributions of other types that we are most proud of
