@@ -50,7 +50,7 @@ In this sprint I mainly worked on the display of the plugins' FAQ in their respe
 
 ### The two user stories that I am most proud of
 - [Issue #157 (Display a 'Store' Button in the navbar)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/157)
-- [Issue #124 (Display a plugin's FAQ in its page):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/124) Work in progress in branch feat-display-faq.
+- [Issue #124 (Display a plugin's FAQ in its page):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/124) Work in progress with João in branch feat-display-faq.
 
 ### The two pull requests that I am most proud of
 - [(#158) feature: added 'Store' button to the navbar](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/158) Adding this little functionality is worth at least for the sprint review and demo.
