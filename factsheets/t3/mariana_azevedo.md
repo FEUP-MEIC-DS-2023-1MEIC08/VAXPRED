@@ -26,7 +26,26 @@ No pull requests were made during this sprint.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+ * "As I researcher, I want to be able see the plugin's supplier email, so that I can directly communicate with them in case I need to." [issue #84](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/84)
+ * "As a researcher, I want to see a store-like grid when I go to the plugin store, so that I can easily see all the plugins available." [issue  #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
+
+Issue #84 was one of the newly added User Stories during this Sprint, it was written among all the POs and I think it is important as it will improve the user's experience using the platform. Issue #33 was the one assigned to my team for this Sprint, and the Developers did a great work implementing some of the items related to it.
+
+
+### The two pull requests that I am most proud of
+
+I did not implement nor review any pull request during this Sprint. I have however contributed to the Definition of Ready and Done that were added to the docs folder, what needed a Pull Request to be done.
+
+
+### Two contributions of other types that I am most proud of
+ 
+ * Writing the Definitions of Ready and Done with the other POs
+ * Writing more User Stories with the other POs
+
+I think having good Definitions of Ready and Done will be important for the work to flow better on the next Sprints, just like having good User Stories already written will be important to have a good start of Sprint 2.
+
 
 
 ## Sprint 2
@@ -60,5 +79,3 @@ Reflect on your specific contributions to the product, technically and as percei
 
 
 ### Value for the Client
-
-...

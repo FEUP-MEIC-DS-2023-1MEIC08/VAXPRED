@@ -18,7 +18,16 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this first sprint, I served as the Scrum Master. I helped the development of the API and to organize it with the work of the other groups. I also helped to correct some errors that arose in the code during development.
+
+The two user stories that I am most proud of is item #32 as i helped with the databse shema and item #49 as I helped in correcting a persistent error in the implementation of the tests.
+
+The two pull requests that I am most proud of
+I did the last pull request for our team, it was the culmination of our work we did in this sprint.
+
+Two contributions of other types that I am most proud of
+In this sprint I took part in organizing the user stories and items, and heping my team in the development.
+
 
 
 ## Sprint 2

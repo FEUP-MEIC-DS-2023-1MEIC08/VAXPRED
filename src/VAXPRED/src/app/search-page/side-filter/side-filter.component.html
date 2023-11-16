@@ -1,0 +1,43 @@
+<aside class="filter-section">
+	<h4>Order By</h4>
+	<label>
+		<input type="radio" [(ngModel)]="sortingOption" [value]="'aToZ'" (change)="toggleSorting()"> Ascending (A-Z)
+	</label>
+	<label>
+		<input type="radio" [(ngModel)]="sortingOption" [value]="'zToA'" (change)="toggleSorting()"> Descending (Z-A)
+	</label>
+	<button (click)="resetListToInitialFormat()" *ngIf="isRadioSelected">Reset to Initial Format</button>
+
+
+	<div class="collapsible">
+		<input type="checkbox" id="toggle">
+		<h4><label for="toggle" class="collapsible-label">Category</label></h4>
+		<div class="content" [attr.list-size]="toolTypes.length">
+			<label *ngFor="let item of toolTypes">
+				<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+			</label>
+		</div>
+	</div>
+	  
+	
+	<div class="collapsible">
+		<input type="checkbox" id="toggleTag">
+		<h4><label for="toggleTag" class="collapsible-label">Tag</label></h4>
+		<div class="content">
+			<label *ngFor="let item of tags">
+				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item" (change)="filterList()"> {{ item }}
+			</label>
+		</div>
+	</div>
+
+	
+</aside>
+
+<main class="results-section">
+	<h1 style="font-size: 1.5rem">Search Results</h1>
+	<p style="font-size: 1.1rem">Your search has produced <strong>{{this.items.length}}</strong> results.</p>
+
+	<div class="results-grid">
+		<app-plugin-card *ngFor="let tool of this.items" [tool]="tool"></app-plugin-card>
+	</div>
+</main>
