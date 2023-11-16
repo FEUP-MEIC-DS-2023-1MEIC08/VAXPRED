@@ -27,6 +27,10 @@ We are proud of one user story that consists of several tasks which was the sole
 
 - [(#90) User profile page (work by Team 4)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/90)
 
+- [(#160) Feat: GitHub Action for Frontend Tests](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/160)
+
+- [(#171) Feat: Deployment with Docker](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/171)
+
 ### Four contributions of other types that we are most proud of
 
 - We were pioneers in creating a common Figma project for everyone to share their UI Mockups in.
