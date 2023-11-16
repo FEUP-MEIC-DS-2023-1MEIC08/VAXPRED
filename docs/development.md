@@ -46,14 +46,12 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 
 ## Restrospectives
 
-The **global** retrospective is presented here: https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/retrospective/retrospective.md .
+- [Global Project Retrospective](./retrospective/retrospective.md)
 
-The retrospective for each team is presented here:
+- [Team 1 Retrospective](./retrospective/retrospective-t1.md)
 
-- **T1:** https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/retrospective/retrospective-t1.md
-   
-- **T2:** https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/retrospective/retrospective-t2.md
-  
-- **T3:** https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/retrospective/retrospective-t3.md
-  
-- **T4:** https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/po/docs/retrospective/retrospective-t4.md
+- [Team 2 Retrospective](./retrospective/retrospective-t2.md)
+
+- [Team 3 Retrospective](./retrospective/retrospective-t3.md)
+
+- [Team 4 Retrospective](./retrospective/retrospective-t4.md)
