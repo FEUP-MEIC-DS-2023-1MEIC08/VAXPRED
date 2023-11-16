@@ -34,8 +34,7 @@ export class SideFilterComponent {
 						new Date(plugin.last_update_date),
 						'Data Quality',			// plugin.type,
 						[],		//plugin.tags
-						plugin.contract_duration,
-						plugin.supplier_name
+						plugin.contract_duration
 					));
 			});
 

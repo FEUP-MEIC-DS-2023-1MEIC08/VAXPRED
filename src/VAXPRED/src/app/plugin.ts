@@ -25,11 +25,9 @@ export class Plugin
 	];
 	type: string;
 	images: string[];
-	supplier_name: string;
-
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number,supplier_name: string)
+		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -49,6 +47,5 @@ export class Plugin
 		this.type = type;
 		this.tags = tags;
 		this.contract_duration = contract_duration;
-		this.supplier_name = supplier_name;
 	}
 }
