@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, params
 from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin import PluginRepository
@@ -10,9 +10,17 @@ router = APIRouter()
 # Route to list every plugin
 
 @router.get("/", response_model=PluginListResponse)
-def get_plugins(db: Session = Depends(get_db)):
+def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
-    plugins = plugin_repository.get_all_plugins()
+    if (search):
+        print(search)
+        plugins = plugin_repository.get_all_plugins_search(search)
+    else:
+        plugins = plugin_repository.get_all_plugins()
+    
+    if plugins is None:
+        raise HTTPException(status_code=404, detail="No plugins available")
+    
     return {"plugins": plugins}
 
 
@@ -40,7 +48,10 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
       name=plugin.name,
       version=plugin.version,
       description=plugin.description,
-      developer = plugin.developer
+      developer = plugin.developer,
+      supplier_name = plugin.supplier_name,
+      supplier_email = plugin.supplier_email,
+      contract_duration = plugin.contract_duration
     )
     return new_plugin
 
@@ -55,7 +66,10 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
       name = plugin_update.name,
       version = plugin_update.version,
       description = plugin_update.description,
-      developer = plugin_update.developer
+      developer = plugin_update.developer,
+      supplier_name = plugin_update.supplier_name,
+      supplier_email = plugin_update.supplier_email,
+      contract_duration = plugin_update.contract_duration
     )
 
     if updated_plugin is None:
