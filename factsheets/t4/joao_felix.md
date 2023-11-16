@@ -46,8 +46,18 @@ The only pull request for this sprint was the one that merges all the work from 
 
 ## Sprint 2
 
-...
+- Displayed a plugin's FAQ in its page but not yet properly connected to DB ([#124](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/124)).
+- Fixed errors in the project and reviewed my colleague's code about a previous issue ([#157](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/157)).
 
+### The two pull requests that I am most proud of
+
+- I ended up not making any pull requests because issue #124 wasn't ready as we wanted and we had more difficulties than expected. We intend to refine this problem in the next sprint
+
+### Two contributions of other types that I am most proud of
+
+- I had the opportunity to work with Juan to try to complete issue #124.
+- I started to see what was expected to be done to complete issue ([#134](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/134)), once again it was not possible to complete and we intend to continue working on this in the next sprint.
+  
 ## Sprint 3
 
 ...
