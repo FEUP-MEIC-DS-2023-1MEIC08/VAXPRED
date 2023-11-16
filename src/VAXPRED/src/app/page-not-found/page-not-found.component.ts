@@ -7,6 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-not-found.component.css']
 })
 export class PageNotFoundComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+      this.pageRoute = router.url
+  });
+  }
   pageRoute = this.router.url;
+
 }
