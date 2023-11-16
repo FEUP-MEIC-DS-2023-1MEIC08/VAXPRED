@@ -18,7 +18,7 @@ export class PluginPageHeaderComponent {
   terminationDate: Date = new Date();
   service: ToolService;
 
-  constructor() {
+  constructor(service: ToolService) {
     this.service = service;
     // Calculate the termination date (using contract duration)
     if (this.plugin.contract_duration && this.plugin.contract_duration > 0) {
