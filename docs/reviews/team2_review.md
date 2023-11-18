@@ -16,9 +16,9 @@ Sprint end: Week of October 23rd
 
 Version demonstrated: [Version 0.1](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/releases/tag/v0.1)
 
-Feedback by the customer: The customer was very pleased with all the general look of the page and with how everything connects to the database thanks to the development of our team.
+Feedback by the customer: The customer was very pleased with the overall work done.
 
-Suggestions of the costumer: The costumer suggested to add a new field to the database that allows see if a product is paid for companies of free for for all users.
+Suggestions of the costumer: The costumer suggested to add a few little details to see if a product is paid or free for for all users.
 
 ## Sprint 2
 
