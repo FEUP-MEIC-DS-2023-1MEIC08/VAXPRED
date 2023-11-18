@@ -1,5 +1,3 @@
-# T2 Review
-
 ## Sprint 0
 
 Sprint start: Week of September 18th
@@ -34,8 +32,8 @@ Feedback by the customer: The product was not demonstrated to the costumer yet.
 
 ## Sprint 3
 
-Describe the review for sprint 3 for team 1
+Describe the review for sprint 3.
 
 ## Sprint 4
 
-Describe the review for sprint 4 for team 1
+Describe the review for sprint 4.
