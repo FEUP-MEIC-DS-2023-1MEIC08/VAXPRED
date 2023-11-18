@@ -74,4 +74,4 @@ An high-level class diagram with key domain concepts.
 
 ## Sprint Reviews
 
-Record of each sprint review, stating *when* they happened, *which version* was demonstrated (refer to specific git tags and/or version number of the product increment), and the main feedback provided by the customer. Refer also to the consequences of that feedback to the planning of the product, when relevant.
+Reviews available at https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/reviews/docs/reviews/review.md.
