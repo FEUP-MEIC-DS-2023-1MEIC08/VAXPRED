@@ -34,6 +34,20 @@ In this sprint I also helped my team in the decision of which attributes we woul
 
 ## Sprint 2
 
+For sprint 2, I have been part of the proccess to add new tables and relations to the database, as well as new attributes to existing tables, population of the database and general scrum master duties.  
+
+### The two user stories that I am most proud of
+
+In this sprint I was involved with user story #23, more precisely with item #113 and #110. In these items the database was updated with new routes and tables to allow to attribute a category for each plugin as well as tags.
+
+### The two pull requests that I am most proud of
+
+The two pull requests I'm most proud of is the pull request #189 which addded a retrospective for the project and for each team and the pull request that added the work developed by team 2 during sprint 2 into the dev branch.
+
+### Two contributions of other types that I am most proud of
+
+I am also proud of my contributions as scrum master in which I helped review several pull requests made by other SM to achieve things like the integration of tests, linters, etc.
+
 ...
 
 

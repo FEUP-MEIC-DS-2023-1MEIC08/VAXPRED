@@ -39,8 +39,18 @@ I was involved with the creation of the plugin page design and mockup.
 
 ## Sprint 2
 
-...
+In this sprint, I edited the plugin page menu in order to create a tab dedicated to the supplier informations. In this section, the supplier's name and email are displayed. These functionalities belong to [issue #129](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=&pane=issue&itemId=43495881) and [issue #122](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=&pane=issue&itemId=43495074).
+During this sprint I got to learn more about the api used.
 
+### The two user stories that I am most proud of
+
+During this sprint, I worked on the following [user story](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=&pane=issue&itemId=42527513):
+
+"As a researcher, I want to be able to know a plugin's supplier, so that I can be informed more about its creation."
+
+### The two pull requests that I am most proud of
+
+There was only one [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/179) related to the work I did during this sprint, which merges the `t1-feature-plugin-supplier-info` branch to `dev`.
 
 ## Sprint 3
 

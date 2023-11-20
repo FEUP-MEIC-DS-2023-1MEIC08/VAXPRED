@@ -49,7 +49,32 @@ The only pull request for this sprint was the one that merges all the work from 
 
 ## Sprint 2
 
-...
+In this sprint I started to work on the urgent task of removing the CoreUI dependency. Later, I developed the mockup for the admin page and finally, worked on the development of the plugin removal functionality via the admin page.
+
+### The two user stories that I am most proud of
+
+- [(#116) User Profile: remove CoreUI dependency](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/116)
+
+This task needed to be urgently done since CoreUI was conflicting with other parts of the project, therefore it was treated with high priority. To accomplish this task, I immediately started exploring different alternatives to CoreUI alongside Fernando and we managed to reach the desired result while using Angular Material, Angular Flex Layout and regular CSS.
+
+- [(#135) As an admin, I want to remove a plugin from the store on the admin dashboard.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/135)
+
+For this task I implemented a list with all the plugins on the admin page, with the possibilty of removing them directly from that page while having to confirm the action on a pop-up. Fernando guided me during this implementation while we followed a pair-programming strategy. He also implemented the API route that I needed to use for the removal of the plugin.
+
+### The two pull requests that I am most proud of
+
+- [(#156) Refactor: Removal of CoreUI dependency from the User Profile component page](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/156)
+
+This pull request merged the removal of the CoreUI dependency to the branch where every team was working from, so it was extremely important. It gave some conflicts, but after some time resolving them it was possible to merge the pull request, removing all the conflicts caused by CoreUI.
+
+- [(#180) Feature: Removal of plugins from the store via the admin page](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/180)
+
+This PR merged the implementation of the plugin removal functionality, a task that was part of an "X-Large" user story.
+
+### Two contributions of other types that I am most proud of
+
+- I made the mockup for the admin page through Figma. This mockup was the starting point for the user story related to the admin page.
+- I was always active and communicated frequently with all teams, making myself available to help in what was necessary.
 
 ## Sprint 3
 

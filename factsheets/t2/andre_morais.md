@@ -43,7 +43,21 @@ As a PO, I did not participate in any pull request, although I contributed to th
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+* "As a researcher, I want to be able to search for a plugin in the store, so that I can find it quickly, whether I search for its name or details, such as tags or supplier." [issue 23](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/23)
+* "As a researcher, I want to see the dependencies of a plugin, so that I can be aware if a specific plugin is compatible with the tools on my workspace." [issue 80](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/80)
+
+I chose these user stories because they provide a great improvement on the user experience, being valuable to the client.
+
+### The two pull requests that I am most proud of
+
+As a PO, I did not participate in any pull request, although I contributed to the writing of the readme file which was then pull request to the main branch.
+
+### Two contributions of other types that I am most proud of
+
+* The writing of the README.md of the root of our project.
+* The revision of user stories previously created.
 
 
 ## Sprint 3

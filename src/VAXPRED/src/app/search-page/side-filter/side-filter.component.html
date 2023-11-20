@@ -8,10 +8,29 @@
 	</label>
 	<button (click)="resetListToInitialFormat()" *ngIf="isRadioSelected">Reset to Initial Format</button>
 
-	<h4>Filter By</h4>
-	<label *ngFor="let item of toolTypes">
-		<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
-	</label>
+
+	<div class="collapsible">
+		<input type="checkbox" id="toggle">
+		<h4><label for="toggle" class="collapsible-label">Category</label></h4>
+		<div class="content" [attr.list-size]="toolTypes.length">
+			<label *ngFor="let item of toolTypes">
+				<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+			</label>
+		</div>
+	</div>
+	  
+	
+	<div class="collapsible">
+		<input type="checkbox" id="toggleTag">
+		<h4><label for="toggleTag" class="collapsible-label">Tag</label></h4>
+		<div class="content">
+			<label *ngFor="let item of tags">
+				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item" (change)="filterList()"> {{ item }}
+			</label>
+		</div>
+	</div>
+
+	
 </aside>
 
 <main class="results-section">

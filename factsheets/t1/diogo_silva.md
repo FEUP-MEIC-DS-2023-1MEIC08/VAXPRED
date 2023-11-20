@@ -33,8 +33,17 @@ No important pull requests have been made by me.
 
 ## Sprint 2
 
-...
+- I was involved in the development of the images section in the plugin page, and also the feature that allows the images to be expanded [[issue #120](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?pane=issue&itemId=43494748)].
+- I got to learn more about MatDialog functionalities in Angular.
 
+### The two pull requests that I am most proud of
+
+- I have performed a single pull request which merges the `t1-feature-plugin-page-images` branch to `dev` [[pull #175](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/175)].
+
+### Two contributions of other types that I am most proud of
+
+- I was involved in the discussion of the plugin page re-design.
+- I was involved in the discussion of plugin data for team 1 implementations.
 
 ## Sprint 3
 

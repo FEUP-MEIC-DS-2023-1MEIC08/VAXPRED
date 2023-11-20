@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PluginPageComponent } from './plugin-page/plugin-page.component';
 import { Plugin } from './plugin';
-import { HomeComponent } from './home/home.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class AppComponent {
       width: '1000px',
       data: {
         dialogRef: null, // Initialize the dialogRef to null
-        plugin: new Plugin(0, "Plugin title changed", "Plugin Description changed") // TODO: INSERT PLUGIN HERE!!!!
+        plugin: new Plugin(0, "Plugin title changed", "Plugin Description changed", '', '', new Date(), new Date()) // TODO: INSERT PLUGIN HERE!!!!
       }
     });
     dialogRef.componentInstance.data.dialogRef = dialogRef;

@@ -55,8 +55,32 @@ Pull Request #30 was reviewed by one of the team's Developers while Pull Request
 
 ## Sprint 2
 
-...
+### The four user stories that we are most proud of
 
+ * "As a researcher, I want to be able to filter the plugins by various tags, so that I can find the one that suits better the experiment I want to do." [issue #24](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/24)
+ * "As a researcher, I want to see a store-like grid when I go to the plugin store, so that I can easily see all the plugins available." [issue #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
+
+Regarding issue #24 we are especially proud of [item #112](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/112), were we added to the store the possibility to filter the plugins by tags.
+We are also proud of how the store grid turned out while doing issue #33.
+
+
+
+### The four pull requests that we are most proud of
+
+ * "T3 - Plugin Store search results page" [#138](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/138)
+ * "Feature tags filter" [#144](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/144)
+ * "T3 - fetching available plugins from database" [#177](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/177)
+ * "Sprint 1 Release (dev -> main)" [#140](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/140)
+
+Pull Requests #138, #144 and #177 were created by the team's members to incorporate new feature's into the full work. Pull Request #140, which served to incorporate part of Sprint 1 work into the main branch, was reviewed by the team's Scrum Master.
+
+
+### Four contributions of other types that we are most proud of
+
+* Creating Mockups for new features of the platform (like in user story [#14's](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/14) description)
+* Creating Acceptance tests for the tags filter (can be seen in user story [#24's](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/24) description)
+* The Team's PO helped writing User Stories that will be done in Sprint 3
+* The Team's members helped dividing the Sprint's User Stories into items, which helped organizing the Sprint's work
 
 ## Sprint 3
 

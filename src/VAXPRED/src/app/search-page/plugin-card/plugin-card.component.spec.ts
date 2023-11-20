@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatDialogModule } from '@angular/material/dialog';
 import { PluginCardComponent } from './plugin-card.component';
 
 describe('PluginCardComponent', () => {
@@ -8,7 +8,8 @@ describe('PluginCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PluginCardComponent]
+      declarations: [PluginCardComponent],
+      imports:[MatDialogModule],
     });
     fixture = TestBed.createComponent(PluginCardComponent);
     component = fixture.componentInstance;
