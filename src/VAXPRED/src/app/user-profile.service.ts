@@ -22,11 +22,12 @@ export class UserProfileService {
     // fetch the plugin IDs subscribed by the user.
     return this.http.get('http://localhost:8000/users/' + id + '/plugins/').pipe(
       switchMap((pluginIds: any) => {
-        // fetch information about each plugin using the IDs.
-        const pluginRequests: Observable<any>[] = pluginIds.plugins.map((pluginId: any) =>
-          this.http.get('http://localhost:8000/plugins/' + pluginId['id'] + '/')
-        );
-        return forkJoin(pluginRequests);
+        console.log(pluginIds);
+        var plugins = [];
+        for (let plugin of pluginIds.associations) {
+          plugins.push(this.http.get('http://localhost:8000/plugins/' + plugin['plugin_id'] + '/'));
+        }
+        return forkJoin(plugins);
       })
     );
   }
