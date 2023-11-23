@@ -69,7 +69,13 @@ def associate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(ge
 def disassociate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(get_db)):
     association = UserPluginRepository(db)
     association_db = UserPluginRepository(db).get_list_dict()
-    if {"user_id": user_id, "plugin_id": plugin_id} not in association_db:
+    print(association_db)
+    found = False
+    for associ in association_db:
+        if (associ['user_id'] == user_id and associ['plugin_id'] == plugin_id):
+            found = True
+            break
+    if not found:
         raise HTTPException(status_code=404, detail="Association not found")
 
     association.delete_association(user_id, plugin_id)

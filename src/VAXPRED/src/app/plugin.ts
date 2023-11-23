@@ -17,6 +17,7 @@ export class Plugin
 	release_date: Date;
 	last_update_date: Date;
 	tags: string[];
+	contract_duration: number;
 	// TODO: connect to db
 	dependencies: any[] = [
 		{ name: 'Python', version: '3.9', vendor: 'Python Foundation' },
@@ -26,7 +27,7 @@ export class Plugin
 	images: string[];
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[])
+		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -45,5 +46,6 @@ export class Plugin
 		];
 		this.type = type;
 		this.tags = tags;
+		this.contract_duration = contract_duration;
 	}
 }
