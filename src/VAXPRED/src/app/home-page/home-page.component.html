@@ -4,15 +4,11 @@
     <div *ngFor="let category of categories; let i = index" class="category">
       <h2>{{ category }}</h2>
       <div class="scroll-container">
-        <div *ngFor="let element of elements[i]" class="scroll-item">{{ element }}</div>
+        <app-plugin-card *ngFor="let tool of this.items" [tool]="tool"></app-plugin-card>      
       </div>
     </div>
     <h2>Filter by Tag</h2>
     <div class="tag-grid">
-      <button *ngFor="let tag of tags">{{ tag }}</button>
+      <button *ngFor="let tag of testTags">{{ tag }}</button>
     </div>
   </div>
-
-  <!-- <div class="results-grid">
-		<app-plugin-card *ngFor="let tool of this.items" [tool]="tool"></app-plugin-card>
-	</div> -->
