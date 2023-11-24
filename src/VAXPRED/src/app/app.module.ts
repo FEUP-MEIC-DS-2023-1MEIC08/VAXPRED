@@ -28,6 +28,7 @@ import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plug
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     AdminPageComponent,
     PageNotFoundComponent,
     HomePageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
