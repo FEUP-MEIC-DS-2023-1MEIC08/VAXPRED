@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminPageService } from '../admin-page.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-admin-page',
