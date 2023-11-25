@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 @Component({
 	selector: 'app-side-filter',
 	templateUrl: './side-filter.component.html',
 	styleUrls: ['./side-filter.component.css']
 })
 export class SideFilterComponent {
-	items: Plugin[] = [];
+	items: Plugin[] = [];	
 	originalItems: Plugin[] = [];
 	sortingOption: string = 'original';
 	isRadioSelected: boolean = false;
@@ -17,6 +17,10 @@ export class SideFilterComponent {
 	selectedToolTypes: { [key: string]: boolean } = {};
 	tags: string[] = [];
 	selectedTags: { [key: string]: boolean } = {};
+
+	@Input() selectedCategory: string = '';
+	@Input() selectedTag: string = '';
+	@Input() searchQuery: string = '';
 
 	constructor(private toolService: ToolService)
 	{

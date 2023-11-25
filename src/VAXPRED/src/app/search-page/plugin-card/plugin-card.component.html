@@ -7,7 +7,7 @@
 		<h5 class="plugin-card-title">{{ this.tool.name }}</h5>
 		<h6 class="plugin-card-subtitle mb-2"> {{ this.tool.type }} </h6>
 		<p class="plugin-card-text"> {{ this.tool.description }} </p>
-		<div class="d-flex w-100 justify-content-around">
+		<div class="d-flex w-100 justify-content-around" *ngIf="!this.tool.smallSize">
 			<button id="view-details-button" class="btn rounded-pill w-85" (click)="openDialog()">
 				<a>
 					<span>View details</span>

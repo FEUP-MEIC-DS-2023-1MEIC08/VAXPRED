@@ -40,7 +40,7 @@ export class HomePageComponent {
 
 		console.log(this.categories);
 		console.log("Oi")
-		
+		console.log(this.categoryPlugins);
 	}
 
 	getPluginsByCategory(categoryId: number){
@@ -61,7 +61,8 @@ export class HomePageComponent {
 						new Date(plugin.last_update_date),
 						'Data Quality',			// plugin.type,
 						[],		//plugin.tags
-						plugin.contract_duration
+						plugin.contract_duration,
+						true
 					));
 			});
 		});
