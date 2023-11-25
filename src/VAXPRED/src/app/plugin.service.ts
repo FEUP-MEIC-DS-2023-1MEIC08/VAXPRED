@@ -19,11 +19,21 @@ export class ToolService {
 		return ['Data Quality', 'Data Curation', 'Synthetic Data Generation'];
 	}
 
-	getTags(): string[] {
+	getTags(){
+		//return this.http.get("localhost:8000/tags/");
 		return ['Tag 1', 'Tag 2', 'Tag 3'];
 	}
 
 	installPlugin(pluginId: number) {
 		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
+	}
+	
+	getCategories(){
+		return this.http.get('http://localhost:8000/categories/');
+	}
+
+	getCategoryPlugins(id: number) {
+		//return this.http.get('http://localhost:8000/categories/' + plugin);
+		return this.http.get('http://localhost:8000/categories/' + id + '/plugins/');
 	}
 }

@@ -12,20 +12,44 @@ import { ToolService } from 'src/app/plugin.service';
 
 export class HomePageComponent {
 
-  items: Plugin[] = [];
-	originalItems: Plugin[] = [];
-	sortingOption: string = 'original';
-	isRadioSelected: boolean = false;
-	toolTypes: string[] = [];
-	selectedToolTypes: { [key: string]: boolean } = {};
+    items: Plugin[] = [];
 	tags: string[] = [];
-	selectedTags: { [key: string]: boolean } = {};
-
+	// a tuple with category name and id
+	categories: [string,number][] = [];
+	categoryPlugins: { [categoryId: number]: Plugin[] } = {};
   constructor(private toolService: ToolService)
 	{
-		this.toolService.getPlugins().subscribe((data: any) => {
+		
+		this.tags = this.toolService.getTags();
+
+	 	this.toolService.getCategories().subscribe( (data: any) => {
+			data.categories.sort((a: any, b: any) => {
+				if (a.name === 'Other') {
+				  return 1; // Move "Others" to the end
+				} else if (b.name === 'Other') {
+				  return -1; // Move "Others" to the end
+				} else {
+				  return a.name.localeCompare(b.name);
+				}
+			  }); 
+			data.categories.forEach((category: any) => {
+				this.categories.push([category.name, category.id]);
+				this.getPluginsByCategory(category.id);
+			});
+		});
+
+		console.log(this.categories);
+		console.log("Oi")
+		
+	}
+
+	getPluginsByCategory(categoryId: number){
+		
+		let items: Plugin[] = [];
+		
+		this.toolService.getCategoryPlugins(categoryId).subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
-				this.items.push(
+				items.push(
 					new Plugin(
 						plugin.id,
 						plugin.name,
@@ -40,30 +64,16 @@ export class HomePageComponent {
 						plugin.contract_duration
 					));
 			});
-
-			this.originalItems = this.items.slice();
 		});
+		this.categoryPlugins[categoryId] = items;
+	
+	
+	}	 
 
-		this.toolTypes = this.toolService.getToolTypes();
-		this.tags = this.toolService.getTags();
-	}
+	
 
-
-  	/**
-	 * Filters the list based on the selected tool type and the tag
-	 */
-	filterList(): void {
-		const selectedTypes = Object.keys(this.selectedToolTypes).filter((type) => this.selectedToolTypes[type]);
-		const selectedTags = Object.keys(this.selectedTags).filter((tag) => this.selectedTags[tag]);
-
-		this.items = this.originalItems.filter((item: Plugin) => {
-			const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(item.type);
-			const tagMatch = selectedTags.length === 0 || item.tags.some((tag) => selectedTags.includes(tag));
-			return typeMatch && tagMatch;
-		});
-	}
-
-  categories = ['Placeholder 1', 'Placeholder 2', 'Placeholder 3'];
+  	
+  //categories = ['Placeholder 1', 'Placeholder 2', 'Placeholder 3'];
   elements = [
     ['Element 1.1', 'Element 1.2', 'Element 1.3', 'Element 1.4', 'Element 1.5', 'Element 1.6', 'Element 1.7', 'Element 1.8'],
     ['Element 2.1', 'Element 2.2', 'Element 2.3'],
@@ -73,3 +83,7 @@ export class HomePageComponent {
 
 
 }
+function sleep(arg0: number) {
+	throw new Error('Function not implemented.');
+}
+

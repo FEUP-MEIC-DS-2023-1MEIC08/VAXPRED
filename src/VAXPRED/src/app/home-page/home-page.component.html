@@ -2,9 +2,9 @@
 <div class="container">
     <input type="text" placeholder="Search..." class="search-bar">
     <div *ngFor="let category of categories; let i = index" class="category">
-      <h2>{{ category }}</h2>
+      <h2>{{ category[0] }}</h2>
       <div class="scroll-container">
-        <app-plugin-card *ngFor="let tool of this.items" [tool]="tool"></app-plugin-card>      
+        <app-plugin-card *ngFor="let tool of categoryPlugins[category[1]]" [tool]="tool"></app-plugin-card>      
       </div>
     </div>
     <h2>Filter by Tag</h2>
