@@ -38,9 +38,6 @@ export class HomePageComponent {
 			});
 		});
 
-		console.log(this.categories);
-		console.log("Oi")
-		console.log(this.categoryPlugins);
 	}
 
 	getPluginsByCategory(categoryId: number){
