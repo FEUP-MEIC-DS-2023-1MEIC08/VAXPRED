@@ -5,7 +5,9 @@
  * @param {string} image the logotype image path of the plugin
  * @param {string} type the type of the plugin 
  * @param {string[]} tags the tags of the plugin
+ * @param {string[]} faq the FAQ of the plugin
  */
+
 export class Plugin
 {
 	id: number;
@@ -25,9 +27,10 @@ export class Plugin
 	];
 	type: string;
 	images: string[];
+	faq: string[];
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number)
+		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number, faq: string[])
 	{
 		this.id = id;
 		this.name = name;
@@ -47,5 +50,6 @@ export class Plugin
 		this.type = type;
 		this.tags = tags;
 		this.contract_duration = contract_duration;
+		this.faq = faq;
 	}
 }

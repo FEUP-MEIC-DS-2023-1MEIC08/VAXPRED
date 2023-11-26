@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
@@ -8,7 +8,7 @@ import { ToolService } from 'src/app/plugin.service';
 	templateUrl: './side-filter.component.html',
 	styleUrls: ['./side-filter.component.css']
 })
-export class SideFilterComponent {
+export class SideFilterComponent implements OnInit {
 	items: Plugin[] = [];
 	originalItems: Plugin[] = [];
 	sortingOption: string = 'original';
@@ -34,7 +34,8 @@ export class SideFilterComponent {
 						new Date(plugin.last_update_date),
 						'Data Quality',			// plugin.type,
 						[],		//plugin.tags
-						plugin.contract_duration
+						plugin.contract_duration,
+						[]		//plugin.faqs
 					));
 			});
 
@@ -43,6 +44,15 @@ export class SideFilterComponent {
 
 		this.toolTypes = this.toolService.getToolTypes();
 		this.tags = this.toolService.getTags();
+		
+	}
+
+	ngOnInit() {
+		this.items.forEach(plugin => {
+			this.toolService.getFAQ(plugin.id).subscribe((faq: string[]) => {
+				plugin.faq = faq;
+			  });
+		});
 	}
 
 	/**
