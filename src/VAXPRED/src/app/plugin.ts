@@ -37,6 +37,7 @@ export class Plugin
 		this.developer = developer;
 		this.release_date = release_date;
 		this.last_update_date = last_update_date;
+		// TODO: connect to db
 		this.images = [
 			'http://placekitten.com/498/300',
 			'http://placekitten.com/499/300',
@@ -45,7 +46,8 @@ export class Plugin
 			'http://placekitten.com/502/300',
 		];
 		this.type = type;
-		this.tags = tags;
+		// TODO: connect to db
+		this.tags = ['Linter', 'Debugger', 'Programming Languages'];
 		this.contract_duration = contract_duration;
 	}
 }
