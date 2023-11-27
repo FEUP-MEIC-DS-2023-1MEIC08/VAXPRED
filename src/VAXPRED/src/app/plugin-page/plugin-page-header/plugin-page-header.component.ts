@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Plugin } from '../../plugin';
 import { PluginPageComponent } from '../plugin-page.component';
 import { MatDialogRef } from '@angular/material/dialog';

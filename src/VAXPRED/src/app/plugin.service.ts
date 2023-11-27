@@ -34,17 +34,5 @@ export class ToolService {
 	getFAQ(pluginId: number): Observable<any> {
 		return this.http.get('http://localhost:8000/faqs/' + pluginId + '/');			
 	}
-	
-	/*
-	getFAQ(pluginId: number): Observable<string[]> {
-		return this.http.get('http://localhost:8000/faqs/' + pluginId + '/').pipe(
-			map((response: any) => {
-			  // Assuming the response contains an array of strings under a certain property
-			  // Adjust this according to your actual API response structure
-			  return response.data.map((item: any) => item.text);
-			  // Above assumes 'data' is an array of objects, and 'text' is a property containing strings
-			}));
-	}
-	*/
-	
+		
 }
