@@ -21,6 +21,8 @@ export class SideFilterComponent {
 	{
 		this.toolService.getPlugins().subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
+				const index = Math.floor(Math.random() * 3);
+				
 				this.items.push(
 					new Plugin(
 						plugin.id,
@@ -31,7 +33,7 @@ export class SideFilterComponent {
 						plugin.developer,
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
-						'Data Quality',			// plugin.type,
+						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
 						[],		//plugin.tags
 						plugin.contract_duration,
 						''		//plugin.faqs
