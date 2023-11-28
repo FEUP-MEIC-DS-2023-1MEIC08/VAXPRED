@@ -34,7 +34,7 @@ export class SideFilterComponent {
 						'Data Quality',			// plugin.type,
 						[],		//plugin.tags
 						plugin.contract_duration,
-						[]		//plugin.faqs
+						''		//plugin.faqs
 					));
 			});
 
