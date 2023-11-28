@@ -51,7 +51,7 @@ export class Plugin
 		this.contract_duration = contract_duration;
 		this.categories = [
 			'Data Quality',
-			'Data Curation',
+			'Data Curation'
 		]
 	}
 }
