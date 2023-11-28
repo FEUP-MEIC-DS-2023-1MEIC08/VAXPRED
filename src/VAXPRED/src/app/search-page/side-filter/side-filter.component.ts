@@ -34,7 +34,7 @@ export class SideFilterComponent {
 						plugin.developer,
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
-						['Data Quality', 'Data Curation', 'Syntethic Data Generation'][index],
+						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
 						[],		//plugin.tags
 						plugin.contract_duration
 					));
