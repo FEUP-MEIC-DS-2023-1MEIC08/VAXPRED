@@ -9,21 +9,33 @@
 	--download-button-radius: 45px;
 }
 
-/* .plugin-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+
+.pricing-badge
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
 }
 
-.plugin-type {
-    font-size: 14px;
+.badge
+{
+    padding: 5px 8px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.plugin-price {
-    font-size: 14px;
-} */
+.badge#free
+{
+	background-color: #00BB55;
+}
 
+.badge#premium
+{
+	background-color: #FF7777;
+}
 
 .plugin-card
 {
@@ -64,6 +76,17 @@
 	max-height: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.plugin-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.plugin-price {
+    font-size: 14px;
 }
 
 a
