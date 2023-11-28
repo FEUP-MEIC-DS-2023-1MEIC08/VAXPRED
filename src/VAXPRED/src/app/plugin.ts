@@ -18,6 +18,7 @@ export class Plugin
 	description: string;
 	logo: string;
 	images: string[];
+	price!: number;
 	version: string;
 	developer: string;
 	release_date: Date;
@@ -75,5 +76,6 @@ export class Plugin
 		
 		this.type_icon = 'assets/plugin_types_icons/' + this.type + '.png';
 		this.type_description = types_descriptions[this.type];
+		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }
