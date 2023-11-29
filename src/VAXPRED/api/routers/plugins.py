@@ -8,7 +8,7 @@ from repositories.plugin_categories import PluginCategoryRepository
 from repositories.plugin_dependencies import PluginDependencyRepository
 from repositories.plugin_faqs import PluginFaqRepository
 from repositories.plugin_tag import PluginTagRepository
-from schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, PluginGeralListResponse, \
+from schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, \
     PluginGeralInfo, PluginListResponse
 
 router = APIRouter()
@@ -38,7 +38,6 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
         dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
-        print(faqs)
 
         response = PluginResponse(
             id=plugin.id,
