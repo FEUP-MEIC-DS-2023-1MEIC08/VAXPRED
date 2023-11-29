@@ -16,5 +16,7 @@ services:
     container_name: vaxpred_backend
     build:
       context: ./api
+    volumes:
+      - ./:/app
     ports:
       - "8000:8000"
