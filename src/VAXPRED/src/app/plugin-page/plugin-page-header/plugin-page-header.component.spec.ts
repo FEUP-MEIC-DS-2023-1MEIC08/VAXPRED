@@ -22,7 +22,7 @@ describe('PluginPageHeaderComponent', () => {
 
   it('should display the plugin title', () => {
     const testTitle = 'Test Plugin Title';
-    const testPlugin = new Plugin(1, testTitle, 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, ['FAQ 1']);
+    const testPlugin = new Plugin(1, testTitle, 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, 'FAQ 1');
 
     component.plugin = testPlugin;
     fixture.detectChanges();
@@ -33,7 +33,7 @@ describe('PluginPageHeaderComponent', () => {
 
   it('should display the plugin version tag', () => {
     const testVersion = '1.0.7';
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, ['FAQ 1']);
+    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, 'FAQ 1');
 
     component.plugin = testPlugin;
 
@@ -45,7 +45,7 @@ describe('PluginPageHeaderComponent', () => {
 
   it('should display the plugin ID', () => {
     const testID = 42;
-    const testPlugin = new Plugin(testID, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, ['FAQ 1']);
+    const testPlugin = new Plugin(testID, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, 'FAQ 1');
 
     component.plugin = testPlugin;
     fixture.detectChanges();
@@ -55,7 +55,7 @@ describe('PluginPageHeaderComponent', () => {
   });
 
   it('should display an install button', () => {
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, ['FAQ 1']);
+    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Type', ['Tag 1'], 2, 'FAQ 1');
 
     component.plugin = testPlugin;
     fixture.detectChanges();
