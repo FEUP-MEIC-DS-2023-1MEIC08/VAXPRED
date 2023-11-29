@@ -9,13 +9,13 @@ from repositories.plugin_dependencies import PluginDependencyRepository
 from repositories.plugin_faqs import PluginFaqRepository
 from repositories.plugin_tag import PluginTagRepository
 from schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, PluginGeralListResponse, \
-    PluginGeralInfo
+    PluginGeralInfo, PluginListResponse
 
 router = APIRouter()
 
 
 # Route to list every plugin
-@router.get("/", response_model=PluginGeralListResponse)
+@router.get("/", response_model=PluginListResponse)
 def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
     if search:
@@ -25,8 +25,42 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
 
     if plugins is None:
         raise HTTPException(status_code=404, detail="No plugins available")
+    
+    category_repository = PluginCategoryRepository(db)
+    tag_repository = PluginTagRepository(db)
+    plugin_dependencies_repository = PluginDependencyRepository(db)
+    plugin_faqs_repository = PluginFaqRepository(db)
 
-    return {"plugins": plugins}
+    pluginsResponse = []
+    for plugin in plugins:
+        plugin_id = plugin.id
+        categories = category_repository.get_categories_by_plugin_id(plugin_id)
+        tags = tag_repository.get_tags_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        print(faqs)
+
+        response = PluginResponse(
+            id=plugin.id,
+            name=plugin.name,
+            version=plugin.version,
+            description=plugin.description,
+            developer=plugin.developer,
+            release_date=plugin.release_date,
+            last_update_date=plugin.last_update_date,
+            supplier_name=plugin.supplier_name,
+            supplier_email=plugin.supplier_email,
+            contract_duration=plugin.contract_duration,
+            price=plugin.price,
+            categories=categories,
+            tags=tags,
+            dependencies=dependencies,
+            faqs=faqs
+        )
+        pluginsResponse.append(response)
+
+
+    return {"plugins": pluginsResponse}
 
 
 # Route for display a specific plugin
