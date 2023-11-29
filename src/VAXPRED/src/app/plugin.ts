@@ -33,9 +33,11 @@ export class Plugin
 		{ name: 'Python', version: '3.9', vendor: 'Python Foundation' },
 		{ name: 'Docker', version: '24.0', vendor: 'Docker Inc.' }
 	];
+	categories: string[]; 
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number)
+		developer: string, release_date: Date, last_update_date: Date, type: string, 
+		tags: string[], contract_duration: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -57,6 +59,10 @@ export class Plugin
 		this.type = type;
 		this.tags = ['Linter', 'Debugger', 'Programming Languages'];
 		this.contract_duration = contract_duration;
+		this.categories = [
+			'Data Quality',
+			'Data Curation'
+		]
 		
 		this.assembleDynamicData();
 	}
