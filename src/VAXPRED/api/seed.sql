@@ -24,27 +24,86 @@ insert into user_plugin_association (user_id, plugin_id) values (18, 18);
 insert into user_plugin_association (user_id, plugin_id) values (19, 19);
 insert into user_plugin_association (user_id, plugin_id) values (20, 20);
 
--- Insira os valores correspondentes
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('ProductivityMaster', '3.0', 'Boost your productivity with this amazing plugin', 'TechSolutions Inc.', 'TechSolutions Inc.', 'techsolutions@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('DataAnalyzer Pro', '2.5', 'Analyze data like a pro with this powerful tool', 'DataTech Labs', 'DataTech Labs', 'datatechlabs@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('SecurityGuard', '1.2', 'Enhance your system security with SecurityGuard', 'SecureSoft', 'SecureSoft', 'securesoft@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('MarketingGenius', '4.0', 'Supercharge your marketing efforts with MarketingGenius', 'MarketPros', 'MarketPros', 'marketpros@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('FinanceOptimizer', '2.1', 'Optimize your financial strategies with FinanceOptimizer', 'FinanceTech Solutions', 'FinanceTech Solutions', 'financetech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('SocialConnect', '2.0', 'Stay connected to your social networks with SocialConnect', 'SocialWare Inc.', 'SocialWare Inc.', 'socialware@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('InventoryMaster', '1.5', 'Manage your inventory efficiently with InventoryMaster', 'Inventory Systems Ltd.', 'Inventory Systems Ltd.', 'inventorysystems@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('ContentCreator Pro', '3.5', 'Create amazing content with ContentCreator Pro', 'CreativeTools', 'CreativeTools', 'creativetools@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('CustomerInsights', '2.2', 'Get valuable insights into your customers with CustomerInsights', 'Insightful Inc.', 'Insightful Inc.', 'insightfulinc@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('ProjectManager Plus', '4.1', 'Manage projects like a pro with ProjectManager Plus', 'Project Solutions Ltd.', 'Project Solutions Ltd.', 'projectsolutions@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('TimeTracker Pro', '1.0', 'Track your time efficiently with TimeTracker Pro', 'TimeTech Inc.', 'TimeTech Inc.', 'timetech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('CustomerSupportHero', '3.2', 'Provide top-notch customer support with CustomerSupportHero', 'SupportTech Solutions', 'SupportTech Solutions', 'supporttech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('SalesBooster', '2.8', 'Boost your sales with the SalesBooster plugin', 'SalesTech Pro', 'SalesTech Pro', 'salestech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('TaskManager Pro', '2.0', 'Efficiently manage tasks with TaskManager Pro', 'Task Solutions Ltd.', 'Task Solutions Ltd.', 'tasksolutions@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('HRMaster', '1.5', 'Streamline your HR processes with HRMaster', 'HR Tech Solutions', 'HR Tech Solutions', 'hrtech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('AnalyticsWizard', '4.2', 'Unlock powerful analytics with AnalyticsWizard', 'Data Insights Inc.', 'Data Insights Inc.', 'datainsights@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('E-commerceOptimizer', '3.1', 'Optimize your e-commerce business with E-commerceOptimizer', 'E-commerce Tech Pro', 'E-commerce Tech Pro', 'ecommercetech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('CustomerFeedbackPro', '2.6', 'Gather valuable customer feedback with CustomerFeedbackPro', 'FeedbackTech Inc.', 'FeedbackTech Inc.', 'feedbacktech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('InventoryTracker', '1.8', 'Track your inventory efficiently with InventoryTracker', 'InventoryTech Ltd.', 'InventoryTech Ltd.', 'inventorytech@gmail.com');
-INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email) VALUES ('MarketingAnalytics', '3.0', 'Get in-depth marketing analytics with MarketingAnalytics', 'Marketing Insights Pro', 'Marketing Insights Pro', 'marketinginsights@gmail.com');
+
+insert into plugin_category_association (category_id, plugin_id) values (1, 1);
+insert into plugin_category_association (category_id, plugin_id) values (2, 2);
+insert into plugin_category_association (category_id, plugin_id) values (3, 3);
+insert into plugin_category_association (category_id, plugin_id) values (4, 4);
+insert into plugin_category_association (category_id, plugin_id) values (5, 5);
+insert into plugin_category_association (category_id, plugin_id) values (1, 6);
+insert into plugin_category_association (category_id, plugin_id) values (2, 7);
+insert into plugin_category_association (category_id, plugin_id) values (3, 8);
+insert into plugin_category_association (category_id, plugin_id) values (4, 9);
+insert into plugin_category_association (category_id, plugin_id) values (5, 10);
+insert into plugin_category_association (category_id, plugin_id) values (1, 11);
+insert into plugin_category_association (category_id, plugin_id) values (2, 12);
+insert into plugin_category_association (category_id, plugin_id) values (3, 13);
+insert into plugin_category_association (category_id, plugin_id) values (4, 14);
+insert into plugin_category_association (category_id, plugin_id) values (5, 15);
+insert into plugin_category_association (category_id, plugin_id) values (0, 16);
+insert into plugin_category_association (category_id, plugin_id) values (1, 17);
+insert into plugin_category_association (category_id, plugin_id) values (2, 18);
+insert into plugin_category_association (category_id, plugin_id) values (3, 19);
+insert into plugin_category_association (category_id, plugin_id) values (4, 20);
+
+
+
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 1);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 2);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 3);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 4);
+insert into plugin_tag_association (tag_id, plugin_id) values (5, 5);
+insert into plugin_tag_association (tag_id, plugin_id) values (6, 6);
+insert into plugin_tag_association (tag_id, plugin_id) values (7, 7);
+insert into plugin_tag_association (tag_id, plugin_id) values (8, 8);
+insert into plugin_tag_association (tag_id, plugin_id) values (9, 9);
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 10);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 11);
+insert into plugin_tag_association (tag_id, plugin_id) values (3, 12);
+insert into plugin_tag_association (tag_id, plugin_id) values (4, 13);
+insert into plugin_tag_association (tag_id, plugin_id) values (5, 14);
+insert into plugin_tag_association (tag_id, plugin_id) values (6, 15);
+insert into plugin_tag_association (tag_id, plugin_id) values (7, 16);
+insert into plugin_tag_association (tag_id, plugin_id) values (8, 17);
+insert into plugin_tag_association (tag_id, plugin_id) values (9, 18);
+insert into plugin_tag_association (tag_id, plugin_id) values (1, 19);
+insert into plugin_tag_association (tag_id, plugin_id) values (2, 20);
+
+
+insert into tags (name) values ('Quick');
+insert into tags (name) values ('Misc');
+insert into tags (name) values ('High');
+insert into tags (name) values ('Medium');
+insert into tags (name) values ('Low');
+insert into tags (name) values ('Random');
+insert into tags (name) values ('Enzyme');
+insert into tags (name) values ('Genes');
+insert into tags (name) values ('Organism');
+insert into tags (name) values ('Mitochondria');
+
+
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('ProductivityMaster', '3.0', 'Boost your productivity with this amazing plugin', 'TechSolutions Inc.', 'TechSolutions Inc.', 'techsolutions@gmail.com', 2, 0, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('DataAnalyzer Pro', '2.5', 'Analyze data like a pro with this powerful tool', 'DataTech Labs', 'DataTech Labs', 'datatechlabs@gmail.com', NULL, 10, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('SecurityGuard', '1.2', 'Enhance your system security with SecurityGuard', 'SecureSoft', 'SecureSoft', 'securesoft@gmail.com', 3, 0, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('MarketingGenius', '4.0', 'Supercharge your marketing efforts with MarketingGenius', 'MarketPros', 'MarketPros', 'marketpros@gmail.com', 2, 10, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('FinanceOptimizer', '2.1', 'Optimize your financial strategies with FinanceOptimizer', 'FinanceTech Solutions', 'FinanceTech Solutions', 'financetech@gmail.com', 3, 0, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('SocialConnect', '2.0', 'Stay connected to your social networks with SocialConnect', 'SocialWare Inc.', 'SocialWare Inc.', 'socialware@gmail.com', NULL, 10, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('InventoryMaster', '1.5', 'Manage your inventory efficiently with InventoryMaster', 'Inventory Systems Ltd.', 'Inventory Systems Ltd.', 'inventorysystems@gmail.com', 2, 0, 'Data Quality');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('ContentCreator Pro', '3.5', 'Create amazing content with ContentCreator Pro', 'CreativeTools', 'CreativeTools', 'creativetools@gmail.com', 3, 10, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('CustomerInsights', '2.2', 'Get valuable insights into your customers with CustomerInsights', 'Insightful Inc.', 'Insightful Inc.', 'insightfulinc@gmail.com', NULL, 0, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('ProjectManager Plus', '4.1', 'Manage projects like a pro with ProjectManager Plus', 'Project Solutions Ltd.', 'Project Solutions Ltd.', 'projectsolutions@gmail.com', 2, 10, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('TimeTracker Pro', '1.0', 'Track your time efficiently with TimeTracker Pro', 'TimeTech Inc.', 'TimeTech Inc.', 'timetech@gmail.com', 3, 0, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('CustomerSupportHero', '3.2', 'Provide top-notch customer support with CustomerSupportHero', 'SupportTech Solutions', 'SupportTech Solutions', 'supporttech@gmail.com', NULL, 10, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('SalesBooster', '2.8', 'Boost your sales with the SalesBooster plugin', 'SalesTech Pro', 'SalesTech Pro', 'salestech@gmail.com', 2, 0, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('TaskManager Pro', '2.0', 'Efficiently manage tasks with TaskManager Pro', 'Task Solutions Ltd.', 'Task Solutions Ltd.', 'tasksolutions@gmail.com', 3, 10, 'Data Curation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('HRMaster', '1.5', 'Streamline your HR processes with HRMaster', 'HR Tech Solutions', 'HR Tech Solutions', 'hrtech@gmail.com', NULL, 0, 'Synthetic Data Generation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('AnalyticsWizard', '4.2', 'Unlock powerful analytics with AnalyticsWizard', 'Data Insights Inc.', 'Data Insights Inc.', 'datainsights@gmail.com', 2, 10, 'Synthetic Data Generation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('E-commerceOptimizer', '3.1', 'Optimize your e-commerce business with E-commerceOptimizer', 'E-commerce Tech Pro', 'E-commerce Tech Pro', 'ecommercetech@gmail.com', 3, 0, 'Synthetic Data Generation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('CustomerFeedbackPro', '2.6', 'Gather valuable customer feedback with CustomerFeedbackPro', 'FeedbackTech Inc.', 'FeedbackTech Inc.', 'feedbacktech@gmail.com', NULL, 10, 'Synthetic Data Generation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('InventoryTracker', '1.8', 'Track your inventory efficiently with InventoryTracker', 'InventoryTech Ltd.', 'InventoryTech Ltd.', 'inventorytech@gmail.com', 2, 0, 'Synthetic Data Generation');
+INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('MarketingAnalytics', '3.0', 'Get in-depth marketing analytics with MarketingAnalytics', 'Marketing Insights Pro', 'Marketing Insights Pro', 'marketinginsights@gmail.com', 3, 10, 'Synthetic Data Generation');
+
+
 
 insert into users (username, email) values ('mfridaye0', 'esubhan0@narod.ru');
 insert into users (username, email) values ('mdods1', 'bmartin1@cbslocal.com');
@@ -147,5 +206,33 @@ insert into users (username, email) values ('kmccullouch2p', 'grudsdell2p@marrio
 insert into users (username, email) values ('sbausor2q', 'wkyncl2q@photobucket.com');
 insert into users (username, email) values ('elindfors2r', 'jglyne2r@salon.com');
 
+insert into categories (name) values ('Other');
+insert into categories (name) values ('Virus');
+insert into categories (name) values ('Bacteria');
+insert into categories (name) values ('DNA');
+insert into categories (name) values ('Machine Learning');
 
+
+insert into plugin_dependency (name, plugin_id) values ('Lisinopril', 1);
+insert into plugin_dependency (name, plugin_id) values ('Titanium Dioxide, Octinoxate/EthylhexylMethoxycinnamate', 2);
+insert into plugin_dependency (name, plugin_id) values ('Titanium Dioxide and Zinc Oxide', 3);
+insert into plugin_dependency (name, plugin_id) values ('Methyl Salicylate, Capsaicin, and Menthol',4);
+insert into plugin_dependency (name, plugin_id) values ('Donepezil Hydrochloride', 5);
+insert into plugin_dependency (name, plugin_id) values ('perphenazine', 6);
+insert into plugin_dependency (name, plugin_id) values ('lamotrigine', 7);
+insert into plugin_dependency (name, plugin_id) values ('Carbon Dioxide', 8);
+insert into plugin_dependency (name, plugin_id) values ('Cetirizine Hydrochloride', 9);
+insert into plugin_dependency (name, plugin_id) values ('PRAVASTATIN SODIUM', 10);
+
+
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('What is this Plugin?', 'This Plugin is a powerful tool that helps with...', 1);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('How do I install this Plugin?', 'To install this Plugin, you need to follow these steps...',1);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Can this Plugin be customized?', 'Yes, It comes with customization options that allow you to...',2);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Is there a tutorial for using this Plugin?', 'Certainly! We have a detailed tutorial on our website that guides you through...',3);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Are there any known issues with the Plugin?', 'As of now, there are no known issues with this Plugin. However, we recommend checking our support page for updates.',4);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('What is this Plugin?', 'This Plugin is a powerful tool that helps with...', 7);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('How do I install this Plugin?', 'To install this Plugin, you need to follow these steps...',8);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Can this Plugin be customized?', 'Yes, It comes with customization options that allow you to...',9);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Is there a tutorial for using this Plugin?', 'Certainly! We have a detailed tutorial on our website that guides you through...',10);
+INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Are there any known issues with the Plugin?', 'As of now, there are no known issues with this Plugin. However, we recommend checking our support page for updates.',11);
 
