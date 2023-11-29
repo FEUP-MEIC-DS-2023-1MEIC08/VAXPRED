@@ -54,8 +54,18 @@ There was only one [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/V
 
 ## Sprint 3
 
-...
+In this sprint, I edited the plugin page menu in order to display the plugin's categories and some additional information about relevant dates. These functionalities belong to issue [#117](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/117) and user story [#122](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/78).
+During this sprint I got to learn more about the api used.
 
+### The two user stories that I am most proud of
+
+During this sprint, I worked on the following [user story](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/78):
+
+"As a researcher, I want to be able to see a plugin's category on its page, so that I'm able to know the field that it inserts itself."
+
+### The two pull requests that I am most proud of
+
+There was only one [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/211) related to the work I did during this sprint, which merges the `t1-feature-plugin-list-categories` branch to `dev`.
 
 ## Sprint 4
 
