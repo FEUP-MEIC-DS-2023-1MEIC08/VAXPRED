@@ -51,6 +51,7 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
             supplier_email=plugin.supplier_email,
             contract_duration=plugin.contract_duration,
             price=plugin.price,
+            type=plugin.type,
             categories=categories,
             tags=tags,
             dependencies=dependencies,
@@ -92,6 +93,7 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
         supplier_email=plugin.supplier_email,
         contract_duration=plugin.contract_duration,
         price=plugin.price,
+        type=plugin.type,
         categories=categories,
         tags=tags,
         dependencies=dependencies,
@@ -123,7 +125,8 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
         supplier_name=plugin.supplier_name,
         supplier_email=plugin.supplier_email,
         contract_duration=plugin.contract_duration,
-        price=plugin.price
+        price=plugin.price,
+        type=plugin.type
     )
 
     dependencies = plugin.dependencies
@@ -154,7 +157,8 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
         supplier_name=plugin_update.supplier_name,
         supplier_email=plugin_update.supplier_email,
         contract_duration=plugin_update.contract_duration,
-        price=plugin_update.price
+        price=plugin_update.price,
+        type=plugin_update.type
     )
 
     if updated_plugin is None:

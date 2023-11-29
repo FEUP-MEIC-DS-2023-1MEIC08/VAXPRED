@@ -41,6 +41,7 @@ def get_category_plugins(category_id: int, db: Session = Depends(get_db)):
             supplier_email=plugin.supplier_email,
             contract_duration=plugin.contract_duration,
             price=plugin.price,
+            type=plugin.type,
             categories=categories,
             tags=tags,
             dependencies=dependencies,

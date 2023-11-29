@@ -49,6 +49,7 @@ class Plugin(Base):
     contract_duration = Column(Integer, nullable=True)
     search_text = Column(String, default='')
     price = Column(Integer, nullable=False)
+    type = Column(String, nullable=False)
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
     categories = relationship("Category", secondary=plugin_category_association, back_populates="plugins")

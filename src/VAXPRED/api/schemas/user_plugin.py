@@ -12,6 +12,9 @@ class UserPlugin(BaseModel):
     last_update_date: datetime
     supplier_name: str
     supplier_email: str
+    contract_duration: Optional[int]
+    price: int
+    type: str
     plugin_id: int
     association_date: datetime
     duration: Optional[int]
