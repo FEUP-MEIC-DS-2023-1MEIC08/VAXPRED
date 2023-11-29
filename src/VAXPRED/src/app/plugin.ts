@@ -20,6 +20,7 @@ export class Plugin
 	description: string;
 	logo: string;
 	images: string[];
+	price!: number;
 	version: string;
 	developer: string;
 	release_date: Date;
@@ -34,10 +35,12 @@ export class Plugin
 		{ name: 'Python', version: '3.9', vendor: 'Python Foundation' },
 		{ name: 'Docker', version: '24.0', vendor: 'Docker Inc.' }
 	];
+	categories: string[]; 
 	faq: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, tags: string[], contract_duration: number, faq: string)
+		developer: string, release_date: Date, last_update_date: Date, type: string, 
+		tags: string[], contract_duration: number, faq: string)
 	{
 		this.id = id;
 		this.name = name;
@@ -59,6 +62,10 @@ export class Plugin
 		this.type = type;
 		this.tags = ['Linter', 'Debugger', 'Programming Languages'];
 		this.contract_duration = contract_duration;
+		this.categories = [
+			'Data Quality',
+			'Data Curation'
+		]
 		this.faq = faq;
 		
 		this.assembleDynamicData();
@@ -79,5 +86,6 @@ export class Plugin
 		
 		this.type_icon = 'assets/plugin_types_icons/' + this.type + '.png';
 		this.type_description = types_descriptions[this.type];
+		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }
