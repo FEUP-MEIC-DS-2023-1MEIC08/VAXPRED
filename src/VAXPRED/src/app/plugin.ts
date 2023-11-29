@@ -9,8 +9,10 @@
  * @param {Date} last_update_date when the last update was made
  * @param {string} type the type of the plugin 
  * @param {string[]} tags the tags of the plugin
+ * @param {string} faq the FAQ of the plugin
  * @param {number} contract_duration the duration of the plugins's contract (in years)
  */
+
 export class Plugin
 {
 	id: number;
@@ -34,10 +36,11 @@ export class Plugin
 		{ name: 'Docker', version: '24.0', vendor: 'Docker Inc.' }
 	];
 	categories: string[]; 
+	faq: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
 		developer: string, release_date: Date, last_update_date: Date, type: string, 
-		tags: string[], contract_duration: number)
+		tags: string[], contract_duration: number, faq: string)
 	{
 		this.id = id;
 		this.name = name;
@@ -63,6 +66,7 @@ export class Plugin
 			'Data Quality',
 			'Data Curation'
 		]
+		this.faq = faq;
 		
 		this.assembleDynamicData();
 	}

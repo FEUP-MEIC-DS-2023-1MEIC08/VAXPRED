@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
 
@@ -36,7 +35,8 @@ export class SideFilterComponent {
 						new Date(plugin.last_update_date),
 						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
 						[],		//plugin.tags
-						plugin.contract_duration
+						plugin.contract_duration,
+						''		//plugin.faqs
 					));
 			});
 
@@ -45,6 +45,7 @@ export class SideFilterComponent {
 
 		this.toolTypes = this.toolService.getToolTypes();
 		this.tags = this.toolService.getTags();
+		
 	}
 
 	/**
