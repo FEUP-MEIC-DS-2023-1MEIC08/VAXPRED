@@ -1,39 +1,78 @@
-<div fxLayout="row" fxLayoutAlign="end start">
-    <div fxFlex="40%">
-      <mat-card class="plugin-card">
-        <mat-card-header class="plugin-title">
-          <h1 i18n="@@myPlugins">Plugins</h1>
-        </mat-card-header>
-        <mat-card-content>
-          <div class="plugin-container">
-            <div *ngFor="let plugin of plugins">
-              <mat-card class="plugin-cards">
-                <mat-card-content>
-                  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1.5em">
-                    <div fxFlex="15%" fxLayoutAlign="start center">
-                      <div mat-card-avatar class="plugin-icon"></div>
-                    </div>
-  
-                    <div fxFlex="15%" fxLayoutAlign="start center">
-                      <h5>ID: {{ plugin.id }}</h5>
-                    </div>
-  
-                    <div fxFlex="60%" fxLayoutAlign="start center">
-                      <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
-                    </div>
-  
-                    <div fxFlex="10%" fxLayoutAlign="end center">
-                      <button class="transparent-button plugin-button-icon" (click)="openConfirmationDialog(plugin)">
-                        <i class="plugin-button-close plugin-button-icon material-icons">close</i>
-                      </button>
-                    </div>
-                  </div>
-                </mat-card-content>
-              </mat-card>
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-around none">
+  <div fxFlex="45%">
+    <mat-card class="plugin-card">
+      <mat-card-header class="plugin-title">
+        <h1 i18n="@@myPlugins">Add Plugin</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Plugin Name:</p>
+        <mat-form-field class="add-plugin-input-container">
+          <input [(ngModel)]="pluginData.name" class="add-plugin-input" matInput placeholder="Name">
+        </mat-form-field>
+        <p>Plugin Description:</p>
+        <mat-form-field class="add-plugin-input-container">
+          <textarea [(ngModel)]="pluginData.description" matInput placeholder="Description of the plugin"></textarea>
+        </mat-form-field>
+        <p>Plugin Category:</p>
+        <mat-form-field class="add-plugin-input-container">
+          <mat-label>Select</mat-label>
+          <mat-select [(ngModel)]="pluginCategoryID">
+            <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>Plugin Tags:</p>
+        <mat-form-field class="add-plugin-input-container">
+          <mat-chip-grid #chipGrid>
+            <mat-chip-row *ngFor="let tag of tags" (removed)="removeTag(tag)">
+              {{tag}}
+              <button matChipRemove aria-label="'remove ' + tag">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          </mat-chip-grid>
+          <input placeholder="New tag..."
+                  [matChipInputFor]="chipGrid"
+                  (matChipInputTokenEnd)="add($event)"/>
+        </mat-form-field>
+        <button (click)="addPlugin()" mat-raised-button color="primary"><mat-icon>keyboard_arrow_right</mat-icon><h3>Add</h3></button>
+      </mat-card-content>
+    </mat-card>
   </div>
+  <div fxFlex="40%">
+    <mat-card class="plugin-card">
+      <mat-card-header class="plugin-title">
+        <h1 i18n="@@myPlugins">Plugins</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="plugin-container">
+          <div *ngFor="let plugin of plugins">
+            <mat-card class="plugin-cards">
+              <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1.5em">
+                  <div fxFlex="15%" fxLayoutAlign="start center">
+                    <div mat-card-avatar class="plugin-icon"></div>
+                  </div>
+
+                  <div fxFlex="15%" fxLayoutAlign="start center">
+                    <h5>ID: {{ plugin.id }}</h5>
+                  </div>
+
+                  <div fxFlex="60%" fxLayoutAlign="start center">
+                    <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
+                  </div>
+
+                  <div fxFlex="10%" fxLayoutAlign="end center">
+                    <button class="transparent-button plugin-button-icon" (click)="openConfirmationDialog(plugin)">
+                      <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                    </button>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
   
