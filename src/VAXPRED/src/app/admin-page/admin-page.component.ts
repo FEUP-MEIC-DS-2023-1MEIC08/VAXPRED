@@ -1,7 +1,7 @@
 import { Component, OnInit, inject} from '@angular/core';
 import { AdminPageService } from '../admin-page.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { LiveAnnouncer} from '@angular/cdk/a11y';
 import { MatChipInputEvent} from '@angular/material/chips';
 
@@ -64,7 +64,7 @@ export class AdminPageComponent implements OnInit {
       width: '35em',
       data: { pluginName: plugin.name }
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // User clicked "Yes" in the confirmation dialog, remove the plugin
