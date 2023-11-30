@@ -5,7 +5,7 @@
 .plugin-card {
     margin-left: 2em;
     margin-right: 2em;
-    margin-right: 10em; 
+    margin-right: 10em;
     margin-top: 2em;
     background-color: #f0f0f0;
 }
@@ -19,7 +19,7 @@
 .plugin-container {
     margin-top: 1.5em;
     float: left;
-    height: 70vh; 
+    height: 70vh;
     overflow-y: auto;
 }
 
@@ -39,38 +39,24 @@
     color: red;
 }
 
+.plugin-button-edit {
+    color: black;
+}
+
 .transparent-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     outline: none;
-  }
-  
-.add-plugin-input-container {
-    width: 100%;
-}
-
-.add-plugin-label {
-    font-size: large;
-}
-
-.add-tag-container {
-    display: flex;
-    align-items: center;
-}
-
-.add-tag-container input {
-    flex: 1;
-    margin-right: 8px;
-}
-
-.tip-message {
-    margin-top: -25px;
-    margin-bottom: 20px;
-    color: #757575;
-    font-size: 12px;
 }
 
 #header {
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 1em;
+}
+
+.btn-new-plugin {
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

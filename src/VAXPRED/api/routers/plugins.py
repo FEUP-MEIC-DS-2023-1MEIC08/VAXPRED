@@ -17,10 +17,10 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         plugins = plugin_repository.get_all_plugins_search(search)
     else:
         plugins = plugin_repository.get_all_plugins()
-    
+
     if plugins is None:
         raise HTTPException(status_code=404, detail="No plugins available")
-    
+
     return {"plugins": plugins}
 
 

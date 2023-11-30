@@ -30,6 +30,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdminPagePluginFormComponent } from './admin-page-plugin-form/admin-page-plugin-form.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     PageNotFoundComponent,
     HomePageComponent,
     FooterComponent,
+    AdminPagePluginFormComponent,
   ],
   imports: [
     BrowserModule,

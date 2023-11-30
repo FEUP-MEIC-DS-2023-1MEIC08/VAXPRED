@@ -30,6 +30,10 @@ export class AdminPageService {
     return this.http.post('http://localhost:8000/plugins/', data)
   }
 
+  editPlugin(pluginID: number, data: any): Observable<any> {
+    return this.http.put('http://localhost:8000/plugins/' + pluginID, data)
+  }
+
   associateCategory(pluginID: number, categoryID: number) {
     return this.http.post('http://localhost:8000/categories/' + categoryID + '/plugins/' + pluginID + '/associate/', "")
   }
