@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -16,14 +15,19 @@ import { MatListModule } from '@angular/material/list';
 import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-page-menu.component';
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 
 // For API calls
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PluginCardComponent } from './home/plugin-card/plugin-card.component';
-import { SideFilterComponent } from './home/side-filter/side-filter.component';
+import { PluginCardComponent } from './search-page/plugin-card/plugin-card.component';
+import { SideFilterComponent } from './search-page/side-filter/side-filter.component';
+import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plugin-page-images.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,14 @@ import { SideFilterComponent } from './home/side-filter/side-filter.component';
     PluginPageComponent,
     PluginPageMenuComponent,
     PluginPageHeaderComponent,
-	PluginCardComponent,
-    HomeComponent,
+    PluginCardComponent,
+    SearchPageComponent,
     NavbarComponent,
-    // UserProfileComponent,
     SideFilterComponent,
+    PluginPageImagesComponent,
+    AdminPageComponent,
+    PageNotFoundComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,7 @@ import { SideFilterComponent } from './home/side-filter/side-filter.component';
     MatTabsModule,
     MatListModule,
     MatDialogModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

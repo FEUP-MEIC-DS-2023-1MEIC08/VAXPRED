@@ -1,8 +1,6 @@
 from typing import List
 from sqlalchemy.orm import Session
 from models import Tag
-from datetime import datetime
-import pytz
 
 class TagRepository:
     def __init__(self, db: Session):

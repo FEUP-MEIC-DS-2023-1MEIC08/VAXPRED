@@ -30,7 +30,7 @@ class PluginRepository:
 
     def get_plugin_by_id(self, plugin_id: int) -> Plugin:
         return self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
-
+    
     def get_plugin_duration_by_id(self, plugin_id: int) -> int:
         plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
         if plugin:
@@ -43,8 +43,8 @@ class PluginRepository:
 
     def get_all_plugins(self) -> List[Plugin]:
         return self.db.query(Plugin).all()
-
-    def get_all_plugins_search(self, search) -> List[Plugin]:
+    
+    def get_all_plugins_search(self,search) -> List[Plugin]:
         return self.db.query(Plugin).filter(Plugin.search_text.contains(search)).all()
 
     def delete_plugin_by_id(self, plugin_id: int) -> None:

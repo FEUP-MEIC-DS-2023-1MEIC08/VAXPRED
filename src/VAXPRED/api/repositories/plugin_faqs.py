@@ -20,12 +20,10 @@ class PluginFaqRepository:
         faqs = self.get_faqs_by_plugin_id(plugin_id)
         return faqs
 
-
     def get_faqs_by_plugin_id(self, plugin_id) -> List[Dict[str, str]]:
         faqs = self.db.query(PluginFaqs).filter_by(plugin_id=plugin_id).all()
         faq_list = [{'question': faq.question, 'answer': faq.answer} for faq in faqs]
         return faq_list
-
 
     def update_faqs(self, plugin_id, new_faqs):
         self.db.query(PluginFaqs).filter_by(plugin_id=plugin_id).delete()

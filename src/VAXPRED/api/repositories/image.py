@@ -1,8 +1,6 @@
 from typing import List
 from sqlalchemy.orm import Session
 from models import Image
-from datetime import datetime
-import pytz
 
 class ImageRepository:
     def __init__(self, db: Session):

@@ -1,9 +1,6 @@
 from typing import List
 from sqlalchemy.orm import Session
 from models import Category
-from datetime import datetime
-import pytz
-
 
 class CategoryRepository:
     def __init__(self, db: Session):

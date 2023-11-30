@@ -63,7 +63,6 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         )
         pluginsResponse.append(response)
 
-
     return {"plugins": pluginsResponse}
 
 
@@ -189,6 +188,6 @@ def delete_plugin(plugin_id: int, db: Session = Depends(get_db)):
     deleted = plugin_repository.delete_plugin(plugin_id)
 
     if deleted:
-        return {"message": f"Plugin deleted successfully"}
+        return {"message": "Plugin deleted successfully"}
     else:
-        return {"message": f"Failed to delete plugin"}
+        return {"message": "Failed to delete plugin"}

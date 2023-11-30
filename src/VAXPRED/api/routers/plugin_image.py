@@ -4,7 +4,6 @@ from database import get_db
 from repositories.plugin_image import PluginImageRepository
 from repositories.plugin import PluginRepository
 from repositories.image import ImageRepository
-from typing import List, Dict
 from schemas.plugin import PluginListResponse
 from schemas.image import ImageListResponse
 
@@ -39,7 +38,7 @@ def get_plugin_images(plugin_id: int, db: Session = Depends(get_db)):
 @router.post("/{image_id}/plugins/{plugin_id}/associate/")
 def associate_image_plugin(image_id: int, plugin_id: int, db: Session = Depends(get_db)):
     association = PluginImageRepository(db)
-    updated_image = association.create_association(image_id = image_id, plugin_id = plugin_id)
+    association.create_association(image_id = image_id, plugin_id = plugin_id)
     return {"message": "Association added successfully"}
 
 # Route to disassociate a plugin from a image

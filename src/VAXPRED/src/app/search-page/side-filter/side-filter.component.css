@@ -1,0 +1,120 @@
+:host {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+:host .filter-section {
+	width: 250px;
+	background-color: #ffffff;
+	padding: 20px;
+	margin-top: 100px;
+	flex: 1fr;
+	max-height: 80vh; /* Adjust the maximum height according to your needs */
+    overflow: auto;
+}
+
+/* Heading Styles */
+:host .filter-section h4 {
+	border-top: 1px solid #000000;
+	margin-top: 0;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+
+/* Radio Buttons and Labels */
+:host .filter-section label {
+	display: block;
+	margin: 15px 0;
+
+}
+
+/* Checkboxes and Labels */
+:host .filter-section label input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+/* Reset Button */
+:host .filter-section button {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	font-size: medium;
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+
+.results-section {
+	margin: 15px;
+	flex: 3;
+	/* Adjust the width as needed */
+}
+
+.results-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+}
+
+.result-item {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+	width: auto;
+}
+
+.collapsible {
+	width: 100%;
+}
+  
+.collapsible-label {
+	cursor: pointer;
+	display: block;
+	color: #333;
+	transition: background-color 0.3s;
+	position: relative;
+}
+  
+.collapsible-label::before {
+	content: '►';
+	position: absolute;
+	right: 10px;
+	transition: transform 0.3s;
+}
+  
+input[type="checkbox"]#toggle {
+	display: none;
+}
+
+input[type="checkbox"]#toggleTag {
+	display: none;
+}
+
+input[type="checkbox"]:checked ~ h4 .collapsible-label::before {
+	transform: rotate(90deg);
+}
+
+input[type="checkbox"]#toggle:checked ~ .content {
+	height: 155px; /* Adjust the maximum height according to the number of filters appearing */
+	overflow: auto;
+	transition: height 1s ease-out;
+}
+
+input[type="checkbox"]#toggleTag:checked ~ .content {
+	height: 155px; /* Adjust the maximum height according to the number of filters appearing */
+	overflow: auto;
+	transition: height 1s ease-out;
+}
+  
+.content {
+	display: block; /* Initially show the content */
+	height: 0;
+	overflow: auto;
+	transition:  height 1s ease-out; /* Control the speed with the transition duration */
+}

@@ -1,5 +1,4 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import text
 from models import Image
 from typing import List, Dict
 from models import Plugin
@@ -15,7 +14,6 @@ class PluginImageRepository:
         plugin_image_association_db = [{"plugin_id": row.plugin_id, "image_id": row.image_id} for row in table]
         return plugin_image_association_db
     
-
     def get_images_by_plugin_id(self, plugin_id: int) -> List[str]:
         image_plugins_associations = self.db.query(
             plugin_image_association.c.image_id,

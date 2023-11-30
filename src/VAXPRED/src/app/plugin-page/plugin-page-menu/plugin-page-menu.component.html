@@ -3,44 +3,56 @@
     <mat-tab-group [(selectedIndex)]="selectedTab">
       <mat-tab label="Description">
         <ng-template matTabContent>
-          <h3>{{ plugin.title }}</h3>
-          <h4>VERSION [1.19.1]</h4>
-          <p>
-            {{ plugin.description }}
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <h3>{{ plugin.name }}</h3>
+            <h4>VERSION [1.19.1]</h4>
+            <p>
+              {{ plugin.description }}
+            </p>
+          </div>
         </ng-template>
       </mat-tab>
-      <mat-tab label="Requirements">
+      <mat-tab label="Dependencies">
         <ng-template matTabContent>
-          <p>
-            These are the requirements:
-          </p>
           <mat-list>
-            <mat-list-item>Requirement 1</mat-list-item>
-            <mat-list-item>Requirement 2</mat-list-item>
-            <mat-list-item>Requirement 3</mat-list-item>
+            <mat-list-item
+              *ngFor="let dependency of plugin.dependencies"
+              style="height:4.5em"
+            >
+              <div class="dependency-description"  style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+                <div fxLayout="row" fxLayoutAlign="start end">
+                  <p class="name">{{ dependency.name }}</p>
+                  <p class="version-tag">{{ dependency.version }}</p>
+                </div>
+                  <p class="vendor">{{ dependency.vendor }}</p>
+              </div>
+              <hr />
+            </mat-list-item>
           </mat-list>
         </ng-template>
       </mat-tab>
       <mat-tab label="Changelog">
         <ng-template matTabContent>
-          <p>
-            This is the changelog.
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <p>
+              This is the changelog.
+            </p>
+          </div>
         </ng-template>
       </mat-tab>
-      <mat-tab label="Extra Item">
+      <mat-tab label="Supplier information">
         <ng-template matTabContent>
-          <p>
-            Some extra content... (yet to determine)
-          </p>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <p>{{ plugin.developer }}</p>
+            <p>Supplier e-mail: supplier123@gmail.com</p>
+          </div>
         </ng-template>
       </mat-tab>
     </mat-tab-group>
   </div>
-  <hr style="border-top: 350px solid #808080;">
+  <hr style="border-top: 350px solid #808080" />
   <div fxLayout="column" fxFlex="30%">
-    <mat-card class="categories" style="border: none; box-shadow: none;">
+    <mat-card class="categories" style="border: none; box-shadow: none">
       <mat-card-title>
         <h3>Categories</h3>
       </mat-card-title>
@@ -52,15 +64,13 @@
         </mat-list>
       </mat-card-content>
     </mat-card>
-    <hr style="border-left: 100%; margin: 0; max-width: 100%;">
-    <mat-card class="more-info" style="border: none; box-shadow: none;">
+    <hr style="border-left: 100%; margin: 0; max-width: 100%" />
+    <mat-card class="more-info" style="border: none; box-shadow: none">
       <mat-card-title>
         <h3>More Info</h3>
       </mat-card-title>
       <mat-card-content>
-        <p>
-          Last Update: mm/dd/yyyy
-        </p>
+        <p>Last Update: mm/dd/yyyy</p>
       </mat-card-content>
     </mat-card>
   </div>

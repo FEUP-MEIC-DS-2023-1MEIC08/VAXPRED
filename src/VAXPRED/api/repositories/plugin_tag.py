@@ -5,7 +5,6 @@ from models import Plugin
 from models import plugin_tag_association
 from fastapi import HTTPException
 
-
 class PluginTagRepository:
     def __init__(self, db: Session):
         self.db = db

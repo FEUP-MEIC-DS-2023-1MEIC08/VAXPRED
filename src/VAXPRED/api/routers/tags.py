@@ -47,4 +47,3 @@ def update_tag(tag_id: int, tag_update: TagUpdate, db: Session = Depends(get_db)
         raise HTTPException(status_code=404, detail="Tag not found")
 
     return updated_tag
-

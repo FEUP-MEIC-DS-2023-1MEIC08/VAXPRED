@@ -3,10 +3,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin_tag import PluginTagRepository
 from repositories.plugin import PluginRepository
-from repositories.tag import TagRepository
-from typing import List, Dict
 from schemas.plugin import PluginListResponse
-from schemas.tag import TagListResponse
 
 router = APIRouter()
 

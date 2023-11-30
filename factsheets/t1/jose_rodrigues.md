@@ -35,8 +35,19 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 2
 
-...
+- Designed and implemented plugin page dependencies ([#118](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/118)).
+- Completed every item assigned to me for this sprint.
+- Fixed errors in the project and reviewed my colleague's code.
 
+### The two pull requests that I am most proud of
+
+- Authored [#141](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/141). Fixed an unintended behaviour that had gone unnoticed. This change ensured a smoother developer experience for the rest of the team.
+- Authored [#142](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/142). Implemented the front-end component of the plugin dependencies. This included designing the component.
+
+### Two contributions of other types that I am most proud of
+
+- Provided a [code review](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/179#pullrequestreview-1732893532) to ensure the quality of the software.
+- I got to work as a team, sharing each others knowledge.
 
 ## Sprint 3
 
