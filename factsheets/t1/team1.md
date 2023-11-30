@@ -82,7 +82,29 @@ During Sprint 2, the team was responsible for improving the plugin's page, its m
 
 ## Sprint 3
 
-...
+During Sprint 3, the team was responsible for improving the plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO also worked with the other teams' POs in the creation of the next sprint's user stories, besides meeeting with two of the clients to show them the progresses made and understand what else was expected.
+
+### The four user stories that we are most proud of
+
+* Show plugin's tags in each plugin page.#111
+* Show plugin's category inside plugin page#117
+*
+*
+
+### The four pull requests that we are most proud of
+
+* T1 - Add plugin categories to plugin page #211
+* T1 feature plugin page access #212
+*
+*
+
+
+### Four contributions of other types that we are most proud of
+
+* All the team's member wrote their factsheets.
+* The Scrum Master contributed to the smooth flow of the project, besides doing the work assigned to him.
+* The PO wrote some user stories for sprint 3 and meet with the other two clients, assuring that the development its going accordingly with their expectations.
+* Mockups were created for the improvement of the user stories by the devs.
 
 
 ## Sprint 4
