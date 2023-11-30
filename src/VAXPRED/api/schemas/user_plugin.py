@@ -20,6 +20,7 @@ class UserPlugin(BaseModel):
     duration: Optional[int]
     dependencies: List[str]
     faqs: List[Dict[str, str]]
+    images: List[str]
 
 class PluginWithCategories(UserPlugin):
     categories: List[str]

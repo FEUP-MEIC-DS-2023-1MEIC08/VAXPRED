@@ -236,3 +236,35 @@ INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Can this Plugin be
 INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Is there a tutorial for using this Plugin?', 'Certainly! We have a detailed tutorial on our website that guides you through...',10);
 INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('Are there any known issues with the Plugin?', 'As of now, there are no known issues with this Plugin. However, we recommend checking our support page for updates.',11);
 
+insert into plugin_image_association (image_id, plugin_id) values (1, 1);
+insert into plugin_image_association (image_id, plugin_id) values (2, 2);
+insert into plugin_image_association (image_id, plugin_id) values (3, 3);
+insert into plugin_image_association (image_id, plugin_id) values (4, 4);
+insert into plugin_image_association (image_id, plugin_id) values (5, 5);
+insert into plugin_image_association (image_id, plugin_id) values (6, 6);
+insert into plugin_image_association (image_id, plugin_id) values (7, 7);
+insert into plugin_image_association (image_id, plugin_id) values (8, 8);
+insert into plugin_image_association (image_id, plugin_id) values (9, 9);
+insert into plugin_image_association (image_id, plugin_id) values (1, 10);
+insert into plugin_image_association (image_id, plugin_id) values (2, 11);
+insert into plugin_image_association (image_id, plugin_id) values (3, 12);
+insert into plugin_image_association (image_id, plugin_id) values (4, 13);
+insert into plugin_image_association (image_id, plugin_id) values (5, 14);
+insert into plugin_image_association (image_id, plugin_id) values (6, 15);
+insert into plugin_image_association (image_id, plugin_id) values (7, 16);
+insert into plugin_image_association (image_id, plugin_id) values (8, 17);
+insert into plugin_image_association (image_id, plugin_id) values (9, 18);
+insert into plugin_image_association (image_id, plugin_id) values (1, 19);
+insert into plugin_image_association (image_id, plugin_id) values (2, 20);
+
+
+insert into images (path) values ('\images\create.png');
+insert into images (path) values ('\images\info.png');
+insert into images (path) values ('\images\details.png');
+insert into images (path) values ('\images\general.png');
+insert into images (path) values ('\images\future.jpg');
+insert into images (path) values ('\images\working.png');
+insert into images (path) values ('\images\logo.png');
+insert into images (path) values ('\images\help.png');
+insert into images (path) values ('\images\Authors.jpg');
+insert into images (path) values ('\images\jump.png');

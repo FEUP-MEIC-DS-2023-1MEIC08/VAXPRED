@@ -8,6 +8,7 @@ from repositories.plugin_categories import PluginCategoryRepository
 from repositories.plugin_dependencies import PluginDependencyRepository
 from repositories.plugin_faqs import PluginFaqRepository
 from repositories.plugin_tag import PluginTagRepository
+from repositories.plugin_image import PluginImageRepository
 from schemas.plugin import PluginCreate, PluginUpdate, PluginResponse, \
     PluginGeralInfo, PluginListResponse
 
@@ -30,6 +31,7 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
     tag_repository = PluginTagRepository(db)
     plugin_dependencies_repository = PluginDependencyRepository(db)
     plugin_faqs_repository = PluginFaqRepository(db)
+    plugin_images_repository = PluginImageRepository(db)
 
     pluginsResponse = []
     for plugin in plugins:
@@ -38,6 +40,7 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
         dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
         response = PluginResponse(
             id=plugin.id,
@@ -55,7 +58,8 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
             categories=categories,
             tags=tags,
             dependencies=dependencies,
-            faqs=faqs
+            faqs=faqs,
+            images=images
         )
         pluginsResponse.append(response)
 
@@ -71,12 +75,14 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
     tag_repository = PluginTagRepository(db)
     plugin_dependencies_repository = PluginDependencyRepository(db)
     plugin_faqs_repository = PluginFaqRepository(db)
+    plugin_images_repository = PluginImageRepository(db)
 
     plugin = plugin_repository.get_plugin_by_id(plugin_id)
     categories = category_repository.get_categories_by_plugin_id(plugin_id)
     tags = tag_repository.get_tags_by_plugin_id(plugin_id)
     dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
     faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+    images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
     if plugin is None:
         raise HTTPException(status_code=404, detail="Plugin not found")
@@ -97,7 +103,8 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
         categories=categories,
         tags=tags,
         dependencies=dependencies,
-        faqs=faqs
+        faqs=faqs,
+        images=images
     )
 
     return plugin

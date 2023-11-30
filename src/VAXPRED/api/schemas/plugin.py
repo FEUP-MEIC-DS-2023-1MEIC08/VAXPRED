@@ -29,6 +29,7 @@ class PluginUpdate(BaseModel):
     type: str
     dependencies: List[str]
     faqs: List[Dict[str, str]]
+    
 class PluginResponse(BaseModel):
     id: int
     name: str
@@ -46,6 +47,7 @@ class PluginResponse(BaseModel):
     categories: List[str]
     tags: List[str]
     faqs: List[Dict[str, str]]
+    images: List[str]
 
 class PluginGeralInfo(BaseModel):
     id: int

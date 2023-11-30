@@ -28,6 +28,14 @@ plugin_tag_association = Table(
     UniqueConstraint('plugin_id', 'tag_id', name='unique_plugin_tag')
 )
 
+plugin_image_association = Table(
+    'plugin_image_association',
+    Base.metadata,
+    Column('plugin_id', Integer, ForeignKey('plugins.id')),
+    Column('image_id', Integer, ForeignKey('images.id')),
+    UniqueConstraint('plugin_id', 'image_id', name='unique_plugin_image')
+)
+
 class Tag(Base):
     __tablename__ = 'tags'
     id = Column(Integer, primary_key=True, index=True)
@@ -56,7 +64,7 @@ class Plugin(Base):
     tags = relationship("Tag", secondary=plugin_tag_association, back_populates="plugins")
     dependencies = relationship("PluginDependency", back_populates="plugins", cascade="all, delete-orphan")
     faqs = relationship("PluginFaqs", back_populates="plugins", cascade="all, delete-orphan")
-
+    images = relationship("Image", secondary=plugin_image_association, back_populates="plugins")
 
 class User(Base):
     __tablename__ = 'users'
@@ -73,6 +81,13 @@ class Category(Base):
     name = Column(String, nullable=False, unique=True, index=True)
 
     plugins = relationship("Plugin", secondary=plugin_category_association, back_populates="categories")
+
+class Image(Base):
+    __tablename__ = 'images'
+    id = Column(Integer, primary_key=True, index=True)
+    path = Column(String,  nullable=False, unique=True, index=True)
+
+    plugins = relationship("Plugin", secondary=plugin_image_association, back_populates="images")
 
 class PluginDependency(Base):
     __tablename__ = "plugin_dependency"
