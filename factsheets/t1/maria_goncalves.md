@@ -61,8 +61,22 @@ No pull requests were made be me during this sprint, with the exception of rewri
 * Meeting with the client.
 
 
+## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+* As a researcher, I want to be able to install a plugin like the Mhcflurry, when I click to install it from the store, so that I can run it in my machine.#213
+* Finish the integration of the backend with the frontend.#223
+
+
+### The two pull requests that I am most proud of
+
+I did not do any pull requests.
+
+### Two contributions of other types that I am most proud of
+
+* Writing user stories with the other POs.
+* Meeting with the other clients.
 
 
 ## Sprint 4
