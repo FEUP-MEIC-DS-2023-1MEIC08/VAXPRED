@@ -35,6 +35,8 @@ export class AdminPageComponent implements OnInit {
 
   pluginCategoryID = -1;
 
+  newTagInput = "";
+
   ngOnInit(): void {
     console.log("init");
 
@@ -90,9 +92,17 @@ export class AdminPageComponent implements OnInit {
     event.chipInput!.clear();
   }
 
+  addInputToChipGrid() {
+    if (this.newTagInput) {
+      this.tags.push(this.newTagInput);
+      this.newTagInput = '';
+    }
+  }
+
   addPlugin() {
     if (this.pluginData.name == "") return
     if (this.pluginData.description == "") return
+    if (this.pluginData.supplier_email == "") return
     if (this.pluginCategoryID == -1) return
     this.adminPageService.addPlugin(this.pluginData).subscribe(
       (response) => {
