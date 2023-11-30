@@ -123,6 +123,7 @@ export class AdminPageComponent implements OnInit {
               })
             }
           }
+          window.location.reload();
         });
       },
       (error) => {

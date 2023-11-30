@@ -1,3 +1,4 @@
+<h1 id="header">Admin Dashboard</h1>
 <div fxLayout="row" fxLayoutAlign="space-around none">
   <div fxFlex="45%">
     <mat-card class="plugin-card">
@@ -5,22 +6,22 @@
         <h1 i18n="@@myPlugins">Add Plugin</h1>
       </mat-card-header>
       <mat-card-content>
-        <p>Plugin Name:</p>
+        <p i18n="@@myPlugins" class="add-plugin-label">Plugin Name:</p>
         <mat-form-field class="add-plugin-input-container">
           <input [(ngModel)]="pluginData.name" class="add-plugin-input" matInput placeholder="Name">
         </mat-form-field>
-        <p>Plugin Description:</p>
+        <p i18n="@@myPlugins"  class="add-plugin-label">Plugin Description:</p>
         <mat-form-field class="add-plugin-input-container">
           <textarea [(ngModel)]="pluginData.description" matInput placeholder="Description of the plugin"></textarea>
         </mat-form-field>
-        <p>Plugin Category:</p>
+        <p i18n="@@myPlugins"  class="add-plugin-label">Plugin Category:</p>
         <mat-form-field class="add-plugin-input-container">
           <mat-label>Select</mat-label>
           <mat-select [(ngModel)]="pluginCategoryID">
             <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <p>Plugin Tags:</p>
+        <p i18n="@@myPlugins"  class="add-plugin-label">Plugin Tags:</p>
         <mat-form-field class="add-plugin-input-container">
           <mat-chip-grid #chipGrid>
             <mat-chip-row *ngFor="let tag of tags" (removed)="removeTag(tag)">
@@ -34,7 +35,7 @@
                   [matChipInputFor]="chipGrid"
                   (matChipInputTokenEnd)="add($event)"/>
         </mat-form-field>
-        <button (click)="addPlugin()" mat-raised-button color="primary"><mat-icon>keyboard_arrow_right</mat-icon><h3>Add</h3></button>
+        <button (click)="addPlugin()" mat-raised-button color="primary"><mat-icon>keyboard_arrow_right</mat-icon><h3 i18n="@@myPlugins">Add</h3></button>
       </mat-card-content>
     </mat-card>
   </div>

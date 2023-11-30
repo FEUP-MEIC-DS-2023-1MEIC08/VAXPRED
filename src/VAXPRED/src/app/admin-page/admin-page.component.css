@@ -1,5 +1,4 @@
 .plugin-title {
-    margin-top: 2em;
     margin-left: 2em;
 }
 
@@ -49,4 +48,12 @@
   
 .add-plugin-input-container {
     width: 100%;
+}
+
+.add-plugin-label {
+    font-size: large;
+}
+
+#header {
+    text-align: center;
 }
