@@ -1,5 +1,4 @@
 .plugin-title {
-    margin-top: 2em;
     margin-left: 2em;
 }
 
@@ -47,3 +46,31 @@
     outline: none;
   }
   
+.add-plugin-input-container {
+    width: 100%;
+}
+
+.add-plugin-label {
+    font-size: large;
+}
+
+.add-tag-container {
+    display: flex;
+    align-items: center;
+}
+
+.add-tag-container input {
+    flex: 1;
+    margin-right: 8px;
+}
+
+.tip-message {
+    margin-top: -25px;
+    margin-bottom: 20px;
+    color: #757575;
+    font-size: 12px;
+}
+
+#header {
+    text-align: center;
+}
