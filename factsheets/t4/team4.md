@@ -69,8 +69,27 @@ In addition, we recognize that we had some inaccuracies in our GitHub usage. We 
 
 ## Sprint 3
 
-...
+### The four user stories that we are most proud of
 
+- [(#83) As a researcher, I want to have access to the plugin's FAQ, so that I can clarify some common questions about the plugin.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/83) - in particular task #124 which is our work
+- [(#77) As an admin, I want to have a page where I can manage plugins in the store, so that I can add, edit and/or remove the plugins from the store.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/77) - in particular tasks #134 and #207
+- [(#192) Add a confirmation popup for disassociating a user plugin](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/192)
+- [(#196) As a researcher, I want to see a footer on all pages, so that I can have a better looking and more pleasant experience.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/196)
+
+### The four pull requests that we are most proud of
+
+- [(#201) T4 - Feat: Add footer to all pages](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/201)
+- [(#204) T4 - Feat: Add confirmation pop-up for plugin disassociation on user profile](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/204)
+- [(#209) T4/T2 Feature: display FAQ](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/209)
+- [(#225) T4 - Feat: Add new plugin via admin dashboard](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/225)
+- [(#227) T4 - Admin dashboard: ability to Edit Plugins](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/227)
+
+### Four contributions of other types that we are most proud of
+
+- Working with Team 2 on [(#83) As a researcher, I want to have access to the plugin's FAQ, so that I can clarify some common questions about the plugin.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/83) by doing task #124.
+- Refining the Mockups of the Admin Dashboard page.
+- Our team's PO helped writing and refining User Stories for the next sprint.
+- Our team's PO and SM participated in a meeting with the client online on 29/11/2023.
 
 ## Sprint 4
 
