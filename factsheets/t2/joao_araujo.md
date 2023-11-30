@@ -40,12 +40,17 @@ No important pull requests have been made by me.
 
 Two contributions of other types that I am most proud of
 In this sprint I also helped a colleague from another team call our api to make post requests.
-...
 
 
 ## Sprint 3
+In this forth sprint, I have been working mainly on refactoring the api.
+Previously, despite being well, we had a lot of useless routes or routes that retrieved information that could be contained in another route. Therefore, with this refactor, for example, with a get from a plugin, we already get all the information from it, but information with the associated tables such as its categories, tags, dependencies and faqs. This way, when the frontend person calls a route, they immediately get more information instead of making several calls, making the system more efficient. I also changed the database schema, turning many-to-many tables into one-to-many tables, as was the case with the faqs.
 
-...
+The two pull requests that I am most proud of
+No important pull requests have been made by me.
+
+Two contributions of other types that I am most proud of
+In this sprint I also helped a colleague from another team call our api to make post and get requests.
 
 
 ## Sprint 4
