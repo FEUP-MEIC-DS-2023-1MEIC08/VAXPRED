@@ -22,8 +22,7 @@ In this sprint, I planned how to tackle the Plugin Store creation by assigning s
 
 ### The two user stories that I am most proud of
 
-No user stories were implemented by me, but I implemented an Item
-- [Issue #43](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/43)
+- [Issue #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
 
 ### The two pull requests that I am most proud of
 
@@ -36,8 +35,20 @@ I wasn't able to create a pull request in time of the edition of this file.
 
 ## Sprint 2
 
-...
+In this sprint I focused on assigning the tasks I was able to finish in last sprint to my team, while also fixing merge issues related to Sprint 1. I was also focused on distributing items to my team, since they worked very well.
 
+### The two user stories that I am most proud of
+- [Issue #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
+
+### The two pull requests that I am most proud of
+
+- [Pull Request #174](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/174)
+- [Pull Request #177](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/177)
+
+### Two contributions of other types that I am most proud of
+
+- Re-worked the team workflow around Git/GitHub to remove latency when merging Pull Requests
+- Removed `coreUI` dependency which was causing entropy with some UI components
 
 ## Sprint 3
 

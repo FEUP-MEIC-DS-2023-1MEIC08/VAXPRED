@@ -31,7 +31,15 @@ In this sprint I also took the initiative to structuring the api directories and
 
 
 ## Sprint 2
+In this third sprint, I have been working on add some features and organize the folder structure.
+The two user stories that I am most proud of
+In this sprint I was involved with user story #32. Even though we only had 1 user story assigned to our team in this sprint, I worked on 4 items #105, #114, #128 and #130 where I stored user contract information with plugins in the database, as well as supplier and supplier information. Furthermore, I changed the api folder to the project root so that it is not inside the src folder.
 
+The two pull requests that I am most proud of
+No important pull requests have been made by me.
+
+Two contributions of other types that I am most proud of
+In this sprint I also helped a colleague from another team call our api to make post requests.
 ...
 
 

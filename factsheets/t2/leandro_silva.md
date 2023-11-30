@@ -32,7 +32,17 @@ In this sprint I was able to help with the integration of the web framework Fast
 
 ## Sprint 2
 
-...
+In this sprint, our team was assigned all the tasks related to database improvements and new field addition. Most of our tasks were in collaboration with other (frontend) teams.
+
+### The two user stories that I am most proud of
+In this sprint I was responsible for the implementation of tags that are fields for the plugins. This included the population of the database and implementation of repositories, routes, schemas and models for that feature. This feature was part of user story #109, which was in collaboration with team t1 and t3.
+I was also responsible for the storage implementation of FAQS and related fields on the databases. This included the population of the database and implementation of repositories, routes, schemas and models for that feature. This feature was part of user story #83, which was in collaboration with team t4.
+
+### The two pull requests that I am most proud of
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+In this sprint, since tags and categories are somewhat similar, I worked closely with Aníbal Ferreira (SM) in order to define what a categorie and a tag would be and cooperated on their development.
 
 
 ## Sprint 3
