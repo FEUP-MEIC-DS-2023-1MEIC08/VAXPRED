@@ -8,12 +8,12 @@ import { Plugin } from '../../plugin';
 })
 export class PluginPageMenuComponent {
   @Input() selectedTab: number = 0;
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, '');
+  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, []);
 
   getFormattedFAQ(): string {
-    const faqs = this.plugin.faq.split('\n\n');
-    const formattedFAQs = faqs.map((faq) => {
-      const [question, answer] = faq.split('\n');
+    const faqs = this.plugin.faq;
+    const formattedFAQs = faqs.map((faq: any) => {
+      const [question, answer] = [faq.question, faq.answer];
       if (question) {
         return `<strong>${question}</strong><br>${answer || ''}`;
       }
