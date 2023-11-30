@@ -33,7 +33,7 @@ The team was focused on exploring the suggested technologies for development, no
 
 - Some developers worked consistently well during the sprint
 - The Scrum Master was able to partion the assigned work and assign more tasks for the most active developers
-- The Product Owner kept on transmitting knowledge from her meetings to the team
+- The Product Owner kept on transmitting knowledge from her meetings to the team and made sure the team followed the Scrum practices
 
 ## Sprint 4
 
