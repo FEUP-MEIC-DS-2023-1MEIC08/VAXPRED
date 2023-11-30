@@ -31,9 +31,13 @@ The team was focused on exploring the suggested technologies for development, no
 
 ## Sprint 3
 
-Describe the retrospective for sprint 3 for team 3
+- Some developers worked consistently well during the sprint
+- The Scrum Master was able to partion the assigned work and assign more tasks for the most active developers
+- The Product Owner kept on transmitting knowledge from her meetings to the team
 
 ## Sprint 4
+
+- Developers should not abandon communications and leave it for the next Spring Planning's to understand if they were able to work or not
 
 Describe the retrospective for sprint 4 for team 3
 
