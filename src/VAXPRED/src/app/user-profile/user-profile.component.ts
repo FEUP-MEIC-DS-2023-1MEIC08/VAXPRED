@@ -6,6 +6,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 // TEMP - logged in user ID
 const loggedUserId = 1;
@@ -21,7 +23,8 @@ const loggedUserId = 1;
 })
 export class UserProfileComponent implements OnInit {
   constructor(
-    private userProfileService: UserProfileService
+    private userProfileService: UserProfileService,
+    private dialog: MatDialog
   ) { }
 
   user = {
@@ -55,6 +58,20 @@ export class UserProfileComponent implements OnInit {
       // Refresh the page
       window.location.reload();
     })
+  }
+
+  openConfirmationDialog(plugin: any): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '35em',
+      data: { pluginName: plugin.name }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // User clicked "Yes" in the confirmation dialog, remove the plugin
+        this.removePlugin(plugin);
+      }
+    });
   }
 
   editProfile() {

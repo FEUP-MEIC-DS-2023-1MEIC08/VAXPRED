@@ -8,7 +8,7 @@ import { Plugin } from 'src/app/plugin';
 	styleUrls: ['./plugin-card.component.css']
 })
 export class PluginCardComponent {
-	@Input() tool: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2);
+	@Input() tool: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, '');
 
 	constructor(public dialog: MatDialog) {}
 

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
 
@@ -22,6 +21,8 @@ export class SideFilterComponent {
 	{
 		this.toolService.getPlugins().subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
+				const index = Math.floor(Math.random() * 3);
+				
 				this.items.push(
 					new Plugin(
 						plugin.id,
@@ -32,9 +33,10 @@ export class SideFilterComponent {
 						plugin.developer,
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
-						'Data Quality',			// plugin.type,
+						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
 						[],		//plugin.tags
-						plugin.contract_duration
+						plugin.contract_duration,
+						''		//plugin.faqs
 					));
 			});
 
@@ -43,6 +45,7 @@ export class SideFilterComponent {
 
 		this.toolTypes = this.toolService.getToolTypes();
 		this.tags = this.toolService.getTags();
+		
 	}
 
 	/**
