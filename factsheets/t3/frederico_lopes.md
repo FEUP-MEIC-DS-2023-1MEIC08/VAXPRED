@@ -64,7 +64,7 @@ In this sprint, I created most of the home page.
 
 ### The two pull requests that I am most proud of
 
-I did not create pull requests this sprint.
+- [Pull request #228](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/228)
 
 ### Two contributions of other types that I am most proud of
 Since I did a total of 4 user stories this sprint (the ones above and [Issue #155](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/155) and [Issue #161](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/161)), I did no contributions of other types.
