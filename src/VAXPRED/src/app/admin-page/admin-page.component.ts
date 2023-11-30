@@ -102,6 +102,8 @@ export class AdminPageComponent implements OnInit {
   addPlugin() {
     if (this.pluginData.name == "") return
     if (this.pluginData.description == "") return
+    if (this.pluginData.developer == "") return
+    if (this.pluginData.supplier_name == "") return
     if (this.pluginData.supplier_email == "") return
     if (this.pluginCategoryID == -1) return
     this.adminPageService.addPlugin(this.pluginData).subscribe(
