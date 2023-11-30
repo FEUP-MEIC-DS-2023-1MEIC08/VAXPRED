@@ -14,6 +14,7 @@
     </div>
     <h2>Filter by Tag</h2>
     <div class="tag-grid">
-      <button *ngFor="let tag of testTags">{{ tag }}</button>
+      <a *ngFor="let tag of testTags" (click)="redirectToSearch(tag)">{{ tag }}</a>
+      <!--<button *ngFor="let tag of testTags">{{ tag }}</button>-->
     </div>
   </div>

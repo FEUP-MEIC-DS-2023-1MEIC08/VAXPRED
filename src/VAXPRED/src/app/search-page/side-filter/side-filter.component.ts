@@ -69,6 +69,11 @@ export class SideFilterComponent {
 			
 			this.tags = this.toolService.getTags();
 			
+			if (this.selectedTag != "") {
+				this.selectedTags[this.selectedTag] = true;
+				this.filterList();
+			}
+
 			// Filter the list based on the selected category
 			if (this.selectedCategory != "") {
 			  this.selectedToolTypes[this.selectedCategory] = true;

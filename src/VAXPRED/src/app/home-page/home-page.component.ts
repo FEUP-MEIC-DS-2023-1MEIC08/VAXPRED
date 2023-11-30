@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
 
@@ -17,7 +19,7 @@ export class HomePageComponent {
 	// a tuple with category name and id
 	categories: [string,number][] = [];
 	categoryPlugins: { [categoryId: number]: Plugin[] } = {};
-  constructor(private toolService: ToolService)
+  constructor(private toolService: ToolService, private router: Router)
 	{
 		
 		this.tags = this.toolService.getTags();
@@ -80,6 +82,9 @@ export class HomePageComponent {
   testTags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9'];
 
 
+  redirectToSearch(tag: string) {
+	this.router.navigate(['/search'], { queryParams: { tag: tag } });
+  }
 }
 function sleep(arg0: number) {
 	throw new Error('Function not implemented.');
