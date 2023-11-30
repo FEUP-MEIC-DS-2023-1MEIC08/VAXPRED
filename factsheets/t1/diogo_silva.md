@@ -47,8 +47,17 @@ No important pull requests have been made by me.
 
 ## Sprint 3
 
-...
+- I was involved in the development of the plugin page element which indicates (for a free plugin) that its access is free [[issue #184](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=diogosilva&pane=issue&itemId=44790151)].
+- I was involved in the development of the plugin page element which indicates (for a premium plugin) that its access is premium [[issue #185](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?filterQuery=diogosilva&pane=issue&itemId=44790170)].
+- I got to learn about how to work with the current API being used. 
 
+### The two pull requests that I am most proud of
+
+- I have performed a single pull request which merges the `t1-feature-plugin-page-access` branch to `dev` [[pull #212](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/212)].
+
+### Two contributions of other types that I am most proud of
+
+- I was involved in the discussion about how other elements should look in the plugin page (like categories).
 
 ## Sprint 4
 
