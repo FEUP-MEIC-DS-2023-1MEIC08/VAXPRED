@@ -1,22 +1,31 @@
 <div class="plugin-card">
-	<div class="m-5">
+	<!-- Premium or Free badge -->
+    <div class="pricing-badge">
+        <span class="badge" id="premium" *ngIf="this.tool.price > 0; else elseBlock">PREMIUM</span>
+        <ng-template #elseBlock><span class="badge" id="free" #elseBlock>FREE</span></ng-template>
+    </div>
+
+	<div class="plugin-icon">
+		<img id="plugin-type-icon" [src]="this.tool.type_icon" alt="Plugin Type Icon">
+		<span class="tooltip">{{this.tool.type_description}}</span>
+	</div>
+	
+	<div class="m-5" >
 		<img id="plugin-image" [src]="this.tool.logo" [alt]="this.tool.name">
 	</div>
 
-	<div class="plugin-card-body">
-		<h5 class="plugin-card-title">{{ this.tool.name }}</h5>
-		<h6 class="plugin-card-subtitle mb-2"> {{ this.tool.type }} </h6>
-		<p class="plugin-card-text"> {{ this.tool.description }} </p>
-		<div class="d-flex w-100 justify-content-around">
-			<button id="view-details-button" class="btn rounded-pill w-85" (click)="openDialog()">
-				<a>
-					<span>View details</span>
-					<span class="ms-2 fa fa-arrow-right"></span>
-				</a>
-			</button>
-			<button id="download-button" class="btn">
-				<a><span class="fa fa-cloud-download"></span></a>
-			</button>
-		</div>
+	<h5 class="plugin-card-title">{{ this.tool.name }}</h5>
+	<h6 class="plugin-card-subtitle mt-2"> {{ this.tool.type }} </h6>
+	<p class="plugin-card-text"> {{ this.tool.description }} </p>
+	<div class="d-flex w-100 justify-content-around">
+		<button id="view-details-button" class="btn rounded-pill w-85" (click)="openDialog()">
+			<a>
+				<span>View details</span>
+				<span class="ms-2 fa fa-arrow-right"></span>
+			</a>
+		</button>
+		<button id="download-button" class="btn">
+			<a><span class="fa fa-cloud-download"></span></a>
+		</button>
 	</div>
 </div>

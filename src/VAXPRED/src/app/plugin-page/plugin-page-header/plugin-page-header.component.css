@@ -72,3 +72,30 @@ h4 {
   padding: 0.5em;
   margin: 0.5em;
 }
+
+.plugin-tag {
+  border: 0.1em solid #88a3e7;
+  border-radius: 0.8em;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.badge
+{
+    border-radius: 0.8em;
+    padding: 0.6em 0.6em 0.5em 0.6em;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.badge#free
+{
+	background-color: #00BB55;
+}
+
+.badge#premium
+{
+	background-color: #FF7777;
+}
