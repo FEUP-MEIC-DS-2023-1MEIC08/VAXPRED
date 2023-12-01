@@ -47,7 +47,32 @@ This is the team's pull request that merges all of our common work into the dev 
 
 ## Sprint 2
 
-...
+In this sprint I remained the team's scrum master. We were productive and communicated efficiently. Tasks were planned in the beginning of the sprint, and developers assigned themselves or got assigned as the sprint progressed. We managed to complete almost all of our tasks. I did some valuable tasks for the project such as setting up the base of the CI/CD pipeline and some GitHub Actions workflows.
+
+### The two user stories that I am most proud of
+
+- [(#116) User Profile: remove CoreUI dependency](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/116)
+
+This was a crucial task of remaking the user profile page by stripping it of CoreUI, which was conflicting with other parts of the project. I helped Rodrigo accomplish this by investigating with him the possibilities using Google Material Design and regular CSS.
+
+- [(#135) As an admin, I want to remove a plugin from the store on the admin dashboard.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/135)
+
+I made the API route that actually removes the plugin when the user confirms the action, and also guided Rodrigo as we pair-programmed the admin dashboard/page remove plugins feature.
+
+### The two pull requests that I am most proud of
+
+- [(#160) Feat: GitHub Action for Frontend Tests](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/160)
+
+This PR introduces one of the multiple GitHub workflows I created, which is a GitHub Action that runs the frontend tests on every push to the `dev` branch. This is a crucial step in the CI/CD pipeline, and it was a challenge to set up because of the way the frontend tests are run (requiring a browser to be opened).
+
+- [(#171) Feat: Deployment with Docker](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/171)
+
+This was also challenging to come up with, but it still a base for our future work regarding real live server deployment. This allows for developers to run the project in Docker containers, which is a good step towards a production-ready deployment. A GitHub Workflow was created to build the Docker containers and run them, checking if the project is working as expected.
+
+### Two contributions of other types that I am most proud of
+
+- The remaining GitHub Workflows for linting frontend & backend, and running the backend tests.
+- Contributing to the good functioning of the project by being active in the team's Discord channel and organizing our general to-do's and pending tasks for the sprint.
 
 ## Sprint 3
 

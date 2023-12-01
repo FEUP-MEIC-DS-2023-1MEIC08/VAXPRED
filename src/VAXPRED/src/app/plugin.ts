@@ -1,13 +1,13 @@
 /**
- * @param {number} id the id of the plugin 
- * @param {string} name the name of the plugin 
- * @param {string} description what the plugin is about / what offers 
+ * @param {number} id the id of the plugin
+ * @param {string} name the name of the plugin
+ * @param {string} description what the plugin is about / what offers
  * @param {string} logo the logotype image path of the plugin
  * @param {string} version the most recent version of the plugin
  * @param {string} developer the ones who created the plugin
  * @param {Date} release_date when the plugin was released
  * @param {Date} last_update_date when the last update was made
- * @param {string} type the type of the plugin 
+ * @param {string} type the type of the plugin
  * @param {string[]} tags the tags of the plugin
  * @param {Object[]} faq the FAQ of the plugin
  * @param {number} contract_duration the duration of the plugins's contract (in years)
@@ -67,13 +67,13 @@ export class Plugin
 			'Data Curation'
 		]
 		this.faq = faq;
-		
+
 		this.assembleDynamicData();
 	}
 
 	assembleDynamicData()
 	{
-		const types_descriptions: any = 
+		const types_descriptions: any =
 		{
 			'Data Quality': 'Data Quality: processes and technologies for identifying, \
 				understanding and correcting flaws in data.',
@@ -83,7 +83,7 @@ export class Plugin
 			'Synthetic Data Generation': 'Synthetic Data Generation: the process of generating \
 				data by training an AI on real world data samples.'
 		}
-		
+
 		this.type_icon = 'assets/plugin_types_icons/' + this.type + '.png';
 		this.type_description = types_descriptions[this.type];
 		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;

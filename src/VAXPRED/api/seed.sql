@@ -104,7 +104,7 @@ INSERT INTO plugins (name, version, description, developer, supplier_name, suppl
 INSERT INTO plugins (name, version, description, developer, supplier_name, supplier_email, contract_duration, price, type) VALUES ('MarketingAnalytics', '3.0', 'Get in-depth marketing analytics with MarketingAnalytics', 'Marketing Insights Pro', 'Marketing Insights Pro', 'marketinginsights@gmail.com', 3, 10, 'Synthetic Data Generation');
 
 
-
+insert into users (username, email) values ('John Doe', 'johndoe@email.com');
 insert into users (username, email) values ('mfridaye0', 'esubhan0@narod.ru');
 insert into users (username, email) values ('mdods1', 'bmartin1@cbslocal.com');
 insert into users (username, email) values ('aspurrier2', 'jpethick2@arstechnica.com');

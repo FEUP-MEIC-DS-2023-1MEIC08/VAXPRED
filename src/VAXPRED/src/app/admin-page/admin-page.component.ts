@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject} from '@angular/core';
 import { AdminPageService } from '../admin-page.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { AdminPagePluginFormComponent } from '../admin-page-plugin-form/admin-page-plugin-form.component';
 
 @Component({
   selector: 'app-admin-page',
@@ -39,7 +40,7 @@ export class AdminPageComponent implements OnInit {
       width: '35em',
       data: { pluginName: plugin.name }
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // User clicked "Yes" in the confirmation dialog, remove the plugin
@@ -48,4 +49,15 @@ export class AdminPageComponent implements OnInit {
     });
   }
 
+  openPluginForm(plugin: any): void {
+    const dialogRef = this.dialog.open(AdminPagePluginFormComponent, {
+			width: '1000px',
+			maxHeight: '90vh',
+			data: {
+				dialogRef: null, // Initialize the dialogRef to null
+        editingPlugin: plugin
+			}
+		});
+		dialogRef.componentInstance.data.dialogRef = dialogRef;
+  }
 }

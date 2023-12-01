@@ -32,7 +32,14 @@ In this sprint I took part in organizing the user stories and items, and heping 
 
 ## Sprint 2
 
-...
+In this second sprint, i helped in organizing some of the folders.
+
+The two user stories that I am most proud of is #32. And also helped in item #128.
+
+I have made no significant pull requests this sprint.
+
+Two contributions of other types that I am most proud of
+is helping my collegue solve some problems with the API.
 
 
 ## Sprint 3

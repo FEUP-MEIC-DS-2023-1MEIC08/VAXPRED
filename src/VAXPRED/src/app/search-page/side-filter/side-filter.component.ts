@@ -22,8 +22,6 @@ export class SideFilterComponent {
 		this.toolService.getPlugins().subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
 				const index = Math.floor(Math.random() * 3);
-				console.log("GENERATE PLUGINS");
-				console.log(plugin);
 				
 				this.items.push(
 					new Plugin(

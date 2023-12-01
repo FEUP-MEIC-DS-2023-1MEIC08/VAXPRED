@@ -7,8 +7,11 @@ from repositories.plugin_tag import PluginTagRepository
 from repositories.user_plugin import UserPluginRepository
 from repositories.plugin import PluginRepository
 from repositories.plugin_categories import PluginCategoryRepository
+from repositories.plugin_image import PluginImageRepository
 
-from schemas.user_plugin import PluginWithCategories
+from schemas.user_plugin import PluginWithCategories, UserPlugin
+from schemas.plugin import PluginResponse
+
 
 router = APIRouter()
 
@@ -29,33 +32,45 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
     for association in associations:
         plugin_id = association["plugin_id"]
         temp_plugin = plugin_repository.get_plugin_by_id(plugin_id)
-        plugin_categories = categories.get_categories_by_plugin_id(plugin_id)
-        plugin_tags = tags.get_tags_by_plugin_id(plugin_id)
-        plugin_dependencies = dependencies.get_dependency_names_by_plugin_id(plugin_id)
-        plugin_faqs = faqs.get_faqs_by_plugin_id(plugin_id)
+        
+        plugin_repository = PluginRepository(db)
+        category_repository = PluginCategoryRepository(db)
+        tag_repository = PluginTagRepository(db)
+        plugin_dependencies_repository = PluginDependencyRepository(db)
+        plugin_faqs_repository = PluginFaqRepository(db)
+        plugin_images_repository = PluginImageRepository(db)
 
-        user_plugin = PluginWithCategories(
-            name=temp_plugin.name,
-            version=temp_plugin.version,
-            description=temp_plugin.description,
-            developer=temp_plugin.developer,
-            release_date=temp_plugin.release_date,
-            last_update_date=temp_plugin.last_update_date,
-            supplier_name=temp_plugin.supplier_name,
-            supplier_email=temp_plugin.supplier_email,
-            contract_duration=temp_plugin.contract_duration,
-            price=temp_plugin.price,
-            type=temp_plugin.type,
-            plugin_id=temp_plugin.id,
-            association_date=association["association_date"],
-            duration=association["duration"],
-            categories=plugin_categories,
-            tags=plugin_tags,
-            dependencies=plugin_dependencies,
-            faqs=plugin_faqs
+        plugin = plugin_repository.get_plugin_by_id(plugin_id)
+        categories = category_repository.get_categories_by_plugin_id(plugin_id)
+        tags = tag_repository.get_tags_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
+
+        if plugin is None:
+            raise HTTPException(status_code=404, detail="Plugin not found")
+
+        plugin = PluginResponse(
+            id=plugin.id,
+            name=plugin.name,
+            version=plugin.version,
+            description=plugin.description,
+            developer=plugin.developer,
+            release_date=plugin.release_date,
+            last_update_date=plugin.last_update_date,
+            supplier_name=plugin.supplier_name,
+            supplier_email=plugin.supplier_email,
+            contract_duration=plugin.contract_duration,
+            price=plugin.price,
+            type=plugin.type,
+            categories=categories,
+            tags=tags,
+            dependencies=dependencies,
+            faqs=faqs,
+            images=images
         )
-
-        user_plugins.append(user_plugin)
+        user_plugins.append(plugin)
+        
     return {"associations": user_plugins}
 
 

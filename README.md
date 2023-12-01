@@ -1,24 +1,26 @@
 # VAXPRED
 
-Explain here in one or two sentences what is the goal of your product. More details about the product should be found in the [product management](docs/product.md) documentation (make sure you link it from here), which includes the product vision, market research and domain analysis.
+VAXPRED aims to improve the field of vaccine development supplying a cloud-based system where researchers can run simulations to generate predictions that assess the efficacy of immune responses against pathogens. These tools are provided through plugins that can be chosen accordingly to the experiment ran by the researcher, in a cloud-based store that we are developing. More details about the product can be found in the [product management](docs/product.md) documentation.
 
 ## How to use
 
-Explain how to use your software from user standpoint. This can include short videos, screenshots, or API documentation, depending on what makes sense for your particular software system and target users. If needed, link to external resources or additional markdown files with further details (please place these in the [docs](docs/) directory).
+We will explain how to use your software from user standpoint. This can include short videos, screenshots, or API documentation, depending on what makes sense for your particular software system and target users. More information can be found in the [docs](docs/) directory).
 
 ## How to contribute
 
-Explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment.
+The guidelines for the project are present here: [guidelines](docs/GUIDELINES.md).
 
-Defer more details about the technical vision to the [development](docs/development.md) documentation, which should include information on architectural, design and technical aspects of the project, justifying the most important choices to show the soundness of the technical vision.
+We still don't have containers but later on we will explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment.
+
+More the details about the tecnical vision can be found in the [development](docs/development.md) documentation.
 
 ## How to run and operate in a production environment
 
-Explain how to package, deploy and run the system to a production (or production-like) environment. If needed, link to external resources or additional markdown files with further details (please place these in the [docs](docs/) directory).
+We still don't have containers but later on we will explain how to package, deploy and run the system to a production (or production-like) environment. If needed, link to external resources or additional markdown files with further details (please place these in the [docs](docs/) directory).
 
 ## Contributions
 
-Link to the factsheets of each team and of each team-member. For example:
+Link to the factsheets of each team and of each team-member.
 
 * [Team 1](factsheets/t1/team1.md)
   * [Maria Sofia Gonçalves](factsheets/t1/maria_goncalves.md) (PO)

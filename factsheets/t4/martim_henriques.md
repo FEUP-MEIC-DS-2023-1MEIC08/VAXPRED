@@ -49,7 +49,25 @@ Having good User Stories already written is important to have a good start of Sp
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+ * "As an admin, I want to have a page where I can add new plugins to the store, so that the plugins become available to the researchers." [issue #77](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/77) 
+
+ * "As an admin, I want a form where I can add fields to create a new plugin, so that I can add it to the store." [issue #134](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/134)
+
+I've decided to highlight these two issues, that complement each other, as they are important for an admin's experience.
+
+
+### The two pull requests that I am most proud of
+
+As a PO, I did not participate in any pull request.
+
+### Two contributions of other types that I am most proud of
+ 
+* Writing user stories with the other POs.
+* Meeting with the client.
+
+Having good User Stories already written is important to have a good start of Sprint 3, and also to keep updated with what the client wants and desires.
 
 
 ## Sprint 3
