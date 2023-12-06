@@ -46,5 +46,11 @@ Completed PBIs are marked with `Sprint 2` on the Project Board, and they can be 
 - Added a new FREE/PREMIUM badge to plugin cards
 - Added new type icons to plugin cards to display the type of plugin they hold
 - The search results' page is now responsive
+- Added a FAQ tab in the plugin details page that displays the plugin's questions & answers
+- Added a form in the Admin Panel to create new plugins
+- Added a button to edit store plugins from the list in the Admin Panel
+- Added a confirmation dialog for disassociating a user plugin in the Profile
+- Added a footer to the website that is shared across all pages
+- 
 
 Completed PBIs are marked with `Sprint 3` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
