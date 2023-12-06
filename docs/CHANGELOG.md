@@ -34,3 +34,9 @@ Completed PBIs are marked with `Sprint 1` on the Project Board, and they can be 
 - Added GitHub Action as automatic app building with Docker (CI/CD)
 
 Completed PBIs are marked with `Sprint 2` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
+
+## Sprint 3 Release [v0.3](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/releases/tag/v0.3)
+
+- WIP
+
+Completed PBIs are marked with `Sprint 3` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
