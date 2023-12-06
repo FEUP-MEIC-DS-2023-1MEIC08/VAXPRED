@@ -38,9 +38,9 @@ export class HomePageComponent {
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
 						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
-						[],		//plugin.tags
+						plugin.tags,
 						plugin.contract_duration,
-						''		//plugin.faqs
+						plugin.faqs
 					));
 			});
 

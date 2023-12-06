@@ -30,9 +30,5 @@ export class ToolService {
 	installPlugin(pluginId: number) {
 		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 	}
-
-	getFAQ(pluginId: number): Observable<any> {
-		return this.http.get('http://localhost:8000/faqs/' + pluginId + '/');			
-	}
 		
 }

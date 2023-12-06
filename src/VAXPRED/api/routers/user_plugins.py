@@ -1,41 +1,77 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, status
 from sqlalchemy.orm import Session
 from database import get_db
+from repositories.plugin_dependencies import PluginDependencyRepository
+from repositories.plugin_faqs import PluginFaqRepository
+from repositories.plugin_tag import PluginTagRepository
 from repositories.user_plugin import UserPluginRepository
 from repositories.plugin import PluginRepository
-from typing import List, Dict
-from schemas.user_plugin import UserPlugin, UserPluginList
-from fastapi.responses import JSONResponse
+from repositories.plugin_categories import PluginCategoryRepository
+from repositories.plugin_image import PluginImageRepository
+
+from schemas.user_plugin import PluginWithCategories, UserPlugin
+from schemas.plugin import PluginResponse
+
 
 router = APIRouter()
 
+
 # Route to list plugins associated with a user
-@router.get("/{user_id}/plugins/", response_model=UserPluginList)
+@router.get("/{user_id}/plugins/")
 def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
-    association_db = UserPluginRepository(db).get_list_dict()  #Ver melhor
-    user_plugins = []
+    associations = UserPluginRepository(db).get_user_plugin_associations(user_id=user_id)
+    categories = PluginCategoryRepository(db)
+    tags = PluginTagRepository(db)
+    dependencies = PluginDependencyRepository(db)
+    faqs = PluginFaqRepository(db)
+
+    if not associations:
+        raise HTTPException(status_code=404, detail="No plugins found for the user")
     plugin_repository = PluginRepository(db)
-    for association in association_db:
-        if association["user_id"] == user_id:
-            temp_plugin = plugin_repository.get_plugin_by_id(association["plugin_id"])
+    user_plugins = []
+    for association in associations:
+        plugin_id = association["plugin_id"]
+        temp_plugin = plugin_repository.get_plugin_by_id(plugin_id)
+        
+        plugin_repository = PluginRepository(db)
+        category_repository = PluginCategoryRepository(db)
+        tag_repository = PluginTagRepository(db)
+        plugin_dependencies_repository = PluginDependencyRepository(db)
+        plugin_faqs_repository = PluginFaqRepository(db)
+        plugin_images_repository = PluginImageRepository(db)
 
-            user_plugin = UserPlugin(
-                name=temp_plugin.name,
-                version=temp_plugin.version,
-                description=temp_plugin.description,
-                developer=temp_plugin.developer,
-                release_date=temp_plugin.release_date,
-                last_update_date=temp_plugin.last_update_date,
-                supplier_name=temp_plugin.supplier_name,
-                supplier_email=temp_plugin.supplier_email,
-                plugin_id=temp_plugin.id,
-                association_date=association["association_date"],
-                duration=association["duration"]
-            )
+        plugin = plugin_repository.get_plugin_by_id(plugin_id)
+        categories = category_repository.get_categories_by_plugin_id(plugin_id)
+        tags = tag_repository.get_tags_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
-            user_plugins.append(user_plugin)
-    return {"associations": user_plugins}  # Change 'plugins' to 'associations'
+        if plugin is None:
+            raise HTTPException(status_code=404, detail="Plugin not found")
 
+        plugin = PluginResponse(
+            id=plugin.id,
+            name=plugin.name,
+            version=plugin.version,
+            description=plugin.description,
+            developer=plugin.developer,
+            release_date=plugin.release_date,
+            last_update_date=plugin.last_update_date,
+            supplier_name=plugin.supplier_name,
+            supplier_email=plugin.supplier_email,
+            contract_duration=plugin.contract_duration,
+            price=plugin.price,
+            type=plugin.type,
+            categories=categories,
+            tags=tags,
+            dependencies=dependencies,
+            faqs=faqs,
+            images=images
+        )
+        user_plugins.append(plugin)
+        
+    return {"associations": user_plugins}
 
 
 # Route to associate a plugin with a user
@@ -43,39 +79,28 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
 def associate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(get_db)):
     association = UserPluginRepository(db)
     plugin = PluginRepository(db)
-    try:
-        plugin_duration = plugin.get_plugin_duration_by_id(plugin_id=plugin_id)
-        if plugin_duration is None:
-            updated_user = association.create_association(user_id=user_id, plugin_id=plugin_id)
-        else:
-            print("Ya")
-            updated_user = association.create_association(user_id=user_id, plugin_id=plugin_id, duration=plugin_duration)
 
-        return {"message": "Association added successfully"}
+    specific_association = association.get_specific_user_plugin_associations(user_id, plugin_id)
 
-    except HTTPException as http_exception:
-        # Handle specific HTTP exceptions
-        return JSONResponse(content={"error": http_exception.detail}, status_code=http_exception.status_code)
+    if specific_association:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Association already exists")
 
-    except Exception as generic_exception:
-        # Handle generic exceptions
-        print(f"Exception: {generic_exception}")
-        return JSONResponse(content={"error": "Internal Server Error"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    plugin_duration = plugin.get_plugin_duration_by_id(plugin_id=plugin_id)
+    if plugin_duration is None:
+        association.create_association(user_id=user_id, plugin_id=plugin_id)
+    else:
+        association.create_association(user_id=user_id, plugin_id=plugin_id, duration=plugin_duration)
 
+    return {"message": "Association added successfully"}
 
 
 # Route to disassociate a plugin from a user
 @router.delete("/{user_id}/plugins/{plugin_id}/disassociate/")
 def disassociate_user_plugin(user_id: int, plugin_id: int, db: Session = Depends(get_db)):
     association = UserPluginRepository(db)
-    association_db = UserPluginRepository(db).get_list_dict()
-    print(association_db)
-    found = False
-    for associ in association_db:
-        if (associ['user_id'] == user_id and associ['plugin_id'] == plugin_id):
-            found = True
-            break
-    if not found:
+    specific_association = association.get_specific_user_plugin_associations(user_id, plugin_id)
+
+    if not specific_association:
         raise HTTPException(status_code=404, detail="Association not found")
 
     association.delete_association(user_id, plugin_id)

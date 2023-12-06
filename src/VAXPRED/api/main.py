@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from routers import plugins, user_plugins, users, tags, plugin_tag, faqs, plugin_faq,categories, plugin_category
-from database import Base,engine
+from routers import plugins, user_plugins, users, categories, plugin_categories, plugin_tags, tags, images, plugin_image
+from database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
@@ -22,9 +22,9 @@ app.add_middleware(
 app.include_router(users.router, prefix="/users", tags=["users"])
 app.include_router(plugins.router, prefix="/plugins", tags=["plugins"])
 app.include_router(user_plugins.router, prefix="/users", tags=["user_plugins"])
-app.include_router(tags.router, prefix="/tags", tags=["tags"])
-app.include_router(plugin_tag.router, prefix="/tags", tags=["tag_plugins"])
 app.include_router(categories.router, prefix="/categories", tags=["categories"])
-app.include_router(plugin_category.router, prefix="/categories", tags=["category_plugins"])
-app.include_router(faqs.router, prefix="/faqs", tags=["faqs"])
-app.include_router(plugin_faq.router, prefix="/faqs", tags=["faq_plugins"])
+app.include_router(plugin_categories.router, prefix="/categories", tags=["category_plugins"])
+app.include_router(tags.router, prefix="/tags", tags=["tags"])
+app.include_router(plugin_tags.router, prefix="/tags", tags=["tag_plugins"])
+app.include_router(images.router, prefix="/images", tags=["images"])
+app.include_router(plugin_image.router, prefix="/images", tags=["image_plugins"])
