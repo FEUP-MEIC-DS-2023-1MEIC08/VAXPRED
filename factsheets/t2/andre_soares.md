@@ -51,7 +51,19 @@ In this sprint I also helped my team to have sql scripts to automatically popula
 
 ## Sprint 3
 
-...
+In this second sprint, I have been part of the improvement of the database with more features so that the front end can be improved and display more information
+
+### The two user stories that I am most proud of
+
+In this sprint I was involved with [user story #188](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/188), where I added a field to the plugin class to determine whether or not a plugin is premium (paid) or free. I used a simple integer (isFree) signifying if it is paid or not, this way the load on the database will be smaller if at scale.
+I was also involved with [user story #119](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/119) where I created a dependencies class as well as an association class between dependencies and plugins, to this effect I also created a way to add a dependency to a plugin and to see both plugins that use a dependency and what dependencies a plugin uses (I made more routes but these are the most important).
+### The two pull requests that I am most proud of
+
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+
+In this sprint I also helped my team by improving prior sql scripts to account for new changes to the database, this means that post changes we can quickly recover our database preset
 
 
 ## Sprint 4

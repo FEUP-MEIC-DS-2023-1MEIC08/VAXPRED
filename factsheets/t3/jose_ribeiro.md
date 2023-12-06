@@ -34,12 +34,36 @@ Nothing to add.
 
 ## Sprint 2
 
-...
+I didn't make any progress during this sprint.
+
+### The two user stories that I am most proud of
+
+I made no user stories.
+
+### The two pull requests that I am most proud of
+
+I made no pull requests.
+
+### Two contributions of other types that I am most proud of
+
+Nothing to add.
 
 
 ## Sprint 3
 
-...
+I didn't make any progress during this sprint.
+
+### The two user stories that I am most proud of
+
+I made no user stories.
+
+### The two pull requests that I am most proud of
+
+I made no pull requests.
+
+### Two contributions of other types that I am most proud of
+
+Nothing to add.
 
 
 ## Sprint 4

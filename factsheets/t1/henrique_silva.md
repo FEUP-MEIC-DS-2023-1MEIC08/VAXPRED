@@ -55,7 +55,20 @@ In this sprint, I was responsible for the contract agreement that pops up when i
 
 ## Sprint 3
 
-...
+In this sprint, I was responsible for enhancing the categories list in the plugin page.
+
+### The user story that I am most proud of
+
+- Show plugin's category inside plugin page. #117.
+
+### The pull request that I am most proud of
+
+- Authored [#216](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/216). An icon corresponding to each category displayed in the plugin page was added. Improved generall display of the categories section.
+
+### Contributions of other types that I am most proud of
+
+- Sharing knowledge with teammates and helping when necessary.
+- Involved in the discussion of the redefined desing of the plugin page.
 
 
 ## Sprint 4

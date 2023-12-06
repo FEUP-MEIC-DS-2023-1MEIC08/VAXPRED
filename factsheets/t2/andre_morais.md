@@ -62,8 +62,22 @@ As a PO, I did not participate in any pull request, although I contributed to th
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
 
+* "As a researcher, I want to have tags on the plugins of the store, so that I can quickly see the main relevant characteristics of the plugin" [issue 109](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/109)
+
+* "As a researcher, I want to be able to see a plugin's category on its page, so that I'm able to know the field that it inserts itself." [issue 78](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/78)
+
+I chose these user stories because they provide a great improvement on the user experience, being valuable to the client.
+
+### The two pull requests that I am most proud of
+
+As a PO, I did not participate in any pull request.
+
+### Two contributions of other types that I am most proud of
+
+* Offered suggestions.
+* Registered the feedback from the clients in the meetings.
 
 ## Sprint 4
 

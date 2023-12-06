@@ -72,7 +72,24 @@ Having good User Stories already written is important to have a good start of Sp
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+ * "As an admin, I want a form where I can edit fields from an existing plugin in the store, so that I can change its details in the store." [issue #207](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/207) 
+
+ * "As a researcher, I want to see a footer on all pages, so that I can have a better looking and more pleasant experience." [issue #196](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/196)
+
+Issue #207 is an obvious addition to the project, as it complements epic #77, enabling admins to either add, edit or remove plugins.
+
+Issue #196 makes the face of the product more catchy and pleasant.
+
+### The two pull requests that I am most proud of
+
+As a PO, I did not participate in any pull request.
+
+### Two contributions of other types that I am most proud of
+ 
+* Writing user stories with the other POs.
+* Discussing and helping my team with the progression in this sprint.
 
 
 ## Sprint 4

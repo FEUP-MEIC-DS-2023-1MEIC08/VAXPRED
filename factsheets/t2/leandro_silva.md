@@ -47,7 +47,16 @@ In this sprint, since tags and categories are somewhat similar, I worked closely
 
 ## Sprint 3
 
-...
+In this sprint, our team was assigned all the tasks related to database improvements and fine tuning. Most of our tasks were in collaboration with other (frontend) teams.
+
+### The two user stories that I am most proud of
+In this sprint I was responsible for the implementation of images for the plugins. This included the population of the database and implementation of repositories, routes, schemas and models for that feature. This feature was part of user story #121.
+
+### The two pull requests that I am most proud of
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+In this sprint, I had to changed the plugin structure in order to retrieve the images without another API call being necessary, improving the overall API performance. I also took part on the merge of the images features into a common team branch that was later pull requested to the dev branch.
 
 
 ## Sprint 4

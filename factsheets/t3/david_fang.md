@@ -53,8 +53,20 @@ During this sprint, the other contribution I have been part of was adivising the
 
 ## Sprint 3
 
-...
+In this sprint, the focus was on essentially on the development of the home page and improving either the visual aspect of the components and the integration of the components with the backend. The integration with the backend had caused some problems related to the tests, so the acceptance tests were adapted to the new changes.
 
+### The two user stories that I am most proud of
+
+- [#202 Fix acceptance tests for Search Page](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/202)
+- [#203 Fix Search Page CSS](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/203)
+
+### The two pull requests that I am most proud of
+
+- [#214 Made responsive display for the results of the search page](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/214)
+
+### Two contributions of other types that I am most proud of
+
+I answered the form provided by the Product Owner providing any future improvements or fix that could be made to the project.
 
 ## Sprint 4
 
