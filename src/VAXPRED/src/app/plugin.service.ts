@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+import { Observable} from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ToolService {
+  getTools(): import("./plugin").Plugin[] {
+    throw new Error('Method not implemented.');
+  }
 	constructor(private http: HttpClient) { }
 
 	getPlugins() {
@@ -26,4 +30,5 @@ export class ToolService {
 	installPlugin(pluginId: number) {
 		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 	}
+		
 }

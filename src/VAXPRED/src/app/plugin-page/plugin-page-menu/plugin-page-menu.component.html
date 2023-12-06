@@ -1,6 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="space-between start">
   <div fxLayout="column" fxFlex="65%">
     <mat-tab-group [(selectedIndex)]="selectedTab">
+
       <mat-tab label="Description">
         <ng-template matTabContent>
           <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
@@ -12,6 +13,7 @@
           </div>
         </ng-template>
       </mat-tab>
+
       <mat-tab label="Dependencies">
         <ng-template matTabContent>
           <mat-list>
@@ -31,6 +33,7 @@
           </mat-list>
         </ng-template>
       </mat-tab>
+
       <mat-tab label="Changelog">
         <ng-template matTabContent>
           <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
@@ -40,6 +43,7 @@
           </div>
         </ng-template>
       </mat-tab>
+
       <mat-tab label="Supplier information">
         <ng-template matTabContent>
           <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
@@ -48,29 +52,42 @@
           </div>
         </ng-template>
       </mat-tab>
+      <mat-tab label="FAQ">
+        <ng-template matTabContent>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <p [innerHTML]="getFormattedFAQ()"></p>
+          </div>
+        </ng-template>
+      </mat-tab>
     </mat-tab-group>
   </div>
+
   <hr style="border-top: 350px solid #808080" />
+
   <div fxLayout="column" fxFlex="30%">
-    <mat-card class="categories" style="border: none; box-shadow: none">
+
+    <mat-card  class="categories" style="border: none; box-shadow: none; margin-bottom: 20px;">
       <mat-card-title>
         <h3>Categories</h3>
       </mat-card-title>
-      <mat-card-content>
-        <mat-list>
-          <mat-list-item>Category 1</mat-list-item>
-          <mat-list-item>Category 2</mat-list-item>
-          <mat-list-item>Category 3</mat-list-item>
-        </mat-list>
+      <mat-card-content *ngFor="let category of plugin.categories">
+        <div fxLayout="row" fxLayoutAlign="start center" class="category-container">
+          <img id="plugin-type-icon" [src]="'assets/plugin_types_icons/' + category + '.png'" alt="Plugin Type Icon" class="icon">
+          <p class="category-text">{{ category }}</p>
+        </div>
       </mat-card-content>
     </mat-card>
+    
+
     <hr style="border-left: 100%; margin: 0; max-width: 100%" />
+
     <mat-card class="more-info" style="border: none; box-shadow: none">
       <mat-card-title>
         <h3>More Info</h3>
       </mat-card-title>
       <mat-card-content>
-        <p>Last Update: mm/dd/yyyy</p>
+        <p>Release Date: {{ plugin.release_date | date:'yyyy-MM-dd'}}</p>
+        <p>Last Update: {{ plugin.last_update_date | date:'yyyy-MM-dd'}}</p>
       </mat-card-content>
     </mat-card>
   </div>
