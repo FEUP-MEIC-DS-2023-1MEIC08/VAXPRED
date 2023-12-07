@@ -6,8 +6,14 @@
     </div>
     <div fxFlex="7.5%">
       <h2 name="userName" class="mb-0">{{user.name}}</h2>
-      <p name="userTitle" class="fw-medium m-0">{{user.title}}</p>
-      <p name="userOrg" class="m-0">{{user.org}}</p>
+      <p name="userEmail" class="fw-medium m-0">{{user.email}}</p>
+    </div>
+    <div fxFlex="15%">
+      <p name="userAdmin" *ngIf="user.isAdmin" class="m-0">
+        <a routerLink="/admin" mat-raised-button color="primary">
+          Admin Panel
+        </a>
+      </p>
     </div>
   </div>
 

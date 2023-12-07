@@ -22,16 +22,14 @@ describe('UserProfileComponent', () => {
   });
 
   it('should display user data', () => {
-    component.user = { id: 1, name: 'John Doe', title: 'Senior Researcher', org: 'Faculdade de Engenharia da Universidade do Porto' };
+    component.user = { id: 1, name: 'John Doe', email: 'johndoe@email.com', isAdmin: true };
     fixture.detectChanges();
 
     const nameElement = fixture.nativeElement.querySelector('h2[name="userName"]');
-    const titleElement = fixture.nativeElement.querySelector('p[name="userTitle"]');
-    const orgElement = fixture.nativeElement.querySelector('p[name="userOrg"]');
+    const titleElement = fixture.nativeElement.querySelector('p[name="userEmail"]');
 
     expect(nameElement.textContent).toContain('John Doe');
-    expect(titleElement.textContent).toContain('Senior Researcher');
-    expect(orgElement.textContent).toContain('Faculdade de Engenharia da Universidade do Porto');
+    expect(titleElement.textContent).toContain('johndoe@email.com');
   });
 
   it('should render Plugin cards', () => {
@@ -51,7 +49,7 @@ describe('UserProfileComponent', () => {
       { name: 'Plugin 2', description: 'Description 2' },
     ];
     fixture.detectChanges();
-  
+
     const pluginCards = fixture.nativeElement.querySelectorAll('.plugin-cards');
 
     expect(pluginCards.length).toEqual(2);
