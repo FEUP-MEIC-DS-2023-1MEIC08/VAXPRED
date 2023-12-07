@@ -26,6 +26,8 @@
       <mat-card-content>
         <div class="plugin-container">
           <div class="grid">
+            <p *ngIf="isLoading" class="alignCenter" i18n="@@noPlugins">Loading...</p>
+            <p *ngIf="plugins.length == 0 && !isLoading" class="alignCenter" i18n="@@noPlugins">No plugins installed</p>
             <div *ngFor="let plugin of plugins">
               <mat-card>
                 <mat-card-content>

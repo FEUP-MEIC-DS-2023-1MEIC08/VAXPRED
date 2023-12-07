@@ -28,6 +28,8 @@ export class UserProfileComponent implements OnInit {
     private dialog: MatDialog
   ) { }
 
+  isLoading = true;
+
   user = {
     id : loggedUserId,
     name: 'Loading...',
@@ -44,6 +46,8 @@ export class UserProfileComponent implements OnInit {
       this.user.name = user['username'];
       this.user.email = user['email'];
       this.user.isAdmin = true;
+
+      this.isLoading = false;
     });
 
     this.userProfileService.getUserPlugins(loggedUserId).subscribe((data) => {
