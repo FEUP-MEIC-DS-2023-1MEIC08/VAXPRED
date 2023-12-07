@@ -25,7 +25,7 @@ describe('UserProfileComponent', () => {
     component.user = { id: 1, name: 'John Doe', email: 'johndoe@email.com', isAdmin: true };
     fixture.detectChanges();
 
-    const nameElement = fixture.nativeElement.querySelector('h2[name="userName"]');
+    const nameElement = fixture.nativeElement.querySelector('h1[name="userName"]');
     const titleElement = fixture.nativeElement.querySelector('p[name="userEmail"]');
 
     expect(nameElement.textContent).toContain('John Doe');
