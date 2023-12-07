@@ -1,8 +1,7 @@
 
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.plugins-list {
+  margin-right: 1em;
+  margin-top: 2em;
 }
 
 .plugin-container .grid {
@@ -11,13 +10,8 @@
   grid-gap: 15px;
 }
 
-.plugin-card {
-  margin-left: 2em;
-  margin-right: 2em;
-}
-
 .plugin-container {
-  margin-top: 1.5em;
+  margin-top: 1em;
   float: left;
 }
 
@@ -37,16 +31,25 @@
   color: red;
 }
 
+.div-with-border {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
 .user-profile {
   margin: 2em;
 }
 
+.alignCenter {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .user-profile img {
-  width: 100px;
-  height: 100px;
+  width: 35%;
   border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1em;
 }
 
 .transparent-button {
