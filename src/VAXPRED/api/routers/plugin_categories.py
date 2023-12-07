@@ -7,6 +7,7 @@ from schemas.plugin import PluginListResponse, PluginResponse
 from repositories.plugin_dependencies import PluginDependencyRepository
 from repositories.plugin_faqs import PluginFaqRepository
 from repositories.plugin_tag import PluginTagRepository
+from repositories.plugin_image import PluginImageRepository
 
 
 router = APIRouter()
@@ -21,7 +22,8 @@ def get_category_plugins(category_id: int, db: Session = Depends(get_db)):
     category_repository = PluginCategoryRepository(db)
     tag_repository = PluginTagRepository(db)
     plugin_dependencies_repository = PluginDependencyRepository(db)
-    plugin_faqs_repository = PluginFaqRepository(db)        
+    plugin_faqs_repository = PluginFaqRepository(db)      
+    plugin_images_repository = PluginImageRepository(db)   
 
     for plugin_id in plugins:
         plugin = plugin_repository.get_plugin_by_id(plugin_id)
@@ -29,6 +31,7 @@ def get_category_plugins(category_id: int, db: Session = Depends(get_db)):
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
         dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
         response = PluginResponse(
             id=plugin.id,
             name=plugin.name,
@@ -45,7 +48,8 @@ def get_category_plugins(category_id: int, db: Session = Depends(get_db)):
             categories=categories,
             tags=tags,
             dependencies=dependencies,
-            faqs=faqs
+            faqs=faqs,
+            images=images
         )
         category_plugins.append(response)
 
