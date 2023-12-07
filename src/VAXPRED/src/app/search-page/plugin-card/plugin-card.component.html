@@ -6,8 +6,8 @@
     </div>
 
 	<div class="plugin-icon">
-		<img id="plugin-type-icon" [src]="this.tool.type_icon" alt="Plugin Type Icon">
-		<span class="tooltip">{{this.tool.type_description}}</span>
+		<img id="plugin-category-icon" [src]="this.tool.category_icon" alt="Plugin Category Icon">
+		<span class="tooltip">{{this.tool.category_description}}</span>
 	</div>
 
 	<div class="m-5" >
@@ -15,7 +15,7 @@
 	</div>
 
 	<h5 class="plugin-card-title">{{ this.tool.name }}</h5>
-	<h6 class="plugin-card-subtitle mt-2"> {{ this.tool.type }} </h6>
+	<h6 class="plugin-card-subtitle mt-2"> {{ this.tool.category }} </h6>
 	<p class="plugin-card-text"> {{ this.tool.description }} </p>
 	<div class="d-flex w-100 justify-content-around">
 		<button id="view-details-button" class="btn rounded-pill w-85" (click)="openDialog()">

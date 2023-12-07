@@ -12,9 +12,9 @@
 	<div class="collapsible">
 		<input type="checkbox" id="toggle">
 		<h4><label for="toggle" class="collapsible-label">Category</label></h4>
-		<div class="content" [attr.list-size]="toolTypes.length">
-			<label *ngFor="let item of toolTypes">
-				<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+		<div class="content" [attr.list-size]="toolCategories.length">
+			<label *ngFor="let item of toolCategories">
+				<input type="checkbox" [(ngModel)]="selectedToolCategories[item]" [value]="item" (change)="filterList()"> {{ item }}
 			</label>
 		</div>
 	</div>
