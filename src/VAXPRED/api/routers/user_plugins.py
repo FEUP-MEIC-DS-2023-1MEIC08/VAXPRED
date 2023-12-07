@@ -28,7 +28,6 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
     user_plugins = []
     for association in associations:
         plugin_id = association["plugin_id"]
-        temp_plugin = plugin_repository.get_plugin_by_id(plugin_id)
         
         plugin_repository = PluginRepository(db)
         tag_repository = PluginTagRepository(db)
