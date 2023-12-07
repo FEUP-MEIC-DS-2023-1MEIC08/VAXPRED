@@ -70,12 +70,10 @@
       <mat-card-title>
         <h3>Categories</h3>
       </mat-card-title>
-      <mat-card-content *ngFor="let category of plugin.categories">
-        <div fxLayout="row" fxLayoutAlign="start center" class="category-container">
-          <img id="plugin-type-icon" [src]="'assets/plugin_types_icons/' + category + '.png'" alt="Plugin Type Icon" class="icon">
-          <p class="category-text">{{ category }}</p>
-        </div>
-      </mat-card-content>
+      <div fxLayout="row" fxLayoutAlign="start center" class="category-container">
+        <img id="plugin-category-icon" [src]="'assets/plugin_categories_icons/' + plugin.category + '.png'" alt="Plugin Category Icon" class="icon">
+        <p class="category-text">{{ plugin.category }}</p>
+      </div>
     </mat-card>
     
 

@@ -43,11 +43,11 @@ describe('SideFilterComponent', () => {
 			requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.',['Tag 1', 'Tag 2']),
 	]);
-    spyOn(toolService, 'getToolTypes').and.returnValue(['Data Quality', 'Data Curation', 'Synthetic Data Generation']);
+    spyOn(toolService, 'getToolCategoriess').and.returnValue(['Data Quality', 'Data Curation', 'Synthetic Data Generation']);
    
     component.items = toolService.getTools().slice();
     component.originalItems = toolService.getTools();
-    component.toolTypes = toolService.getToolTypes().slice();
+    component.toolCategories = toolService.getToolCategories().slice();
    
   });
 
@@ -107,8 +107,8 @@ describe('SideFilterComponent', () => {
     expect(component.items).toEqual(component.originalItems);
 
   });
-  it('should filter the list based on 1 selected tool types', () => {
-    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': false, 'Data Curation': true };
+  it('should filter the list based on 1 selected tool categoriess', () => {
+    component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': false, 'Data Curation': true };
     
     component.filterList();
 
@@ -120,8 +120,8 @@ describe('SideFilterComponent', () => {
     expect(component.items).toEqual(expected_List);
   });
 
-  it('should filter the list based on 2 selected tool types', () => {
-    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+  it('should filter the list based on 2 selected tool categories', () => {
+    component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     console.log("Initial Component list")
     console.log(component.items)
     component.filterList();
@@ -143,8 +143,8 @@ describe('SideFilterComponent', () => {
 
   });
 
-  it('should filter the list based on 2 selected tool types and order the list in descending order', () => {
-    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+  it('should filter the list based on 2 selected tool categories and order the list in descending order', () => {
+    component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     component.filterList();
     component.sortingOption = 'zToA';
     component.toggleSorting();
@@ -164,8 +164,8 @@ describe('SideFilterComponent', () => {
     expect(component.items).toEqual(expected_List);
   });
 
-  it('should filter the list based on 2 selected tool types and order the list in descending order and then reset', () => {
-    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+  it('should filter the list based on 2 selected tool categories and order the list in descending order and then reset', () => {
+    component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
     component.filterList();
     component.sortingOption = 'zToA';
     component.toggleSorting();
@@ -212,8 +212,8 @@ describe('SideFilterComponent', () => {
     expect(component.items).toEqual(expected_List);
   });
 
-  it('should filter the list based on 1 selected Tool type and 1 selected Tag', () => {
-    component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': false };
+  it('should filter the list based on 1 selected Tool category and 1 selected Tag', () => {
+    component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': false };
     component.selectedTags = { 'Tag 1': false, 'Tag 2': true, 'Tag 3': false };
 
     component.filterList();

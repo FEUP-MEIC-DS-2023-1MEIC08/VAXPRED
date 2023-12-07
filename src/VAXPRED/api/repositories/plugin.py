@@ -10,7 +10,7 @@ class PluginRepository:
         self.db = db
 
     def create_plugin(self, name: str, version: str, description: str, developer: str, supplier_name: str,
-                      supplier_email: str, price: int, type: str, contract_duration: Optional[int] = None) -> Plugin:
+                      supplier_email: str, price: int, category: str, contract_duration: Optional[int] = None) -> Plugin:
         plugin = Plugin(
             name=name,
             version=version,
@@ -21,7 +21,7 @@ class PluginRepository:
             contract_duration=contract_duration,
             search_text=name + description,
             price=price,
-            type=type
+            category=category
         )
         self.db.add(plugin)
         self.db.commit()
@@ -54,7 +54,7 @@ class PluginRepository:
             self.db.commit()
 
     def update_plugin(self, plugin_id: int, name: str, version: str, description: str, developer: str,
-                      supplier_name: str, supplier_email: str, price: int, type: str,
+                      supplier_name: str, supplier_email: str, price: int, category: str,
                       contract_duration: Optional[int] = None) -> Plugin:
 
         existing_plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
@@ -72,7 +72,7 @@ class PluginRepository:
         existing_plugin.contract_duration = contract_duration
         existing_plugin.search_text = name + description
         existing_plugin.price = price
-        existing_plugin.type = type
+        existing_plugin.category = category
         self.db.commit()
         return existing_plugin
 
