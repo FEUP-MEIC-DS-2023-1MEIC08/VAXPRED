@@ -14,7 +14,7 @@ class UserPlugin(BaseModel):
     supplier_email: str
     contract_duration: Optional[int]
     price: int
-    type: str
+    category: str
     plugin_id: int
     association_date: datetime
     duration: Optional[int]
@@ -22,8 +22,7 @@ class UserPlugin(BaseModel):
     faqs: List[Dict[str, str]]
     images: List[str]
 
-class PluginWithCategories(UserPlugin):
-    categories: List[str]
+class PluginWithTags(UserPlugin):
     tags: List[str]
 
 class UserPluginList(BaseModel):
