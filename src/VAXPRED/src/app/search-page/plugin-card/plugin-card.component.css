@@ -53,6 +53,7 @@
 .plugin-card:hover
 {
 	box-shadow: 0px 5px 10px lightgrey;
+	cursor: pointer;
 }
 
 .plugin-card-title
@@ -187,29 +188,11 @@ button {
 	font-size: 16px;
 }
 
-#view-details-button {
-	background-color: var(--details-button-color);
-	font-size: 16px;
-	font-weight: bold;
-}
-
-#view-details-button:hover a
-{
-	color: var(--details-button-text-color-hover);
-	font-weight: normal;
-}
-
-#view-details-button:hover {
-	border-color: var(--details-button-color);
-	background-color: var(--details-button-sec-color);
-}
-
 #download-button {
 	background-color: var(--download-button-color);
-	border-radius: 50%;
-	width: var(--download-button-radius);
+	border-radius: 50px;
 	height: var(--download-button-radius);
-	font-size: 100%;
+	font-size: 16px;
 	font-weight: bold;
 	color: var(--download-button-sec-color);
 }
