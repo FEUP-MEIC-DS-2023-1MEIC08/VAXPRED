@@ -40,7 +40,7 @@ export class Plugin
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
 		developer: string, release_date: Date, last_update_date: Date, type: string, 
-		tags: string[], contract_duration: number, faq: Object[])
+		tags: string[], contract_duration: number, faq: Object[], price?: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -67,6 +67,7 @@ export class Plugin
 			'Data Curation'
 		]
 		this.faq = faq;
+		this.price = price ? price : 0;
 
 		this.assembleDynamicData();
 	}

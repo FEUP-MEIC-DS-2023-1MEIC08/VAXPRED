@@ -12,14 +12,13 @@
 			<!-- Premium or Free badge -->
 			<div>
 				<span *ngIf="this.tool.price > 0; then thenBlock else elseBlock"></span>
-				<ng-template #thenBlock>
+				<ng-template #thenBlock class="tooltip-container">
 					<span class="badge" id="premium">PREMIUM</span>
-					<span tooltip-container>
-						<span class="tooltip">{{this.tool.type_description}}</span>
-					</span>
+					<span class="tooltip">This plugin requires payment to be used.</span>
 				</ng-template>
 				<ng-template #elseBlock>
 					<span class="badge" id="free" #elseBlock>FREE</span>
+					<span class="tooltip">You're free to install this plugin.</span>
 				</ng-template>
 			</div>
 			
