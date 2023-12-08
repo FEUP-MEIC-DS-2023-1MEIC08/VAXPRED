@@ -38,7 +38,7 @@ def get_plugins(search: str = params.Query(None), db: Session = Depends(get_db))
         plugin_id = plugin.id
         categories = category_repository.get_categories_by_plugin_id(plugin_id)
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
-        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
         images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
@@ -79,7 +79,7 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
     plugin = plugin_repository.get_plugin_by_id(plugin_id)
     categories = category_repository.get_categories_by_plugin_id(plugin_id)
     tags = tag_repository.get_tags_by_plugin_id(plugin_id)
-    dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+    dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
     faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
     images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
@@ -116,12 +116,18 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
     plugin_dependencies_repository = PluginDependencyRepository(db)
     plugin_faqs_repository = PluginFaqRepository(db)
 
-    if any(count > 1 for count in Counter(plugin.dependencies).values()):
-        raise HTTPException(status_code=422, detail="Duplicate dependencies are not allowed")
+    tempDepend = []
+    for dependency in plugin.dependencies:
+        if dependency[0] in tempDepend:
+            raise HTTPException(status_code=409, detail="Plugin with this name already exists")
+        else:
+            tempDepend.append(dependency[0])
 
     existing_plugin = plugin_repository.get_plugin_by_name(plugin.name)
     if existing_plugin:
         raise HTTPException(status_code=409, detail="Plugin with this name already exists")
+    
+    
 
     new_plugin = plugin_repository.create_plugin(
         name=plugin.name,
@@ -137,7 +143,7 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
 
     dependencies = plugin.dependencies
     for dependency in dependencies:
-        plugin_dependencies_repository.create_dependency(plugin_id=new_plugin.id, dependency_name=dependency)
+        plugin_dependencies_repository.create_dependency(plugin_id=new_plugin.id, dependency_name=dependency[0],dependency_vendor=dependency[1],dependency_version=dependency[2])
 
     faqs = plugin.faqs
     plugin_faqs_repository.create_faqs(plugin_id=new_plugin.id, faqs=faqs)
@@ -151,8 +157,6 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
     plugin_repository = PluginRepository(db)
     plugin_dependencies_repository = PluginDependencyRepository(db)
     plugin_faqs_repository = PluginFaqRepository(db)
-
-    unique_dependencies = list(set(plugin_update.dependencies))
 
     updated_plugin = plugin_repository.update_plugin(
         plugin_id,
@@ -170,7 +174,7 @@ def update_plugin(plugin_id: int, plugin_update: PluginUpdate, db: Session = Dep
     if updated_plugin is None:
         raise HTTPException(status_code=404, detail="Plugin not found")
 
-    plugin_dependencies_repository.update_dependencies(plugin_id=plugin_id, new_dependencies=unique_dependencies)
+    plugin_dependencies_repository.update_dependencies(plugin_id=plugin_id, new_dependencies=plugin_update.dependencies)
     plugin_faqs_repository.update_faqs(plugin_id=plugin_id, new_faqs=plugin_update.faqs)
 
     return updated_plugin

@@ -94,6 +94,8 @@ class PluginDependency(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
+    vendor = Column(String, nullable = False)
+    version = Column(String, nullable = False)
     plugin_id = Column(Integer, ForeignKey("plugins.id"))
 
     plugins = relationship("Plugin", back_populates="dependencies")
