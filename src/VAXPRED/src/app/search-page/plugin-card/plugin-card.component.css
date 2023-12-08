@@ -52,7 +52,7 @@
 .plugin-card
 {
 	font-family: Roboto, "Helvetica Neue", sans-serif;
-	width: 95%;
+	width: 23rem;
 	margin: 5px;
 	border: solid;
 	border-width: 1px;
@@ -86,7 +86,7 @@
 
 .plugin-card-title
 {
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	font-weight: normal;
 	margin: 0;
 }
