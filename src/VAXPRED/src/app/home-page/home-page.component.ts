@@ -4,15 +4,15 @@ import { ToolService } from 'src/app/plugin.service';
 
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+	selector: 'app-home-page',
+	templateUrl: './home-page.component.html',
+	styleUrls: ['./home-page.component.css']
 })
 
 
 export class HomePageComponent {
 
-  items: Plugin[] = [];
+	items: Plugin[] = [];
 	originalItems: Plugin[] = [];
 	sortingOption: string = 'original';
 	isRadioSelected: boolean = false;
@@ -21,12 +21,11 @@ export class HomePageComponent {
 	tags: string[] = [];
 	selectedTags: { [key: string]: boolean } = {};
 
-  constructor(private toolService: ToolService)
-	{
+	constructor(private toolService: ToolService) {
 		this.toolService.getPlugins().subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
 				const index = Math.floor(Math.random() * 3);
-				
+
 				this.items.push(
 					new Plugin(
 						plugin.id,
@@ -52,9 +51,9 @@ export class HomePageComponent {
 	}
 
 
-  	/**
-	 * Filters the list based on the selected tool type and the tag
-	 */
+	/**
+ * Filters the list based on the selected tool type and the tag
+ */
 	filterList(): void {
 		const selectedTypes = Object.keys(this.selectedToolTypes).filter((type) => this.selectedToolTypes[type]);
 		const selectedTags = Object.keys(this.selectedTags).filter((tag) => this.selectedTags[tag]);
@@ -66,13 +65,11 @@ export class HomePageComponent {
 		});
 	}
 
-  categories = ['Placeholder 1', 'Placeholder 2', 'Placeholder 3'];
-  elements = [
-    ['Element 1.1', 'Element 1.2', 'Element 1.3', 'Element 1.4', 'Element 1.5', 'Element 1.6', 'Element 1.7', 'Element 1.8'],
-    ['Element 2.1', 'Element 2.2', 'Element 2.3'],
-    ['Element 3.1', 'Element 3.2', 'Element 3.3']
-  ];
-  testTags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9'];
-
-
+	categories = ['Placeholder 1', 'Placeholder 2', 'Placeholder 3'];
+	elements = [
+		['Element 1.1', 'Element 1.2', 'Element 1.3', 'Element 1.4', 'Element 1.5', 'Element 1.6', 'Element 1.7', 'Element 1.8'],
+		['Element 2.1', 'Element 2.2', 'Element 2.3'],
+		['Element 3.1', 'Element 3.2', 'Element 3.3']
+	];
+	testTags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9'];
 }
