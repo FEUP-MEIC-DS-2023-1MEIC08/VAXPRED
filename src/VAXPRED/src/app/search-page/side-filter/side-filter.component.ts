@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Plugin } from 'src/app/plugin';
 import { ToolService } from 'src/app/plugin.service';
 
@@ -17,10 +17,9 @@ export class SideFilterComponent {
 	tags: string[] = [];
 	selectedTags: { [key: string]: boolean } = {};
 
-	constructor(private toolService: ToolService)
-	{
+	constructor(private toolService: ToolService) {
 		this.toolService.getPlugins().subscribe((data: any) => {
-			data.plugins.forEach((plugin: any) => {				
+			data.plugins.forEach((plugin: any) => {
 				this.items.push(
 					new Plugin(
 						plugin.id,
@@ -32,17 +31,17 @@ export class SideFilterComponent {
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
 						plugin.type,
-						plugin.tags,		
+						plugin.tags,
 						plugin.contract_duration,
 						plugin.faqs,
-						plugin.price	
+						plugin.price
 					));
 			});
 
 			this.originalItems = this.items.slice();
 		});
 
-		this.toolTypes = this.toolService.getToolTypes();		
+		this.toolTypes = this.toolService.getToolTypes();
 	}
 
 	/**
