@@ -58,6 +58,7 @@
 	border-width: 1px;
 	border-radius: 2%;
 	border-color: #BBBBBB;
+	background-color: #F7F7F7;
 	position: relative;
 	min-height: 85%;
 }
@@ -72,14 +73,14 @@
 
 .plugin-card-image
 {
-	background-color: #FFFFFF;
+	background-color: #777777;
 }
 
 /************************************ PLUGIN CARD BODY ************************************/
 
 .plugin-card-body
 {
-	background-color: #F0F0F0;
+	background-color: #FFFFFF;
 	padding: 15px;
 	position: relative;
 }
