@@ -26,7 +26,6 @@ export class Plugin
 	release_date: Date;
 	last_update_date: Date;
 	type: string;
-	type_icon!: string;
 	type_description!: string;
 	tags: string[];
 	contract_duration: number;
@@ -37,6 +36,7 @@ export class Plugin
 	];
 	categories: string[]; 
 	faq: Object[];
+	css_id!: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
 		developer: string, release_date: Date, last_update_date: Date, type: string, 
@@ -84,7 +84,14 @@ export class Plugin
 				data by training an AI on real world data samples.'
 		}
 
-		this.type_icon = 'assets/plugin_types_icons/' + this.type + '.png';
+		const css_ids: any =
+		{
+			'Data Quality': 'data-quality',
+			'Data Curation': 'data-curation',
+			'Synthetic Data Generation': 'synthetic-data-generation'
+		}
+
+		this.css_id = css_ids[this.type];
 		this.type_description = types_descriptions[this.type];
 		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}

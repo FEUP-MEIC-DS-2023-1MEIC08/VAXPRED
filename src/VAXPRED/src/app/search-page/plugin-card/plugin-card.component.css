@@ -9,22 +9,17 @@
 	--download-button-radius: 45px;
 }
 
-
-.pricing-badge
-{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-}
+/************************************ BADGES ************************************/
 
 .badge
 {
     padding: 5px 8px;
+	margin: 0px 5px 0px 0px;
     border-radius: 50px;
     font-size: 12px;
     font-weight: bold;
     color: #fff;
+	text-transform: uppercase;
 }
 
 .badge#free
@@ -37,23 +32,56 @@
 	background-color: #FF7777;
 }
 
+.badge#data-curation
+{
+	background-color: #00BBAA;
+}
+
+.badge#data-quality
+{
+	background-color: #FFAA00;
+}
+
+.badge#synthetic-data-generation
+{
+	background-color: #8a48f3;
+}
+
+/************************************ PLUGIN CARD ************************************/
+
 .plugin-card
 {
 	font-family: Roboto, "Helvetica Neue", sans-serif;
-	width: 21rem;
+	width: 95%;
 	margin: 5px;
 	border: solid;
 	border-width: 1px;
-	border-radius: 5%;
+	border-radius: 2%;
 	border-color: #BBBBBB;
-	padding: 20px;
 	position: relative;
+	min-height: 85%;
 }
 
 .plugin-card:hover
 {
 	box-shadow: 0px 5px 10px lightgrey;
 	cursor: pointer;
+}
+
+/************************************ PLUGIN CARD IMAGE ************************************/
+
+.plugin-card-image
+{
+	background-color: #FFFFFF;
+}
+
+/************************************ PLUGIN CARD BODY ************************************/
+
+.plugin-card-body
+{
+	background-color: #F0F0F0;
+	padding: 15px;
+	position: relative;
 }
 
 .plugin-card-title
@@ -74,9 +102,11 @@
 .plugin-card-text
 {
 	line-height: 25px;
-	max-height: 20px;
-	overflow: hidden;
 	text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .plugin-details {
@@ -86,32 +116,18 @@
     margin-top: 10px;
 }
 
-.plugin-price {
-    font-size: 14px;
-}
-
-a
+.plugin-badges
 {
-	text-decoration: none;
-	color: #FFFFFF
-}
-
-#plugin-image
-{
-	width: 100%;
+	display: flex;
+	margin-top: 10px;
+	justify-content: left;
+	align-items: center;
 }
 
 #plugin-type-icon
 {
 	width: 30px;
 	height: 30px;
-}
-
-.plugin-icon
-{
-    position: absolute;
-	top: 10px;
-	right: 10px;
 }
 
 .tooltip
@@ -125,7 +141,7 @@ a
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -133,9 +149,17 @@ a
 }
 
 /* Tooltip text - show on hover */
-.plugin-icon:hover .tooltip {
+.tooltip-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/************************************ GENERAL ************************************/
+
+a
+{
+	text-decoration: none;
+	color: #FFFFFF
 }
 
 .m-5 {
@@ -160,6 +184,10 @@ a
 
 .w-75 {
 	width: 75%;
+}
+
+.w-50 {
+	width: 50%;
 }
 
 .d-flex {
