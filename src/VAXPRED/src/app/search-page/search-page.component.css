@@ -1,9 +1,9 @@
- .results-page {
+/* .results-page {
     display: flex;
     align-items: flex-start;
   } 
   
-/*   .filter-section {
+   .filter-section {
     flex: 1; // Adjust the width as needed 
     float: left;
   }
