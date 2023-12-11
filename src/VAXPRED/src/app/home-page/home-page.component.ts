@@ -46,7 +46,6 @@ export class HomePageComponent {
 		
 		this.toolService.getCategoryPlugins(categoryId).subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
-				const index = Math.floor(Math.random() * 3);
 				if (items.length < 4) {
 					items.push(
 						new Plugin(
@@ -58,13 +57,13 @@ export class HomePageComponent {
 							plugin.developer,
 							new Date(plugin.release_date),
 							new Date(plugin.last_update_date),
-							['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index], // to be integrated with the backend
+							plugin.type,
 							plugin.tags,
 							plugin.contract_duration,
-							plugin.faqs
+							plugin.faqs,
+							plugin.categories
 						));	
 				}
-				
 			});
 		});
 		this.categoryPlugins[categoryId] = items;

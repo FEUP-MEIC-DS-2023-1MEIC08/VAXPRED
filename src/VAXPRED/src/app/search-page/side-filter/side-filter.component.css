@@ -11,8 +11,13 @@
 	padding: 20px;
 	margin-top: 100px;
 	flex: 1fr;
-	max-height: 80vh; /* Adjust the maximum height according to your needs */
+	max-height: auto; /* Adjust the maximum height according to your needs */
     overflow: auto;
+}
+
+:host .submit-button {
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* Heading Styles */
