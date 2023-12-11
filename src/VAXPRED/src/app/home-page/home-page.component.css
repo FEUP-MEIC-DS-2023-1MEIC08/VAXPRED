@@ -1,7 +1,8 @@
 /* app.component.css */
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+
 }
 
 .category-header {
@@ -18,10 +19,11 @@
   vertical-align: middle;
 }
 
-.search-bar {
-  width: 50%;
-  padding: 10px;
-  margin: 20px auto; 
+.category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .category {
@@ -45,7 +47,7 @@
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 10px;
   margin: 20px auto; /* updated */
-  width: 80%; /* specify a width */
+  width: 100%; /* specify a width */
 }
 
 .tag-grid button {

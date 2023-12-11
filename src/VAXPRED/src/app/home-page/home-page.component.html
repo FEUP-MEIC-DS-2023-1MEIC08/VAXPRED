@@ -1,6 +1,6 @@
 <!-- app.component.html -->
 <div class="container">
-  <h1>Marketplace</h1>
+   <h1>Marketplace</h1>
     <div *ngFor="let category of categories; let i = index" class="category">
       <div class="category-header">
         <h2>{{ category[0] }}</h2>
@@ -8,12 +8,12 @@
           <mat-icon>keyboard_arrow_right</mat-icon>
         </a>
       </div>
-      <div class="scroll-container">
-        <app-plugin-card *ngFor="let tool of categoryPlugins[category[1]]" [tool]="tool" ></app-plugin-card>      
-      </div>
+    <div class="category-row">
+    <app-plugin-card *ngFor="let tool of categoryPlugins[category[1]]" [tool]="tool" ></app-plugin-card>
+    </div> 
     </div>
     <h2>Filter by Tag</h2>
     <div class="tag-grid">
       <button *ngFor="let tag of testTags">{{ tag }}</button>
-    </div>
+    </div> 
   </div>
