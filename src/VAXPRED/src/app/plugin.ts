@@ -36,10 +36,11 @@ export class Plugin
 		{ name: 'Docker', version: '24.0', vendor: 'Docker Inc.' }
 	];
 	faq: Object[];
+	css_id!: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
 		developer: string, release_date: Date, last_update_date: Date, category: string, 
-		tags: string[], contract_duration: number, faq: Object[])
+		tags: string[], contract_duration: number, faq: Object[], price?: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -61,6 +62,7 @@ export class Plugin
 		this.tags = tags;
 		this.contract_duration = contract_duration;
 		this.faq = faq;
+		this.price = price ? price : 0;
 
 		this.assembleDynamicData();
 	}
@@ -80,6 +82,14 @@ export class Plugin
 
 		this.category_icon = 'assets/plugin_categories_icons/' + this.category + '.png';
 		this.category_description = categories_descriptions[this.category];
+		const css_ids: any =
+		{
+			'Data Quality': 'data-quality',
+			'Data Curation': 'data-curation',
+			'Synthetic Data Generation': 'synthetic-data-generation'
+		}
+
+		this.css_id = css_ids[this.category];
 		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }
