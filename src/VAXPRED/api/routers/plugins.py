@@ -1,5 +1,3 @@
-from collections import Counter
-
 from fastapi import APIRouter, HTTPException, Depends, params
 from sqlalchemy.orm import Session
 from database import get_db
@@ -120,8 +118,6 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
     if existing_plugin:
         raise HTTPException(status_code=409, detail="Plugin with this name already exists")
     
-    
-
     new_plugin = plugin_repository.create_plugin(
         name=plugin.name,
         version=plugin.version,
