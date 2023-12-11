@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Plugin } from './plugin';
 
 @Injectable({
   providedIn: 'root'
@@ -22,10 +23,9 @@ export class UserProfileService {
     // fetch the plugin IDs subscribed by the user.
     return this.http.get('http://localhost:8000/users/' + id + '/plugins/').pipe(
       switchMap((pluginIds: any) => {
-        console.log(pluginIds);
         var plugins = [];
         for (let plugin of pluginIds.associations) {
-          plugins.push(this.http.get('http://localhost:8000/plugins/' + plugin['plugin_id'] + '/'));
+          plugins.push(this.http.get('http://localhost:8000/plugins/' + plugin.id + '/'));
         }
         return forkJoin(plugins);
       })
