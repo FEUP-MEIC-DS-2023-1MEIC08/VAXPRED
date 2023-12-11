@@ -184,17 +184,16 @@ insert into users (username, email) values ('sbausor2q', 'wkyncl2q@photobucket.c
 insert into users (username, email) values ('elindfors2r', 'jglyne2r@salon.com');
 
 
-insert into plugin_dependency (name, plugin_id) values ('Lisinopril', 1);
-insert into plugin_dependency (name, plugin_id) values ('Titanium Dioxide, Octinoxate/EthylhexylMethoxycinnamate', 2);
-insert into plugin_dependency (name, plugin_id) values ('Titanium Dioxide and Zinc Oxide', 3);
-insert into plugin_dependency (name, plugin_id) values ('Methyl Salicylate, Capsaicin, and Menthol',4);
-insert into plugin_dependency (name, plugin_id) values ('Donepezil Hydrochloride', 5);
-insert into plugin_dependency (name, plugin_id) values ('perphenazine', 6);
-insert into plugin_dependency (name, plugin_id) values ('lamotrigine', 7);
-insert into plugin_dependency (name, plugin_id) values ('Carbon Dioxide', 8);
-insert into plugin_dependency (name, plugin_id) values ('Cetirizine Hydrochloride', 9);
-insert into plugin_dependency (name, plugin_id) values ('PRAVASTATIN SODIUM', 10);
-
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Lisinopril', 'Oyope', '0.37', 1);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Titanium Dioxide ','AquaTech', '2.1.0', 2);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Zinc Dioxide', 'NanoBlend', '3.0.5', 3);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Methyl Salicylate','BioCool', '4.2.3', 4);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Donepezil Hydrochloride', 'MindSharp', '5.1.0', 5);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('perphenazine', 'NeuroFusion', '6.0.2', 6);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('lamotrigine', 'SynthoLife', '7.3.1', 7);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Carbon Dioxide', 'EcoPure', '8.0.0', 8);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('Cetirizine Hydrochloride', 'AllerGuard', '9.2.5', 9);
+insert into plugin_dependency (name, vendor, version, plugin_id) values ('PRAVASTATIN SODIUM', 'CardioCare', '10.1.3', 10);
 
 INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('What is this Plugin?', 'This Plugin is a powerful tool that helps with...', 1);
 INSERT INTO plugin_faq (question, answer, plugin_id) VALUES ('How do I install this Plugin?', 'To install this Plugin, you need to follow these steps...',1);

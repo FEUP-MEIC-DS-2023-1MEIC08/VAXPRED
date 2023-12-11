@@ -37,7 +37,7 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
 
         plugin = plugin_repository.get_plugin_by_id(plugin_id)
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
-        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
         images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
