@@ -34,6 +34,7 @@ export class SideFilterComponent {
 						plugin.tags,
 						plugin.contract_duration,
 						plugin.faqs,
+						plugin.categories,
 						plugin.price
 					));
 			});

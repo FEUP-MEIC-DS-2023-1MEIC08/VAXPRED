@@ -10,7 +10,7 @@ import { ToolService } from '../plugin.service';
 })
 export class PluginPageComponent {
   selectedTab: number = 0;
-  plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, []);
+  plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, [], []);
   constructor(
     public dialogRef: MatDialogRef<PluginPageComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent, any>; plugin: Plugin },

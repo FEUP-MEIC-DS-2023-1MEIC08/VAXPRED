@@ -39,7 +39,8 @@ export class HomePageComponent {
 						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
 						plugin.tags,
 						plugin.contract_duration,
-						plugin.faqs
+						plugin.faqs,
+						plugin.categories
 					));
 			});
 
