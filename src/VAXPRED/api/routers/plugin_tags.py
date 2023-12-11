@@ -3,10 +3,8 @@ from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin_tag import PluginTagRepository
 from repositories.plugin import PluginRepository
-from repositories.plugin import PluginRepository
 from repositories.plugin_dependencies import PluginDependencyRepository
 from repositories.plugin_faqs import PluginFaqRepository
-from repositories.plugin_tag import PluginTagRepository
 from repositories.plugin_image import PluginImageRepository
 from schemas.plugin import PluginListResponse, PluginResponse
 
