@@ -15,6 +15,7 @@ class UserPlugin(BaseModel):
     contract_duration: Optional[int]
     price: int
     category: str
+    changelog: str
     plugin_id: int
     association_date: datetime
     duration: Optional[int]

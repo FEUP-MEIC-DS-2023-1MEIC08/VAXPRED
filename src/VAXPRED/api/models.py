@@ -50,6 +50,7 @@ class Plugin(Base):
     search_text = Column(String, default='')
     price = Column(Integer, nullable=False)
     category = Column(String, nullable=False)
+    changelog = Column(String, nullable=True)
 
     users = relationship("User", secondary=user_plugin_association, back_populates="plugins")
     tags = relationship("Tag", secondary=plugin_tag_association, back_populates="plugins")

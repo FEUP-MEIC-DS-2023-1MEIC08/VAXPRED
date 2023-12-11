@@ -8,6 +8,7 @@
  * @param {Date} release_date when the plugin was released
  * @param {Date} last_update_date when the last update was made
  * @param {string} category the category of the plugin
+ * @param {string} changelog the changelog of the plugin
  * @param {string[]} tags the tags of the plugin
  * @param {Object[]} faq the FAQ of the plugin
  * @param {number} contract_duration the duration of the plugins's contract (in years)
@@ -28,6 +29,7 @@ export class Plugin
 	category: string;
 	category_icon!: string;
 	category_description!: string;
+	changelog: string;
 	tags: string[];
 	contract_duration: number;
 	// TODO: connect to db
@@ -39,7 +41,7 @@ export class Plugin
 	css_id!: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, category: string, 
+		developer: string, release_date: Date, last_update_date: Date, category: string, changelog: string, 
 		tags: string[], contract_duration: number, faq: Object[], price?: number)
 	{
 		this.id = id;
@@ -59,6 +61,7 @@ export class Plugin
 			'http://placekitten.com/502/300',
 		];
 		this.category = category;
+		this.changelog = changelog;
 		this.tags = tags;
 		this.contract_duration = contract_duration;
 		this.faq = faq;

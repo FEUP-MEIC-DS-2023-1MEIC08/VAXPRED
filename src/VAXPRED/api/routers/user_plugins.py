@@ -57,6 +57,7 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
             contract_duration=plugin.contract_duration,
             price=plugin.price,
             category=plugin.category,
+            changelog=plugin.changelog,
             tags=tags,
             dependencies=dependencies,
             faqs=faqs,

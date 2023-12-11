@@ -37,6 +37,7 @@ export class HomePageComponent {
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
 						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
+						plugin.changelog,
 						plugin.tags,
 						plugin.contract_duration,
 						plugin.faqs
