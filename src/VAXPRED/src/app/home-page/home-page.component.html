@@ -4,7 +4,7 @@
     <div *ngFor="let category of categories; let i = index" class="category">
       <div class="category-header">
         <h2>{{ category[0] }}</h2>
-        <a [routerLink]="'/search'" [queryParams]="{categories: category[0] }">See more
+        <a [routerLink]="'/search'" [queryParams]="{categories: category[1]}">See more
           <mat-icon>keyboard_arrow_right</mat-icon>
         </a>
       </div>

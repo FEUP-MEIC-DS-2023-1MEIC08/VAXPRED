@@ -16,8 +16,12 @@ export class SearchPageComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.selectedCategory = params['categories'] || '';
-     /*  this.selectedTag = params['tag'] || ""; // 
-      this.searchQuery = params['searchQuery'] || ''; */
+      console.log("Categories in searchpage: "+this.selectedCategory)
+      console.log(this.selectedCategory);
+      this.selectedTag = params['tags'] || ""; // 
+      console.log("Tags in searchpage: "+this.selectedTag)
+      console.log(this.selectedTag);
+      /*  this.searchQuery = params['searchQuery'] || ''; */
     });
   }
 }

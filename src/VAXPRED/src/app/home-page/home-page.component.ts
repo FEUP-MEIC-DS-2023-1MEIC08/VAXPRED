@@ -20,7 +20,7 @@ export class HomePageComponent {
   constructor(private toolService: ToolService)
 	{
 		
-		this.tags = this.toolService.getTags();
+		this.tags = ['Tag1','Tag2','Tag3']
 
 	 	this.toolService.getCategories().subscribe( (data: any) => {
 			data.categories.sort((a: any, b: any) => {

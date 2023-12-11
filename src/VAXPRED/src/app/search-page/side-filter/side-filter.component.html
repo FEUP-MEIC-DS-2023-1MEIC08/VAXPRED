@@ -1,4 +1,5 @@
 <aside class="filter-section">
+	<a [routerLink]="'/search'"  [queryParams]="{categories: sendSelectedToolTypes(), tags: sendSelectedTags()}" *ngIf="foundDifference()">AA</a>
 	<h4>Order By</h4>
 	<label>
 		<input type="radio" [(ngModel)]="sortingOption" [value]="'aToZ'" (change)="toggleSorting()"> Ascending (A-Z)
@@ -14,7 +15,7 @@
 		<h4><label for="toggle" class="collapsible-label">Category</label></h4>
 		<div class="content" [attr.list-size]="toolTypes.length">
 			<label *ngFor="let item of toolTypes">
-				<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" (change)="filterList()"> {{ item }}
+				<input type="checkbox" [(ngModel)]="selectedToolTypes[item]" [value]="item" > {{ item }}
 			</label>
 		</div>
 	</div>
@@ -25,7 +26,7 @@
 		<h4><label for="toggleTag" class="collapsible-label">Tag</label></h4>
 		<div class="content">
 			<label *ngFor="let item of tags">
-				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item" (change)="filterList()"> {{ item }}
+				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item"> {{ item }}
 			</label>
 		</div>
 	</div>
