@@ -4,9 +4,9 @@ import { ToolService } from 'src/app/plugin.service';
 
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+	selector: 'app-home-page',
+	templateUrl: './home-page.component.html',
+	styleUrls: ['./home-page.component.css']
 })
 
 
@@ -46,6 +46,7 @@ export class HomePageComponent {
 		
 		this.toolService.getCategoryPlugins(categoryId).subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
+				const index = Math.floor(Math.random() * 3);
 				items.push(
 					new Plugin(
 						plugin.id,
@@ -56,10 +57,10 @@ export class HomePageComponent {
 						plugin.developer,
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
-						'Data Quality',			// plugin.type,
-						[],		//plugin.tags
+						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index], // to be integrated with the backend
+						plugin.tags,
 						plugin.contract_duration,
-						true
+						plugin.faqs
 					));
 			});
 		});

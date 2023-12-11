@@ -44,10 +44,23 @@ We managed to prepare good user stories for the next sprint's planning.
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+* As a researcher, I want to be able to see a "Free" symbol, so that I can know which plugins are free for all the users.#162
+* As a researcher, I want to be able to see a "Premium" symbol, so that I can see which plugins are payed for industrial companies.#163
+
+The reason why is because I believe that the implementation of this features will make the user experience easier.
+
+### The two pull requests that I am most proud of
+
+No pull requests were made be me during this sprint, with the exception of rewriting the definition of Ready and Done to the docs folder.
+
+### Two contributions of other types that I am most proud of
+
+* Writing user stories with the other POs.
+* Meeting with the client.
 
 
-## Sprint 3
 
 ...
 

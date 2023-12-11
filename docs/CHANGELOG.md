@@ -1,0 +1,36 @@
+# Project Changelog
+
+This file contains the changelogs for each sprint release, each identified with a version number.
+
+## Sprint 1 Release: [v0.1](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/releases/tag/v0.1)
+
+- Created a functional backend for the application using FastAPI and SQLite
+- Created a functional frontend for the application using NodeJS and AngularJS
+- Added plugin store page
+- Added plugin information modal/popup
+- Added user (researcher) profile page
+
+Completed PBIs are marked with `Sprint 1` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
+
+## Sprint 2 Release [v0.2](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/releases/tag/v0.2)
+
+- Created and updated mockups in the project's Figma page
+- Added support for categories and tags for the plugins
+- Added new plugin fields and new search mechanisms
+- Updated plugin information popup
+- Updated plugin page with its dependencies and supplier information
+- Implemented grid layout for the plugin store
+- Added plugin search by tag or category
+- Added plugin search by name or other attributes
+- Added admin dashboard page (URL/admin)
+- Added ability to remove plugins from the store by the admin
+- Added ability for users to remove plugins from their profile page
+- Added ability for users to add plugins to their profile
+- Added page for error "page not found" (404)
+- Added GitHub Action as automatic code linter for frontend (CI/CD)
+- Added GitHub Action as automatic code linter for backend (CI/CD)
+- Added GitHub Action as automatic testing for frontend (CI/CD)
+- Added GitHub Action as automatic testing for backend (CI/CD)
+- Added GitHub Action as automatic app building with Docker (CI/CD)
+
+Completed PBIs are marked with `Sprint 2` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.

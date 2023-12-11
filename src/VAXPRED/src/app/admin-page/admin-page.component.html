@@ -1,39 +1,48 @@
-<div fxLayout="row" fxLayoutAlign="end start">
-    <div fxFlex="40%">
-      <mat-card class="plugin-card">
-        <mat-card-header class="plugin-title">
-          <h1 i18n="@@myPlugins">Plugins</h1>
-        </mat-card-header>
-        <mat-card-content>
-          <div class="plugin-container">
-            <div *ngFor="let plugin of plugins">
-              <mat-card class="plugin-cards">
-                <mat-card-content>
-                  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1.5em">
-                    <div fxFlex="15%" fxLayoutAlign="start center">
-                      <div mat-card-avatar class="plugin-icon"></div>
-                    </div>
-  
-                    <div fxFlex="15%" fxLayoutAlign="start center">
-                      <h5>ID: {{ plugin.id }}</h5>
-                    </div>
-  
-                    <div fxFlex="60%" fxLayoutAlign="start center">
-                      <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
-                    </div>
-  
-                    <div fxFlex="10%" fxLayoutAlign="end center">
-                      <button class="transparent-button plugin-button-icon" (click)="openConfirmationDialog(plugin)">
-                        <i class="plugin-button-close plugin-button-icon material-icons">close</i>
-                      </button>
-                    </div>
+<h1 id="header">Admin Panel</h1>
+<hr>
+<div fxLayout="row" fxLayoutAlign="space-around none">
+  <div fxFlex="40%">
+    <mat-card class="plugin-card">
+      <mat-card-header class="plugin-title">
+        <h1 i18n="@@myPlugins">Plugins</h1>
+        <button class="btn-new-plugin" (click)="openPluginForm(null)">
+          <a>
+            <span>New Plugin</span>
+          </a>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="plugin-container">
+          <div *ngFor="let plugin of plugins">
+            <mat-card class="plugin-cards">
+              <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1.5em">
+                  <div fxFlex="15%" fxLayoutAlign="start center">
+                    <div mat-card-avatar class="plugin-icon"></div>
                   </div>
-                </mat-card-content>
-              </mat-card>
-            </div>
+
+                  <div fxFlex="15%" fxLayoutAlign="start center">
+                    <h5>ID: {{ plugin.id }}</h5>
+                  </div>
+
+                  <div fxFlex="60%" fxLayoutAlign="start center">
+                    <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
+                  </div>
+
+                  <div fxFlex="10%" fxLayoutAlign="end center">
+                    <button class="transparent-button plugin-button-icon" (click)="openConfirmationDialog(plugin)">
+                      <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                    </button>
+                    <button class="transparent-button plugin-button-icon" (click)="openPluginForm(plugin)">
+                      <i class="plugin-button-edit plugin-button-icon material-icons">edit</i>
+                    </button>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
           </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-  
+</div>

@@ -26,3 +26,17 @@ hr {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
 }
+
+.category-container {
+    display: flex;
+    align-items: center;
+}
+  
+.icon {
+    max-width: 20px; /* Adjust the maximum width of the icon */
+    height: auto; /* Maintain aspect ratio */
+}
+  
+.category-text {
+    margin-left: 10px; /* Add margin between the icon and text */
+}

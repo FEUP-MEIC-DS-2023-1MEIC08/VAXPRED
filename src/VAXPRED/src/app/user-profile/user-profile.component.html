@@ -1,64 +1,69 @@
-<div fxLayout="column" fxLayoutGap="10px">
-
-  <div fxLayout="row" class="user-profile">
-    <div class="img" fxFlex="7.5%">
-      <img src="../../assets/img/default_pic.png" alt="User Avatar">
-    </div>
-    <div fxFlex="7.5%">
-      <h2 name="userName" class="mb-0">{{user.name}}</h2>
-      <p name="userTitle" class="fw-medium m-0">{{user.title}}</p>
-      <p name="userOrg" class="m-0">{{user.org}}</p>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxFlex="40%" class="user-profile">
+    <mat-card>
+      <mat-card-content>
+        <div class="img alignCenter">
+          <img src="../../assets/img/default_pic.png" alt="User Avatar">
+        </div>
+        <h1 class="alignCenter" name="userName">{{user.name}}</h1>
+        <p class="alignCenter" name="userEmail">{{user.email}}</p>
+        <div class="alignCenter" *ngIf="user.isAdmin">
+          <p name="userAdmin">
+            <a routerLink="/admin" mat-raised-button color="primary">
+              Admin Panel
+            </a>
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-
-  <div fxLayout="row">
-    <div fxFlex="100%">
-      <mat-card class="plugin-card">
-        <mat-card-header class="plugin-title">
-          <h2 i18n="@@myPlugins">My Plugins</h2>
-        </mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-card-content>
-          <div class="plugin-container">
-            <div class="grid">
-              <div *ngFor="let plugin of plugins">
-                <mat-card class="plugin-cards">
-                  <mat-card-content>
-                    <div fxLayout="column">
-                      <div fxLayout="row" fxLayoutGap="10px">
-                        <div fxFlex="50%">
-                          <div mat-card-avatar class="plugin-icon"></div>
-                        </div>
-                        <div fxFlex="50%">
-                          <button class="transparent-button plugin-button-icon" (click)="removePlugin(plugin)">
-                            <i class="plugin-button-close plugin-button-icon material-icons">close</i>
-                          </button>
-                        </div>
+  <div fxFlex="60%" class="plugins-list">
+    <mat-card>
+      <mat-card-header class="alignCenter">
+        <h1 i18n="@@myPlugins">My Plugins</h1>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="plugin-container">
+          <div class="grid">
+            <p *ngIf="isLoading" class="alignCenter" i18n="@@noPlugins">Loading...</p>
+            <p *ngIf="plugins.length == 0 && !isLoading" class="alignCenter" i18n="@@noPlugins">No plugins installed</p>
+            <div *ngFor="let plugin of plugins">
+              <mat-card>
+                <mat-card-content>
+                  <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="10px">
+                      <div fxFlex="50%">
+                        <div mat-card-avatar class="plugin-icon"></div>
                       </div>
-                      <div fxLayout="row">
-                        <div fxFlex="100%">
-                          <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
-                        </div>
-                      </div>
-                      <div fxLayout="row" fxLayoutGap="10px">
-                        <div fxFlex="50%">
-                          <p name="pluginDescription" cCardText>{{ plugin.description }}</p>
-                        </div>
-                        <div fxFlex="50%">
-                          <a routerLink="/plugincontainer/{{user.id}}/{{plugin.id}}" target="_blank">
-                            <i class="plugin-button-icon material-icons">arrow_outward</i>
-                          </a>
-                        </div>
+                      <div fxFlex="50%">
+                        <button class="transparent-button plugin-button-icon" (click)="openConfirmationDialog(plugin)">
+                          <i class="plugin-button-close plugin-button-icon material-icons">close</i>
+                        </button>
                       </div>
                     </div>
-                  </mat-card-content>
-                </mat-card>
-              </div>
+                    <div fxLayout="row">
+                      <div fxFlex="100%">
+                        <h5 name="pluginName" cCardTitle>{{ plugin.name }}</h5>
+                      </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px">
+                      <div fxFlex="50%">
+                        <p name="pluginDescription" cCardText>{{ plugin.description }}</p>
+                      </div>
+                      <div fxFlex="50%">
+                        <a routerLink="/plugincontainer/{{user.id}}/{{plugin.id}}" target="_blank">
+                          <i class="plugin-button-icon material-icons">arrow_outward</i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
             </div>
           </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-
 </div>

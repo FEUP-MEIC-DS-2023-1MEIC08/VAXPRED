@@ -1,22 +1,32 @@
-<div class="plugin-card">
+<div class="plugin-card" (click)="openDialog()">
 	<div class="m-5">
-		<img id="plugin-image" [src]="this.tool.logo" [alt]="this.tool.name">
+		<img class="w-100" [src]="this.tool.logo" [alt]="this.tool.name">
 	</div>
 
 	<div class="plugin-card-body">
 		<h5 class="plugin-card-title">{{ this.tool.name }}</h5>
-		<h6 class="plugin-card-subtitle mb-2"> {{ this.tool.type }} </h6>
-		<p class="plugin-card-text"> {{ this.tool.description }} </p>
-		<div class="d-flex w-100 justify-content-around" *ngIf="!this.tool.smallSize">
-			<button id="view-details-button" class="btn rounded-pill w-85" (click)="openDialog()">
-				<a>
-					<span>View details</span>
-					<span class="ms-2 fa fa-arrow-right"></span>
-				</a>
-			</button>
-			<button id="download-button" class="btn">
-				<a><span class="fa fa-cloud-download"></span></a>
-			</button>
+		<h6 class="plugin-card-subtitle mt-2"> {{ this.tool.developer }} </h6>
+		<div class="plugin-card-text"> {{ this.tool.description }} </div>
+
+		<div class="plugin-badges">
+			<!-- Premium or Free badge -->
+			<div>
+				<span *ngIf="this.tool.price > 0; then thenBlock else elseBlock"></span>
+				<ng-template #thenBlock class="tooltip-container">
+					<span class="badge" id="premium">PREMIUM</span>
+					<span class="tooltip">This plugin requires payment to be used.</span>
+				</ng-template>
+				<ng-template #elseBlock>
+					<span class="badge" id="free" #elseBlock>FREE</span>
+					<span class="tooltip">You're free to install this plugin.</span>
+				</ng-template>
+			</div>
+			
+			<!-- Plugin type badge -->
+			<div class="tooltip-container">
+				<span class="badge" [id]="this.tool.css_id">{{this.tool.type}}</span>
+				<span class="tooltip">{{this.tool.type_description}}</span>
+			</div>
 		</div>
 	</div>
 </div>

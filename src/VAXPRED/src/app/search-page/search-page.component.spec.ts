@@ -1,10 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { SearchPageComponent } from './search-page.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+import { PluginCardComponent } from './plugin-card/plugin-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
+const mockActivatedRoute = {
+  snapshot: {
+    paramMap: {
+      get: () => 'mockValue',
+    },
+  },
+};
 describe('SearchPageComponent', () => {
   let component: SearchPageComponent;
   let fixture: ComponentFixture<SearchPageComponent>;

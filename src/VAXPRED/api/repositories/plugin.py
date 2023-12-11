@@ -4,21 +4,24 @@ from models import Plugin
 from datetime import datetime
 import pytz
 
+
 class PluginRepository:
     def __init__(self, db: Session):
         self.db = db
 
-  
-    def create_plugin(self, name: str, version: str, description: str, developer: str, supplier_name: str, supplier_email: str, contract_duration: Optional[int] = None ) -> Plugin:
+    def create_plugin(self, name: str, version: str, description: str, developer: str, supplier_name: str,
+                      supplier_email: str, price: int, type: str, contract_duration: Optional[int] = None) -> Plugin:
         plugin = Plugin(
-            name = name,
-            version = version,
-            description = description,
-            developer = developer,
-            supplier_name = supplier_name,
-            supplier_email = supplier_email,
-            contract_duration = contract_duration,
-            search_text = name + description
+            name=name,
+            version=version,
+            description=description,
+            developer=developer,
+            supplier_name=supplier_name,
+            supplier_email=supplier_email,
+            contract_duration=contract_duration,
+            search_text=name + description,
+            price=price,
+            type=type
         )
         self.db.add(plugin)
         self.db.commit()
@@ -44,13 +47,16 @@ class PluginRepository:
     def get_all_plugins_search(self,search) -> List[Plugin]:
         return self.db.query(Plugin).filter(Plugin.search_text.contains(search)).all()
 
-    def delete_plugin_by_id(self, plugin_id : int) -> None:
+    def delete_plugin_by_id(self, plugin_id: int) -> None:
         plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
         if plugin is not None:
             self.db.delete(plugin)
             self.db.commit()
 
-    def update_plugin(self, plugin_id: int, name: str, version: str, description : str, developer: str, supplier_name: str, supplier_email: str, contract_duration: Optional[int] = None) -> Plugin:
+    def update_plugin(self, plugin_id: int, name: str, version: str, description: str, developer: str,
+                      supplier_name: str, supplier_email: str, price: int, type: str,
+                      contract_duration: Optional[int] = None) -> Plugin:
+
         existing_plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()
 
         if existing_plugin is None:
@@ -65,6 +71,8 @@ class PluginRepository:
         existing_plugin.supplier_email = supplier_email
         existing_plugin.contract_duration = contract_duration
         existing_plugin.search_text = name + description
+        existing_plugin.price = price
+        existing_plugin.type = type
         self.db.commit()
         return existing_plugin
 
@@ -75,4 +83,3 @@ class PluginRepository:
         self.db.delete(existing_plugin)
         self.db.commit()
         return existing_plugin
-

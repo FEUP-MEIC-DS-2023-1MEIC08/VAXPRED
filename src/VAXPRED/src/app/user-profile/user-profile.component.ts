@@ -6,8 +6,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
-// TEMP - logged in user ID
+// TEMP - logged in user ID which is an admin
 const loggedUserId = 1;
 
 @Component({
@@ -16,19 +19,22 @@ const loggedUserId = 1;
   styleUrls: ['./user-profile.component.css'],
   standalone: true,
   imports: [
-    CommonModule, MatGridListModule, FlexLayoutModule, MatCardModule, MatDividerModule, RouterModule
+    CommonModule, MatGridListModule, FlexLayoutModule, MatCardModule, MatDividerModule, RouterModule, MatButtonModule
   ],
 })
 export class UserProfileComponent implements OnInit {
   constructor(
-    private userProfileService: UserProfileService
+    private userProfileService: UserProfileService,
+    private dialog: MatDialog
   ) { }
+
+  isLoading = true;
 
   user = {
     id : loggedUserId,
     name: 'Loading...',
-    title: '',
-    org: ''
+    email: '',
+    isAdmin: false,
   }
 
   plugins: any[] = [];
@@ -38,9 +44,10 @@ export class UserProfileComponent implements OnInit {
     this.userProfileService.getUser(loggedUserId).subscribe((user: any) => {
       console.log(user);
       this.user.name = user['username'];
-      // TEMP
-      this.user.title = user['email'];
-      this.user.org = user['email'];
+      this.user.email = user['email'];
+      this.user.isAdmin = true;
+
+      this.isLoading = false;
     });
 
     this.userProfileService.getUserPlugins(loggedUserId).subscribe((data) => {
@@ -55,6 +62,20 @@ export class UserProfileComponent implements OnInit {
       // Refresh the page
       window.location.reload();
     })
+  }
+
+  openConfirmationDialog(plugin: any): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '35em',
+      data: { pluginName: plugin.name }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // User clicked "Yes" in the confirmation dialog, remove the plugin
+        this.removePlugin(plugin);
+      }
+    });
   }
 
   editProfile() {

@@ -52,7 +52,8 @@ export class SideFilterComponent {
 					  new Date(JSON.parse(pluginData).last_update_date),
 					  'Data Quality', // plugin.type,
 					  [], //plugin.tags
-					  JSON.parse(pluginData).contract_duration
+					  JSON.parse(pluginData).contract_duration,
+					  JSON.parse(pluginData).faq,
 					) )
 			}
 			this.originalItems = this.items.slice();

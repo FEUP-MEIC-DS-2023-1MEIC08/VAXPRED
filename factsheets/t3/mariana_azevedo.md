@@ -50,7 +50,25 @@ I think having good Definitions of Ready and Done will be important for the work
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+ * "As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application." [issue #132](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132)
+ * "As a researcher, I want to be able to filter the plugins by various tags, so that I can find the one that suits better the experiment I want to do." [issue #24](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/24)
+
+Both user stories were written by all POs and I am proud of them as they were assigned to my team, who did a good job creating the filters and is on the right track to create a nice looking home page for the platform, which is important as it will be the first thing the user sees when entering the plugin store.
+
+
+### The two pull requests that I am most proud of
+
+I did not create nor review any pull request during this Sprint.
+
+
+### Two contributions of other types that I am most proud of
+ 
+ * Writing more User Stories with the other POs
+ * Helping my team members understand what should be done about certain user stories
+
+The team members were confused about user stories  [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/14) and [#132](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132)but after I rewrote and explained them the work could continue without problems.
 
 
 ## Sprint 3

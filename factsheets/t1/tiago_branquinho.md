@@ -42,8 +42,23 @@ In this sprint, my roles were estimating the efforts of User Stories, and dividi
 
 ## Sprint 2
 
-...
+In this sprint I mainly communicated to other groups, assuring we were on the same page. Also guided my team, giving them feedback, diving their work, evaluating it. Also made the install button on a plugin functional, creating an association in the database.
 
+### The two user stories that I am most proud of
+
+- [(#139) Associate plugin to user.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues139)
+
+### The two pull requests that I am most proud of
+
+- [(#95) T1 feature install plugin.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/183)
+
+- [(#92) T1 - supplier information.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/179)
+
+### Two contributions of other types that I am most proud of
+
+- Guided my team's work, explaining what the goal of each task was
+
+- Evaluated PRs, improving their appearance and functionality, correcting my team's work
 
 ## Sprint 3
 

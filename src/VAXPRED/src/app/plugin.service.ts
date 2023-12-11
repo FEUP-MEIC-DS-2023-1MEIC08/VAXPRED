@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ToolService {
+  getTools(): import("./plugin").Plugin[] {
+    throw new Error('Method not implemented.');
+  }
 	constructor(private http: HttpClient) { }
 
 	getPlugins() {

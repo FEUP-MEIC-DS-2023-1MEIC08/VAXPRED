@@ -16,7 +16,8 @@ import { PluginPageMenuComponent } from './plugin-page/plugin-page-menu/plugin-p
 import { PluginPageHeaderComponent } from './plugin-page/plugin-page-header/plugin-page-header.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 // For API calls
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +29,8 @@ import { PluginPageImagesComponent } from './plugin-page/plugin-page-images/plug
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { AdminPagePluginFormComponent } from './admin-page-plugin-form/admin-page-plugin-form.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AdminPageComponent,
     PageNotFoundComponent,
     HomePageComponent,
+    FooterComponent,
+    AdminPagePluginFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +65,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MatListModule,
     MatDialogModule,
     MatIconModule,
+    MatSelectModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
