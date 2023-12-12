@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['127.0.0.1:9092'],
+  brokers: ['localhost:9092'],
 });
 
 const producer = kafka.producer();
@@ -23,15 +23,18 @@ app.use(express.json());
 app.post('/log-to-kafka', async (req, res) => {
   const { action, pluginId } = req.body;
 
+
   if (!action || !pluginId) {
     return res.status(400).send('Invalid request: action and pluginId are required');
   }
+
 
   const kafkaMessage = {
     action,
     pluginId,
     timestamp: Date.now(),
   };
+
 
   try {
     await producer.send({
