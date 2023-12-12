@@ -52,6 +52,35 @@ app.post('/log-to-kafka', async (req, res) => {
   }
 });
 
+app.post('/log-to-kafka-2', async (req, res) => {
+  const { action, pluginId} = req.body;
+
+
+  if (!action || !pluginId) {
+    return res.status(400).send('Invalid request: action and pluginId are required');
+  }
+
+
+  const kafkaMessage = {
+    action,
+    pluginId,
+    timestamp: Date.now(),
+  };
+
+
+  try {
+    await producer.send({
+      topic: 'testTopic',
+      messages: [{ value: JSON.stringify(kafkaMessage) }],
+    });
+
+    res.status(200).send('Logged to Kafka successfully');
+  } catch (error) {
+    console.error('Error sending message to Kafka:', error);
+    res.status(500).send('Error sending message to Kafka');
+  }
+});
+
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
