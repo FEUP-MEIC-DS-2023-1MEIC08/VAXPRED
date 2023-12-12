@@ -28,7 +28,30 @@ export class ToolService {
 	}
 
 	installPlugin(pluginId: number) {
-		return this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
+		// First, perform the HTTP request to install the plugin
+		const installRequest = this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
+	
+		// Then, log the installation action to Kafka
+		installRequest.subscribe(() => {
+		  // Log the installation action to Kafka here
+		  this.logToKafka('Plugin installed', pluginId); // Customize the message as needed
+		});
+	
+		return installRequest;
+	  }
+	
+	private logToKafka(action: string, pluginId: number) {
+		// Perform an HTTP request to your server-side component that handles Kafka logging
+		const kafkaLogRequest = this.http.post('http://localhost:3000/log-to-kafka', { action, pluginId });
+	
+		// Subscribe to the Kafka logging HTTP request
+		kafkaLogRequest.subscribe(
+			() => {
+			console.log('Successfully logged action to Kafka');
+			},
+			(error) => {
+			console.error('Error logging action to Kafka:', error);
+			} 
+		);
 	}
-		
 }
