@@ -47,6 +47,9 @@ class PluginRepository:
     
     def get_all_plugins_search(self,search) -> List[Plugin]:
         return self.db.query(Plugin).filter(Plugin.search_text.contains(search)).all()
+    
+    def get_all_plugins_by_category(self, category: str) -> List[Plugin]:
+        return self.db.query(Plugin).filter(Plugin.category == category).all()
 
     def delete_plugin_by_id(self, plugin_id: int) -> None:
         plugin = self.db.query(Plugin).filter(Plugin.id == plugin_id).first()

@@ -101,6 +101,59 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
 
     return plugin
 
+# Route to list every plugin with a specific category
+@router.get("/category/{category}", response_model=PluginListResponse)
+def get_plugins_by_category(category: str, db: Session = Depends(get_db)):
+    plugin_repository = PluginRepository(db)
+    print("......")
+
+    if (category == "data-quality"): category_name = "Data Quality"
+    elif (category == "data-curation"): category_name = "Data Curation"
+    elif (category == "synthetic-data-generation"): category_name = "Synthetic Data Generation"
+    else: 
+        raise HTTPException(status_code=404, detail="Unavailable Category")
+
+    plugins = plugin_repository.get_all_plugins_by_category(category_name)
+
+    if plugins is None:
+        raise HTTPException(status_code=404, detail="No plugins available")
+    
+    tag_repository = PluginTagRepository(db)
+    plugin_dependencies_repository = PluginDependencyRepository(db)
+    plugin_faqs_repository = PluginFaqRepository(db)
+    plugin_images_repository = PluginImageRepository(db)
+
+    pluginsResponse = []
+    for plugin in plugins:
+        plugin_id = plugin.id
+        tags = tag_repository.get_tags_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
+        faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
+
+        response = PluginResponse(
+            id=plugin.id,
+            name=plugin.name,
+            version=plugin.version,
+            description=plugin.description,
+            developer=plugin.developer,
+            release_date=plugin.release_date,
+            last_update_date=plugin.last_update_date,
+            supplier_name=plugin.supplier_name,
+            supplier_email=plugin.supplier_email,
+            contract_duration=plugin.contract_duration,
+            price=plugin.price,
+            category=plugin.category,
+            changelog=plugin.changelog,
+            tags=tags,
+            dependencies=dependencies,
+            faqs=faqs,
+            images=images
+        )
+        pluginsResponse.append(response)
+
+    return {"plugins": pluginsResponse}
+
 
 # Route for create a specific plugin
 @router.post("/")
