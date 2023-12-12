@@ -46,15 +46,19 @@ export class PluginPageHeaderComponent {
   }
 
   acceptContract() {
+    const userId = 3; // TO DO replace with the actual user ID
+    const userName = 'John Doe'; // TO DO replace with the actual user name
+
     // Handle the logic for contract acceptance here
-    this.service.installPlugin(this.plugin.id).subscribe((data: any) => {
-      console.log(data);
+    this.service.installPlugin(userId, userName, this.plugin.id).subscribe((data: any) => {
+        console.log(data);
     });
+
     // This function should close the popup and initiate the download.
     this.closePopup();
     // Add code to initiate the download after the contract is accepted.
-    //this.closeDialog();
-  }
+    // this.closeDialog();
+}
 
   closePopup() {
     const popupModal = document.getElementById('popup-modal');
