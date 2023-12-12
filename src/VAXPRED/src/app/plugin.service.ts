@@ -27,22 +27,22 @@ export class ToolService {
 		return ['Tag 1', 'Tag 2', 'Tag 3'];
 	}
 
-	installPlugin(userId: number, userName: string, pluginId: number) {
+	installPlugin(userId: number, userName: string, pluginId: number, pluginName: string) {
 		// First, perform the HTTP request to install the plugin
-		const installRequest = this.http.post(`http://localhost:8000/users/${userId}/plugins/${pluginId}/associate/`, {});
+		const installRequest = this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 
 		// Then, log the installation action to Kafka
 		installRequest.subscribe(() => {
 			// Log the installation action to Kafka here
-			this.logToKafka('Plugin installed', pluginId, userId, userName); // Pass user and plugIn information
+			this.logToKafka('Plugin installed', pluginId, pluginName, userId, userName); // Pass user and plugIn information
 		});
 
 		return installRequest;
 	} 
 	
-	private logToKafka(action: string, pluginId: number, userId: number, userName: string) {
+	private logToKafka(action: string, pluginId: number, pluginName:string, userId: number, userName: string) {
 		// Perform an HTTP request to your server-side component that handles Kafka logging
-		const kafkaLogRequest = this.http.post('http://localhost:3000/log-to-kafka', { action, pluginId, userId, userName });
+		const kafkaLogRequest = this.http.post('http://localhost:3000/log-to-kafka', { action, pluginId, pluginName, userId, userName });
 
 		// Subscribe to the Kafka logging HTTP request
 		kafkaLogRequest.subscribe(

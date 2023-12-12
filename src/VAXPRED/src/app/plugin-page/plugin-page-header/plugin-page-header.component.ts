@@ -50,7 +50,7 @@ export class PluginPageHeaderComponent {
     const userName = 'John Doe'; // TO DO replace with the actual user name
 
     // Handle the logic for contract acceptance here
-    this.service.installPlugin(userId, userName, this.plugin.id).subscribe((data: any) => {
+    this.service.installPlugin(userId, userName, this.plugin.id, this.plugin.name).subscribe((data: any) => {
         console.log(data);
     });
 
