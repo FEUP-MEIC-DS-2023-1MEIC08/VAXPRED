@@ -105,11 +105,13 @@ def get_plugin(plugin_id: int, db: Session = Depends(get_db)):
 @router.get("/category/{category}", response_model=PluginListResponse)
 def get_plugins_by_category(category: str, db: Session = Depends(get_db)):
     plugin_repository = PluginRepository(db)
-    print("......")
 
-    if (category == "data-quality"): category_name = "Data Quality"
-    elif (category == "data-curation"): category_name = "Data Curation"
-    elif (category == "synthetic-data-generation"): category_name = "Synthetic Data Generation"
+    if (category == "data-quality"): 
+        category_name = "Data Quality"
+    elif (category == "data-curation"): 
+        category_name = "Data Curation"
+    elif (category == "synthetic-data-generation"): 
+        category_name = "Synthetic Data Generation"
     else: 
         raise HTTPException(status_code=404, detail="Unavailable Category")
 
