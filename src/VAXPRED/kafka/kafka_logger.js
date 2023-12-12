@@ -21,7 +21,7 @@ runProducer().catch(console.error);
 app.use(express.json());
 
 app.post('/log-to-kafka', async (req, res) => {
-  const { action, pluginId } = req.body;
+  const { action, pluginId, pluginName, userId, userName } = req.body;
 
 
   if (!action || !pluginId) {
@@ -32,6 +32,9 @@ app.post('/log-to-kafka', async (req, res) => {
   const kafkaMessage = {
     action,
     pluginId,
+    pluginName,
+    userId, 
+    userName,
     timestamp: Date.now(),
   };
 
