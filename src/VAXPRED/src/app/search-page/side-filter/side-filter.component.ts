@@ -11,22 +11,74 @@ import { Router } from '@angular/router';
 })
 
 export class SideFilterComponent {
-	items: Plugin[] = [];	
+	/**
+	 * stores the list of plugins meant to be displayed
+	 */
+	items: Plugin[] = [];
+	
+	/**
+	 * stores the original list of plugins
+	 */
 	originalItems: Plugin[] = [];
+	
+	/**
+	 * stores the sorting option selected
+	 * @default 'original'
+	 * @see toggleSorting()
+	 */
 	sortingOption: string = 'original';
+	
+	/**
+	 * stores whether the sorting option has been selected
+	 * @default false
+	 * @see toggleSorting()
+	 */
 	isRadioSelected: boolean = false;
 	
+	/**
+	 * stores the list of tool categories meant to be displayed
+	 */
 	toolCategories: string[] = [];
+
+	/**
+	 * keeps track of the tool initial categories selected
+	 */
 	lastToolCategories: { [key: string]: boolean } = {};
+
+	/**
+	 * keeps track of the currents tool categories selected
+	 */
 	selectedToolCategories:{ [key: string]: boolean } = {};
 
+	/**
+	 * stores the list of tags meant to be displayed
+	 */
 	tags: string[] = [];
+
+	/**
+	 * keeps track of the initial tags 
+	 */
 	lastTags: { [key: string]: boolean } = {};
+	
+	/**
+	 * keeps track of the currents tags selected
+	 */
 	selectedTags: { [key: string]: boolean } = {};
 	
+	/**
+	 * stores the tool category passed from the search page
+	 */
 	@Input() selectedCategory: string="";
+
+	/**
+	 * stores the tag passed from the search page
+	 */
 	@Input() selectedTag: string="";
-	@Input() searchQuery: string="";
+
+	/**
+	 * stores the search query passed from the search page // NOT IMPLEMENTED YET
+	 */
+	//@Input() searchQuery: string="";
 
 	constructor(private toolService: ToolService, private router: Router, private route: ActivatedRoute) {}
 	
@@ -48,38 +100,45 @@ export class SideFilterComponent {
 	 * Fetches the list of categories, tags and plugins meant to be displayed
 	 */
 	fetch(){
-		this.items = [];
-		this.originalItems = [];
-		this.sortingOption = 'original';
-		this.isRadioSelected = false;
-
-		this.toolCategories = [];
-		this.lastToolCategories = {};
-		this.selectedToolCategories = {};
-
-		this.tags = [];
-		this.lastTags = {};
-		this.selectedToolCategories = {};
 
 		this.toolService.getFilteredResults(this.selectedCategory,this.selectedTag).subscribe(
 			(results: any[]) => {
-			  for (const result of results){
+				// Empty the variables
+				this.items = [];
+				this.originalItems = [];
+				this.sortingOption = 'original';
+				this.isRadioSelected = false;
+
+				this.toolCategories = [];
+				this.lastToolCategories = {};
+				this.selectedToolCategories = {};
+
+				this.tags = [];
+				this.lastTags = {};
+				this.selectedToolCategories = {};
+				// Fill the variables
+			  	for (const result of results){
+				
 				  if (result.categories) {
 					  // Handle the response with categories
-					  //console.log('Response with categories:', result.categories);
+					 
 					  for (let category of result.categories) {
+						//console.log("Category: " + category.name);
 						  this.toolCategories.push(category.name);
 					  }
 					} else if (result.tags) {
 					  // Handle the response with tags
-					  //console.log('Response with tags:', result.tags);
+					  
 					  for (let tag of result.tags) {
 						  this.tags.push(tag.name);
 					  }
 					} else if (result.plugins) {
 					  // Handle the response with plugins
-					  //console.log('Response with plugins:', result.plugins);
+					 
 					  for(let plugin of result.plugins){
+						
+						// if item with that id already exists, pass, else add it
+						if (!this.items.some(item => item.id === plugin.id)) {						
 						  this.items.push(
 							  new Plugin(
 								  plugin.id,
@@ -93,47 +152,50 @@ export class SideFilterComponent {
 								  plugin.type,
 								  plugin.tags,
 								  plugin.contract_duration,
-								  plugin.faq,
+								  plugin.faqs,
 								  plugin.categories,
 								  plugin.price
 								  )
 						  );}
-					  
+						}
 					} else {
 					  console.log('Response with no data')	
 					}
-			  }
-			  this.originalItems = this.items.slice();
-  
-			  if (this.selectedCategory != "") {
-				  let categories = this.selectedCategory.split(",");
-				  for (let category of categories){
-					  this.lastToolCategories[this.toolCategories[Number(category)-1]] = true;
-					  this.selectedToolCategories[this.toolCategories[Number(category)-1]] = true;
-				  }
-				  for (const category of this.toolCategories) {
-					  if (!this.selectedToolCategories[category]) {
-						  this.lastToolCategories[category] = false;
-						  this.selectedToolCategories[category] = false;
-					  }
-				  }
-			  }
-			  if (this.selectedTag != "") {
-				  let tags = this.selectedTag.split(",");
-				  for (let tag of tags) {
-					  this.lastTags[this.tags[Number(tag)-1]] = true;
-					  this.selectedTags[this.tags[Number(tag)-1]] = true;
-				  }
-				  for (const tag of this.tags) {
-					  if (!this.selectedTags[tag]) {
-						  this.lastTags[tag] = false;
-						  this.selectedTags[tag] = false;
-					  }
-				  }
-			  }
-			  if ((this.selectedTag != "") && (this.selectedCategory != "")) {
-				  this.filterList();
-			  }
+				}
+				this.originalItems = this.items.slice();
+				
+				// Sees if there was a selected category
+				if (this.selectedCategory != "") {
+					let categories = this.selectedCategory.split(",");
+					for (let category of categories){
+						this.lastToolCategories[this.toolCategories[Number(category)-1]] = true;
+						this.selectedToolCategories[this.toolCategories[Number(category)-1]] = true;
+					}
+					for (const category of this.toolCategories) {
+						if (!this.selectedToolCategories[category]) {
+							this.lastToolCategories[category] = false;
+							this.selectedToolCategories[category] = false;
+						}
+					}
+				}
+				// Sees if there was a selected tag
+				if (this.selectedTag != "") {
+					let tags = this.selectedTag.split(",");
+					for (let tag of tags) {
+						this.lastTags[this.tags[Number(tag)-1]] = true;
+						this.selectedTags[this.tags[Number(tag)-1]] = true;
+					}
+					for (const tag of this.tags) {
+						if (!this.selectedTags[tag]) {
+							this.lastTags[tag] = false;
+							this.selectedTags[tag] = false;
+						}
+					}
+				}
+				// If there was a selected category and a selected tag, filter the list
+				if ((this.selectedTag != "") && (this.selectedCategory != "")) {
+					this.filterList();
+				}
 			},
 			(error) => {
 			  console.error('Error loading data:', error);
@@ -184,6 +246,10 @@ export class SideFilterComponent {
 		return found;
 	}
 
+	/**
+	 * Updates the selected tools categories
+	 * @returns tool categories in string concatenated with commas
+	 */
 	sendSelectedToolCategories(): string {
 		// return the selected tool categories in string concatenated with commas
 		let aux: string[] = [];
@@ -195,6 +261,10 @@ export class SideFilterComponent {
 		return aux.join(',');
 	}
 
+	/**
+	 * Updates the selected tags 
+	 * @returns tags in string concatenated with commas
+	 */
 	sendSelectedTags(): string {
 		// return the selected tags in string concatenated with commas
 		let aux: string[] = [];
@@ -220,6 +290,9 @@ export class SideFilterComponent {
 		});
 	}
 
+	/**
+	 * Navigate to the search page with the selected tool categories and tags
+	 */
 	onSubmit() {
 		let queryParams: { [key: string]: string } = {};
 

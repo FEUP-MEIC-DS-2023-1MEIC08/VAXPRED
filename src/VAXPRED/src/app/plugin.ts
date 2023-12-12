@@ -40,7 +40,7 @@ export class Plugin
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
 		developer: string, release_date: Date, last_update_date: Date, type: string, 
-		tags: string[], contract_duration: number, faq: Object[], categories: string[], price?: number, )
+		tags: string[], contract_duration: number, faq: Object[], categories: string[], price?: number )
 	{
 		this.id = id;
 		this.name = name;
@@ -65,7 +65,7 @@ export class Plugin
 		this.categories = categories;
 		this.faq = faq;
 		this.price = price ? price : 0;
-
+	
 		this.assembleDynamicData();
 	}
 
@@ -91,6 +91,5 @@ export class Plugin
 
 		this.css_id = css_ids[this.type];
 		this.type_description = types_descriptions[this.type];
-		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }

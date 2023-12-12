@@ -19,18 +19,12 @@ export class ToolService {
 	 */
 	getFilteredResults(category: string, tag: string/*, searchQuery: string*/): Observable<any[]> {
 		let categories=category.split(",");
-		console.log("Tag: "+tag)
-		// split the category into an array of strings
 		let tags=tag.split(",");
-		console.log("Tags: "+tags)
-		console.log("Tags length: "+tags.length)
-
-		console.log("Categories: "+categories)
-		console.log("Categories length: "+categories.length)
 		
 		let requests_list = [];
 		requests_list.push(this.getCategories());
 		requests_list.push(this.getTags());
+		
 		if (category == "" && tag == ""/* && searchQuery == ""*/) {
 			requests_list.push(this.getPlugins());
 		} 
@@ -44,13 +38,12 @@ export class ToolService {
 				requests_list.push(this.getPluginsByTag(ta));
 			}
 		}
-		
-	
 		return forkJoin(requests_list);
 	}
 
 	/**
 	 * Returns a list of all plugins
+	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPlugins() { // no filter options
 		return this.http.get('http://localhost:8000/plugins/');		
@@ -58,6 +51,8 @@ export class ToolService {
 
 	/**
 	 * Returns a list of plugins filtered by category
+	 * @param {string} category the category to filter by
+	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByCategory(category: string) {
 		return this.http.get('http://localhost:8000/categories/' + category + '/plugins/');
@@ -65,6 +60,8 @@ export class ToolService {
 
 	/**
 	 * Returns a list of all plugins
+	 * @param {string} tag the tag to filter by
+	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByTag(tag: string) {
 		return this.http.get('http://localhost:8000/tags/' + tag + '/plugins/');
@@ -72,6 +69,8 @@ export class ToolService {
 	
 	/**
 	 * Returns a plugin by id
+	 * @param {number} id the id of the plugin
+	 * @returns {Observable<any>} the plugin
 	 */
 	getPlugin(id: number) {
 		return this.http.get('http://localhost:8000/plugins/' + id + '/');
@@ -83,6 +82,7 @@ export class ToolService {
 
 	/**
 	 * Returns a list of all tags
+	 * @returns {Observable<any>} the list of tags
 	 */
 	getTags(){
 		return this.http.get("http://localhost:8000/tags/");
@@ -94,11 +94,17 @@ export class ToolService {
 	
 	/**
 	 * Returns a list of all categories
+	 * @returns {Observable<any>} the list of categories
 	 */
 	getCategories(){
 		return this.http.get('http://localhost:8000/categories/');
 	}
 
+	/**
+	 * Returns a list of plugins filtered by category
+	 * @param {string} category the category to filter by
+	 * @returns {Observable<any>} the list of plugins
+	 */
 	getCategoryPlugins(id: number) {
 		//return this.http.get('http://localhost:8000/categories/' + plugin);
 		return this.http.get('http://localhost:8000/categories/' + id + '/plugins/');

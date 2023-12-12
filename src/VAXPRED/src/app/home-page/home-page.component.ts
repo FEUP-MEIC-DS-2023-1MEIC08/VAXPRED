@@ -11,17 +11,29 @@ import { ToolService } from 'src/app/plugin.service';
 
 
 export class HomePageComponent {
-
+	/**
+	 * stores the list of plugins meant to be displayed
+	*/
     items: Plugin[] = [];
+	/**
+	 * list of tags meant to be displayed
+	 */
 	tags: string[] = [];
-	// a tuple with category name and id
+	
+	/**
+	 * list of categories meant to be displayed
+	 */
 	categories: [string,number][] = [];
+
+	/**
+	 * list of plugins for each category
+	 */
 	categoryPlugins: { [categoryId: number]: Plugin[] } = {};
-  constructor(private toolService: ToolService)
-	{
+	
+    constructor(private toolService: ToolService) {
 		
 		this.tags = ['Tag1','Tag2','Tag3']
-
+		// Fill the list of plugins and categories
 	 	this.toolService.getCategories().subscribe( (data: any) => {
 			data.categories.sort((a: any, b: any) => {
 				if (a.name === 'Other') {
@@ -40,6 +52,9 @@ export class HomePageComponent {
 
 	}
 
+	/**
+	 * Get the plugins for a given category
+	 */
 	getPluginsByCategory(categoryId: number){
 		
 		let items: Plugin[] = [];
@@ -67,21 +82,9 @@ export class HomePageComponent {
 			});
 		});
 		this.categoryPlugins[categoryId] = items;
-	
-	
 	}	 
 
-	
-
-  	
-  //categories = ['Placeholder 1', 'Placeholder 2', 'Placeholder 3'];
-  elements = [
-    ['Element 1.1', 'Element 1.2', 'Element 1.3', 'Element 1.4', 'Element 1.5', 'Element 1.6', 'Element 1.7', 'Element 1.8'],
-    ['Element 2.1', 'Element 2.2', 'Element 2.3'],
-    ['Element 3.1', 'Element 3.2', 'Element 3.3']
-  ];
   testTags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9'];
-
 
 }
 function sleep(arg0: number) {

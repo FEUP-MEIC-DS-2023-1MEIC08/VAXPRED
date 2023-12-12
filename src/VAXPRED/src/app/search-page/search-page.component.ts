@@ -7,20 +7,31 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent implements OnInit {
+  /**
+   * stores the category selected by the user
+   */
   selectedCategory: string = '';
-  selectedTag: string = ''; // not used 
-  searchQuery: string = ''; //not used
+
+  /**
+   * stores the tag selected by the user
+   */
+  selectedTag: string = '';
+  
+  //searchQuery: string = ''; // TO BE IMPLEMENTED
 
   constructor(private route: ActivatedRoute) { }
-
+  
+  /**
+   * Subscribes to the query parameters and stores the selected category and tag
+   */
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.selectedCategory = params['categories'] || '';
-      console.log("Categories in searchpage: "+this.selectedCategory)
-      console.log(this.selectedCategory);
+      //console.log("Categories in searchpage: "+this.selectedCategory)
+      //console.log(this.selectedCategory);
       this.selectedTag = params['tags'] || ""; // 
-      console.log("Tags in searchpage: "+this.selectedTag)
-      console.log(this.selectedTag);
+      //console.log("Tags in searchpage: "+this.selectedTag)
+      //console.log(this.selectedTag);
       /*  this.searchQuery = params['searchQuery'] || ''; */
     });
   }
