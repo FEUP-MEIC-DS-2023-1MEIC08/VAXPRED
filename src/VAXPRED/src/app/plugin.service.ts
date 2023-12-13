@@ -22,7 +22,7 @@ export class ToolService {
 		let tags=tag.split(",");
 		
 		let requests_list = [];
-		requests_list.push(this.getCategories());
+		//requests_list.push(this.getCategories());
 		requests_list.push(this.getTags());
 		
 		if (category == "" && tag == ""/* && searchQuery == ""*/) {
@@ -30,7 +30,7 @@ export class ToolService {
 		} 
 		if (categories.length > 0 && categories[0] != "") {
 			for (let categ of categories) {
-				requests_list.push(this.getPluginsByCategory(categ));
+				requests_list.push(this.getCategoryPlugins(categ));
 			}
 		}
 		if (tags.length > 0 && tags[0] != "") {
@@ -105,8 +105,8 @@ export class ToolService {
 	 * @param {string} category the category to filter by
 	 * @returns {Observable<any>} the list of plugins
 	 */
-	getCategoryPlugins(id: number) {
+	getCategoryPlugins(category: string) {
 		//return this.http.get('http://localhost:8000/categories/' + plugin);
-		return this.http.get('http://localhost:8000/categories/' + id + '/plugins/');
+		return this.http.get('http://localhost:8000/plugins/category/' + category );
 	}
 }

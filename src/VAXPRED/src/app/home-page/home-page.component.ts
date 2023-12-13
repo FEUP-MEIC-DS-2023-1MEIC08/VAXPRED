@@ -25,18 +25,28 @@ export class HomePageComponent {
 	/**
 	 * list of categories meant to be displayed
 	 */
-	categories: [string,number][] = [];
+	categories: string[] = [];
 
 	/**
 	 * list of plugins for each category
 	 */
-	categoryPlugins: { [categoryId: number]: Plugin[] } = {};
+	categoryPlugins: { [category: string]: Plugin[] } = {};
+
+	categoryValues: { [category: string]: string } = {};
 	
     constructor(private toolService: ToolService) {
 		
 		this.tags = ['Tag1','Tag2','Tag3']
+
 		// Fill the list of plugins and categories
-	 	this.toolService.getCategories().subscribe( (data: any) => {
+		this.categories = this.toolService.getToolCategories();
+		for (let category of this.categories) {
+			let categoryValue = category.toLowerCase().replace(/ /g, '-');
+			this.categoryValues[category] = categoryValue;
+			this.getPluginsByCategory(category,categoryValue);
+		}
+
+	 	/* this.toolService.getCategories().subscribe( (data: any) => {
 			data.categories.sort((a: any, b: any) => {
 				if (a.name === 'Other') {
 				  return 1; // Move "Others" to the end
@@ -48,20 +58,19 @@ export class HomePageComponent {
 			  }); 
 			data.categories.forEach((category: any) => {
 				this.categories.push([category.name, category.id]);
-				this.getPluginsByCategory(category.id);
+				this. (category.id);
 			});
-		});
-
+		}); */
 	}
 
 	/**
 	 * Get the plugins for a given category
 	 */
-	getPluginsByCategory(categoryId: number){
+	getPluginsByCategory(shownCategory: string,category: string){
 		
 		let items: Plugin[] = [];
 		
-		this.toolService.getCategoryPlugins(categoryId).subscribe((data: any) => {
+		this.toolService.getCategoryPlugins(category).subscribe((data: any) => {
 			data.plugins.forEach((plugin: any) => {
 				if (items.length < 4) {
 					items.push(
@@ -74,16 +83,17 @@ export class HomePageComponent {
 							plugin.developer,
 							new Date(plugin.release_date),
 							new Date(plugin.last_update_date),
-							plugin.type,
+							plugin.category,
+							plugin.changelog,
 							plugin.tags,
 							plugin.contract_duration,
 							plugin.faqs,
-							plugin.categories
+							plugin.price
 						));	
 				}
 			});
 		});
-		this.categoryPlugins[categoryId] = items;
+		this.categoryPlugins[shownCategory] = items;
 	}	 
 
   testTags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9'];

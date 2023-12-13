@@ -100,7 +100,6 @@ export class SideFilterComponent {
 	 * Fetches the list of categories, tags and plugins meant to be displayed
 	 */
 	fetch(){
-
 		this.toolService.getFilteredResults(this.selectedCategory,this.selectedTag).subscribe(
 			(results: any[]) => {
 				// Empty the variables
@@ -117,16 +116,18 @@ export class SideFilterComponent {
 				this.lastTags = {};
 				this.selectedToolCategories = {};
 				// Fill the variables
+				this.toolCategories=this.toolService.getToolCategories();
 			  	for (const result of results){
 				
-				  if (result.categories) {
+				/*   if (result.categories) {
 					  // Handle the response with categories
 					 
 					  for (let category of result.categories) {
 						//console.log("Category: " + category.name);
 						  this.toolCategories.push(category.name);
 					  }
-					} else if (result.tags) {
+					} else */ 
+					if (result.tags) {
 					  // Handle the response with tags
 					  
 					  for (let tag of result.tags) {
@@ -149,11 +150,11 @@ export class SideFilterComponent {
 								  plugin.developer,
 								  new Date(plugin.release_date),
 								  new Date(plugin.last_update_date),
-								  plugin.type,
+								  plugin.category,
+								  plugin.changelog,
 								  plugin.tags,
 								  plugin.contract_duration,
 								  plugin.faqs,
-								  plugin.categories,
 								  plugin.price
 								  )
 						  );}
@@ -168,8 +169,10 @@ export class SideFilterComponent {
 				if (this.selectedCategory != "") {
 					let categories = this.selectedCategory.split(",");
 					for (let category of categories){
-						this.lastToolCategories[this.toolCategories[Number(category)-1]] = true;
-						this.selectedToolCategories[this.toolCategories[Number(category)-1]] = true;
+						// switch - to space and make the fist letter of each word uppercase
+						let auxcategory = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+						this.lastToolCategories[auxcategory] = true;
+						this.selectedToolCategories[auxcategory] = true;
 					}
 					for (const category of this.toolCategories) {
 						if (!this.selectedToolCategories[category]) {
@@ -234,12 +237,12 @@ export class SideFilterComponent {
 	foundDifference(): boolean {
 		let found = false;
 		for (const category of Object.keys(this.selectedToolCategories)) {
-			if (this.lastToolCategories[category] !== this.selectedToolCategories[category]) {
+			if (this.lastToolCategories[category] !== this.selectedToolCategories[category] && this.selectedToolCategories[category]) {
 				found = true;
 			}
-		}
+		}	
 		for (const tag of Object.keys(this.selectedTags)) {
-			if (this.lastTags[tag] !== this.selectedTags[tag]) {
+			if (this.lastTags[tag] !== this.selectedTags[tag] && this.selectedTags[tag]) {
 				found = true;
 			}
 		}
@@ -255,7 +258,8 @@ export class SideFilterComponent {
 		let aux: string[] = [];
 		for (const category of Object.keys(this.selectedToolCategories)) {
 			if (this.selectedToolCategories[category]) {
-				aux.push(String(this.toolCategories.indexOf(category)+1));
+				let categoryValue = category.toLowerCase().replace(/ /g, '-');
+				aux.push((categoryValue));
 			}
 		}
 		return aux.join(',');
@@ -280,13 +284,12 @@ export class SideFilterComponent {
 	 * Filters the list based on the selected tool category and the tag
 	 */
 	filterList(): void {
-		const selectedCategories =  Object.keys(this.lastToolCategories).filter((category) => this.lastToolCategories[category]);
+		const selectedCategories = Object.keys(this.lastToolCategories).filter((type) => this.lastToolCategories[type]);
 		const selectedTags = Object.keys(this.lastTags).filter((tag) => this.lastTags[tag]);
-		
 		this.items = this.originalItems.filter((item: Plugin) => {
-			const categoryMatch = selectedCategories.length === 0 || item.categories.some((category) => selectedCategories.includes(category));
+			const typeMatch = selectedCategories.length === 0 || selectedCategories.includes(item.category);
 			const tagMatch = selectedTags.length === 0 || item.tags.some((tag) => selectedTags.includes(tag));
-			return categoryMatch && tagMatch;
+			return typeMatch && tagMatch;
 		});
 	}
 

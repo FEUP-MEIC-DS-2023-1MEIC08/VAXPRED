@@ -3,14 +3,14 @@
    <h1>Marketplace</h1>
     <div *ngFor="let category of categories; let i = index" class="category">
       <div class="category-header">
-        <h2>{{ category[0] }}</h2>
-        <a [routerLink]="'/search'" [queryParams]="{categories: category[1]}">See more
+        <h2>{{ category }}</h2>
+        <a [routerLink]="'/search'" [queryParams]="{categories: categoryValues[category]}">See more
           <mat-icon>keyboard_arrow_right</mat-icon>
         </a>
       </div>
     <div class="category-row">
-    <app-plugin-card *ngFor="let tool of categoryPlugins[category[1]]" [tool]="tool" ></app-plugin-card>
-    </div> 
+    <app-plugin-card *ngFor="let tool of categoryPlugins[category]" [tool]="tool" ></app-plugin-card>
+    </div>
     </div>
     <h2>Filter by Tag</h2>
     <div class="tag-grid">

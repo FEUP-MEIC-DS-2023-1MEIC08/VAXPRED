@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/* import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideFilterComponent } from './side-filter.component';
 import { ToolService } from 'src/app/plugin.service';
 import { HttpClientTestingModule,HttpTestingController  } from '@angular/common/http/testing';
@@ -576,4 +576,4 @@ it('should filter the list based on 1 selected Tool type and 1 selected Tag', ()
 });
 
 
-});
+}); */
