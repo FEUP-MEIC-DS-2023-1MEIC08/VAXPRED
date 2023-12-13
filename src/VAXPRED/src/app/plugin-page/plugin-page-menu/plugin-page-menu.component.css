@@ -45,3 +45,9 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 720px) {
+    .menu-divider {
+        display: none;
+    } 
+}

@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="space-between start">
-  <div fxLayout="column" fxFlex="65%">
-    <mat-tab-group [(selectedIndex)]="selectedTab" t>
+<div fxLayout="row wrap" fxLayoutAlign="space-between start">
+  <div fxLayout="column wrap" fxFlex.md="65%">
+    <mat-tab-group [(selectedIndex)]="selectedTab">
       <mat-tab label="Description">
         <ng-template matTabContent>
           <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
@@ -62,9 +62,9 @@
     </mat-tab-group>
   </div>
 
-  <hr style="border-top: 350px solid #808080" />
+  <hr class="menu-divider" style="border-top: 350px solid #808080" />
 
-  <div fxLayout="column" fxFlex="30%">
+  <div fxLayout="column" fxFlex.md="30%" style="margin-left: 0.2em">
     <mat-card
       class="categories"
       style="border: none; box-shadow: none; margin-bottom: 20px"
