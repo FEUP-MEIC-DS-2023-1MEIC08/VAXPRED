@@ -8,7 +8,7 @@ describe('PluginPageImagesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PluginPageImagesComponent]
+      declarations: [PluginPageImagesComponent],
     });
     fixture = TestBed.createComponent(PluginPageImagesComponent);
     component = fixture.componentInstance;
