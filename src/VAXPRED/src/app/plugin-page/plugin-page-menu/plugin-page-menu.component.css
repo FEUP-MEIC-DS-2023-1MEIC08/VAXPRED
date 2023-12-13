@@ -46,6 +46,42 @@ hr {
     justify-content: space-between;
 }
 
+.badge
+{
+    padding: 5px 8px;
+	margin: 0px 5px 0px 0px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+	text-transform: uppercase;
+}
+
+.badge#free
+{
+	background-color: #00BB55;
+}
+
+.badge#premium
+{
+	background-color: #FF7777;
+}
+
+.badge#data-curation
+{
+	background-color: #00BBAA;
+}
+
+.badge#data-quality
+{
+	background-color: #FFAA00;
+}
+
+.badge#synthetic-data-generation
+{
+	background-color: #8a48f3;
+}
+
 @media screen and (max-width: 720px) {
     .menu-divider {
         display: none;
