@@ -237,12 +237,12 @@ export class SideFilterComponent {
 	foundDifference(): boolean {
 		let found = false;
 		for (const category of Object.keys(this.selectedToolCategories)) {
-			if (this.lastToolCategories[category] !== this.selectedToolCategories[category] && this.selectedToolCategories[category]) {
+			if (this.lastToolCategories[category] !== this.selectedToolCategories[category]) {
 				found = true;
 			}
 		}	
 		for (const tag of Object.keys(this.selectedTags)) {
-			if (this.lastTags[tag] !== this.selectedTags[tag] && this.selectedTags[tag]) {
+			if (this.lastTags[tag] !== this.selectedTags[tag]) {
 				found = true;
 			}
 		}
