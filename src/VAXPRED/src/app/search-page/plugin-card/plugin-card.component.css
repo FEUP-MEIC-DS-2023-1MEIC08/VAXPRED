@@ -29,7 +29,7 @@
 
 .badge#premium
 {
-	background-color: #FF7777;
+	background-color: #FFAA00;
 }
 
 .badge#data-curation
@@ -39,7 +39,7 @@
 
 .badge#data-quality
 {
-	background-color: #FFAA00;
+	background-color: #FF7777;
 }
 
 .badge#synthetic-data-generation
