@@ -115,7 +115,7 @@ describe('HomePageComponent', () => {
       }
     ]}
     spyOn(toolService, 'getCategories').and.returnValue(of(categoriesData));
-    spyOn(toolService,'getCategoryPlugins').and.callFake((categoryId: number) => {
+    spyOn(toolService,'getCategoryPlugins').and.callFake((category: string) => {
       return of(pluginsData);
     });
     fixture = TestBed.createComponent(HomePageComponent);
@@ -127,11 +127,11 @@ describe('HomePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have 5 categories', () => {
-    expect(component.categories.length).toBe(5);
+  it('should have 3 categories', () => {
+    expect(component.categories.length).toBe(3);
   });
 
-  it('should have 4 plugins in category 1', () => {
-    expect(component.categoryPlugins[1].length).toBe(4);
+  it('should have 4 plugins in category Data Quality', () => {
+    expect(component.categoryPlugins["Data Quality"].length).toBe(4);
   });
 });

@@ -93,6 +93,5 @@ export class Plugin
 		}
 
 		this.css_id = css_ids[this.category];
-		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }

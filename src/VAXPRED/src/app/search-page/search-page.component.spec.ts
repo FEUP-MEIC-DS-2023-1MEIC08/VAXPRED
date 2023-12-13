@@ -1,4 +1,4 @@
-/* import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { SearchPageComponent } from './search-page.component';
 import { SideFilterComponent } from './side-filter/side-filter.component';
@@ -48,4 +48,4 @@ describe('SearchPageComponent', () => {
 
 
 
-}); */
+}); 
