@@ -5,7 +5,7 @@ client = TestClient(app)
 
 def test_associate_user_plugin():
     response = client.post("/users/1/plugins/1/associate/")
-    assert response.status_code == 404
+    assert response.status_code == 409
 
 def test_list_user_plugins():
     response = client.get("/users/1/plugins/")

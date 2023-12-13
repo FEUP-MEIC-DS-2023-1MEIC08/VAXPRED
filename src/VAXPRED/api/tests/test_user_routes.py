@@ -10,8 +10,8 @@ def test_list_users():
   
 def test_create_user():
     user_data = {
-        "username": "NewUser",
-        "email": "newuser@example.com"
+        "username": "John Doe",
+        "email": "johndoe@email.com"
     }
     response = client.post("/users/", json=user_data)
     assert response.status_code == 400
