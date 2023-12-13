@@ -7,7 +7,8 @@
  * @param {string} developer the ones who created the plugin
  * @param {Date} release_date when the plugin was released
  * @param {Date} last_update_date when the last update was made
- * @param {string} type the type of the plugin
+ * @param {string} category the category of the plugin
+ * @param {string} changelog the changelog of the plugin
  * @param {string[]} tags the tags of the plugin
  * @param {Object[]} faq the FAQ of the plugin
  * @param {number} contract_duration the duration of the plugins's contract (in years)
@@ -25,8 +26,10 @@ export class Plugin
 	developer: string;
 	release_date: Date;
 	last_update_date: Date;
-	type: string;
-	type_description!: string;
+	category: string;
+	category_icon!: string;
+	category_description!: string;
+	changelog: string;
 	tags: string[];
 	contract_duration: number;
 	// TODO: connect to db
@@ -34,13 +37,12 @@ export class Plugin
 		{ name: 'Python', version: '3.9', vendor: 'Python Foundation' },
 		{ name: 'Docker', version: '24.0', vendor: 'Docker Inc.' }
 	];
-	categories: string[]; 
 	faq: Object[];
 	css_id!: string;
 
 	constructor(id: number, name: string, description: string, logo: string, version: string, 
-		developer: string, release_date: Date, last_update_date: Date, type: string, 
-		tags: string[], contract_duration: number, faq: Object[], categories: string[], price?: number )
+		developer: string, release_date: Date, last_update_date: Date, category: string, changelog: string, 
+		tags: string[], contract_duration: number, faq: Object[], price?: number)
 	{
 		this.id = id;
 		this.name = name;
@@ -58,11 +60,10 @@ export class Plugin
 			'http://placekitten.com/501/300',
 			'http://placekitten.com/502/300',
 		];
-		//! TODO: connect to db (type and tags)
-		this.type = type;
+		this.category = category;
+		this.changelog = changelog;
 		this.tags = tags;
 		this.contract_duration = contract_duration;
-		this.categories = categories;
 		this.faq = faq;
 		this.price = price ? price : 0;
 	
@@ -71,7 +72,7 @@ export class Plugin
 
 	assembleDynamicData()
 	{
-		const types_descriptions: any =
+		const categories_descriptions: any =
 		{
 			'Data Quality': 'Data Quality: processes and technologies for identifying, \
 				understanding and correcting flaws in data.',
@@ -82,6 +83,8 @@ export class Plugin
 				data by training an AI on real world data samples.'
 		}
 
+		this.category_icon = 'assets/plugin_categories_icons/' + this.category + '.png';
+		this.category_description = categories_descriptions[this.category];
 		const css_ids: any =
 		{
 			'Data Quality': 'data-quality',
@@ -89,7 +92,7 @@ export class Plugin
 			'Synthetic Data Generation': 'synthetic-data-generation'
 		}
 
-		this.css_id = css_ids[this.type];
-		this.type_description = types_descriptions[this.type];
+		this.css_id = css_ids[this.category];
+		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }

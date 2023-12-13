@@ -12,8 +12,9 @@ class PluginCreate(BaseModel):
     supplier_email: str
     contract_duration: Optional[int]
     price: int
-    type: str
-    dependencies: List[str]
+    category: str
+    changelog: str
+    dependencies: List[List[str]]
     faqs: List[Dict[str, str]]
 
 
@@ -26,8 +27,9 @@ class PluginUpdate(BaseModel):
     supplier_email: str
     contract_duration: Optional[int]
     price: int
-    type: str
-    dependencies: List[str]
+    category: str
+    changelog: str
+    dependencies: List[List[str]]
     faqs: List[Dict[str, str]]
     
 class PluginResponse(BaseModel):
@@ -42,9 +44,9 @@ class PluginResponse(BaseModel):
     supplier_email: str
     contract_duration: Optional[int]
     price: int
-    type: str
-    dependencies: List[str]
-    categories: List[str]
+    category: str
+    changelog: str
+    dependencies: List[List[str]]
     tags: List[str]
     faqs: List[Dict[str, str]]
     images: List[str]
@@ -61,7 +63,8 @@ class PluginGeralInfo(BaseModel):
     supplier_email: str
     contract_duration: Optional[int]
     price: int
-    type: str
+    category: str
+    changelog: str
 
 class PluginGeralListResponse(BaseModel):
     plugins: List[PluginGeralInfo]

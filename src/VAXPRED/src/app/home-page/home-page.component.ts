@@ -11,10 +11,12 @@ import { ToolService } from 'src/app/plugin.service';
 
 
 export class HomePageComponent {
+	
 	/**
 	 * stores the list of plugins meant to be displayed
 	*/
     items: Plugin[] = [];
+	
 	/**
 	 * list of tags meant to be displayed
 	 */
