@@ -40,3 +40,14 @@ hr {
 .category-text {
     margin-left: 10px; /* Add margin between the icon and text */
 }
+
+.plugin-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 720px) {
+    .menu-divider {
+        display: none;
+    } 
+}

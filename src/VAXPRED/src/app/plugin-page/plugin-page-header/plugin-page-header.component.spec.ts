@@ -22,7 +22,21 @@ describe('PluginPageHeaderComponent', () => {
 
   it('should display the plugin title', () => {
     const testTitle = 'Test Plugin Title';
-    const testPlugin = new Plugin(1, testTitle, 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    const testPlugin = new Plugin(
+      1,
+      testTitle,
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
 
     component.plugin = testPlugin;
     fixture.detectChanges();
@@ -33,19 +47,49 @@ describe('PluginPageHeaderComponent', () => {
 
   it('should display the plugin version tag', () => {
     const testVersion = '1.0.7';
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    const testPlugin = new Plugin(
+      1,
+      'Test Plugin',
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
 
     component.plugin = testPlugin;
 
     fixture.detectChanges();
 
-    const versionElement = fixture.nativeElement.querySelector('.plugin-version-tag');
+    const versionElement = fixture.nativeElement.querySelector(
+      '.plugin-version-tag'
+    );
     expect(versionElement.textContent).toBe(testVersion);
   });
 
   it('should display the plugin ID', () => {
     const testID = 42;
-    const testPlugin = new Plugin(testID, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    const testPlugin = new Plugin(
+      testID,
+      'Test Plugin',
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
 
     component.plugin = testPlugin;
     fixture.detectChanges();
@@ -55,12 +99,27 @@ describe('PluginPageHeaderComponent', () => {
   });
 
   it('should display an install button', () => {
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    const testPlugin = new Plugin(
+      1,
+      'Test Plugin',
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
 
     component.plugin = testPlugin;
     fixture.detectChanges();
 
-    const installButton = fixture.nativeElement.querySelector('#install-plugin');
+    const installButton =
+      fixture.nativeElement.querySelector('#install-plugin');
     expect(installButton).toBeTruthy();
   });
 });
