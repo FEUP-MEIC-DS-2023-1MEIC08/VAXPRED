@@ -1,0 +1,818 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>vaxpred documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">vaxpred documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  PluginCardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/search-page/plugin-card/plugin-card.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-plugin-card</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./plugin-card.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./plugin-card.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#openDialog" >openDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#tool" >tool</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/search-page/plugin-card/plugin-card.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tool"></a>
+                        <b>tool</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Plugin.html" target="_self" >Plugin</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Plugin(0, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, new Date(), new Date(), &#x27;&#x27;,&#x27;&#x27;, [], 2, [])</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/search-page/plugin-card/plugin-card.component.ts:11</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialog"></a>
+                    <span class="name">
+                        <span ><b>openDialog</b></span>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDialog()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="15"
+                                    class="link-to-prism">src/app/search-page/plugin-card/plugin-card.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/search-page/plugin-card/plugin-card.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { PluginPageComponent } from &#x27;src/app/plugin-page/plugin-page.component&#x27;;
+import { Plugin } from &#x27;src/app/plugin&#x27;;
+@Component({
+	selector: &#x27;app-plugin-card&#x27;,
+	templateUrl: &#x27;./plugin-card.component.html&#x27;,
+	styleUrls: [&#x27;./plugin-card.component.css&#x27;]
+})
+export class PluginCardComponent {
+	@Input() tool: Plugin &#x3D; new Plugin(0, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, new Date(), new Date(), &#x27;&#x27;,&#x27;&#x27;, [], 2, []);
+
+	constructor(public dialog: MatDialog) {}
+
+	openDialog(): void { // TODO: THIS IS CALLED WITH HTML, INSERT IN PLUGIN LISTING IN STORE
+		const dialogRef &#x3D; this.dialog.open(PluginPageComponent, {
+			width: &#x27;1000px&#x27;,
+			maxHeight: &#x27;90vh&#x27;,
+			data: {
+				dialogRef: null, // Initialize the dialogRef to null
+				plugin: this.tool // TODO: INSERT PLUGIN HERE!!!!
+			}
+		});
+		dialogRef.componentInstance.data.dialogRef &#x3D; dialogRef;
+	}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;plugin-card&quot; (click)&#x3D;&quot;openDialog()&quot;&gt;
+	&lt;div class&#x3D;&quot;m-5&quot;&gt;
+		&lt;img class&#x3D;&quot;w-100&quot; [src]&#x3D;&quot;this.tool.logo&quot; [alt]&#x3D;&quot;this.tool.name&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;plugin-card-body&quot;&gt;
+		&lt;h5 class&#x3D;&quot;plugin-card-title&quot;&gt;{{ this.tool.name }}&lt;/h5&gt;
+		&lt;h6 class&#x3D;&quot;plugin-card-subtitle mt-2&quot;&gt; {{ this.tool.developer }} &lt;/h6&gt;
+		&lt;div class&#x3D;&quot;plugin-card-text&quot;&gt; {{ this.tool.description }} &lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;plugin-badges&quot;&gt;
+			&lt;!-- Premium or Free badge --&gt;
+			&lt;div&gt;
+				&lt;span *ngIf&#x3D;&quot;this.tool.price &gt; 0; then thenBlock else elseBlock&quot;&gt;&lt;/span&gt;
+				&lt;ng-template #thenBlock class&#x3D;&quot;tooltip-container&quot;&gt;
+					&lt;span class&#x3D;&quot;badge&quot; id&#x3D;&quot;premium&quot;&gt;PREMIUM&lt;/span&gt;
+					&lt;span class&#x3D;&quot;tooltip&quot;&gt;This plugin requires payment to be used.&lt;/span&gt;
+				&lt;/ng-template&gt;
+				&lt;ng-template #elseBlock&gt;
+					&lt;span class&#x3D;&quot;badge&quot; id&#x3D;&quot;free&quot; #elseBlock&gt;FREE&lt;/span&gt;
+					&lt;span class&#x3D;&quot;tooltip&quot;&gt;You&#x27;re free to install this plugin.&lt;/span&gt;
+				&lt;/ng-template&gt;
+			&lt;/div&gt;
+			
+			&lt;!-- Plugin type badge --&gt;
+			&lt;div class&#x3D;&quot;tooltip-container&quot;&gt;
+				&lt;span class&#x3D;&quot;badge&quot; [id]&#x3D;&quot;this.tool.css_id&quot;&gt;{{this.tool.category}}&lt;/span&gt;
+				&lt;span class&#x3D;&quot;tooltip&quot;&gt;{{this.tool.category_description}}&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./plugin-card.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host
+{
+	--details-button-color: #00BB55;
+	--details-button-sec-color: #FFFFFF;
+	--details-button-text-color-hover: #00BB55;
+	--download-button-color: #00AAFF;
+	--download-button-sec-color: #FFFFFF;
+	--download-button-text-color-hover: #00AAFF;
+	--download-button-radius: 45px;
+}
+
+/************************************ BADGES ************************************/
+
+.badge
+{
+    padding: 5px 8px;
+	margin: 0px 5px 0px 0px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+	text-transform: uppercase;
+}
+
+.badge#free
+{
+	background-color: #00BB55;
+}
+
+.badge#premium
+{
+	background-color: #FF7777;
+}
+
+.badge#data-curation
+{
+	background-color: #00BBAA;
+}
+
+.badge#data-quality
+{
+	background-color: #FFAA00;
+}
+
+.badge#synthetic-data-generation
+{
+	background-color: #8a48f3;
+}
+
+/************************************ PLUGIN CARD ************************************/
+
+.plugin-card
+{
+	font-family: Roboto, &quot;Helvetica Neue&quot;, sans-serif;
+	width: 23rem;
+	margin: 5px;
+	border: solid;
+	border-width: 1px;
+	border-radius: 2%;
+	border-color: #BBBBBB;
+	background-color: #F7F7F7;
+	position: relative;
+	min-height: 85%;
+}
+
+.plugin-card:hover
+{
+	box-shadow: 0px 5px 10px lightgrey;
+	cursor: pointer;
+}
+
+/************************************ PLUGIN CARD IMAGE ************************************/
+
+.plugin-card-image
+{
+	background-color: #777777;
+}
+
+/************************************ PLUGIN CARD BODY ************************************/
+
+.plugin-card-body
+{
+	background-color: #FFFFFF;
+	padding: 15px;
+	position: relative;
+}
+
+.plugin-card-title
+{
+	font-size: 1.35rem;
+	font-weight: normal;
+	margin: 0;
+}
+
+.plugin-card-subtitle
+{
+	font-size: 1rem;
+	font-weight: normal;
+	margin: 5px 0px 15px 0px;
+	color: #777777;
+}
+
+.plugin-card-text
+{
+	line-height: 25px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.plugin-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.plugin-badges
+{
+	display: flex;
+	margin-top: 10px;
+	justify-content: left;
+	align-items: center;
+}
+
+#plugin-category-icon
+{
+	width: 30px;
+	height: 30px;
+}
+
+.tooltip
+{
+    visibility: hidden;
+    width: max-content;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 50px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip text - show on hover */
+.badge:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/************************************ GENERAL ************************************/
+
+a
+{
+	text-decoration: none;
+	color: #FFFFFF
+}
+
+.m-5 {
+	margin: 3rem;
+}
+
+.ms-2 {
+	margin-left: 0.5rem;
+}
+
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.w-85 {
+	width: 85%;
+}
+
+.w-75 {
+	width: 75%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-content-around {
+	justify-content: space-around;
+}
+
+.rounded-pill {
+	border-radius: 500px;
+}
+
+/************************************ BUTTONS ************************************/
+
+button {
+	background-color: #FF7777;
+	border: solid;
+	border-width: 2px;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	display: inline-block;
+	font-size: 16px;
+}
+
+#download-button {
+	background-color: var(--download-button-color);
+	border-radius: 50px;
+	height: var(--download-button-radius);
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--download-button-sec-color);
+}
+
+#download-button:hover a
+{
+	font-weight: normal;
+	color: var(--download-button-text-color-hover);
+}
+
+#download-button:hover {
+	background-color: var(--download-button-sec-color);
+	border-color: var(--download-button-color);
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="plugin-card" (click)="openDialog()">	<div class="m-5">		<img class="w-100" [src]="this.tool.logo" [alt]="this.tool.name">	</div>	<div class="plugin-card-body">		<h5 class="plugin-card-title">{{ this.tool.name }}</h5>		<h6 class="plugin-card-subtitle mt-2"> {{ this.tool.developer }} </h6>		<div class="plugin-card-text"> {{ this.tool.description }} </div>		<div class="plugin-badges">			<!-- Premium or Free badge -->			<div>				<span *ngIf="this.tool.price > 0; then thenBlock else elseBlock"></span>				<ng-template #thenBlock class="tooltip-container">					<span class="badge" id="premium">PREMIUM</span>					<span class="tooltip">This plugin requires payment to be used.</span>				</ng-template>				<ng-template #elseBlock>					<span class="badge" id="free" #elseBlock>FREE</span>					<span class="tooltip">You\'re free to install this plugin.</span>				</ng-template>			</div>						<!-- Plugin type badge -->			<div class="tooltip-container">				<span class="badge" [id]="this.tool.css_id">{{this.tool.category}}</span>				<span class="tooltip">{{this.tool.category_description}}</span>			</div>		</div>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AdminPageComponent', 'selector': 'app-admin-page'},{'name': 'AdminPagePluginFormComponent', 'selector': 'app-admin-page-plugin-form'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PluginCardComponent', 'selector': 'app-plugin-card'},{'name': 'PluginPageComponent', 'selector': 'app-plugin-page'},{'name': 'PluginPageHeaderComponent', 'selector': 'app-plugin-page-header'},{'name': 'PluginPageImagesComponent', 'selector': 'app-plugin-page-images'},{'name': 'PluginPageMenuComponent', 'selector': 'app-plugin-page-menu'},{'name': 'SearchPageComponent', 'selector': 'app-search-page'},{'name': 'SideFilterComponent', 'selector': 'app-side-filter'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PluginCardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PluginCardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
