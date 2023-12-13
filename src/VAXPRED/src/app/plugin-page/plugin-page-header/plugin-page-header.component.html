@@ -9,8 +9,15 @@
       <h1>{{ this.plugin.name }}</h1>
       <p class="version-tag">1.0.7</p>
       <div class="pricing-badge">
-        <span class="badge" id="premium" *ngIf="this.plugin.price > 0; else elseBlock">PREMIUM</span>
-        <ng-template #elseBlock><span class="badge" id="free" #elseBlock>FREE</span></ng-template>
+        <span
+          class="badge"
+          id="premium"
+          *ngIf="this.plugin.price > 0; else elseBlock"
+          >PREMIUM</span
+        >
+        <ng-template #elseBlock
+          ><span class="badge" id="free" #elseBlock>FREE</span></ng-template
+        >
       </div>
     </div>
     <div fxLayout="row" fxLayoutAlign="start center">
@@ -21,6 +28,9 @@
     <!-- TODO: i18n -->
     <button (click)="openPopup()" id="install-plugin">Install</button>
   </div>
+  <button mat-icon-button aria-label="Close page" (click)="closeDialog()" style="color:white; align-self: start">
+    <mat-icon style="font-size: 1.2em">close</mat-icon>
+  </button>
 </div>
 
 <!-- Popup Modal -->

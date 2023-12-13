@@ -84,8 +84,8 @@
         <h3>More Info</h3>
       </mat-card-title>
       <mat-card-content>
-        <p>Release Date: {{ plugin.release_date | date:'yyyy-MM-dd'}}</p>
-        <p>Last Update: {{ plugin.last_update_date | date:'yyyy-MM-dd'}}</p>
+        <p class="plugin-date">Release Date: <span><em>{{ plugin.release_date | date:'yyyy-MM-dd'}}</em></span></p>
+        <p class="plugin-date">Last Update: <span><em>{{ plugin.last_update_date | date:'yyyy-MM-dd'}}</em></span></p>
       </mat-card-content>
     </mat-card>
   </div>

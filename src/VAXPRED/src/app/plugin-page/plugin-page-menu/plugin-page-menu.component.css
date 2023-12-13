@@ -40,3 +40,8 @@ hr {
 .category-text {
     margin-left: 10px; /* Add margin between the icon and text */
 }
+
+.plugin-date {
+    display: flex;
+    justify-content: space-between;
+}
