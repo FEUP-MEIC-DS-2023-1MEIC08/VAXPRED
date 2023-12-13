@@ -6,7 +6,6 @@ from repositories.plugin_faqs import PluginFaqRepository
 from repositories.plugin_tag import PluginTagRepository
 from repositories.user_plugin import UserPluginRepository
 from repositories.plugin import PluginRepository
-from repositories.plugin_categories import PluginCategoryRepository
 from repositories.plugin_image import PluginImageRepository
 from schemas.plugin import PluginResponse
 
@@ -18,7 +17,6 @@ router = APIRouter()
 @router.get("/{user_id}/plugins/")
 def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
     associations = UserPluginRepository(db).get_user_plugin_associations(user_id=user_id)
-    categories = PluginCategoryRepository(db)
     tags = PluginTagRepository(db)
     dependencies = PluginDependencyRepository(db)
     faqs = PluginFaqRepository(db)
@@ -31,16 +29,14 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
         plugin_id = association["plugin_id"]
         
         plugin_repository = PluginRepository(db)
-        category_repository = PluginCategoryRepository(db)
         tag_repository = PluginTagRepository(db)
         plugin_dependencies_repository = PluginDependencyRepository(db)
         plugin_faqs_repository = PluginFaqRepository(db)
         plugin_images_repository = PluginImageRepository(db)
 
         plugin = plugin_repository.get_plugin_by_id(plugin_id)
-        categories = category_repository.get_categories_by_plugin_id(plugin_id)
         tags = tag_repository.get_tags_by_plugin_id(plugin_id)
-        dependencies = plugin_dependencies_repository.get_dependency_names_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
         faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
         images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
 
@@ -59,8 +55,8 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
             supplier_email=plugin.supplier_email,
             contract_duration=plugin.contract_duration,
             price=plugin.price,
-            type=plugin.type,
-            categories=categories,
+            category=plugin.category,
+            changelog=plugin.changelog,
             tags=tags,
             dependencies=dependencies,
             faqs=faqs,

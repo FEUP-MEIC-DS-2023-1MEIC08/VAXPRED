@@ -3,7 +3,10 @@ from sqlalchemy.orm import Session
 from database import get_db
 from repositories.plugin_tag import PluginTagRepository
 from repositories.plugin import PluginRepository
-from schemas.plugin import PluginListResponse
+from repositories.plugin_dependencies import PluginDependencyRepository
+from repositories.plugin_faqs import PluginFaqRepository
+from repositories.plugin_image import PluginImageRepository
+from schemas.plugin import PluginListResponse, PluginResponse
 
 router = APIRouter()
 
@@ -13,9 +16,40 @@ def get_tag_plugins(tag_id: int, db: Session = Depends(get_db)):
     plugins = PluginTagRepository(db).get_plugins_by_tag_id(tag_id=tag_id)
     tag_plugins = []
     plugin_repository = PluginRepository(db)
-    for plugin in plugins:
-        tempPlugin = plugin_repository.get_plugin_by_id(plugin)
-        tag_plugins.append(tempPlugin)
+    tag_repository = PluginTagRepository(db)
+    plugin_dependencies_repository = PluginDependencyRepository(db)
+    plugin_faqs_repository = PluginFaqRepository(db)
+    plugin_images_repository = PluginImageRepository(db)
+    
+    for id in plugins:
+        plugin = plugin_repository.get_plugin_by_id(id)
+        plugin_id = plugin.id
+        tags = tag_repository.get_tags_by_plugin_id(plugin_id)
+        dependencies = plugin_dependencies_repository.get_dependencies_by_plugin_id(plugin_id)
+        faqs = plugin_faqs_repository.get_faqs_by_plugin_id(plugin_id)
+        images = plugin_images_repository.get_images_by_plugin_id(plugin_id)
+
+        response = PluginResponse(
+            id=plugin.id,
+            name=plugin.name,
+            version=plugin.version,
+            description=plugin.description,
+            developer=plugin.developer,
+            release_date=plugin.release_date,
+            last_update_date=plugin.last_update_date,
+            supplier_name=plugin.supplier_name,
+            supplier_email=plugin.supplier_email,
+            contract_duration=plugin.contract_duration,
+            price=plugin.price,
+            category=plugin.category,
+            changelog=plugin.changelog,
+            tags=tags,
+            dependencies=dependencies,
+            faqs=faqs,
+            images=images
+        )
+        tag_plugins.append(response)
+
     return {"plugins": tag_plugins}
 
 

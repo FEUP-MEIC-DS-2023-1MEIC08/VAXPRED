@@ -22,7 +22,7 @@ def get_image_plugins(image_id: int, db: Session = Depends(get_db)):
     return {"plugins": image_plugins}
 
 # Route to list of images associated with a plugin
-@router.get("/{plugin_id}/", response_model=ImageListResponse)
+@router.get("/plugin/{plugin_id}/", response_model=ImageListResponse)
 def get_plugin_images(plugin_id: int, db: Session = Depends(get_db)):
     association_db = PluginImageRepository(db).get_list_dict()
     plugin_images = []

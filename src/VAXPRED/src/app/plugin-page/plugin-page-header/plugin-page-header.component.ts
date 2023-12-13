@@ -11,7 +11,7 @@ import { ToolService } from 'src/app/plugin.service';
   styleUrls: ['./plugin-page-header.component.css']
 })
 export class PluginPageHeaderComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '', [], 2, []);
+  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
   @Input() dialogRef!: MatDialogRef<PluginPageComponent>;
 
   currentDate: Date = new Date();

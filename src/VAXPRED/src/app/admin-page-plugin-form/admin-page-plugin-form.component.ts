@@ -29,13 +29,14 @@ export class AdminPagePluginFormComponent implements OnInit {
     developer: "",
     supplier_name: "",
     supplier_email: "",
-    contract_duration: 0
+    contract_duration: 0,
+    changelog: ""
   };
 
   pluginCategoryID = -1;
 
   // TODO: supplier_name and supplier_email are not in the plugin model
-  // TODO: fix category selection because a plugin can have more than 1 category !!!
+  // TODO: fix category selection because a plugin can have more than 1 category !!! (outdated)
 
   newTagInput = "";
 
@@ -57,6 +58,7 @@ export class AdminPagePluginFormComponent implements OnInit {
       // this.pluginData.supplier_email = this.data.editingPlugin.supplier_email;
       this.pluginData.contract_duration = this.data.editingPlugin.contract_duration;
       this.pluginCategoryID = 1; // TEMP
+      this.pluginData.changelog = this.data.editingPlugin.changelog;
     }
   }
 
