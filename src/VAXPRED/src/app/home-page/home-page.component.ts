@@ -16,8 +16,8 @@ export class HomePageComponent {
 	originalItems: Plugin[] = [];
 	sortingOption: string = 'original';
 	isRadioSelected: boolean = false;
-	toolTypes: string[] = [];
-	selectedToolTypes: { [key: string]: boolean } = {};
+	toolCategories: string[] = [];
+	selectedToolCategories: { [key: string]: boolean } = {};
 	tags: string[] = [];
 	selectedTags: { [key: string]: boolean } = {};
 
@@ -37,6 +37,7 @@ export class HomePageComponent {
 						new Date(plugin.release_date),
 						new Date(plugin.last_update_date),
 						['Data Quality', 'Data Curation', 'Synthetic Data Generation'][index],
+						plugin.changelog,
 						plugin.tags,
 						plugin.contract_duration,
 						plugin.faqs
@@ -46,22 +47,22 @@ export class HomePageComponent {
 			this.originalItems = this.items.slice();
 		});
 
-		this.toolTypes = this.toolService.getToolTypes();
+		this.toolCategories = this.toolService.getToolCategories();
 		this.tags = this.toolService.getTags();
 	}
 
 
-	/**
- * Filters the list based on the selected tool type and the tag
- */
+  	/**
+	 * Filters the list based on the selected tool category and the tag
+	 */
 	filterList(): void {
-		const selectedTypes = Object.keys(this.selectedToolTypes).filter((type) => this.selectedToolTypes[type]);
+		const selectedCategories = Object.keys(this.selectedToolCategories).filter((category) => this.selectedToolCategories[category]);
 		const selectedTags = Object.keys(this.selectedTags).filter((tag) => this.selectedTags[tag]);
 
 		this.items = this.originalItems.filter((item: Plugin) => {
-			const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(item.type);
+			const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(item.category);
 			const tagMatch = selectedTags.length === 0 || item.tags.some((tag) => selectedTags.includes(tag));
-			return typeMatch && tagMatch;
+			return categoryMatch && tagMatch;
 		});
 	}
 

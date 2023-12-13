@@ -34,19 +34,19 @@ describe('SideFilterComponent', () => {
 		spyOn(toolService, 'getTools').and.returnValue([
 			new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 		]);
-		spyOn(toolService, 'getToolTypes').and.returnValue(['Data Quality', 'Data Curation', 'Synthetic Data Generation']);
+		spyOn(toolService, 'getToolCategories').and.returnValue(['Data Quality', 'Data Curation', 'Synthetic Data Generation']);
 
 		component.items = toolService.getTools().slice();
 		component.originalItems = toolService.getTools();
-		component.toolTypes = toolService.getToolTypes().slice();
+		component.toolCategories = toolService.getToolCategories().slice();
 
 	});
 
@@ -62,13 +62,13 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 			new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 		];
 
 		expect(component.sortingOption).toEqual('aToZ');
@@ -82,13 +82,13 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 		];
 
 		expect(component.sortingOption).toEqual('zToA');
@@ -107,20 +107,20 @@ describe('SideFilterComponent', () => {
 
 	});
 	it('should filter the list based on 1 selected tool types', () => {
-		component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': false, 'Data Curation': true };
+		component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': false, 'Data Curation': true };
 
 		component.filterList();
 
 		const expected_List = [
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});
 
 	it('should filter the list based on 2 selected tool types', () => {
-		component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+		component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
 		console.log("Initial Component list")
 		console.log(component.items)
 		component.filterList();
@@ -130,20 +130,20 @@ describe('SideFilterComponent', () => {
 			[
 				new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
     augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-					'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+					'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 				new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-					'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+					'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 				new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-					'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+					'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 			];
 		expect(component.items).toEqual(expected_List);
 
 	});
 
 	it('should filter the list based on 2 selected tool types and order the list in descending order', () => {
-		component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+		component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
 		component.filterList();
 		component.sortingOption = 'zToA';
 		component.toggleSorting();
@@ -152,19 +152,19 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});
 
 	it('should filter the list based on 2 selected tool types and order the list in descending order and then reset', () => {
-		component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
+		component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': true };
 		component.filterList();
 		component.sortingOption = 'zToA';
 		component.toggleSorting();
@@ -173,13 +173,13 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(1, 'YData', 'Generate synthetic data that mimics the statistical properties and behaviour of the real data. Protect your sensitive data, \
 			augment your datasets and improve efficiency of your models by replacing real data or enriching it with synthetic data', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1'], 0, []),
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});
@@ -191,7 +191,7 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});
@@ -203,16 +203,16 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 			new Plugin(3, 'Sama', 'Your ML model\'s success requires more than data. It requires a trusted data curation, annotation & validation partner \
 			capable of managing risk while providing proactive insights and predictability.', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});
 
 	it('should filter the list based on 1 selected Tool type and 1 selected Tag', () => {
-		component.selectedToolTypes = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': false };
+		component.selectedToolCategories = { 'Data Quality': false, 'Synthetic Data Generation': true, 'Data Curation': false };
 		component.selectedTags = { 'Tag 1': false, 'Tag 2': true, 'Tag 3': false };
 
 		component.filterList();
@@ -220,7 +220,7 @@ describe('SideFilterComponent', () => {
 		const expected_List = [
 			new Plugin(2, 'MOSTLY.AI', 'Synthetic data looks and feels like real data. With MOSTLY AI, you can make your synthetic data bigger, smaller, rebalanced, \
 			or augmented to fill in missing data points. Learn more about ', 'assets/img/ydata.png',
-				'version', 'developer', new Date, new Date, 'type', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
+				'version', 'developer', new Date, new Date, 'category', 'changelog', ['Tag 1', 'Tag 2', 'Tag 3'], 0, []),
 		];
 		expect(component.items).toEqual(expected_List);
 	});

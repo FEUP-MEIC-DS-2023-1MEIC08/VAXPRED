@@ -18,7 +18,7 @@ export class ToolService {
 		return this.http.get('http://localhost:8000/plugins/' + id + '/');
 	}
 
-	getToolTypes(): string[] {
+	getToolCategories(): string[] {
 		return ['Data Quality', 'Data Curation', 'Synthetic Data Generation'];
 	}
 
