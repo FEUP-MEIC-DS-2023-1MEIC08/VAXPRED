@@ -21,7 +21,7 @@
 
 .category-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
