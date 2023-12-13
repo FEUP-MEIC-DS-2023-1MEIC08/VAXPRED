@@ -8,8 +8,6 @@ from repositories.user_plugin import UserPluginRepository
 from repositories.plugin import PluginRepository
 from repositories.plugin_categories import PluginCategoryRepository
 from repositories.plugin_image import PluginImageRepository
-
-from schemas.user_plugin import PluginWithCategories, UserPlugin
 from schemas.plugin import PluginResponse
 
 
@@ -31,7 +29,6 @@ def get_user_plugins(user_id: int, db: Session = Depends(get_db)):
     user_plugins = []
     for association in associations:
         plugin_id = association["plugin_id"]
-        temp_plugin = plugin_repository.get_plugin_by_id(plugin_id)
         
         plugin_repository = PluginRepository(db)
         category_repository = PluginCategoryRepository(db)
