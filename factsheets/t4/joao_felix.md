@@ -80,6 +80,21 @@ In this sprint my main goal was to try to finish as many issues as possible.
 
 ## Sprint 4
 
+In this sprint I had the opportunity to work on implementing Kafka in the project.
+
+### The user storie that I am most proud of
+
+- [(#132) As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/253).
+
+### The pull request that I am most proud of
+
+- [(#253) Pull request to update the Kafka branch](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/253).
+
+### Contribution of other types that I am most proud of
+
+- Having managed to pass the name and ID of the plugin buyer to the server in PR #253.
+
+  
 ...
 
 ## Overall Product
