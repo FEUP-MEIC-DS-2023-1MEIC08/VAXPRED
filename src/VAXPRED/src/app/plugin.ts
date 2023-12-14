@@ -66,7 +66,7 @@ export class Plugin
 		this.contract_duration = contract_duration;
 		this.faq = faq;
 		this.price = price ? price : 0;
-
+	
 		this.assembleDynamicData();
 	}
 
@@ -93,6 +93,5 @@ export class Plugin
 		}
 
 		this.css_id = css_ids[this.category];
-		this.price = Math.random() > 0.5 ? 20 + Math.floor(Math.random() * 3) * 10 - 0.01 : 0;
 	}
 }

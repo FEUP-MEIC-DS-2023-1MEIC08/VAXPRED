@@ -49,7 +49,6 @@ def get_tag_plugins(tag_id: int, db: Session = Depends(get_db)):
             images=images
         )
         tag_plugins.append(response)
-
     return {"plugins": tag_plugins}
 
 

@@ -9,8 +9,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'profile', component: UserProfileComponent },
-  //{ path: 'store', component: HomePageComponent },
+  { path: 'store', component: HomePageComponent },
   { path: 'search', component: SearchPageComponent },
+  { path: 'search/:categories', component: SearchPageComponent },
+  // route that involver 2 query params
+  { path: 'search/:categories/:tags', component: SearchPageComponent },
   { path: 'admin', component: AdminPageComponent },
 
   //Wild Card Route for 404 request

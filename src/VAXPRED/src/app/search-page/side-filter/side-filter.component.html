@@ -14,23 +14,23 @@
 		<h4><label for="toggle" class="collapsible-label">Category</label></h4>
 		<div class="content" [attr.list-size]="toolCategories.length">
 			<label *ngFor="let item of toolCategories">
-				<input type="checkbox" [(ngModel)]="selectedToolCategories[item]" [value]="item" (change)="filterList()"> {{ item }}
+				<input type="checkbox" [(ngModel)]="selectedToolCategories[item]" [value]="item" > {{ item }}
 			</label>
 		</div>
 	</div>
 	  
-	
 	<div class="collapsible">
 		<input type="checkbox" id="toggleTag">
 		<h4><label for="toggleTag" class="collapsible-label">Tag</label></h4>
 		<div class="content">
 			<label *ngFor="let item of tags">
-				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item" (change)="filterList()"> {{ item }}
+				<input type="checkbox" [(ngModel)]="selectedTags[item]" [value]="item"> {{ item }}
 			</label>
 		</div>
 	</div>
-
-	
+	<div class="submit-button">
+		<button (click)="onSubmit()" *ngIf="foundDifference()">Apply Filter</button>
+	</div>
 </aside>
 
 <main class="results-section">
