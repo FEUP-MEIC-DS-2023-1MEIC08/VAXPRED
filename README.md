@@ -4,19 +4,19 @@ VAXPRED aims to improve the field of vaccine development supplying a cloud-based
 
 ## How to use
 
-We will explain how to use your software from user standpoint. This can include short videos, screenshots, or API documentation, depending on what makes sense for your particular software system and target users. More information can be found in the [docs](docs/) directory).
+Instructions on how to use this system: TODO.
+
+Complete project documentation can be generated with `Compodoc`. See the [README](src/VAXPRED/README.md) for more details.
 
 ## How to contribute
 
 The guidelines for the project are present here: [guidelines](docs/GUIDELINES.md).
 
-We still don't have containers but later on we will explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment.
-
-More the details about the tecnical vision can be found in the [development](docs/development.md) documentation.
+Instructions on how to develop the system, including how to build, run and test it in a development environment, as well as details about the technical vision can be found in the [development](docs/development.md) documentation.
 
 ## How to run and operate in a production environment
 
-We still don't have containers but later on we will explain how to package, deploy and run the system to a production (or production-like) environment. If needed, link to external resources or additional markdown files with further details (please place these in the [docs](docs/) directory).
+Instructions on how to run and operate the system in a production environment can be found in the application's main [README](src/VAXPRED/README.md).
 
 ## Contributions
 
