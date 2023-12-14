@@ -114,7 +114,29 @@ The team members created these pull requests to incorporate the work performed w
 
 ## Sprint 4
 
-...
+### The four user stories that we are most proud of
+
+ * "As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application." [issue #132](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132)
+ * "As a researcher, I want the store page to be as user friendly as possible, so that I can have a good experience using it." [issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+
+These were the user stories assigned to the team for this Sprint. We are proud of this as the home page is one of the first parts of the application that is seen by the user and we think we accomplished making it look appealing and user-friendly.
+
+
+### The four pull requests that we are most proud of
+
+ * "T3 task home box schema" [#228](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/228)
+ * "T3 - plugin cards re-design" [#248](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/248)
+ * "T3 task category integration" [#254](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254)
+ 
+The team members created these pull requests to incorporate the work performed (including new features and enhancements of previous ones) with the rest of the app.
+
+
+### Four contributions of other types that we are most proud of
+
+* One of the team's members was part of the "Kafka team" that worked with Kafka
+* The team collaborated with the other teams so all elements of the app were correctly integrated and to assure the user-friendliness of the app
+* The Team's members helped dividing the Sprint's User Stories into items, which helped organizing the Sprint's work
+* The Team's members wrote useful documentation for the implemented code
 
 
 ## Overall Product
