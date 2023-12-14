@@ -62,8 +62,25 @@ In this sprint I mainly communicated to other groups, assuring we were on the sa
 
 ## Sprint 3
 
-...
+In this sprint I mainly communicated to other groups, assuring we were on the same page. Also guided my team, giving them feedback, diving their work, evaluating it. Plus, I participed in the meeting with the client, presenting my team's work and receiving feedback. Also learned more about the next steps to take.
 
+### The two user stories that I am most proud of
+
+- [(#126) See plugins description.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues26)
+
+### The two pull requests that I am most proud of
+
+- [(#211) T1 - Add plugin categories to plugin page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/211)
+
+- [(#212) T1 feature plugin page access.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/212)
+
+### Two contributions of other types that I am most proud of
+
+- Guided my team's work, explaining what the goal of each task was
+
+- Evaluated PRs, improving their appearance and functionality, correcting my team's work
+
+- Contributed to evaluate our performance and to ease future work
 
 ## Sprint 4
 

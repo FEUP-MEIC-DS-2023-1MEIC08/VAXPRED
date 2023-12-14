@@ -19,7 +19,7 @@ Collecting information about the product.
 
 ## Sprint 1
 
-In this sprint, I contributed to the implementation of the plugin list of the user profile page component and made it connect to API. 
+In this sprint, I contributed to the implementation of the plugin list of the user profile page component and made it connect to the API. 
 
 ### The two user stories that I am most proud of
 
@@ -47,13 +47,13 @@ This was the only pull request for this sprint and it was made to merge all the 
 
 ## Sprint 2
 
-In this sprint, I contributed to the implementation of the removal of a plugin from a user profile page and also fixed the tests from the user-profile component.
+In this sprint, I contributed to the implementation of the removal of a plugin from a user profile page and also fixed the tests from the user profile component.
 
 ### The two user stories that I am most proud of
 
 - [(#22) As a researcher, I want to be able to remove the plugins from my profile, so that I can discard plugins that are not relevant for my current experiments.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/22)
 
-I made the remove button of each plugin in our user profile page make an API call to dissassociate the plugin with the current user, and refresh page to update the list visually.
+I made the remove button of each plugin in our user profile page make an API call to disassociate the plugin from the current user, and refresh the page to update the list visually.
 
 - [(#106) Fix tests for user-profile component](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/106)
 
@@ -67,7 +67,7 @@ This PR was to merge the work made for issue #22 to the dev branch of our reposi
 
 - [(#146) Fix for tests of the user-profile component](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/146)
 
-I made this PR to merge the fixes for our user-profile compoment to the dev branch of our repository.
+I made this PR to merge the fixes for our user-profile component to the dev branch of our repository.
 
 ### Two contributions of other types that I am most proud of
 
@@ -75,7 +75,24 @@ I made this PR to merge the fixes for our user-profile compoment to the dev bran
 
 ## Sprint 3
 
-...
+In this sprint, I worked on the implementation of the create plugin form in the admin page.
+
+### The two user stories that I am most proud of
+
+- [(#77) As an admin, I want to have a page where I can manage plugins in the store, so that I can add, edit and/or remove the plugins from the store.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/77)
+
+In this sprint, I only worked on this user story, more specifically on the task [(#134)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/134), as this was a very time-consuming feature to implement. To finish the task, I created a form on the admin page, that allows the creation of new plugins.
+
+### The two pull requests that I am most proud of
+
+- [(#225) T4 - Feat: Add new plugin via admin dashboard](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/225)
+
+Since I only worked on one task, I also only made one Pull Request. This Pull Request was to merge the work made for issue [(#134)](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/134) to the dev branch of our repository.
+
+### Two contributions of other types that I am most proud of
+
+- Offered to help with issues related to my previous work.
+- I was ready to meet and work at any time it was required.
 
 ## Sprint 4
 

@@ -82,9 +82,34 @@ Pull Requests #138, #144 and #177 were created by the team's members to incorpor
 * The Team's PO helped writing User Stories that will be done in Sprint 3
 * The Team's members helped dividing the Sprint's User Stories into items, which helped organizing the Sprint's work
 
+
 ## Sprint 3
 
-...
+### The four user stories that we are most proud of
+
+ * "As a researcher, I want to be able to see a "Free" symbol, so that I can know which plugins are free for all the users." [issue #162](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/162)
+ * "As a researcher, I want to be able to see a "Premium" symbol, so that I can see which plugins are payed for industrial companies."  [issue #163](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/163)
+ * "As a researcher, I want to have the plugins available in the store divided into categories or sections, so that I can view them in an organized way." [issue #14]([https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/163](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/14))
+ * "As a researcher, I want to have different icons for the plugins available in the store, so that at a glance I can see what each plugin is about." [issue #76](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/76)
+
+User stories #162 and #163 had issues belonging to teams 1 and 3, with our team having finished their corresponding issues ([#186](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/186) and #[187](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/187)), which lead to an improvement of the usability of the store. User stories #14 and #76 were finished in this sprint by the team, also leading to 
+a better interface.
+
+### The four pull requests that we are most proud of
+
+ * "T3 feature plugin type icon" [#208](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/208)
+ * "T3 - Add a new PREMIUM/FREE badge to the plugin cards" [#210](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/210)
+ * "T3: Responsive display for the results of the search page" [#214](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/214)
+
+The team members created these pull requests to incorporate the work performed with the rest of the store.
+
+
+### Four contributions of other types that we are most proud of
+
+* The team collaborated with other teams to be able to have a connection between the database and the interface
+* The team's PO and SM were present in a meeting with the client to discuss the ongoing work and plans for Sprint 4
+* The Team's PO helped writing User Stories that will be done in Sprint 4
+* The Team's members helped dividing the Sprint's User Stories into items, which helped organizing the Sprint's work
 
 
 ## Sprint 4

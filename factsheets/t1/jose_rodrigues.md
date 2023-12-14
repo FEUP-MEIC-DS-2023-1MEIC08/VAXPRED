@@ -51,7 +51,17 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 3
 
-...
+- Added a tag visualizer to the plugin card.
+- Completed every item assigned to me for this sprint.
+- 
+### The two pull requests that I am most proud of
+
+- Authored [#200](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/200). Added tag display to the plugin page. Users are now better informed about a plugin.
+
+### Two contributions of other types that I am most proud of
+
+- Designed the visual part for the component I implemented.
+- Discussed implementation options with my colleagues.
 
 
 ## Sprint 4

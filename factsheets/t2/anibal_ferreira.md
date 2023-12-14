@@ -48,13 +48,22 @@ The two pull requests I'm most proud of is the pull request #189 which addded a 
 
 I am also proud of my contributions as scrum master in which I helped review several pull requests made by other SM to achieve things like the integration of tests, linters, etc.
 
-...
-
 
 ## Sprint 3
 
-...
+For sprint 3, I helped the integration of new database fields such as price and type of the plugin as well as taking part of a code refactor and database population. As the scrum master I also helped review pull requests and communicate with the other teams to allow our team to better accomodate the database according to the system's needs.  
 
+### The two user stories that I am most proud of
+
+In this sprint I was involved with user story #83 as well as user story #109 due to the nature of the code refactor we conducted. 
+
+### The two pull requests that I am most proud of
+
+The two pull requests I'm most proud of is the pull request #226 which aims to bring the code refactor and changes made to the database by team 2 during sprint 3 to the dev branch.
+
+### Two contributions of other types that I am most proud of
+
+In this sprint I also helped manage several merges between our feature, refactor and test branches and thoroughly test them to ensure they are ready for merge with the dev branch. I also populated the database with entries that resemble what the actual database would have stored.
 
 ## Sprint 4
 

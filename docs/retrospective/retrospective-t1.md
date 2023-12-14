@@ -31,9 +31,26 @@ Nothing was defined yet, this sprint consisted of an understandin of the project
 
 ## Sprint 3
 
-Describe the retrospective for sprint 3 for team 1
+## What went well?
 
+* The communication between teams was substantially improved and worked was started earlier on the sprint, resulting in ready results before its end.
+* The Scrum Master continued doing a great work supporting the Developers.
+* The Product Owner met with the other two client, who thought the work done was excellent and did not add any more requirements.
+
+## What could be improved?
+
+* Nothing worth noting, everything went smoothly.
+  
 ## Sprint 4
 
-Describe the retrospective for sprint 4 for team 1
+## What went well?
+
+* There weren't many features planned for this sprint, as the client was already satisfied with the previous sprint's presentation.
+* The Scrum Master continued doing a great work supporting the Developers.
+* The kafka team member ensured everything went smootly in that regard, taking initiative and guiding other members' work.
+* The plugin page UX was successfully improved.
+
+## What could be improved?
+
+* Nothing worth noting, everything went smoothly.
 

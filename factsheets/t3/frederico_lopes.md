@@ -22,7 +22,7 @@ My main contributions of this sprint were acquiring information about the produc
 
 ## Sprint 1
 
-In this sprint designed the UI and created a mockup for the Plugin Store (with Nuno) and I also implemented in Angular the main page for this store
+In this sprint, I designed the UI and created a mockup for the Plugin Store (with Nuno) and I also implemented in Angular the main page for this store
 
 ### The two user stories that I am most proud of
 
@@ -39,18 +39,44 @@ The mock for the plugin store
 
 ## Sprint 2
 
-...
+In this sprint I worked in fetching the information from the database to display the plugins in the store.
+
+### The two user stories that I am most proud of
+
+- [Issue #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
+
+### The two pull requests that I am most proud of
+
+I did not create pull requests this sprint.
+
+### Two contributions of other types that I am most proud of
+
+My contribution was the user story.
 
 
 ## Sprint 3
+In this sprint, I created most of the home page.
 
-...
+### The two user stories that I am most proud of
+
+- [Issue #14](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/14)
+- [Issue #165](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/165)
+
+### The two pull requests that I am most proud of
+
+- [Pull request #228](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/228)
+
+### Two contributions of other types that I am most proud of
+Since I did a total of 4 user stories this sprint (the ones above and [Issue #155](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/155) and [Issue #161](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/161)), I did no contributions of other types.
 
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+### The two pull requests that I am most proud of
+
+### Two contributions of other types that I am most proud of
 
 ## Overall Product
 

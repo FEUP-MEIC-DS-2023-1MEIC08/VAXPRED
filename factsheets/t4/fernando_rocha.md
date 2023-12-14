@@ -76,7 +76,22 @@ This was also challenging to come up with, but it still a base for our future wo
 
 ## Sprint 3
 
-...
+In this sprint I remained the team's scrum master. We were productive and communicated efficiently. Tasks were planned in the beginning of the sprint, and developers assigned themselves or got assigned as the sprint progressed. We managed to complete all of our tasks!
+
+### The two user stories that I am most proud of
+
+- [(#196) As a researcher, I want to see a footer on all pages, so that I can have a better looking and more pleasant experience.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/196)
+- [(#77) As an admin, I want to have a page where I can manage plugins in the store, so that I can add, edit and/or remove the plugins from the store.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/77)
+
+### The two pull requests that I am most proud of
+
+- [(#201) T4 - Feat: Add footer to all pages](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/201) - I created this feature.
+- [(#227) T4 - Admin dashboard: ability to Edit Plugins](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/227) - I created this feature with João Félix.
+
+### Two contributions of other types that I am most proud of
+
+- Contributing to the good functioning of the project by being active in the team's Discord channel and organizing our general to-do's and pending tasks for the sprint.
+- Meeting with the client online on 29/11/2023 as a Scrum Master, to discuss the project's progress and future steps.
 
 ## Sprint 4
 

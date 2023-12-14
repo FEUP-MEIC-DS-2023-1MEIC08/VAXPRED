@@ -35,7 +35,7 @@ I wasn't able to create a pull request in time of the edition of this file.
 
 ## Sprint 2
 
-In this sprint I focused on assigning the tasks I was able to finish in last sprint to my team, while also fixing merge issues related to Sprint 1. I was also focused on distributing items to my team, since they worked very well.
+In this sprint I focused on assigning the tasks I wasn't able to finish in last sprint to my team, while also fixing merge issues related to Sprint 1. I was also focused on distributing items to my team, since they worked very well.
 
 ### The two user stories that I am most proud of
 - [Issue #33](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/33)
@@ -52,7 +52,24 @@ In this sprint I focused on assigning the tasks I was able to finish in last spr
 
 ## Sprint 3
 
-...
+In this sprint I focused on completing the tasks I wasn't able to finish in last sprint, as also completing the ones I assigned myself this sprint.
+
+### The two user stories that I am most proud of
+- [Issue #76](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/76)
+- [Issue #186](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/186)
+- [Issue #187](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/187)
+
+> [!NOTE]
+> The last two are part of a User Story that was assigned to 2 teams and wasn't moved to the Done Backlog
+
+### The two pull requests that I am most proud of
+
+- [Pull Request #208](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/208)
+- [Pull Request #210](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/210)
+
+### Two contributions of other types that I am most proud of
+
+- Interacted with the client to understand what the last sprint could look like
 
 
 ## Sprint 4
