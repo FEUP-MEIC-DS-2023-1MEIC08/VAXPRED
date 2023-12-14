@@ -84,19 +84,18 @@ I answered the form provided by the Product Owners about the Happiness Meter.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 
 ### Technical Soundness
 
-...
+  I helped in developing the search page functionalities, mainly the filter bar on the left and the results that appear. In the homepage, I also helped in showing the categories and the plugins of each category.
 
 
 ### Product Realization
-
-...
-
+ 
+  I believe the homepage and plugin store I assisted in developing have successfully reached a positive outcome, showcasing practical features and a distinct "professional" impression.
 
 ### Value for the Client
 
-...
+  Based on the feedback received, the client expressed satisfaction with the final outcome. Despite the distribution of the work in the beggining felt a little uneven, it seemed to work well in the end. Overral, the effort was appropriate and everyone worked well together.
+
+  
