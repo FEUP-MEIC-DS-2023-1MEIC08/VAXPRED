@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "compodoc": "npx compodoc -p tsconfig.doc.json",
+    "compodoc:build": "compodoc -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +40,7 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@compodoc/compodoc": "^1.1.23",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
