@@ -96,7 +96,28 @@ In this sprint we had one major user story assigned to our team and several work
 
 ## Sprint 4
 
-...
+
+### The four user stories that we are most proud of
+
+* "Create a new route in the backend to return all the plugins that have a specific category." [issue #239](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/239).
+* "Add new version plugin to the backend." [issue #240](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/240).
+* "Refactor categories in the backend" [issue #238](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/238).
+* "As a researcher, I want to be able to install a plugin like the Mhcflurry, when I click to install it from the store, so that I can run it in my machine." [issue #213](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/213).
+
+### The four pull requests that we are most proud of
+
+* "T2 - Changed create plugin response" [pull #255](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/255)
+* "API update" [pull #250](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/250)
+* "T2 API Refactor" [pull #226](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/226)
+* "T2 - Feature - Show Category Icons" [pull #216](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/216)
+
+### Four contributions of other types that we are most proud of
+
+* Our team contributed team contributed in helping establishing the effort of each user story for this sprint.
+* Our team colaborated with the oher teams to integrate the backend into the frontend.
+* Our team created automated tests for our PBIs.
+* Our team discussed the user stories and work items with the team's PO. 
+
 
 
 ## Overall Product
@@ -106,14 +127,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+We contributed for a solid backend.
 
 
 ### Product Realization
 
-...
+The product was a lot more complete with the implementation of our backend.
 
 
 ### Value for the Client
 
-...
+It delivered some funcionality to the whole cloud platform which is really welcome.

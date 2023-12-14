@@ -71,12 +71,16 @@ Since I did a total of 4 user stories this sprint (the ones above and [Issue #15
 
 
 ## Sprint 4
+In this sprint I was part of the Kafka superteam.
 
 ### The two user stories that I am most proud of
+- [Issue #229](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/229)
 
 ### The two pull requests that I am most proud of
+- [Pull request #262](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/262)
 
 ### Two contributions of other types that I am most proud of
+I was responsible for the initial developement of the kafka integration. I created the initial files and functions for the kafka that were then further developed by my peers.
 
 ## Overall Product
 

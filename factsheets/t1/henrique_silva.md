@@ -73,7 +73,20 @@ In this sprint, I was responsible for enhancing the categories list in the plugi
 
 ## Sprint 4
 
-...
+In this sprint, I was responsible for developing logging using Kafka.
+
+### The user story that I am most proud of
+
+- As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application. #132.
+
+### The pull request that I am most proud of
+
+- Reviewed [#251](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/251). Ensured more fields were added to the kafka logs.
+
+### Contributions of other types that I am most proud of
+
+- Sharing knowledge with teammates and helping when necessary.
+- Setted up Kafka and Zookeeper servers.
 
 
 ## Overall Product
