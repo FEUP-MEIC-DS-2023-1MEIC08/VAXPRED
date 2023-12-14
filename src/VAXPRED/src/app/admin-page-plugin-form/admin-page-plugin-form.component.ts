@@ -140,7 +140,7 @@ export class AdminPagePluginFormComponent implements OnInit {
                 })
               }
             }
-            window.location.reload();
+            setTimeout(() => { window.location.reload(); }, 500);
           });
         },
         // Error creating new plugin
