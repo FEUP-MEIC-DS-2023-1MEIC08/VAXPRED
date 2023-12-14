@@ -95,3 +95,16 @@ As a PO, I did not participate in any pull request.
 * Offered suggestions to improve the project.
 * Explained the feedback of the meetings with the client to the other team members.
 
+## Overall Product
+
+### Technical Soundness
+
+My coordination as product owner, helped the backend of the application reach a final state where all the necessary information is stored and this information is retrieved in an efficient way that minimizes the number of required calls to the cloud platform.
+
+### Product Realization
+
+My user stories created during the sprint, helped the product reach its final stage in a complete state with the required features implemented. 
+
+### Value for the Client
+
+The product developed shows value for the client and in the meetings we had that value was acknowledged. This final result was only possible due to the hard work of my team that communicated with me and followed the backlog that me and the other product owners organised.
