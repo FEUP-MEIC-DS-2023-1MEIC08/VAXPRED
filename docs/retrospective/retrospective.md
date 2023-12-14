@@ -10,14 +10,12 @@ The first sprint was the bumpiest one, since the teams initiated the development
 
 ## Sprint 2
 
-This sprint went a little better than the previous sprint as the teams were able to present new changes to the product and there weren't many items that had to be carried over to the next sprint. During this sprint most teams encountered time restrictions due to an increase in workload outside this project. However, this led to a better underrstanding of how these situations can be handled to ensure a quality release.
+This sprint went a little better than the previous sprint as the teams were able to present new changes to the product and there weren't many items that had to be carried over to the next sprint. During this sprint most teams encountered time restrictions due to an increase in workload outside this project. However, this led to a better understanding of how these situations can be handled to ensure a quality release.
 
 ## Sprint 3
 
-Describe the global retrospective for sprint 3
+The third sprint was a success. The teams were able to present new features and the product was starting to look like the final product. Everyone was used to the scrum process and the tools used to develop the product. The teams were able to work together and help each other out when needed. There were some issues left for the next sprint, a major part of which was the documentation and UI/UX improvements. The client showed interest in the product and was happy with the progress.
 
 ## Sprint 4
 
 Describe the global retrospective for sprint 4
-
-
