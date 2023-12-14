@@ -96,7 +96,24 @@ The reunions with the clients helped figure out what else could be done to have 
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+ * "As a researcher, I want the store page to be as user friendly as possible, so that I can have a good experience using it." [issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+ * "As a researcher, I want to be able to install a plugin like the Mhcflurry, when I click to install it from the store, so that I can run it in my machine."  [issue #213](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/213)
+
+I am proud of the first user story as my team was careful to implement all its features taking into account how the user could have a good experience, which is important for apps.
+The second user story was written by the POs after talking with the client and I am proud that we were able to do it, as it adds value to the product.
+
+
+### The two pull requests that I am most proud of
+
+I did not review nor create any pull request during this sprint.
+
+
+### Two contributions of other types that I am most proud of
+
+ * Talking to the other teams to solve problems my team members had related to features that needed something from the other teams
+ * Helping with decisions regarding what improvements to do to the app
 
 
 ## Overall Product
