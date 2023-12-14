@@ -94,8 +94,20 @@ As a PO, I did not participate in any pull request.
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+ * "When adding a plugin to the profile, the request should be made through Kafka, and only then be stored in the database if any change needs to be stored." [issue #229](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/229) 
+
+ * "As an admin, I want to have access to the admin page through a button in the profile, so that I can access it easily." [issue #230](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/230)
+
+### The two pull requests that I am most proud of
+
+As a PO, I did not participate in any pull request.
+
+### Two contributions of other types that I am most proud of
+ 
+* Helping my team with ideas/decisions regarding on what new implementations could be made
+* Offered suggestions to improve the project.
 
 ## Overall Product
 
