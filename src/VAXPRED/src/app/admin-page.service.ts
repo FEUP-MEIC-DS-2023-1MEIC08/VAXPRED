@@ -32,6 +32,7 @@ export class AdminPageService {
     return this.http.delete('http://localhost:8000/plugins/' + pluginID);
   }
 
+
   /**
    * Retrieves all categories.
    * @returns An array of categories.
@@ -60,6 +61,7 @@ export class AdminPageService {
   editPlugin(pluginID: number, data: any): Observable<any> {
     return this.http.put('http://localhost:8000/plugins/' + pluginID, data)
   }
+
 
   /**
    * Associates a category with a plugin.
@@ -96,6 +98,16 @@ export class AdminPageService {
    */
   associateTag(pluginID: number, tagID: number) {
     return this.http.post('http://localhost:8000/tags/' + tagID + '/plugins/' + pluginID + '/associate/', "")
+  }
+
+  /**
+   * Disassociates a tag with a plugin.
+   * @param pluginID The ID of the plugin.
+   * @param tagID The ID of the tag to disassociate.
+   * @returns An indication of the success of the disassociation.
+   */
+  disassociateTag(pluginID: number, tagID: number) {
+    return this.http.delete('http://localhost:8000/tags/' + tagID + '/plugins/' + pluginID + '/disassociate/')
   }
 
 }
