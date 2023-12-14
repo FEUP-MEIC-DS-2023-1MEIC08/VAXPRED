@@ -61,8 +61,17 @@ No important pull requests have been made by me.
 
 ## Sprint 4
 
-...
+- I was involved in the documentation of the plugin page, specially the header and images section component [[issue #217](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?pane=issue&itemId=46107155)].
+- I got to experiment once again with Doxygen and to learn about Compodoc.
 
+### The two pull requests that I am most proud of
+
+- I have performed a single pull request which merges the `t1-docs-plugin-page` branch to `dev` [[pull #259](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/259)].
+
+### Two contributions of other types that I am most proud of
+
+- I was involved in the discussion about tools for documentation generation such as Doxygen, TypeDoc and Compodoc.
+- I was involved in the resolution of conflicts regarding pull requests.
 
 ## Overall Product
 
