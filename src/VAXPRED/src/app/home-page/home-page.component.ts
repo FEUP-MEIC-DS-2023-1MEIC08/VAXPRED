@@ -20,8 +20,9 @@ export class HomePageComponent {
 	/**
 	 * list of tags meant to be displayed
 	 */
-	tags: string[] = [];
-	
+	//tags: {[key:number]:string} = {};
+	tags : string[]= [];
+	tagsIds: string[]= [];
 	/**
 	 * list of categories meant to be displayed
 	 */
@@ -36,7 +37,17 @@ export class HomePageComponent {
 	
     constructor(private toolService: ToolService) {
 		
-		this.tags = ['Tag1','Tag2','Tag3']
+		//this.tags = ['Tag1','Tag2','Tag3']
+		this.toolService.getTags().subscribe( (data: any) => {
+			data.tags.forEach((tag:any) => {
+				//this.tags[tag.id] = tag.name;
+				this.tags.push(tag.name);
+				this.tagsIds.push(tag.id);
+			});
+		});
+		console.log("tags:",this.tags);
+		
+
 
 		// Fill the list of plugins and categories
 		this.categories = this.toolService.getToolCategories();

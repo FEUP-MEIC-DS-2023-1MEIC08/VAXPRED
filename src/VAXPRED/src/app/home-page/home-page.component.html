@@ -14,6 +14,6 @@
     </div>
     <h2>Filter by Tag</h2>
     <div class="tag-grid">
-      <button *ngFor="let tag of testTags">{{ tag }}</button>
+      <a *ngFor="let tag of this.tags; let i = index" [routerLink]="'/search'" [queryParams]="{tags: this.tagsIds[i] }">{{tag}}</a>
     </div> 
   </div>
