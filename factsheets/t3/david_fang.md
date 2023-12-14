@@ -70,7 +70,21 @@ I answered the form provided by the Product Owner providing any future improveme
 
 ## Sprint 4
 
-...
+In this sprint the focus was essentialy on finishing and improving the home page, improving the search page, fixing component tests and writing documentation.
+
+### The two user stories that I am most proud of
+
+- [#222 Adapt the homepage's option to "see more" to be able to contain more plugins without unformed the page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/222)
+- [#244 Implement search page refresh after changing filter option](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/244)
+
+### The two pull requests that I am most proud of
+
+- [#254 T3 task category integration](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254)
+
+### Two contributions of other types that I am most proud of
+
+I answered the form provided by the Product Owners about the Happiness Meter.
+
 
 
 ## Overall Product
