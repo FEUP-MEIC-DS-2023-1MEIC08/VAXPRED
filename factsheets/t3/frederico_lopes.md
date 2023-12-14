@@ -84,19 +84,17 @@ I was responsible for the initial developement of the kafka integration. I creat
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 
 ### Technical Soundness
 
-...
+I utilized and understood the chosen technologies, helped in the integration of Kafka in the project and kept the easy maintenance of the code in mind when developing it during the sprints.
 
 
 ### Product Realization
 
-...
+I think both the homepage and the plugin store that I helped to develop achieved a good final result, with viable features and a "professional" feel. The kafka part could be further developed, but since it was started only in the last sprint, I think the result was also good and it's a good starting point for someone who wants to further develop it.
 
 
 ### Value for the Client
 
-...
+From the feedback we had, the client was happy with the final result. I think the effort was appropriate, even though it was not equally divided throughout the semester. For me, the beggining required more time since I needed to learn how to work with the technologies and with the team in general. In the end, all of this was more effortless. Even so, the overall effort was appropriate. 
