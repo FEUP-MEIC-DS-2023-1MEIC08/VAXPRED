@@ -126,6 +126,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service responsible for handling user profile-related operations.</p>
+
+            </p>
 
 
 
@@ -177,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/user-profile.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/user-profile.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -240,14 +247,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="18"
-                                    class="link-to-prism">src/app/user-profile.service.ts:18</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="30"
+                                    class="link-to-prism">src/app/user-profile.service.ts:30</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Retrieves a specific user by ID.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -258,6 +267,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -272,6 +282,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>The ID of the user to fetch.</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -281,7 +295,8 @@
 
                         </div>
                             <div class="io-description">
-                                
+                                <p>User data.</p>
+
                             </div>
                 </td>
             </tr>
@@ -307,14 +322,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="22"
-                                    class="link-to-prism">src/app/user-profile.service.ts:22</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/app/user-profile.service.ts:39</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Retrieves plugins associated with a user.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -325,6 +342,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -339,6 +357,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>The ID of the user.</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -348,7 +370,8 @@
 
                         </div>
                             <div class="io-description">
-                                
+                                <p>User&#39;s plugins.</p>
+
                             </div>
                 </td>
             </tr>
@@ -374,19 +397,25 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="14"
-                                    class="link-to-prism">src/app/user-profile.service.ts:14</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="21"
+                                    class="link-to-prism">src/app/user-profile.service.ts:21</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Retrieves all users.</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </div>
+                            <div class="io-description">
+                                <p>User&#39;s data.</p>
+
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -411,14 +440,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="35"
-                                    class="link-to-prism">src/app/user-profile.service.ts:35</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/app/user-profile.service.ts:58</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Removes a plugin associated with a user.</p>
+</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -429,6 +460,7 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
+                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -443,6 +475,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>The ID of the user.</p>
+
+                                            </td>
                                         </tr>
                                         <tr>
                                                 <td>pluginID</td>
@@ -455,6 +491,10 @@
                                             </td>
 
 
+                                            <td>
+                                                    <p>The ID of the plugin to remove.</p>
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -464,7 +504,8 @@
 
                         </div>
                             <div class="io-description">
-                                
+                                <p>An indication for the success of the removal operation.</p>
+
                             </div>
                 </td>
             </tr>
@@ -482,6 +523,9 @@ import { Observable, forkJoin } from &#x27;rxjs&#x27;;
 import { switchMap } from &#x27;rxjs/operators&#x27;;
 import { Plugin } from &#x27;./plugin&#x27;;
 
+/**
+ * Service responsible for handling user profile-related operations.
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
@@ -489,14 +533,28 @@ export class UserProfileService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Retrieves all users.
+   * @returns User&#x27;s data.
+   */
   getUsers() {
     return this.http.get(&#x27;http://localhost:8000/users/&#x27;);
   }
 
+  /**
+   * Retrieves a specific user by ID.
+   * @param id The ID of the user to fetch.
+   * @returns User data.
+   */
   getUser(id: number) {
     return this.http.get(&#x27;http://localhost:8000/users/&#x27; + id + &#x27;/&#x27;);
   }
 
+  /**
+   * Retrieves plugins associated with a user.
+   * @param id The ID of the user.
+   * @returns User&#x27;s plugins.
+   */
   getUserPlugins(id: number): Observable&lt;any&gt; {
     // fetch the plugin IDs subscribed by the user.
     return this.http.get(&#x27;http://localhost:8000/users/&#x27; + id + &#x27;/plugins/&#x27;).pipe(
@@ -510,11 +568,16 @@ export class UserProfileService {
     );
   }
 
+  /**
+   * Removes a plugin associated with a user.
+   * @param userID The ID of the user.
+   * @param pluginID The ID of the plugin to remove.
+   * @returns An indication for the success of the removal operation.
+   */
   removePlugin(userID: number, pluginID: number){
     return this.http.delete(&#x27;http://localhost:8000/users/&#x27; + userID + &#x27;/plugins/&#x27; + pluginID + &#x27;/disassociate/&#x27;);
   }
-}
-</code></pre>
+}</code></pre>
     </div>
 
 </div>
