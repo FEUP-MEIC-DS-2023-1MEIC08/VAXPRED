@@ -2,7 +2,6 @@
 
 
 ## Sprint 0
-
 As a developer there wasn't much to do at this early stage, so I mainly reviewed the work done by the PO's and SM's about the product vision and backlog. Also started to get familiar with the technologies that we are going to use during the project.
 
 ### The two user stories that I am most proud of
@@ -16,23 +15,19 @@ Proposing some ideas and making technical suggestions about the repository manag
 
 
 ## Sprint 1
-
 In this sprint I mainly participated in the implementation of the plugins list in the user profile page component and the acceptance tests.
 
 ### The two user stories that I am most proud of
-
 As a team we all worked on the following user story:
 
 [(#34) As a researcher, I want to have a profile page, so that I can see all the plugins I am using](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/34)
 
 I worked specifically on these issues:
-
 - [Issue #38 (Mockups for the researcher's profile):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/38) The mockups for the researcher's profile were collaboratively created by the entire team, including Fernando, João, Juan, and Rodrigo.
 - [Issue #50 (Create list with 'my plugins'):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/50) The development of the 'My Plugins' list for the user profile page component was a joint effort between Rodrigo and me, primarily focusing on the frontend aspects.
 - [Issue #52 (Acceptance tests are created for the profile page):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/52) I helped João to fix some errors encountered while coding the tests.
 
 ### The two pull requests that I am most proud of
-
 - [(#90) User profile page (work by Team 4):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/90)
 This was the only pull request for this sprint and it was made to merge all the work from our team into the dev branch.
 
@@ -41,7 +36,6 @@ I made myself available to the team in order to participate in the calls and hel
 
 
 ## Sprint 2
-
 In this sprint I mainly worked on the display of the plugins' FAQ on their respective pages.
 
 ### The two user stories that I am most proud of
@@ -57,7 +51,6 @@ In this sprint I mainly worked on the display of the plugins' FAQ on their respe
 
 
 ## Sprint 3
-
 My principal objective of this sprint was to finish the uncompleted work of last sprint, as it was larger than initially expected.
 
 ### The two user stories that I am most proud of
@@ -71,9 +64,20 @@ My principal objective of this sprint was to finish the uncompleted work of last
 - Regularly merged dev branch into the working one and consciously fixed the incoming conflicts in order to leave the new features working correctly.
 - Detected a bug related to the zoom in the search page view.
 
-## Sprint 4
 
-...
+## Sprint 4
+The focus of this last sprint was to improve and ensure the correct overall performance of the app, and in my particular case I mainly worked on fixing component tests.
+
+### The two user stories that I am most proud of
+- [Issue #224 (Fix component tests regarding the profile and admin page):](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/224) First of all I had to make all the project's testsuite able to run by fixing several spec compiling issues, and then fixed my team components tests so they can run successfully.
+
+### The two pull requests that I am most proud of
+- [(#247) T4 - Fix: frontend tests execution:](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/247) First step of the work for [#224](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/224), making all the frontend tests able to be executed.
+- [(#258) T4 - Fix: User profile and admin page tests:](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/258) This pull request successfully closed [#224](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/224).
+
+### Two contributions of other types that I am most proud of
+- Reviewed and approved Fernando's work in [(#246) T4 - Remake User Profile UI](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/246) pull request.
+- Contributed with team 2 in fixing new bugs related to the plugin page component that appeared when some API routes were changed.
 
 ## Overall Product
 
