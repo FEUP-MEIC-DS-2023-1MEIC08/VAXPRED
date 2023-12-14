@@ -118,23 +118,18 @@ In this sprint we had one major user story assigned to our team and several work
 * Our team created automated tests for our PBIs.
 * Our team discussed the user stories and work items with the team's PO. 
 
-
-
 ## Overall Product
-
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
 
 ### Technical Soundness
 
-We contributed for a solid backend.
+We contributed for a solid backend. Our contributions helped the backend of the application reach a final state where all the necessary information is stored and this information is retrieved in an efficient way that minimizes the number of required calls.
 
 
 ### Product Realization
 
-The product was a lot more complete with the implementation of our backend.
+The product was a lot more complete with the implementation of our backend. Our work during the sprints helped the product reach its final stage in a complete state with the required features implemented.
 
 
 ### Value for the Client
 
-It delivered some funcionality to the whole cloud platform which is really welcome.
+The product developed shows value for the client and in the meetings we had that value was acknowledged. This final result was only possible due to the effort of all team.
