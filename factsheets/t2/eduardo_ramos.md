@@ -43,8 +43,11 @@ is helping my collegue solve some problems with the API.
 
 
 ## Sprint 3
+In this third sprint, I heped with the refactoring of the api. The APi had an over abundance of uneaded routes and, as such, with this refactor, we trimmed them down to the essencials. Now, the API is more efficient for the frontend calls. I helped with the change to the database schemas.
 
-...
+The two pull requests that I am most proud of No important pull requests have been made by me.
+
+Two contributions of other types that I am most No importante contributions f any other type were made.
 
 
 ## Sprint 4

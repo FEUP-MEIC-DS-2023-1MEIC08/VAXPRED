@@ -60,7 +60,23 @@ The only pull request for this sprint was the one that merges all the work from 
   
 ## Sprint 3
 
-...
+In this sprint my main goal was to try to finish as many issues as possible.
+
+### The two user stories that I am most proud of
+
+- [(#124) Display a plugin's FAQ in its page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/124)
+  
+- [(#207) As an admin, I want a form where I can edit fields from an existing plugin in the store, so that I can change its details in the store.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/207)
+
+### The two pull requests that I am most proud of
+
+- [(#209) Feature: display FAQ](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/209)
+
+- [(#227) T4 - Admin dashboard: ability to Edit Plugins](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/227)
+
+### Two contributions of other types that I am most proud of
+
+- I had the opportunity to work with Juan to complete issue #124 and with Fernando to do the issue #207.
 
 ## Sprint 4
 

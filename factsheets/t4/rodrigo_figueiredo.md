@@ -78,7 +78,24 @@ This PR merged the implementation of the plugin removal functionality, a task th
 
 ## Sprint 3
 
-...
+For this sprint, I only worked on implementing one of the tasks as there weren't much tasks and even though I made myself available to help on any task, it wasn't needed. I also reviewed a PR and was always active in order to ensure everything was going alright.
+
+### The two user stories that I am most proud of
+
+- [(#192) Add a confirmation popup for disassociating a user plugin](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/92)
+
+This task consisted on implementing a pop-up in order for the user to confirm the action of disassociating a plugin from it's profile. It was important that the disassociation of a user's plugin required additional confirmation instead of just clicking on the "X" one time.
+
+### The two pull requests that I am most proud of
+
+- [(#204) Feature: Added confirmation pop-up for plugin disassociation on user profile](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/204)
+
+This pull request merged the implementation of the confirmation pop-up for the plugin disassociation on user profiles to the branch where every team was working from.
+
+### Two contributions of other types that I am most proud of
+
+- I reviewed a PR, assuring the task was correctly done and everything was working as expected.
+- I made myself available to help on everything that was necessary and was always active.
 
 ## Sprint 4
 

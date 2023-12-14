@@ -55,7 +55,19 @@ This sprint, I didn't really contribute in anything else besides what was assign
 
 ## Sprint 3
 
-...
+This sprint, I focussed on the developlment of the home page and improving the visual aspect of some components as well as the integration of the components with the backend. THe integration with the backend caused some problems with the acceptance tests so they needed to be fixed. Also created new tests for the homepage
+### The two user stories that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/14
+- item https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/205
+  
+### The two pull requests that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/214
+
+
+
+### Two contributions of other types that I am most proud of
+I answered the form given by the Product Owners providing future improvements or fixes that could be done to the prokect
+
 
 
 ## Sprint 4

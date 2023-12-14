@@ -73,7 +73,25 @@ The team members were confused about user stories  [#14](https://github.com/FEUP
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+ * "As a researcher, I want to be able to see a "Free" symbol, so that I can know which plugins are free for all the users." [issue #162](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/162)
+ * "As a researcher, I want to be able to see a "Premium" symbol, so that I can see which plugins are payed for industrial companies."  [issue #163](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/163)
+
+These user-stories were written by the POs after talking with the client. I am proud because my team did well implementing their part regarding these user-stories (adding "Free" and "Premium" symbols to the plugin's cards in the store), which will make the store better.
+
+
+### The two pull requests that I am most proud of
+
+I did not review nor create any pull request during this sprint.
+
+
+### Two contributions of other types that I am most proud of
+
+ * Taking part in reunions with the clients
+ * Writing more User Stories with the other POs
+
+The reunions with the clients helped figure out what else could be done to have a better plugin store, leading to more user stories.
 
 
 ## Sprint 4

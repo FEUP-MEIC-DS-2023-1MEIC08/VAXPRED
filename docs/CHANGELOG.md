@@ -34,3 +34,24 @@ Completed PBIs are marked with `Sprint 1` on the Project Board, and they can be 
 - Added GitHub Action as automatic app building with Docker (CI/CD)
 
 Completed PBIs are marked with `Sprint 2` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.
+
+## Sprint 3 Release [v0.3](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/releases/tag/v0.3)
+
+- Database refactor with changes to how a plugin's tags, categories and FAQs are stored
+- Added new plugin fields, "type" and "price" to the database
+- Database route to get one or multiple plugins now returns all the items related to each plugin in a single call instead of having to call multiple routes
+- Implemented the storage in the database of one or more images per plugin
+- Reworked existing database calls in the frontend to accomodate new backend changes 
+- Designed and implemented a UI for the home page
+- Added a new FREE/PREMIUM badge to plugin cards
+- Added new type icons to plugin cards to display the type of plugin they hold
+- The search results' page is now responsive
+- Added a FAQ tab in the plugin details page that displays the plugin's questions & answers
+- Added a form in the Admin Panel to create new plugins
+- Added a button to edit store plugins from the list in the Admin Panel
+- Added a confirmation dialog for disassociating a user plugin in the Profile
+- Added a footer to the website that is shared across all pages
+- Added a display of the tags corresponding to a plugin on its page
+- Added the indication of a plugin's category to its page   
+
+Completed PBIs are marked with `Sprint 3` on the Project Board, and they can be found in the `Accepted` column. For the exact detail, refer to the commits made until this release.

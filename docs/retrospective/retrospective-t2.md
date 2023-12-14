@@ -40,7 +40,20 @@ Everything happened according to the expected in this sprint.
 
 ## Sprint 3
 
-Describe the retrospective for sprint 3 for team 2
+### What went well
+
+- All the developers effectively conducted the tasks they assigned themselves to, which resulted in a more refined database.  
+- The Scrum Master effectively distributed the allocated work and thoroughly worked to improve the scrum.
+- All the work assigned to this sprint was developed and accepted.
+- The Product Owner succeeded in transmitting to the team the necessary details and issues discussed in meetings with the clients.
+- Communication with the other teams was improved in comparison to the previous sprints. 
+- The team displayed good communication between its members.
+
+### What could be improved?
+
+- The communication between teams can still be improved. In this Sprint 3 some miscommunicated details resulted in conflits when merging the work of team 2 with the remaining teams.
+- GitHub workflow can also be improved in some minor aspects. 
+
 
 ## Sprint 4
 

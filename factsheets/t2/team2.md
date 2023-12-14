@@ -72,7 +72,26 @@ In this sprint we had one major user story assigned to our team and several work
 
 ## Sprint 3
 
-...
+### The four user stories that we are most proud of
+
+* "As a researcher, I want to have access to the plugin's FAQ, so that I can clarify some common questions about the plugin." [issue #83](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/83).
+* "Add a field in the database to store whether a plugin is Free or Premium" [issue #188](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/188).
+* "Store plugin depencencies in the database." [issue #119](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/119).
+* "Store plugins' images' path in the database." [issue #121](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/121).
+
+### The four pull requests that we are most proud of
+
+* "Feature - Show Category Icons" [pull #216](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/216)
+* "Add a new PREMIUM/FREE badge to the plugin cards" [pull #210](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/210)
+* "Added tags to plugin page" [pull #200](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/200)
+* "" [pull #](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/)
+
+### Four contributions of other types that we are most proud of
+
+* Our team contributed team contributed in helping establishing the effort of each user story for this sprint.
+* Our team colaborated with the oher teams to integrate the backend into the frontend.
+* Our team created automated tests for our PBIs.
+* Our team discussed the user stories and work items with the team's PO. 
 
 
 ## Sprint 4
