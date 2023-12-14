@@ -1,0 +1,45 @@
+[2023-12-12T19:15:33.356+0000][gc,heap] Heap region size: 1M
+[2023-12-12T19:15:33.360+0000][gc     ] Using G1
+[2023-12-12T19:15:33.361+0000][gc,heap,coops] Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+[2023-12-12T19:15:34.626+0000][gc,start     ] GC(0) Pause Young (Concurrent Start) (Metadata GC Threshold)
+[2023-12-12T19:15:34.627+0000][gc,task      ] GC(0) Using 13 workers of 13 for evacuation
+[2023-12-12T19:15:34.635+0000][gc,phases    ] GC(0)   Pre Evacuate Collection Set: 0.0ms
+[2023-12-12T19:15:34.635+0000][gc,phases    ] GC(0)   Evacuate Collection Set: 6.3ms
+[2023-12-12T19:15:34.635+0000][gc,phases    ] GC(0)   Post Evacuate Collection Set: 0.7ms
+[2023-12-12T19:15:34.635+0000][gc,phases    ] GC(0)   Other: 1.3ms
+[2023-12-12T19:15:34.636+0000][gc,heap      ] GC(0) Eden regions: 48->0(44)
+[2023-12-12T19:15:34.636+0000][gc,heap      ] GC(0) Survivor regions: 0->7(7)
+[2023-12-12T19:15:34.636+0000][gc,heap      ] GC(0) Old regions: 0->1
+[2023-12-12T19:15:34.636+0000][gc,heap      ] GC(0) Humongous regions: 0->0
+[2023-12-12T19:15:34.636+0000][gc,metaspace ] GC(0) Metaspace: 20762K(21296K)->20762K(21296K) NonClass: 18568K(18864K)->18568K(18864K) Class: 2194K(2432K)->2194K(2432K)
+[2023-12-12T19:15:34.636+0000][gc           ] GC(0) Pause Young (Concurrent Start) (Metadata GC Threshold) 47M->7M(1024M) 9.913ms
+[2023-12-12T19:15:34.636+0000][gc,cpu       ] GC(0) User=0.03s Sys=0.01s Real=0.01s
+[2023-12-12T19:15:34.636+0000][gc           ] GC(1) Concurrent Cycle
+[2023-12-12T19:15:34.637+0000][gc,marking   ] GC(1) Concurrent Clear Claimed Marks
+[2023-12-12T19:15:34.637+0000][gc,marking   ] GC(1) Concurrent Clear Claimed Marks 0.243ms
+[2023-12-12T19:15:34.637+0000][gc,marking   ] GC(1) Concurrent Scan Root Regions
+[2023-12-12T19:15:34.638+0000][gc,marking   ] GC(1) Concurrent Scan Root Regions 1.127ms
+[2023-12-12T19:15:34.638+0000][gc,marking   ] GC(1) Concurrent Mark (1.350s)
+[2023-12-12T19:15:34.639+0000][gc,marking   ] GC(1) Concurrent Mark From Roots
+[2023-12-12T19:15:34.639+0000][gc,task      ] GC(1) Using 3 workers of 3 for marking
+[2023-12-12T19:15:34.640+0000][gc,marking   ] GC(1) Concurrent Mark From Roots 0.994ms
+[2023-12-12T19:15:34.640+0000][gc,marking   ] GC(1) Concurrent Preclean
+[2023-12-12T19:15:34.640+0000][gc,marking   ] GC(1) Concurrent Preclean 0.215ms
+[2023-12-12T19:15:34.640+0000][gc,marking   ] GC(1) Concurrent Mark (1.350s, 1.352s) 1.789ms
+[2023-12-12T19:15:34.641+0000][gc,start     ] GC(1) Pause Remark
+[2023-12-12T19:15:34.642+0000][gc,stringtable] GC(1) Cleaned string and symbol table, strings: 7930 processed, 0 removed, symbols: 66391 processed, 31 removed
+[2023-12-12T19:15:34.642+0000][gc            ] GC(1) Pause Remark 8M->8M(1024M) 1.647ms
+[2023-12-12T19:15:34.642+0000][gc,cpu        ] GC(1) User=0.01s Sys=0.01s Real=0.00s
+[2023-12-12T19:15:34.643+0000][gc,marking    ] GC(1) Concurrent Rebuild Remembered Sets
+[2023-12-12T19:15:34.643+0000][gc,marking    ] GC(1) Concurrent Rebuild Remembered Sets 0.441ms
+[2023-12-12T19:15:34.643+0000][gc,start      ] GC(1) Pause Cleanup
+[2023-12-12T19:15:34.644+0000][gc            ] GC(1) Pause Cleanup 8M->8M(1024M) 0.295ms
+[2023-12-12T19:15:34.644+0000][gc,cpu        ] GC(1) User=0.00s Sys=0.00s Real=0.01s
+[2023-12-12T19:15:34.644+0000][gc,marking    ] GC(1) Concurrent Cleanup for Next Mark
+[2023-12-12T19:15:34.646+0000][gc,marking    ] GC(1) Concurrent Cleanup for Next Mark 1.574ms
+[2023-12-12T19:15:34.646+0000][gc            ] GC(1) Concurrent Cycle 9.332ms
+[2023-12-12T19:15:53.667+0000][gc,heap,exit  ] Heap
+[2023-12-12T19:15:53.667+0000][gc,heap,exit  ]  garbage-first heap   total 1048576K, used 21894K [0x00000000c0000000, 0x0000000100000000)
+[2023-12-12T19:15:53.667+0000][gc,heap,exit  ]   region size 1024K, 22 young (22528K), 7 survivors (7168K)
+[2023-12-12T19:15:53.668+0000][gc,heap,exit  ]  Metaspace       used 23046K, capacity 23542K, committed 23728K, reserved 1071104K
+[2023-12-12T19:15:53.668+0000][gc,heap,exit  ]   class space    used 2567K, capacity 2784K, committed 2816K, reserved 1048576K
