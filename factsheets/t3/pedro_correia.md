@@ -63,8 +63,6 @@ This sprint, I focussed on the developlment of the home page and improving the v
 ### The two pull requests that I am most proud of
 - https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/214
 
-
-
 ### Two contributions of other types that I am most proud of
 I answered the form given by the Product Owners providing future improvements or fixes that could be done to the prokect
 
@@ -72,8 +70,17 @@ I answered the form given by the Product Owners providing future improvements or
 
 ## Sprint 4
 
-...
+This sprint, I focused on finishing the home page as well as improving it and the search page. Also fixed component tests and wrote documentation for the code.
 
+### The two user stories that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132
+- item https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/249
+  
+### The two pull requests that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254
+
+### Two contributions of other types that I am most proud of
+I answered the form provided by the Product Owners about the Happiness Meter.
 
 ## Overall Product
 
