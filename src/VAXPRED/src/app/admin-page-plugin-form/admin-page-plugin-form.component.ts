@@ -5,6 +5,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { LiveAnnouncer} from '@angular/cdk/a11y';
 import { MatChipInputEvent} from '@angular/material/chips';
 
+/**
+ * Component representing the form for editing or adding plugins from the store through the admin page.
+ */
 @Component({
   selector: 'app-admin-page-plugin-form',
   templateUrl: './admin-page-plugin-form.component.html',
@@ -17,10 +20,14 @@ export class AdminPagePluginFormComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<AdminPagePluginFormComponent, any>; editingPlugin: Plugin },
   ) { }
 
+ /** Holds all categories available. */
   categories: any[] = [];
+ /** Holds selected tags. */
   tags: any[] = [];
+ /** Holds all available tags. */
   allTags: any;
 
+ /** Data structure for plugin information. */
   pluginData = {
     id: -1,
     name: "",
@@ -33,15 +40,21 @@ export class AdminPagePluginFormComponent implements OnInit {
     changelog: ""
   };
 
+  /** ID of the plugin's category. */
   pluginCategoryID = -1;
 
   // TODO: supplier_name and supplier_email are not in the plugin model
   // TODO: fix category selection because a plugin can have more than 1 category !!! (outdated)
 
+  /** Input for new tags. */
   newTagInput = "";
 
+  /** Instance of LiveAnnouncer for accessibility announcements. */
   announcer = inject(LiveAnnouncer);
 
+  /**
+   * Lifecycle hook called after component initialization.
+   */
   ngOnInit(): void {
     this.adminPageService.getAllCategories().subscribe((data: any[]) => {
       console.log('categories: ', data);
@@ -62,6 +75,10 @@ export class AdminPagePluginFormComponent implements OnInit {
     }
   }
 
+  /**
+   * Removes a tag from the list of tags.
+   * @param tag The tag to be removed.
+   */
   removeTag(tag: string) {
     const index = this.tags.indexOf(tag);
     if (index >= 0) {
@@ -71,6 +88,10 @@ export class AdminPagePluginFormComponent implements OnInit {
     }
   }
 
+  /**
+   * Adds a tag to the list of tags.
+   * @param event The MatChipInputEvent containing the added value.
+   */
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
     if (value) {
@@ -79,6 +100,9 @@ export class AdminPagePluginFormComponent implements OnInit {
     event.chipInput!.clear();
   }
 
+  /**
+   * Adds the new tag input to the tag grid.
+   */
   addInputToChipGrid() {
     if (this.newTagInput) {
       this.tags.push(this.newTagInput);
@@ -86,6 +110,9 @@ export class AdminPagePluginFormComponent implements OnInit {
     }
   }
 
+  /**
+   * Posts the plugin data.
+   */
   postPlugin() {
     if (this.pluginData.name == "") return
     if (this.pluginData.description == "") return
@@ -176,11 +203,19 @@ export class AdminPagePluginFormComponent implements OnInit {
 
   }
 
+  /**
+   * Retrieves the ID of a tag by name.
+   * @param tagName The name of the tag to search.
+   * @returns The ID of the tag if found, otherwise null.
+   */
   getTagId(tagName: string): number | null {
     const foundTag = this.allTags.tags.find((tag: { name: string; }) => tag.name.toLowerCase() === tagName.toLowerCase());
     return foundTag ? foundTag.id : null;
   }
 
+  /**
+   * Closes the form.
+   */
   closeDialog() {
     this.data.dialogRef.close();
   }

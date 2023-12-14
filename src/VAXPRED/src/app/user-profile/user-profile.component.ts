@@ -13,6 +13,9 @@ import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation
 // TEMP - logged in user ID which is an admin
 const loggedUserId = 1;
 
+/**
+ * Component representing the user profile.
+ */
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -28,8 +31,10 @@ export class UserProfileComponent implements OnInit {
     private dialog: MatDialog
   ) { }
 
+  /** Indicates whether data is loading. */
   isLoading = true;
 
+  /** Represents the user's profile information. */
   user = {
     id : loggedUserId,
     name: 'Loading...',
@@ -37,8 +42,12 @@ export class UserProfileComponent implements OnInit {
     isAdmin: false,
   }
 
+  /** Holds plugins related to the user. */
   plugins: any[] = [];
 
+  /**
+   * Lifecycle hook called after component initialization.
+   */
   ngOnInit(): void {
     console.log("init");
     this.userProfileService.getUser(loggedUserId).subscribe((user: any) => {
@@ -56,6 +65,10 @@ export class UserProfileComponent implements OnInit {
     })
   }
 
+  /**
+   * Removes a plugin associated with the user.
+   * @param plugin The plugin to be removed.
+   */
   removePlugin(plugin: any) {
     this.userProfileService.removePlugin(loggedUserId, plugin.id).subscribe((data) => {
       console.log(data);
@@ -64,6 +77,10 @@ export class UserProfileComponent implements OnInit {
     })
   }
 
+  /**
+   * Opens a confirmation dialog for plugin removal.
+   * @param plugin The plugin to be removed.
+   */
   openConfirmationDialog(plugin: any): void {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       width: '35em',
@@ -78,18 +95,30 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Handles user's profile edition.
+   */
   editProfile() {
     // Lógica de edição do perfil
   }
 
+  /**
+   * Handles navigation to the next page.
+   */
   goToNextPage() {
     // Lógica para ir para a próxima página
   }
 
+  /**
+   * Handles navigation to the previous page.
+   */
   goToPreviousPage() {
     // Lógica para ir para a página anterior
   }
 
+  /**
+   * Handles page change event.
+   */
   onPageChange(){
 
   }
