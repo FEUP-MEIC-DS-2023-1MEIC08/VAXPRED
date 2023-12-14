@@ -4,20 +4,45 @@ import { PluginPageComponent } from '../plugin-page.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ToolService } from 'src/app/plugin.service';
 
-
+/**  
+ * @Component for PluginPageHeaderComponent
+ * Angular component responsible for displaying the header of a plugin page
+ */
 @Component({
   selector: 'app-plugin-page-header',
   templateUrl: './plugin-page-header.component.html',
   styleUrls: ['./plugin-page-header.component.css']
 })
 export class PluginPageHeaderComponent {
+  /**
+   * Holds data related to the plugin being displayed on the page. Default value is an instance of Plugin with default values
+   */
   @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+
+  /**
+   * Holds the reference to the contract dialog instance to control the opening/closing of the dialog
+   */
   @Input() dialogRef!: MatDialogRef<PluginPageComponent>;
 
+  /** 
+   * Holds the current date
+   */
   currentDate: Date = new Date();
+
+  /** 
+   * Holds the termination date of the contract (default value is the current date)
+   */
   terminationDate: Date = new Date();
+
+  /** 
+   * Holds the service for plugin-related tools and functionalities
+   */
   service: ToolService;
 
+  /**
+   * Constructor for PluginPageHeaderComponent
+   * @param service Service handling plugin-related tools and functionalities
+   */
   constructor(service: ToolService) {
     this.service = service;
     // Calculate the termination date (using contract duration)
@@ -34,10 +59,16 @@ export class PluginPageHeaderComponent {
     }
   }
 
+  /**
+   * Close the contract dialog when called
+   */
   closeDialog() {
     this.dialogRef.close();
   }
 
+  /**
+   * Open the contract popup when called
+   */
   openPopup() {
     const popupModal = document.getElementById('popup-modal');
     if (popupModal) {
@@ -45,6 +76,9 @@ export class PluginPageHeaderComponent {
     }
   }
 
+  /**
+   * Handle the logic for contract acceptance
+   */
   acceptContract() {
     // Handle the logic for contract acceptance here
     this.service.installPlugin(this.plugin.id).subscribe((data: any) => {
@@ -56,6 +90,9 @@ export class PluginPageHeaderComponent {
     //this.closeDialog();
   }
 
+  /**
+   * Close the contract popup when called
+   */
   closePopup() {
     const popupModal = document.getElementById('popup-modal');
     if (popupModal) {
