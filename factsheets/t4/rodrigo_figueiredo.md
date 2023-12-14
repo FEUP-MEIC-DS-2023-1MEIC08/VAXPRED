@@ -99,7 +99,25 @@ This pull request merged the implementation of the confirmation pop-up for the p
 
 ## Sprint 4
 
-...
+This sprint was mostly focused on improvements for what was already done. I was in charge of writing documentation for the code that our team developed across all sprints.
+
+### The two user stories that I am most proud of
+
+- [(#218) Write documentation about the profile page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/218)
+- [(#218) Write documentation about the admin page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/234)
+
+These tasks consisted on writing documentation for the admin and profile pages, the pages that our team developed. For that I used JSDoc comments and Compodoc to generate the documentation.
+
+### The two pull requests that I am most proud of
+
+- [(#260) T4 - Feat: Add documentation for user profile and admin pages](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/260)
+
+This pull request merged the added documentation to the branch where every team was working from.
+
+### Two contributions of other types that I am most proud of
+
+- Regarding the documentation, instead of using just JSDoc comments, I searched for a tool that could make the documentation visible on a web interface. I found out that Compodoc could achieve that, so I proposed its usage to other teams.
+- I made myself available to help on everything that was necessary and was always active.
 
 ## Overall Product
 
