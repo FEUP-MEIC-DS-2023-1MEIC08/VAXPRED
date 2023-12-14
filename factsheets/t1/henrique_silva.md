@@ -82,6 +82,7 @@ In this sprint, I was responsible for developing logging using Kafka.
 ### The pull request that I am most proud of
 
 - Reviewed [#251](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/251). Ensured more fields were added to the kafka logs.
+- Authored [#262](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/262). Added fully functional Kafka logs.
 
 ### Contributions of other types that I am most proud of
 
