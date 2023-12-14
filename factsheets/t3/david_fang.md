@@ -89,19 +89,15 @@ I answered the form provided by the Product Owners about the Happiness Meter.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+I have dominated most of the technologies integrated in this project, mostly related to web development and communication with the database.
 
 ### Product Realization
 
-...
+From my point of view, the implementation of front end and integration between both front and back end have reached our expectations, along with the clear and simple UI and code structure to be furthur developed.
 
 
 ### Value for the Client
 
-...
+The client seemed to be satisfied from the result we displayed. I think we have successfully achieved the their expectations.
