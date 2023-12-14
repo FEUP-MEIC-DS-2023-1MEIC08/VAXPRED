@@ -93,8 +93,26 @@ In addition, we recognize that we had some inaccuracies in our GitHub usage. We 
 
 ## Sprint 4
 
-...
+### The four user stories that we are most proud of
 
+- [(#218) Write documentation about the profile page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/218) & [(#234) Write documentation about the admin page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/234)
+- [(#221) Connect small details that are not working in the overall project due to their dependency of the database.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/221)
+- [(#224) Fix component tests regarding the profile and admin page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/224)
+- [(#168) As a researcher, I want the profile page to be as user friendly as possible, so that I can have a good experience using it.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/168)
+
+### The four pull requests that we are most proud of
+
+- [(#260) T4 - Add documentation for user profile and admin pages](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/260)
+- [(#261) T4 - Fix admin panel create/update plugin form](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/261)
+- [(#258) T4 - Fix: User profile and admin page tests](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/258)
+- [(#246) T4 - Remake User Profile UI](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/246)
+
+### Four contributions of other types that we are most proud of
+
+- Our team's SM & PO helped manage the user stories & tasks, making sure we were on track and could finish everything on time for this last sprint, but we also verified what other teams needed from us in order to do their tasks (coordination).
+- One of our team members (João Félix) joined the Kafka team and worked on the integration of Kafka with the project.
+- Working with Team 2 on refining the API, in particular some routes related to users, plugins and their tags. We needed this to be perfect in order to finish the Admin Panel.
+- Our team wrote useful documentation for the project, notably the User Profile and Admin Panel pages.
 
 ## Overall Product
 
