@@ -1,10 +1,9 @@
-<div fxLayout="row" fxLayoutAlign="space-between start">
-  <div fxLayout="column" fxFlex="65%">
+<div fxLayout="row wrap" fxLayoutAlign="space-between start">
+  <div fxLayout="column wrap" fxFlex.md="65%">
     <mat-tab-group [(selectedIndex)]="selectedTab">
-
       <mat-tab label="Description">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
             <h3>{{ plugin.name }}</h3>
             <h4>VERSION [1.19.1]</h4>
             <p>
@@ -17,16 +16,13 @@
       <mat-tab label="Dependencies">
         <ng-template matTabContent>
           <mat-list>
-            <mat-list-item
-              *ngFor="let dependency of plugin.dependencies"
-              style="height:4.5em"
-            >
-              <div class="dependency-description"  style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+            <mat-list-item *ngFor="let dependency of plugin.dependencies" style="height: 4.5em">
+              <div class="dependency-description" style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
                 <div fxLayout="row" fxLayoutAlign="start end">
                   <p class="name">{{ dependency.name }}</p>
                   <p class="version-tag">{{ dependency.version }}</p>
                 </div>
-                  <p class="vendor">{{ dependency.vendor }}</p>
+                <p class="vendor">{{ dependency.vendor }}</p>
               </div>
               <hr />
             </mat-list-item>
@@ -36,25 +32,23 @@
 
       <mat-tab label="Changelog">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
-            <p>
-              This is the changelog.
-            </p>
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
+            <p>This is the changelog.</p>
           </div>
         </ng-template>
       </mat-tab>
 
       <mat-tab label="Supplier information">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
             <p>{{ plugin.developer }}</p>
-            <p>Supplier e-mail: supplier123@gmail.com</p>
+            <p>Supplier e-mail: <a href="mailto:supplier123@gmail.com">supplier123@gmail.com</a></p>
           </div>
         </ng-template>
       </mat-tab>
       <mat-tab label="FAQ">
         <ng-template matTabContent>
-          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+          <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
             <p [innerHTML]="getFormattedFAQ()"></p>
           </div>
         </ng-template>
@@ -62,20 +56,18 @@
     </mat-tab-group>
   </div>
 
-  <hr style="border-top: 350px solid #808080" />
+  <hr class="menu-divider" style="border-top: 350px solid #808080" />
 
-  <div fxLayout="column" fxFlex="30%">
-
-    <mat-card  class="categories" style="border: none; box-shadow: none; margin-bottom: 20px;">
+  <div fxLayout="column" fxFlex.md="30%" style="margin-left: 0.2em">
+    <mat-card class="categories" style="border: none; box-shadow: none; margin-bottom: 20px">
       <mat-card-title>
         <h3>Categories</h3>
       </mat-card-title>
-      <div fxLayout="row" fxLayoutAlign="start center" class="category-container">
-        <img id="plugin-category-icon" [src]="'assets/plugin_categories_icons/' + plugin.category + '.png'" alt="Plugin Category Icon" class="icon">
-        <p class="category-text">{{ plugin.category }}</p>
+      <div class="tooltip-container">
+        <span class="badge" [id]="this.plugin.css_id">{{this.plugin.category}}</span>
       </div>
+
     </mat-card>
-    
 
     <hr style="border-left: 100%; margin: 0; max-width: 100%" />
 
@@ -84,8 +76,14 @@
         <h3>More Info</h3>
       </mat-card-title>
       <mat-card-content>
-        <p>Release Date: {{ plugin.release_date | date:'yyyy-MM-dd'}}</p>
-        <p>Last Update: {{ plugin.last_update_date | date:'yyyy-MM-dd'}}</p>
+        <p class="plugin-date">
+          Release Date:
+          <span><em>{{ plugin.release_date | date : "yyyy-MM-dd" }}</em></span>
+        </p>
+        <p class="plugin-date">
+          Last Update:
+          <span><em>{{ plugin.last_update_date | date : "yyyy-MM-dd" }}</em></span>
+        </p>
       </mat-card-content>
     </mat-card>
   </div>

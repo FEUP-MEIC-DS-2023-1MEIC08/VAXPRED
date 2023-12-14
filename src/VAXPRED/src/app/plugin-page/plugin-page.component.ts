@@ -10,7 +10,7 @@ import { ToolService } from '../plugin.service';
 @Component({
   selector: 'app-plugin-page',
   templateUrl: './plugin-page.component.html',
-  styleUrls: ['./plugin-page.component.css']
+  styleUrls: ['./plugin-page.component.css'],
 })
 
 export class PluginPageComponent {
@@ -23,7 +23,21 @@ export class PluginPageComponent {
   /**
    * Holds data related to the plugin being displayed on the page. Default value is an instance of Plugin with default values
    */
-  plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+  plugin: Plugin = new Plugin(
+    0,
+    '',
+    '',
+    '',
+    '',
+    '',
+    new Date(),
+    new Date(),
+    '',
+    '',
+    [],
+    2,
+    []
+  );
 
   /**
    * Constructor for PluginPageComponent
@@ -33,7 +47,11 @@ export class PluginPageComponent {
    */
   constructor(
     public dialogRef: MatDialogRef<PluginPageComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<PluginPageComponent, any>; plugin: Plugin },
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      dialogRef: MatDialogRef<PluginPageComponent, any>;
+      plugin: Plugin;
+    },
     toolService: ToolService
   ) {
     this.plugin = data.plugin;
@@ -45,5 +63,4 @@ export class PluginPageComponent {
   closeDialog() {
     this.data.dialogRef.close();
   }
-
 }

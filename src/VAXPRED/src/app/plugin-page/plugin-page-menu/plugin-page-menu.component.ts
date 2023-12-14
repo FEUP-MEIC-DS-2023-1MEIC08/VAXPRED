@@ -8,7 +8,7 @@ import { Plugin } from '../../plugin';
 @Component({
   selector: 'app-plugin-page-menu',
   templateUrl: './plugin-page-menu.component.html',
-  styleUrls: ['./plugin-page-menu.component.css']
+  styleUrls: ['./plugin-page-menu.component.css'],
 })
 
 export class PluginPageMenuComponent {
@@ -21,7 +21,21 @@ export class PluginPageMenuComponent {
   /**
    * Holds data related to the plugin being displayed on the page. Default value is an instance of Plugin with default values
    */
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+  @Input() plugin: Plugin = new Plugin(
+    0,
+    '',
+    '',
+    '',
+    '',
+    '',
+    new Date(),
+    new Date(),
+    '',
+    '',
+    [],
+    2,
+    []
+  );
 
   /**
    * Returns an HTML-formatted string containing questions in bold and their corresponding answers separated by line breaks, using the 'plugin' property of the class
@@ -39,7 +53,7 @@ export class PluginPageMenuComponent {
       if (question) {
         return `<strong>${question}</strong><br>${answer || ''}`;
       }
-      return ''; 
+      return '';
     });
     return formattedFAQs.filter(Boolean).join('<br><br>');
   }

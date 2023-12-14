@@ -8,13 +8,27 @@ import { Plugin } from '../../plugin';
 @Component({
   selector: 'app-plugin-page-images',
   templateUrl: './plugin-page-images.component.html',
-  styleUrls: ['./plugin-page-images.component.css']
+  styleUrls: ['./plugin-page-images.component.css'],
 })
 export class PluginPageImagesComponent {
   /** 
    * Holds data related to the plugin being displayed on the page. Default value is an instance of Plugin with default values
    */
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+  @Input() plugin: Plugin = new Plugin(
+    0,
+    '',
+    '',
+    '',
+    '',
+    '',
+    new Date(),
+    new Date(),
+    '',
+    '',
+    [],
+    2,
+    []
+  );
 
   /** 
    * Holds the URL of the image being expanded (default value is null)

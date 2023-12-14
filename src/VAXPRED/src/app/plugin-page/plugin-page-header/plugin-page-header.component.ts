@@ -11,13 +11,27 @@ import { ToolService } from 'src/app/plugin.service';
 @Component({
   selector: 'app-plugin-page-header',
   templateUrl: './plugin-page-header.component.html',
-  styleUrls: ['./plugin-page-header.component.css']
+  styleUrls: ['./plugin-page-header.component.css'],
 })
 export class PluginPageHeaderComponent {
   /**
    * Holds data related to the plugin being displayed on the page. Default value is an instance of Plugin with default values
    */
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+  @Input() plugin: Plugin = new Plugin(
+    0,
+    '',
+    '',
+    '',
+    '',
+    '',
+    new Date(),
+    new Date(),
+    '',
+    '',
+    [],
+    2,
+    []
+  );
 
   /**
    * Holds the reference to the contract dialog instance to control the opening/closing of the dialog
@@ -51,7 +65,9 @@ export class PluginPageHeaderComponent {
       const terminationDays = terminationYears * 365; // Assuming 365 days in a year
 
       this.terminationDate = new Date(this.currentDate);
-      this.terminationDate.setDate(this.currentDate.getDate() + terminationDays);
+      this.terminationDate.setDate(
+        this.currentDate.getDate() + terminationDays
+      );
     } else {
       // Default termination date if contract duration is not provided or invalid
       this.terminationDate = new Date(this.currentDate);
@@ -100,4 +116,3 @@ export class PluginPageHeaderComponent {
     }
   }
 }
-
