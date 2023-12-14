@@ -68,24 +68,35 @@ In this sprint I also helped my team by improving prior sql scripts to account f
 
 ## Sprint 4
 
-...
+During this sprint I was involved in the refactor of the database code, implementation of new routes and addition of new fields. The main change I did was to allow dependencies to work in the new refactored code as well as add new fields to them. 
+
+### The two user stories that I am most proud of
+
+In this sprint I was involved with item #240 where I added new fields to the dependencies table and item #238 since I modified several dependencies related functions and response models so that they could be returned as a list containing name, vendor and version inside a plugin response return, allowing this information to be fethced in one call.
+
+### The two pull requests that I am most proud of
+
+No important pull requests have been made by me.
+
+### Two contributions of other types that I am most proud of
+
+In addition to what I mentioned above, I was also involved in testing some of the new refactored code as well as making sure all of the limit cases and exceptions concerning dependencies changes worked without problem. 
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 
 ### Technical Soundness
 
-...
+My contributions helped the backend of the application reach a final state where all the necessary information is stored and this information is retrieved in an efficient way that minimizes the number of required calls.
 
 
 ### Product Realization
 
-...
+My work during the sprints helped the product reach its final stage in a complete state with the required features implemented. As as Dev in this project, I made sure I was always available to implement any change that was required quite quickly so the frontend could move forward efficiently. 
+
 
 
 ### Value for the Client
 
-...
+The product developed shows value for the client and in the meetings that my scrum master had that value was acknowledged. This final result was only possible due to the work of the rest of my team and myself.
