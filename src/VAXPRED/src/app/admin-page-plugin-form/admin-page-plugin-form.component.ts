@@ -164,7 +164,7 @@ export class AdminPagePluginFormComponent implements OnInit {
 
               if (tagID != null) {
                 this.adminPageService.disassociateTag(pluginID, tagID).subscribe((data) => {
-                  //console.log("Disassociating ", tag, data)
+                  console.log("Disassociating ", tag, data)
                 })
               }
             }
@@ -193,7 +193,7 @@ export class AdminPagePluginFormComponent implements OnInit {
                 })
               }
             }
-            window.location.reload();
+            setTimeout(() => { window.location.reload(); }, 500);
           });
         },
         (error) => {
