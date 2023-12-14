@@ -29,5 +29,5 @@ class PluginDependencyRepository:
 
         self.db.commit()
 
-        new_dependencies = self.get_dependency_names_by_plugin_id(plugin_id)
+        new_dependencies = self.get_dependencies_by_plugin_id(plugin_id)
         return new_dependencies

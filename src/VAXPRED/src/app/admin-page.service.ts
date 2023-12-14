@@ -40,4 +40,8 @@ export class AdminPageService {
     return this.http.post('http://localhost:8000/tags/' + tagID + '/plugins/' + pluginID + '/associate/', "")
   }
 
+  disassociateTag(pluginID: number, tagID: number) {
+    return this.http.delete('http://localhost:8000/tags/' + tagID + '/plugins/' + pluginID + '/disassociate/')
+  }
+
 }

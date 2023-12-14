@@ -4,6 +4,7 @@ import { AdminPageService } from '../admin-page.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { LiveAnnouncer} from '@angular/cdk/a11y';
 import { MatChipInputEvent} from '@angular/material/chips';
+import { convertToObject } from 'typescript';
 
 @Component({
   selector: 'app-admin-page-plugin-form',
@@ -19,9 +20,10 @@ export class AdminPagePluginFormComponent implements OnInit {
 
   categories = ['Data Quality', 'Data Curation', 'Synthetic Data Generation']
   dependencies: any[] = [];
-  faqs: any[] = [];
+  faqs: Object[] = [];
   tags: any[] = [];
   allTags: any;
+  TagsToRemove: any[] = [];
 
   pluginData = {
     id: -1,
@@ -36,7 +38,7 @@ export class AdminPagePluginFormComponent implements OnInit {
     category: "",
     changelog: "",
     dependencies: this.dependencies,
-    faqs: this.faqs
+    faqs: this.faqs,
   };
 
   newTagInput = "";
@@ -45,7 +47,8 @@ export class AdminPagePluginFormComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.data.editingPlugin) {
-      console.log(this.data.editingPlugin)
+      console.log("plugin:", this.data.editingPlugin)
+      this.TagsToRemove = [];
       this.pluginData.id = this.data.editingPlugin.id;
       this.pluginData.name = this.data.editingPlugin.name;
       this.pluginData.version = this.data.editingPlugin.version;
@@ -56,6 +59,15 @@ export class AdminPagePluginFormComponent implements OnInit {
       this.pluginData.changelog = this.data.editingPlugin.changelog;
       this.pluginData.dependencies = this.data.editingPlugin.dependencies;
       this.pluginData.faqs = this.data.editingPlugin.faq;
+      this.tags = JSON.parse(JSON.stringify(this.data.editingPlugin.tags))
+
+      if ('supplier_email' in this.data.editingPlugin)
+        this.pluginData.supplier_email = this.data.editingPlugin.supplier_email as string;
+      if ('supplier_name' in this.data.editingPlugin)
+        this.pluginData.supplier_name = this.data.editingPlugin.supplier_name as string;
+      if ('faqs' in this.data.editingPlugin)
+        this.pluginData.faqs = this.data.editingPlugin.faqs as Array<Object>;
+      
     }
   }
 
@@ -63,7 +75,8 @@ export class AdminPagePluginFormComponent implements OnInit {
     const index = this.tags.indexOf(tag);
     if (index >= 0) {
       this.tags.splice(index, 1);
-
+      this.TagsToRemove.push(tag);
+      console.log(this.TagsToRemove)
       this.announcer.announce(`removed ${tag}`);
     }
   }
@@ -112,9 +125,9 @@ export class AdminPagePluginFormComponent implements OnInit {
               if (tagID == null) {
                 this.adminPageService.createTag({"name": tag}).subscribe(
                   (response) => {
-                    console.log('Response:', response);
+                    //console.log('Response:', response);
                     this.adminPageService.associateTag(pluginID, response.id).subscribe((data) => {
-                      console.log(data)
+                      //console.log(data)
                     })
                   },
                   (error) => {
@@ -123,11 +136,11 @@ export class AdminPagePluginFormComponent implements OnInit {
                 )
               } else {
                 this.adminPageService.associateTag(pluginID, tagID).subscribe((data) => {
-                  console.log(data)
+                  //console.log(data)
                 })
               }
             }
-            //window.location.reload();
+            window.location.reload();
           });
         },
         // Error creating new plugin
@@ -140,12 +153,28 @@ export class AdminPagePluginFormComponent implements OnInit {
       // Update existing plugin
       let pluginID = this.data.editingPlugin.id;
       this.adminPageService.editPlugin(pluginID, this.pluginData).subscribe(
+        // Success editing plugin
         (response) => {
           console.log('Response:', response);
           this.adminPageService.getTags().subscribe((data) => {
             this.allTags = data;
-            for (let tag of this.tags) {
+
+            for (let tag of this.TagsToRemove) {
+              let tagID = this.getTagId(tag)
+
+              if (tagID != null) {
+                this.adminPageService.disassociateTag(pluginID, tagID).subscribe((data) => {
+                  //console.log("Disassociating ", tag, data)
+                })
+              }
+            }
+
+            let newTags = this.tags.filter(tag => !this.data.editingPlugin.tags.includes(tag))
+            console.log(newTags)
+
+            for (let tag of newTags) {
               let tagID = this.getTagId(tag);
+
               if (tagID == null) {
                 this.adminPageService.createTag({"name": tag}).subscribe(
                   (response) => {
