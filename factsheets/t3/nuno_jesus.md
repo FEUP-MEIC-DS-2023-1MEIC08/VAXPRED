@@ -74,7 +74,21 @@ In this sprint I focused on completing the tasks I wasn't able to finish in last
 
 ## Sprint 4
 
-...
+In this sprint I focused on improving the user-friendliness of the app and also completing the plugin cards.
+
+### The two user stories that I am most proud of
+- [Issue #151](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/151)
+- [Issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+- [Issue #219](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/219)
+
+### The two pull requests that I am most proud of
+
+- [Pull Request #248](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/248)
+
+### Two contributions of other types that I am most proud of
+
+- Helped the teams deciding what tool to use for the documentation
+- Reviewed pull requests
 
 
 ## Overall Product
