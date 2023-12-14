@@ -2,7 +2,7 @@
 
 ## Sprint 0
 
-We kickstarted the projected by a global meeting in which we formed the scrum teams and discussed the project's requirements imposed by the client, the vision of the project and the technologies we would use. We also discussed the project's architecture and the tasks we would have to do in the first sprint. There was a first meeting with the client. Every team contributed equally to the initial planning.
+We kickstarted the project with a global meeting in which we formed the scrum teams and discussed the project's requirements imposed by the client, the vision of the project and the technologies we would use. We also discussed the project's architecture and the tasks we would have to do in the first sprint. There was a first meeting with the client. Every team contributed equally to the initial planning.
 
 ## Sprint 1
 
