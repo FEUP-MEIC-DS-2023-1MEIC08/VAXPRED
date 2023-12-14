@@ -7,7 +7,6 @@ from repositories.plugin_tag import PluginTagRepository
 from repositories.user_plugin import UserPluginRepository
 from repositories.plugin import PluginRepository
 from repositories.plugin_image import PluginImageRepository
-
 from schemas.plugin import PluginResponse
 
 
