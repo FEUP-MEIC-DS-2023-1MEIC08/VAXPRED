@@ -17,7 +17,9 @@ export class AdminPagePluginFormComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: { dialogRef: MatDialogRef<AdminPagePluginFormComponent, any>; editingPlugin: Plugin },
   ) { }
 
-  categories: any[] = [];
+  categories = ['Data Quality', 'Data Curation', 'Synthetic Data Generation']
+  dependencies: any[] = [];
+  faqs: any[] = [];
   tags: any[] = [];
   allTags: any;
 
@@ -30,35 +32,30 @@ export class AdminPagePluginFormComponent implements OnInit {
     supplier_name: "",
     supplier_email: "",
     contract_duration: 0,
-    changelog: ""
+    price: 0,
+    category: "",
+    changelog: "",
+    dependencies: this.dependencies,
+    faqs: this.faqs
   };
-
-  pluginCategoryID = -1;
-
-  // TODO: supplier_name and supplier_email are not in the plugin model
-  // TODO: fix category selection because a plugin can have more than 1 category !!! (outdated)
 
   newTagInput = "";
 
   announcer = inject(LiveAnnouncer);
 
   ngOnInit(): void {
-    this.adminPageService.getAllCategories().subscribe((data: any[]) => {
-      console.log('categories: ', data);
-      this.categories = data;
-    });
-
     if (this.data.editingPlugin) {
+      console.log(this.data.editingPlugin)
       this.pluginData.id = this.data.editingPlugin.id;
       this.pluginData.name = this.data.editingPlugin.name;
       this.pluginData.version = this.data.editingPlugin.version;
       this.pluginData.description = this.data.editingPlugin.description;
       this.pluginData.developer = this.data.editingPlugin.developer;
-      // this.pluginData.supplier_name = this.data.editingPlugin.supplier_name;
-      // this.pluginData.supplier_email = this.data.editingPlugin.supplier_email;
       this.pluginData.contract_duration = this.data.editingPlugin.contract_duration;
-      this.pluginCategoryID = 1; // TEMP
+      this.pluginData.category = this.data.editingPlugin.category; 
       this.pluginData.changelog = this.data.editingPlugin.changelog;
+      this.pluginData.dependencies = this.data.editingPlugin.dependencies;
+      this.pluginData.faqs = this.data.editingPlugin.faq;
     }
   }
 
@@ -88,25 +85,30 @@ export class AdminPagePluginFormComponent implements OnInit {
 
   postPlugin() {
     if (this.pluginData.name == "") return
+    if (this.pluginData.version == "") return
     if (this.pluginData.description == "") return
     if (this.pluginData.developer == "") return
-    // if (this.pluginData.supplier_name == "") return
-    // if (this.pluginData.supplier_email == "") return
-    if (this.pluginCategoryID == -1) return
+    if (this.pluginData.category == "") return
+    if (this.pluginData.changelog == "") return
 
     if (this.data.editingPlugin == null) {
+      if (this.pluginData.supplier_name == "") return
+      if (this.pluginData.supplier_email == "") return
       // Create new plugin
       this.adminPageService.addPlugin(this.pluginData).subscribe(
+        // Success creating new plugin
         (response) => {
           console.log('Response:', response);
           let pluginID = response.id
-          this.adminPageService.associateCategory(pluginID, this.pluginCategoryID).subscribe((data) => {
-            console.log(data)
-          });
+          // Get all Tags
           this.adminPageService.getTags().subscribe((data) => {
             this.allTags = data;
+
             for (let tag of this.tags) {
+              // Find Tag ID if exists else null
               let tagID = this.getTagId(tag);
+
+              // If doesnt exist create Tag and associate with plugin
               if (tagID == null) {
                 this.adminPageService.createTag({"name": tag}).subscribe(
                   (response) => {
@@ -125,9 +127,10 @@ export class AdminPagePluginFormComponent implements OnInit {
                 })
               }
             }
-            window.location.reload();
+            //window.location.reload();
           });
         },
+        // Error creating new plugin
         (error) => {
           console.log('Error: ', error)
         }
@@ -139,9 +142,6 @@ export class AdminPagePluginFormComponent implements OnInit {
       this.adminPageService.editPlugin(pluginID, this.pluginData).subscribe(
         (response) => {
           console.log('Response:', response);
-          this.adminPageService.associateCategory(pluginID, this.pluginCategoryID).subscribe((data) => {
-            console.log(data)
-          });
           this.adminPageService.getTags().subscribe((data) => {
             this.allTags = data;
             for (let tag of this.tags) {

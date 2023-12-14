@@ -3,12 +3,7 @@
   <hr>
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Name *</p>
   <mat-form-field class="add-plugin-input-container">
-    <input [(ngModel)]="pluginData.name" class="add-plugin-input" matInput placeholder="Name">
-  </mat-form-field>
-
-  <p i18n="@@myPlugins" class="add-plugin-label">Plugin Version</p>
-  <mat-form-field class="add-plugin-input-container">
-    <input [(ngModel)]="pluginData.version" class="add-plugin-input" matInput placeholder="Version">
+    <input type="text" [(ngModel)]="pluginData.name" class="add-plugin-input" matInput placeholder="Name">
   </mat-form-field>
 
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Description *</p>
@@ -16,26 +11,46 @@
     <textarea [(ngModel)]="pluginData.description" matInput placeholder="Description of the plugin"></textarea>
   </mat-form-field>
 
+  <p i18n="@@myPlugins" class="add-plugin-label">Plugin Version</p>
+  <mat-form-field class="add-plugin-input-container">
+    <input type="text" [(ngModel)]="pluginData.version" class="add-plugin-input" matInput placeholder="Version">
+  </mat-form-field>
+
+  <p i18n="@@myPlugins" class="add-plugin-label">Plugin Changelog *</p>
+  <mat-form-field class="add-plugin-input-container">
+    <textarea type="text" [(ngModel)]="pluginData.changelog" matInput placeholder="Changelog of the plugin"></textarea>
+  </mat-form-field>
+
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Developer *</p>
   <mat-form-field class="add-plugin-input-container">
-    <input [(ngModel)]="pluginData.developer" class="add-plugin-input" matInput placeholder="Developer">
+    <input type="text" [(ngModel)]="pluginData.developer" class="add-plugin-input" matInput placeholder="Developer">
   </mat-form-field>
 
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Supplier Name *</p>
   <mat-form-field class="add-plugin-input-container">
-    <input [(ngModel)]="pluginData.supplier_name" class="add-plugin-input" matInput placeholder="Supplier Name">
+    <input type="text" [(ngModel)]="pluginData.supplier_name" class="add-plugin-input" matInput placeholder="Supplier Name">
   </mat-form-field>
 
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Supplier Email *</p>
   <mat-form-field class="add-plugin-input-container">
-    <input [(ngModel)]="pluginData.supplier_email" class="add-plugin-input" matInput placeholder="Supplier Email">
+    <input type="text" [(ngModel)]="pluginData.supplier_email" class="add-plugin-input" matInput placeholder="Supplier Email">
+  </mat-form-field>
+
+  <p i18n="@@myPlugins" class="add-plugin-label">Plugin Contract Duration *</p>
+  <mat-form-field class="add-plugin-input-container">
+    <input type="number" [(ngModel)]="pluginData.contract_duration" class="add-plugin-input" matInput placeholder="Contract Duration">
+  </mat-form-field>
+
+  <p i18n="@@myPlugins" class="add-plugin-label">Plugin Price</p>
+  <mat-form-field class="add-plugin-input-container">
+    <input type="number" [(ngModel)]="pluginData.price" class="add-plugin-input" matInput placeholder="Price">
   </mat-form-field>
 
   <p i18n="@@myPlugins" class="add-plugin-label">Plugin Category *</p>
   <mat-form-field class="add-plugin-input-container">
     <mat-label>Select</mat-label>
-    <mat-select [(ngModel)]="pluginCategoryID">
-      <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+    <mat-select [(ngModel)]="pluginData.category">
+      <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
     </mat-select>
   </mat-form-field>
 
