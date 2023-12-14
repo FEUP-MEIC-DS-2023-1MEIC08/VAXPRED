@@ -195,7 +195,7 @@ def create_plugin(plugin: PluginCreate, db: Session = Depends(get_db)):
     faqs = plugin.faqs
     plugin_faqs_repository.create_faqs(plugin_id=new_plugin.id, faqs=faqs)
 
-    return new_plugin
+    return {"id": new_plugin.id, "detail": "Plugin created successfully!"}
 
 
 # Route for update a specific plugin

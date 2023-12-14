@@ -34,7 +34,21 @@ describe('PluginPageMenuComponent', () => {
 
   it('should correctly set selectedTab and plugin inputs', () => {
     const testSelectedTab = 2;
-    const testPlugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    const testPlugin = new Plugin(
+      1,
+      'Test Plugin',
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
 
     component.selectedTab = testSelectedTab;
     component.plugin = testPlugin;
@@ -47,15 +61,29 @@ describe('PluginPageMenuComponent', () => {
 
   it('should display the plugin title', () => {
     const testTitle = 'Test Plugin Title';
-    component.plugin = new Plugin(1, 'Test Plugin', 'Test Description', 'Test Path', 'Test Version', 'Test Developer', new Date(), new Date(), 'Test Category','Test changelog', ['Tag 1'], 2, []);
+    component.plugin = new Plugin(
+      1,
+      'Test Plugin',
+      'Test Description',
+      'Test Path',
+      'Test Version',
+      'Test Developer',
+      new Date(),
+      new Date(),
+      'Test Category',
+      'Test changelog',
+      ['Tag 1'],
+      2,
+      []
+    );
     fixture.detectChanges();
-  
+
     const titleElement = fixture.nativeElement.querySelector('h3');
     expect(titleElement.textContent).toContain(testTitle);
   });
-  
+
   it('should update selectedTab when a tab is clicked', async () => {
-    await fixture.whenStable(); 
+    await fixture.whenStable();
 
     const tabGroupHarness = await TestbedHarnessEnvironment.harnessForFixture(
       fixture,

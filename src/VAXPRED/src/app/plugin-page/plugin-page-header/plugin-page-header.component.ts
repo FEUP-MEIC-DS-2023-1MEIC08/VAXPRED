@@ -4,14 +4,27 @@ import { PluginPageComponent } from '../plugin-page.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ToolService } from 'src/app/plugin.service';
 
-
 @Component({
   selector: 'app-plugin-page-header',
   templateUrl: './plugin-page-header.component.html',
-  styleUrls: ['./plugin-page-header.component.css']
+  styleUrls: ['./plugin-page-header.component.css'],
 })
 export class PluginPageHeaderComponent {
-  @Input() plugin: Plugin = new Plugin(0, '', '', '', '', '', new Date(), new Date(), '','', [], 2, []);
+  @Input() plugin: Plugin = new Plugin(
+    0,
+    '',
+    '',
+    '',
+    '',
+    '',
+    new Date(),
+    new Date(),
+    '',
+    '',
+    [],
+    2,
+    []
+  );
   @Input() dialogRef!: MatDialogRef<PluginPageComponent>;
 
   currentDate: Date = new Date();
@@ -26,7 +39,9 @@ export class PluginPageHeaderComponent {
       const terminationDays = terminationYears * 365; // Assuming 365 days in a year
 
       this.terminationDate = new Date(this.currentDate);
-      this.terminationDate.setDate(this.currentDate.getDate() + terminationDays);
+      this.terminationDate.setDate(
+        this.currentDate.getDate() + terminationDays
+      );
     } else {
       // Default termination date if contract duration is not provided or invalid
       this.terminationDate = new Date(this.currentDate);
@@ -63,4 +78,3 @@ export class PluginPageHeaderComponent {
     }
   }
 }
-
