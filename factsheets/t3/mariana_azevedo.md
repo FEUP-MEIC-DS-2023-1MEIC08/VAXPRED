@@ -118,17 +118,16 @@ I did not review nor create any pull request during this sprint.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
-
-...
+As a PO, I helped in informing the developers about the technologies that were preferred by the client to be used on the product.
+I also aided communicating doubts my team had about work performed by other teams, to ensure everything worked correctly as a whole.
 
 
 ### Product Realization
-
-...
+Together with the other POs, I wrote user stories containing everything the client asked for and some more ideas, with the features implemented by the developers coming from those user stories.
 
 
 ### Value for the Client
+My work made it possible for the features and technologies wanted by the client to be present in the final product.
+Like intended and described in the [Product Vision](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/main/docs/product.md), the final product has a user-friendly plugin store with various plugins, divided into distinct categories and having their respective descriptions.
+
