@@ -141,17 +141,14 @@ The team members created these pull requests to incorporate the work performed (
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
-
 ### Technical Soundness
-
-...
-
+The team’s members learned how to properly work with the technologies used in the product to assure the quality of everything created.
+During the implementation of its corresponding features, the team was careful to create code that works as intended, is properly documented, easy maintainable and well-integrated with the work performed by the other teams so everything works correctly.
 
 ### Product Realization
-
-...
-
+The team’s goal was creating the Home Page and the Search Page of the application, being careful in making them user-friendly. The plugins present on the store, each in its individual card holding information about itself, are divided into categories, with filters being available to quickly find the plugins of a certain tag or category.
+A navbar was also created to be used in the whole application.
 
 ### Value for the Client
+The Home Page and Search Page were implemented considering the features the client asked for. With them, a user can see which plugins are available in the store in an organized manner and quickly search for a specific one. The design of the pages was also made with a pleasant use of the application in mind.
+The positive feedback given by the client also confirms the value the product holds for them.
