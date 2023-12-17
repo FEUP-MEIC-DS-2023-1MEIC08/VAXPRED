@@ -97,14 +97,15 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+- Produced a set of features, following Angular's best practices.
+- Developed an event logging system adhering to Kafka's recommended methodologies. 
 
 
 ### Product Realization
 
-...
+- I contributed across various aspects, from designing and implementing the UI of the plugin page to building a comprehensive logging system that captured events across the entire system. 
 
 
 ### Value for the Client
 
-...
+- The work contributed results in an improved user interface for the plugin page and a comprehensive logging system, ensuring enhanced user experience and streamlined system monitoring for the client.
