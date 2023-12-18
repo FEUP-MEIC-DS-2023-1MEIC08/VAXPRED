@@ -69,8 +69,25 @@ There was only one [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/V
 
 ## Sprint 4
 
-...
+In this sprint, I added the categories from the database to the plugin page. This feature ended up not being used since the team responsible for the backend/database made some changes to it. The feature is well implemented either way.
 
+I also helped with the documentation of the code in the files plugin-page.component.ts and plugin-page-menu.component.ts. This is related to issue [#217](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/217).
+
+### The two user stories that I am most proud of
+
+During this sprint, I worked on the following [user story]([https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC08/projects/2/views/1?pane=issue&itemId=41799720](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/169)):
+
+"As a researcher, I want the plugin page to be as user friendly as possible, so that I can have a good experience using it."
+
+### The two pull requests that I am most proud of
+
+The [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/252) related to the initial work I did during this sprint, which merges `t1-feature-plugin-list-categories` to `dev`.
+
+The second [pull request](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/252) made was to merge the documentation of the files refered previously.
+
+### Two contributions of other types that I am most proud of
+
+I was involved with the plugin page design and the documentation of the code.
 
 ## Overall Product
 
@@ -79,14 +96,12 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
-
+- I bolstered the plugin page's functionality, integrating tab menus, code documentation.
 
 ### Product Realization
 
-...
-
-
+- The contributions I made to this project include de layout of the plugin page menu tabs and the display of important information, such as the supplier's information, relevant dates, and the categories of the plugin.
+ 
 ### Value for the Client
 
-...
+- I wanted to improve the overall quality of the product by concentrating on features that are important to users and UI improvements. The product's value was much enhanced and customer expectations were met by these efforts, which were focused on satisfying user needs, improving design, and making sure all documentation was complete.

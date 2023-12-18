@@ -80,6 +80,21 @@ In this sprint my main goal was to try to finish as many issues as possible.
 
 ## Sprint 4
 
+In this sprint I had the opportunity to work on implementing Kafka in the project.
+
+### The user storie that I am most proud of
+
+- [(#132) As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/253).
+
+### The pull request that I am most proud of
+
+- [(#253) Pull request to update the Kafka branch](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/253).
+
+### Contribution of other types that I am most proud of
+
+- Having managed to pass the name and ID of the plugin buyer to the server in PR #253.
+
+  
 ...
 
 ## Overall Product
@@ -87,11 +102,13 @@ In this sprint my main goal was to try to finish as many issues as possible.
 Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
 
 ### Technical Soundness
-...
+
+- I worked in several areas on this project, always trying to follow the best possible practices depending on the request.
 
 ### Product Realization
-...
+
+- Contributes in various aspects, from exchanging ideas, to involvement in mockups, to the development or improvement of features, to carrying out tests, frontend - database connection and Kafka. In my opinion it was a challenging project as I participated in very varied things.
 
 ### Value for the Client
 
-...
+- I believe that the work carried out has value for the client, as we improved the interface, created the logic of the plugins, a series of interesting features were created and the last addition relating to Kafka I believe was an added value.

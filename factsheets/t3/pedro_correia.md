@@ -63,8 +63,6 @@ This sprint, I focussed on the developlment of the home page and improving the v
 ### The two pull requests that I am most proud of
 - https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/214
 
-
-
 ### Two contributions of other types that I am most proud of
 I answered the form given by the Product Owners providing future improvements or fixes that could be done to the prokect
 
@@ -72,24 +70,32 @@ I answered the form given by the Product Owners providing future improvements or
 
 ## Sprint 4
 
-...
+This sprint, I focused on finishing the home page as well as improving it and the search page. Also fixed component tests and wrote documentation for the code.
 
+### The two user stories that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132
+- item https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/249
+  
+### The two pull requests that I am most proud of
+- https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254
+
+### Two contributions of other types that I am most proud of
+I answered the form provided by the Product Owners about the Happiness Meter.
 
 ## Overall Product
-
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
 
 
 ### Technical Soundness
 
-...
+  I helped in developing the search page functionalities, mainly the filter bar on the left and the results that appear. In the homepage, I also helped in showing the categories and the plugins of each category.
 
 
 ### Product Realization
-
-...
-
+ 
+  I believe the homepage and plugin store I assisted in developing have successfully reached a positive outcome, showcasing practical features and a distinct "professional" impression.
 
 ### Value for the Client
 
-...
+  Based on the feedback received, the client expressed satisfaction with the final outcome. Despite the distribution of the work in the beggining felt a little uneven, it seemed to work well in the end. Overral, the effort was appropriate and everyone worked well together.
+
+  

@@ -99,18 +99,36 @@ This pull request merged the implementation of the confirmation pop-up for the p
 
 ## Sprint 4
 
-...
+This sprint was mostly focused on improvements for what was already done. I was in charge of writing documentation for the code that our team developed across all sprints.
+
+### The two user stories that I am most proud of
+
+- [(#218) Write documentation about the profile page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/218)
+- [(#218) Write documentation about the admin page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/234)
+
+These tasks consisted on writing documentation for the admin and profile pages, the pages that our team developed. For that I used JSDoc comments and Compodoc to generate the documentation.
+
+### The two pull requests that I am most proud of
+
+- [(#260) T4 - Feat: Add documentation for user profile and admin pages](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/260)
+
+This pull request merged the added documentation to the branch where every team was working from.
+
+### Two contributions of other types that I am most proud of
+
+- Regarding the documentation, instead of using just JSDoc comments, I searched for a tool that could make the documentation visible on a web interface. I found out that Compodoc could achieve that, so I proposed its usage to other teams.
+- I made myself available to help on everything that was necessary and was always active.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 ### Technical Soundness
-...
+
+Contributed for the development of various features while always following the best practices, assuring the code was readable, maintainable and followed the specified standards. Additionally, made a clear and comprehensive documentation for the code developed by our team, assuring the reliability and stability of the project.
 
 ### Product Realization
-...
+
+I was involved in the devolopment of the user profile and admin pages, working on a diverse range of features such as the user interface or the logic behind it. Finished all the tasks that were assigned to me and helped my team on other tasks whenever it was needed. I was always available to communicate with everyone and to complete any task. Apart from the typical user stories I also helped fixing critical bugs and in general, produced robust code. All these contributions helped the realization of the project.
 
 ### Value for the Client
 
-...
+All my contributions were important and added value for the client. Both the user profile page and the admin page are key parts of the project and we produced an enhanced user interface ensuring a good user experience, while also ensuring that the logic behind the interface was flawless. The produced documentation is also important for the client as it helps the client to have a better understanding of the project and its features.

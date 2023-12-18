@@ -61,8 +61,16 @@ In this sprint, I had to changed the plugin structure in order to retrieve the i
 
 ## Sprint 4
 
-...
+In this sprint my team's focus was to finalize any details left on the backend of the application in order to end development.
 
+### The two user stories that I am most proud of
+In this sprint I was responsible for the development of the item #239 that involved the creation of a route to return all the plugins that have a specific category.
+
+### The two pull requests that I am most proud of
+I created a PR (#255) for a refactoring issue to fix an issue with a route on the backend.
+
+### Two contributions of other types that I am most proud of
+In this sprint, on the beginning, I fixed some issues detected after the merge of the backend merge, some routes stopped working due to some outadated code. After my team's SM received a request, from someone on the frontend teams, that required us to change the response of the create plugin route, I volunteered to fix it. The route was returning a useless value and if It returned the newly created plugin ID It would make frontend's work with the backend easier and It would reduce the number of needed API calls.
 
 ## Overall Product
 

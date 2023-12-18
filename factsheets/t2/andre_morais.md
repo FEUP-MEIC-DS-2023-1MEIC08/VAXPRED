@@ -81,6 +81,30 @@ As a PO, I did not participate in any pull request.
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+* "Create a new route in the backend to return all the plugins that have a specific category." [issue #239](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/239).
+* "As a researcher, I want to be able to install a plugin like the Mhcflurry, when I click to install it from the store, so that I can run it in my machine." [issue #213](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/213).
 
+### The two pull requests that I most proud of
+
+As a PO, I did not participate in any pull request.
+
+### Two contributions of other types that I am most proud of
+
+* Offered suggestions to improve the project.
+* Explained the feedback of the meetings with the client to the other team members.
+
+## Overall Product
+
+### Technical Soundness
+
+My coordination as product owner, helped the backend of the application reach a final state where all the necessary information is stored and this information is retrieved in an efficient way that minimizes the number of required calls to the cloud platform.
+
+### Product Realization
+
+My user stories created during the sprint, helped the product reach its final stage in a complete state with the required features implemented. 
+
+### Value for the Client
+
+The product developed shows value for the client and in the meetings we had that value was acknowledged. This final result was only possible due to the hard work of my team that communicated with me and followed the backlog that me and the other product owners organised.

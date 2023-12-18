@@ -52,7 +52,11 @@ Two contributions of other types that I am most No importante contributions f an
 
 ## Sprint 4
 
-...
+In this ast sprint, I helped ith the integration of Kafka to the product. I managed to include a new log for when a plugin is accessed.
+
+The two pull requests that I am most proud of No important pull requests have been made by me.
+
+Two contributions of other types that I am most No importante contributions of any other type were made.
 
 
 ## Overall Product

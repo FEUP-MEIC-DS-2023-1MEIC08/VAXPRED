@@ -114,22 +114,41 @@ The team members created these pull requests to incorporate the work performed w
 
 ## Sprint 4
 
-...
+### The four user stories that we are most proud of
+
+ * "As a researcher, I want to be able to see the plugins' store home page, so that I can see all the plugins right away and easily go to other sections of the application." [issue #132](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/132)
+ * "As a researcher, I want the store page to be as user friendly as possible, so that I can have a good experience using it." [issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+
+These were the user stories assigned to the team for this Sprint. We are proud of this as the home page is one of the first parts of the application that is seen by the user and we think we accomplished making it look appealing and user-friendly.
+
+
+### The four pull requests that we are most proud of
+
+ * "T3 task home box schema" [#228](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/228)
+ * "T3 - plugin cards re-design" [#248](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/248)
+ * "T3 task category integration" [#254](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254)
+ 
+The team members created these pull requests to incorporate the work performed (including new features and enhancements of previous ones) with the rest of the app.
+
+
+### Four contributions of other types that we are most proud of
+
+* One of the team's members was part of the "Kafka team" that worked with Kafka
+* The team collaborated with the other teams so all elements of the app were correctly integrated and to assure the user-friendliness of the app
+* The Team's members helped dividing the Sprint's User Stories into items, which helped organizing the Sprint's work
+* The Team's members wrote useful documentation for the implemented code
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
-
 ### Technical Soundness
-
-...
-
+The team’s members learned how to properly work with the technologies used in the product to assure the quality of everything created.
+During the implementation of its corresponding features, the team was careful to create code that works as intended, is properly documented, easy maintainable and well-integrated with the work performed by the other teams so everything works correctly.
 
 ### Product Realization
-
-...
-
+The team’s goal was creating the Home Page and the Search Page of the application, being careful in making them user-friendly. The plugins present on the store, each in its individual card holding information about itself, are divided into categories, with filters being available to quickly find the plugins of a certain tag or category.
+A navbar was also created to be used in the whole application.
 
 ### Value for the Client
+The Home Page and Search Page were implemented considering the features the client asked for. With them, a user can see which plugins are available in the store in an organized manner and quickly search for a specific one. The design of the pages was also made with a pleasant use of the application in mind.
+The positive feedback given by the client also confirms the value the product holds for them.

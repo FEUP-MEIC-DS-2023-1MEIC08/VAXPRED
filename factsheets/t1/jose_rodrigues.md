@@ -66,24 +66,33 @@ Envolved at initial development of domain model and product vision.
 
 ## Sprint 4
 
-...
+- Made changes to the plugin page to improve the UX
+- Completed every item assigned to me for this sprint.
 
+### The two pull requests that I am most proud of
+
+- Authored [#256](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/256). Made several changes to improve the plugin page's UX and responsiveness.
+- Reviewed [#262](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/262). Provided code review to other colleagues' changes.
+
+### Two contributions of other types that I am most proud of
+
+- Tested the product with an outsider to gain insights into the page's behavior.
+- Discussed several problems with the team to drive the product forward.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+Produced a robust set of features, following Angular's best practices. 
 
 ### Product Realization
 
-...
+My contributions ranged through different areas of product development: UI design, discussion, and implementation. 
 
+I am proud to say I was able to complete every task assigned to me and improved the product to the best of my knowledge.
 
 ### Value for the Client
 
-...
+By working primarily on the frontend side of the application, made sure functionality was well suited to the end user. 
+This included working on the product's UX and giving feedback back to the backend team.
+

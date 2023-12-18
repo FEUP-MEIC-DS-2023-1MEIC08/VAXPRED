@@ -74,24 +74,33 @@ In this sprint I focused on completing the tasks I wasn't able to finish in last
 
 ## Sprint 4
 
-...
+In this sprint I focused on improving the user-friendliness of the app and also completing the plugin cards.
+
+### The two user stories that I am most proud of
+- [Issue #151](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/151)
+- [Issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+- [Issue #219](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/219)
+
+### The two pull requests that I am most proud of
+
+- [Pull Request #248](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/248)
+
+### Two contributions of other types that I am most proud of
+
+- Helped the teams deciding what tool to use for the documentation
+- Reviewed pull requests
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+Together with other Scrum Masters, I helped writing and adapting guidelines for teams to work with Git/GitHub throughout the semester. I made sure to remove any dead-ends my team would find, by either aiding directly or communicating the issues to other teams, if needed.
 
 ### Product Realization
 
-...
-
+I was mostly into creating and also re-designing the plugin cards to improve both UI and UX. Those cards display resumed informations of a plugin and are found on both home page and search-results page.
 
 ### Value for the Client
 
-...
+The way the plugins are recognized by users highly depends on their first impression when looking at the plugin cards. So, creating a card that allows the first batch of information to easily be perceived by the users upon contact, was of most importance.

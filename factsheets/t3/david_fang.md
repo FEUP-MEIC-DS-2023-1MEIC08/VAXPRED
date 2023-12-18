@@ -70,24 +70,34 @@ I answered the form provided by the Product Owner providing any future improveme
 
 ## Sprint 4
 
-...
+In this sprint the focus was essentialy on finishing and improving the home page, improving the search page, fixing component tests and writing documentation.
+
+### The two user stories that I am most proud of
+
+- [#222 Adapt the homepage's option to "see more" to be able to contain more plugins without unformed the page.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/222)
+- [#244 Implement search page refresh after changing filter option](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/244)
+
+### The two pull requests that I am most proud of
+
+- [#254 T3 task category integration](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/254)
+
+### Two contributions of other types that I am most proud of
+
+I answered the form provided by the Product Owners about the Happiness Meter.
+
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+I have dominated most of the technologies integrated in this project, mostly related to web development and communication with the database.
 
 ### Product Realization
 
-...
+From my point of view, the implementation of front end and integration between both front and back end have reached our expectations, along with the clear and simple UI and code structure to be furthur developed.
 
 
 ### Value for the Client
 
-...
+The client seemed to be satisfied from the result we displayed. I think we have successfully achieved the their expectations.

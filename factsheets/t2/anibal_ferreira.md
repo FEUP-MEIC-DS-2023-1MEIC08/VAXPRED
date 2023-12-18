@@ -42,7 +42,7 @@ In this sprint I was involved with user story #23, more precisely with item #113
 
 ### The two pull requests that I am most proud of
 
-The two pull requests I'm most proud of is the pull request #189 which addded a retrospective for the project and for each team and the pull request that added the work developed by team 2 during sprint 2 into the dev branch.
+The pull request I'm most proud of is the pull request #189 which addded a retrospective for the project and for each team and the pull request that added the work developed by team 2 during sprint 2 into the dev branch.
 
 ### Two contributions of other types that I am most proud of
 
@@ -59,7 +59,7 @@ In this sprint I was involved with user story #83 as well as user story #109 due
 
 ### The two pull requests that I am most proud of
 
-The two pull requests I'm most proud of is the pull request #226 which aims to bring the code refactor and changes made to the database by team 2 during sprint 3 to the dev branch.
+The pull request I'm most proud of is the pull request #226 which aims to bring the code refactor and changes made to the database by team 2 during sprint 3 to the dev branch.
 
 ### Two contributions of other types that I am most proud of
 
@@ -67,24 +67,34 @@ In this sprint I also helped manage several merges between our feature, refactor
 
 ## Sprint 4
 
-...
+During this sprint I was involved in the refactor of the database code, implementation of new routes and addition of new fields. I also took care of some issues with the code and created new tests. As the scrum master I also helped manage work with the other teams and ensure the scrum as well as making and reviewing pull requests. 
+
+### The two user stories that I am most proud of
+
+In this sprint I was involved with item #238 as well as item #239 in which I made changes to how we store the category of a plugin as well as how we retrieve with and how we can filter plugins using that category. 
+
+### The two pull requests that I am most proud of
+
+The two pull requests I'm most proud of are, the pull request #250 which aims to bring the code refactor and new changes made to the database by team 2 during the initial part of sprint 4 to the dev branch, and the pull request that brough some small fixes with the plugin routes to the dev branch when the other teams needed those changes.
+
+### Two contributions of other types that I am most proud of
+
+In addition to what I mentioned above, I was also involved in fixing the tests for the backend so that all checks pass.
+I also added new fields to the plugin such as the changelog. 
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
+My contributions helped the backend of the application reach a final state where all the necessary information is stored and this information is retrieved in an efficient way that minimizes the number of required calls.
 
 
 ### Product Realization
 
-...
+My work during the sprints helped the product reach its final stage in a complete state with the required features implemented. As the scrum master for most of the sprints, I also tried to fullfil my duties and uphold the scrum values and practices. 
 
 
 ### Value for the Client
 
-...
+The product developed shows value for the client and in the meetings we had that value was acknowledged. This final result was only possible due to the work of my team and myself.

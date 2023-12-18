@@ -81,24 +81,35 @@ I did not do any pull requests.
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+Since this is the last sprint, no user stories had to be added.
+
+### The two pull requests that I am most proud of
+
+I did not do any pull requests.
+
+### Two contributions of other types that I am most proud of
+
+* Being always available to clarify questions from my colleagues.
 
 ## Overall Product
 
 Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
 
+Since I was Team 1's Product Owner, I didn't actually implement any code to the final product, but I believe that I played an important role making sure that everything went smoothly and that each dev of the team knew exactly what to do.
 
 ### Technical Soundness
 
-...
+This parameter does not apply to my contribution to the product.
 
 
 ### Product Realization
 
-...
+This parameter does not apply to my contribution to the product.
 
 
 ### Value for the Client
 
-...
+The final product is of great importance to the client, since, putting in few words, it allows them to see all plugins that a researcher
+may want to use.

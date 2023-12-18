@@ -96,18 +96,38 @@ Since I only worked on one task, I also only made one Pull Request. This Pull Re
 
 ## Sprint 4
 
-...
+In this sprint, I worked on fixes for the create and update plugin form on the admin dashboard page.
+
+### The two user stories that I am most proud of
+
+- [(#221) Connect small details that are not working in the overall project due to their dependency of the database.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/221)
+- [(#223) Finish the integration of the backend with the frontend.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/223)
+
+In this sprint, I worked on both of these issues. To finish the task, I updated the create and update form on the admin dashboard page to work with the changes made to our API.
+
+### The two pull requests that I am most proud of
+
+- [(#261) T4 fix admin panel create/update plugin form](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/261)
+
+The work of both of my user stories was merged into the dev branch using this Pull Request. This made it so that an admin could create or update the data of a plugin.
+
+### Two contributions of other types that I am most proud of
+
+- Offered to help with issues related to my previous work.
+- I was ready to meet and work at any time it was required.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 ### Technical Soundness
-...
+
+- Incorporated a diverse range of features into the project, applying robust coding techniques and following best practices specific to Angular development to ensure a high-quality and maintainable code
 
 ### Product Realization
-...
+
+- I implemented various elements for user and admin profile pages and contributed to the logic behind specific requests using the API
 
 ### Value for the Client
 
-...
+- The contributions made led to an enhanced user interface on the user and admin page ensuring improved user experience
+
+

@@ -96,22 +96,38 @@ The reunions with the clients helped figure out what else could be done to have 
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+ * "As a researcher, I want the store page to be as user friendly as possible, so that I can have a good experience using it." [issue #170](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/170)
+ * "As a researcher, I want to be able to install a plugin like the Mhcflurry, when I click to install it from the store, so that I can run it in my machine."  [issue #213](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/213)
+
+I am proud of the first user story as my team was careful to implement all its features taking into account how the user could have a good experience, which is important for apps.
+The second user story was written by the POs after talking with the client and I am proud that we were able to do it, as it adds value to the product.
+
+
+### The two pull requests that I am most proud of
+
+I did not review nor create any pull request during this sprint.
+
+
+### Two contributions of other types that I am most proud of
+
+ * Talking to the other teams to solve problems my team members had related to features that needed something from the other teams
+ * Helping with decisions regarding what improvements to do to the app
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
-
-...
+As a PO, I helped in informing the developers about the technologies that were preferred by the client to be used on the product.
+I also aided communicating doubts my team had about work performed by other teams, to ensure everything worked correctly as a whole.
 
 
 ### Product Realization
-
-...
+Together with the other POs, I wrote user stories containing everything the client asked for and some more ideas, with the features implemented by the developers coming from those user stories.
 
 
 ### Value for the Client
+My work made it possible for the features and technologies wanted by the client to be present in the final product.
+Like intended and described in the [Product Vision](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/blob/main/docs/product.md), the final product has a user-friendly plugin store with various plugins, divided into distinct categories and having their respective descriptions.
+

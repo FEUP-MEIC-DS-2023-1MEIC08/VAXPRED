@@ -90,25 +90,40 @@ In this sprint I remained the team's scrum master. We were productive and commun
 
 ### Two contributions of other types that I am most proud of
 
-- Contributing to the good functioning of the project by being active in the team's Discord channel and organizing our general to-do's and pending tasks for the sprint.
+- Contributing to the good functioning of the project by being active in the team's Discord channel and organizing our general to-do's and pending tasks for the sprint. I helped writing the Retrospectives and Sprint Release Changelog.
 - Meeting with the client online on 29/11/2023 as a Scrum Master, to discuss the project's progress and future steps.
 
 ## Sprint 4
 
-...
+In this sprint I remained the team's scrum master. We were productive and communicated efficiently. Tasks were planned in the beginning of the sprint, and developers assigned themselves or got assigned as the sprint progressed. We managed to complete all of our tasks!
+
+### The two user stories that I am most proud of
+
+- [(#230) As an admin, I want to have access to the admin page through a button in the profile, so that I can access it easily.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/230)
+- [(#168) As a researcher, I want the profile page to be as user friendly as possible, so that I can have a good experience using it.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues/168)
+
+### The two pull requests that I am most proud of
+
+- [(#246) T4 - Remake User Profile UI](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/246) - I performed this refactoring/enhancement.
+- [(#235) T4 - Feat: Add admin panel link to user profile](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/235) - I created this feature.
+
+### Two contributions of other types that I am most proud of
+
+- Contributing to the good functioning of the project by being active in the team's Discord channel and organizing our general to-do's and pending tasks for the sprint. I helped writing the Retrospectives and Sprint Release Changelog.
+- Helping democratically decide with the team who had to join the Kafka team (of 4 people total). This person (João) worked on the Kafka integration, and I can say it was successful.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
+<!-- Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words. -->
 
 ### Technical Soundness
 
-...
+I contributed to the project's technical soundness by creating the CI/CD pipeline, which is a crucial part of the project's development. I also helped with the Docker deployment, which is a step towards a production-ready deployment. Throughout the project, my contributions were varied as I participated in the frontend, backend, documentation, testing and CI/CD. I already had solid knowledge of the technologies used in the project, apart from AngularJS, which I improved my knowledge of.
 
 ### Product Realization
 
-...
+As a scrum master, I coordinated the team's work and made sure we were on track to finish the tasks in time. I applied good practices and finished all tasks assigned to me. I was able to fix bugs when required and produce good quality code. My work helped the project reach its final state, with all the required features implemented.
 
 ### Value for the Client
 
-...
+My contributions to frontend, backend, documentation and CI/CD were important steps towards a good final product. I helped the team with the User Profile page, which is a key part of the project because it impacts the final user directly. I also helped with the Admin Panel, which is also a key part of the project because it allows the client to manage the plugins in the store. I also helped with other details that are important for the user experience. The documentation created is important for the client to understand the project and its features. I started the project's CI/CD pipeline, which is important for the project's development and deployment.

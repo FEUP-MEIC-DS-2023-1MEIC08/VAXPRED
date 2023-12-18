@@ -84,8 +84,21 @@ In this sprint I mainly communicated to other groups, assuring we were on the sa
 
 ## Sprint 4
 
-...
+In this sprint I guided my team, giving them feedback, diving their work and evaluating it. Plus, I enhanced the UX by modifying the plugin page.
 
+### The two user stories that I am most proud of
+
+- [(#169) As a researcher, I want the plugin page to be as user friendly as possible, so that I can have a good experience using it.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/issues169)
+
+### The two pull requests that I am most proud of
+
+- [(#257) T1 - Feature plugin page label ux.](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/257)
+
+### Two contributions of other types that I am most proud of
+
+- Guided my team's work, explaining what the goal of each task was. Evaluated PRs, improving their appearance and functionality, correcting my team's work.
+
+- Improved UX on plugin page by changing the styling of the labels so the platform is consistent in that regard.
 
 ## Overall Product
 
