@@ -46,8 +46,19 @@ The team was focused on exploring the suggested technologies for development, an
 
 ## What could be improved?
 
-- We believe that nothing could have been improved in this sprint since we completed all tasks with no issues
+- We believe that nothing could have been improved in this sprint since we completed all tasks (except one that had a small bug that was fixed in the following sprint)
 
 ## Sprint 4
 
-...
+## What went well?
+
+- Developers were assigned to tasks in due time
+- Developers communicated their progress well throughout the sprint
+- Developers communicated their doubts and concerns when needed
+- The Product Owner did their job well by communicating with the other POs and the client
+- The Scrum Master did their job well by communicating with the team and redirecting efforts to items that mattered the most
+- We made a good estimation of the items at the beginning of the sprint, and we managed to complete all tasks on time!
+
+## What could be improved?
+
+- We believe that nothing could have been improved in this sprint since we completed all tasks with no issues
