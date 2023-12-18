@@ -43,7 +43,7 @@ Nothing was defined yet, this sprint consisted of an understandin of the project
   
 ## Sprint 4
 
- What went well?
+## What went well?
 
 * There weren't many features planned for this sprint, as the client was already satisfied with the previous sprint's presentation.
 * The Scrum Master continued doing a great work supporting the Developers.

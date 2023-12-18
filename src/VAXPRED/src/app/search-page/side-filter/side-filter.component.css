@@ -11,8 +11,13 @@
 	padding: 20px;
 	margin-top: 100px;
 	flex: 1fr;
-	max-height: 80vh; /* Adjust the maximum height according to your needs */
+	max-height: auto; /* Adjust the maximum height according to your needs */
     overflow: auto;
+}
+
+:host .submit-button {
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* Heading Styles */
@@ -53,7 +58,7 @@
 
 .results-section {
 	margin: 15px;
-	flex: 3;
+	/* flex: 3; */
 	/* Adjust the width as needed */
 	align-items: center;
 	width: 100%;
@@ -62,7 +67,7 @@
 .results-grid {
 	display: grid;
 	/* grid-template-columns: repeat(4, 1fr); */
-	grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 10px;
 }
 

@@ -1,13 +1,29 @@
 /* app.component.css */
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+
 }
 
-.search-bar {
-  width: 50%;
-  padding: 10px;
-  margin: 20px auto; 
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-header a {
+  margin-left: auto; 
+}
+
+.category-header a mat-icon{
+  vertical-align: middle;
+}
+
+.category-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .category {
@@ -21,20 +37,25 @@
 }
 
 .scroll-item {
-  border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
-  width: auto;
+  width: 200px;
 }
 
 .tag-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  margin: 20px auto; /* updated */
-  width: 80%; /* specify a width */
+  display:flex;
+  flex-direction: row;
 }
 
-.tag-grid button {
-  padding: 10px;
+.tag-grid a{
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: lightgray; /* Set the background color to grey */
+  text-align: center;
+  line-height: 50px;
+  margin: 5px;
+  text-decoration: none;
+  color: black; /* Set the text color to white */
+  cursor: pointer;
 }

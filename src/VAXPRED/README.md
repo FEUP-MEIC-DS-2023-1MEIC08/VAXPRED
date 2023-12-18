@@ -45,3 +45,11 @@ Run `pip install -r requirements.txt` to install dependencies.
 Run `uvicorn main:app` to start the backend server.
 
 Run `pytest` to run the tests.
+
+### Documentation
+
+Code documentation can be generated with `Compodoc`.
+
+Run `npm run compodoc:build-and-serve` to generate and serve the documentation. The documentation files are stored in `/documentation`. This folder is ignored by git.
+
+Navigate to `http://localhost:8080/` to view the documentation.
