@@ -114,16 +114,16 @@ In this sprint I remained the team's scrum master. We were productive and commun
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
+<!-- Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words. -->
 
 ### Technical Soundness
 
-...
+I contributed to the project's technical soundness by creating the CI/CD pipeline, which is a crucial part of the project's development. I also helped with the Docker deployment, which is a step towards a production-ready deployment. Throughout the project, my contributions were varied as I participated in the frontend, backend, documentation, testing and CI/CD. I already had solid knowledge of the technologies used in the project, apart from AngularJS, which I improved my knowledge of.
 
 ### Product Realization
 
-...
+As a scrum master, I coordinated the team's work and made sure we were on track to finish the tasks in time. I applied good practices and finished all tasks assigned to me. I was able to fix bugs when required and produce good quality code. My work helped the project reach its final state, with all the required features implemented.
 
 ### Value for the Client
 
-...
+My contributions to frontend, backend, documentation and CI/CD were important steps towards a good final product. I helped the team with the User Profile page, which is a key part of the project because it impacts the final user directly. I also helped with the Admin Panel, which is also a key part of the project because it allows the client to manage the plugins in the store. I also helped with other details that are important for the user experience. The documentation created is important for the client to understand the project and its features. I started the project's CI/CD pipeline, which is important for the project's development and deployment.
