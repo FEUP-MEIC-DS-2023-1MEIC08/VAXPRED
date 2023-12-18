@@ -109,7 +109,29 @@ During Sprint 3, the team was responsible for improving the plugin's page, its m
 
 ## Sprint 4
 
-...
+During Sprint 4, the team was responsible for improving the plugin's page, its mockups and acceptance tests. The Scrum Master did not only that, but also worked with the other Scrum Masters to guarantee the flow of the project's development. The PO provided support in a better understanding of the user stories, everytime that that was needed.
+
+### The four user stories that we are most proud of
+
+* Write documentation about the plugin page.#217
+* Write documentation about the plugin page.#217
+*
+*
+
+### The four pull requests that we are most proud of
+
+* T1 docs plugin page #259
+* Feature plugin page label ux #257
+* Improved Plugin Page's UX #256
+* T1 - feature plugin list categories #252
+
+
+### Four contributions of other types that we are most proud of
+
+* All the team's member wrote their factsheets.
+* The Scrum Master contributed to the smooth flow of the project, besides doing the work assigned to him.
+* The PO was always available to clarify doubts that appeared.
+* The Kafka member of the team was crucial for a good development.
 
 
 ## Overall Product
@@ -119,14 +141,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
-
+Our team's efforts were very important in improving the technical soundness of the plugin page. Together, the team implemented crucial features like plugin installation, real data integration and UX improvements. Not only that, but also participated in the technical discussions, providing insights, and contributing to the documentation, ensuring a well-documented codebase.
 
 ### Product Realization
 
-...
+The team successfully realized their product goals by working collectively on user stories, creating detailed mockups, and executing acceptance tests, besides all the development done for the plugin page, which was the main focus. The collaborative efforts led to user stories reflecting the client expectations.
 
 
 ### Value for the Client
 
-...
+The team's collaborative approach extended to client interactions. The Product Owner met with the clients during Sprint 3, showing them the progress and gathering their feedback. The collaboration resulted in user stories that directly aligned with client needs. 
