@@ -121,14 +121,14 @@ This pull request merged the added documentation to the branch where every team 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 ### Technical Soundness
-...
+
+Contributed for the development of various features while always following the best practices, assuring the code was readable, maintainable and followed the specified standards. Additionally, made a clear and comprehensive documentation for the code developed by our team, assuring the reliability and stability of the project.
 
 ### Product Realization
-...
+
+I was involved in the devolopment of the user profile and admin pages, working on a diverse range of features such as the user interface or the logic behind it. Finished all the tasks that were assigned to me and helped my team on other tasks whenever it was needed. I was always available to communicate with everyone and to complete any task. Apart from the typical user stories I also helped fixing critical bugs and in general, produced robust code. All these contributions helped the realization of the project.
 
 ### Value for the Client
 
-...
+All my contributions were important and added value for the client. Both the user profile page and the admin page are key parts of the project and we produced an enhanced user interface ensuring a good user experience, while also ensuring that the logic behind the interface was flawless. The produced documentation is also important for the client as it helps the client to have a better understanding of the project and its features.
