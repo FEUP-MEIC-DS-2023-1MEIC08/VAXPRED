@@ -102,11 +102,13 @@ In this sprint I had the opportunity to work on implementing Kafka in the projec
 Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
 
 ### Technical Soundness
-...
+
+- I worked in several areas on this project, always trying to follow the best possible practices depending on the request.
 
 ### Product Realization
-...
+
+- Contributes in various aspects, from exchanging ideas, to involvement in mockups, to the development or improvement of features, to carrying out tests, frontend - database connection and Kafka. In my opinion it was a challenging project as I participated in very varied things.
 
 ### Value for the Client
 
-...
+- I believe that the work carried out has value for the client, as we improved the interface, created the logic of the plugins, a series of interesting features were created and the last addition relating to Kafka I believe was an added value.
