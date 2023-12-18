@@ -120,7 +120,7 @@ In addition, we recognize that we had some inaccuracies in our GitHub usage. We 
 
 ### Technical Soundness
 
-Our team was involved in all parts of the development process, from the initial planning to the final product. Our team members contributed to the frontend, backend, GitHub actions (CI/CD automation), Kafka implementation, documentation and testing. We implemented important feature such as the User Profile page, the Admin Panel, the FAQ and the Footer. We introduced a tool that generates code documentation for the entire project, and cared about fixing the application's tests. We also helped other teams with their tasks, namely by providing feedback on their pull requests and participating in the technical discussions, providing insights and suggestions.
+Our team was involved in all parts of the development process, from the initial planning to the final product. Our team members contributed to the frontend, backend, GitHub actions and Docker (CI/CD automation), Kafka implementation, documentation and testing. We implemented important feature such as the User Profile page, the Admin Panel, the FAQ and the Footer. We introduced a tool that generates code documentation for the entire project, and cared about fixing the application's tests. We also helped other teams with their tasks, namely by providing feedback on their pull requests and participating in the technical discussions, providing insights and suggestions.
 
 ### Product Realization
 
