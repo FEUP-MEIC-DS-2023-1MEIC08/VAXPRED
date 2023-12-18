@@ -118,14 +118,16 @@ The work of both of my user stories was merged into the dev branch using this Pu
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 ### Technical Soundness
-...
+
+- Incorporated a diverse range of features into the project, applying robust coding techniques and following best practices specific to Angular development to ensure a high-quality and maintainable code
 
 ### Product Realization
-...
+
+- I implemented various elements for user and admin profile pages and contributed to the logic behind specific requests using the API
 
 ### Value for the Client
 
-...
+- The contributions made led to an enhanced user interface on the user and admin page ensuring improved user experience
+
+
