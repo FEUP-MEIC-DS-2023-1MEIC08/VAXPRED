@@ -116,19 +116,16 @@ In addition, we recognize that we had some inaccuracies in our GitHub usage. We 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
+<!-- Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words. -->
 
 ### Technical Soundness
 
-...
-
+Our team was involved in all parts of the development process, from the initial planning to the final product. Our team members contributed to the frontend, backend, GitHub actions (CI/CD automation), Kafka implementation, documentation and testing. We implemented important feature such as the User Profile page, the Admin Panel, the FAQ and the Footer. We introduced a tool that generates code documentation for the entire project, and cared about fixing the application's tests. We also helped other teams with their tasks, namely by providing feedback on their pull requests and participating in the technical discussions, providing insights and suggestions.
 
 ### Product Realization
 
-...
-
+We were able to deliver all the features we were assigned to, successfully satisfying the product goals. We created UI mockups and clean code, with good documentation and tests. The development done for the User Profile page and the Admin Panel was particularly important, as it was a key part of the product because it impacted the final user directly.
 
 ### Value for the Client
 
-...
+Our work reflected the product vision and it was well received by the client. The product's value was gradually incremented every sprint, with the addition of new features and improvements. The client was satisfied with the overall product when we met with them. They confirmed that our work was in line with their expectations and that the product was on track to be completed on time.
