@@ -43,5 +43,14 @@ Nothing was defined yet, this sprint consisted of an understandin of the project
   
 ## Sprint 4
 
-Describe the retrospective for sprint 4 for team 1
+ What went well?
+
+* There weren't many features planned for this sprint, as the client was already satisfied with the previous sprint's presentation.
+* The Scrum Master continued doing a great work supporting the Developers.
+* The kafka team member ensured everything went smootly in that regard, taking initiative and guiding other members' work.
+* The plugin page UX was successfully improved.
+
+## What could be improved?
+
+* Nothing worth noting, everything went smoothly.
 
