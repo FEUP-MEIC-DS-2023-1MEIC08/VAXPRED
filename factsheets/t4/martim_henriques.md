@@ -111,19 +111,15 @@ As a PO, I did not participate in any pull request.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+Having the role of product owner, I had the responsability to help and inform the developers, more specifically Team 4, on what technologies and ideas the client preferred to be used on the product. I also aided communicating between all teams, in order to ensure a good work flow.
 
 ### Product Realization
 
-...
+As part of the unofficial team of PO's, we wrote user stories containing ideas that the client transmited and some others that came up throughtout the development. These US helped the product reach the final stage with the required features implemented.
 
 
 ### Value for the Client
 
-...
+The final product demonstrates what the client desired, it allows to interact with all the plugins that a researcher may want to use. In meetings with the client, we had that value was acknowledged.
