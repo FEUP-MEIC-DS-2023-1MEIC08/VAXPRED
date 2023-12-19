@@ -79,18 +79,14 @@ The focus of this last sprint was to improve and ensure the correct overall perf
 - Reviewed and approved Fernando's work in [(#246) T4 - Remake User Profile UI](https://github.com/FEUP-MEIC-DS-2023-1MEIC08/VAXPRED/pull/246) pull request.
 - Contributed with team 2 in fixing new bugs related to the plugin page component that appeared when some API routes were changed.
 
+
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
 ### Technical Soundness
-
-...
+Even though I had no prior knowledge on most of the technologies used in the project, I managed to learn how to use them following the recommended practices and always trying to leave the code in the most clean and readable way as possible.
 
 ### Product Realization
-
-...
+I was involved in the development of multiple frontend components and in the testing of these. Also, I reported several bugs of related issues that I was able to find and fixed most of them myself.
 
 ### Value for the Client
-
-...
+What I can remark to be the most valuable consequences of my work to the client are the user profile interface and the FAQ's display of each plugin on their respective pages. These elements were elaborated with a focus on delivering the optimal user experience.
