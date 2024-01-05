@@ -10,7 +10,7 @@ export class ToolService {
   }
 	constructor(private http: HttpClient) { }
 
-	
+
 	/**
 	* This function returns a list of get functions to be called in order to get all the categories, tags and plugins with the filters chosen by the user.
 	*@param category categories chosen by the user.
@@ -20,14 +20,14 @@ export class ToolService {
 	getFilteredResults(category: string, tag: string/*, searchQuery: string*/): Observable<any[]> {
 		let categories=category.split(",");
 		let tags=tag.split(",");
-		
+
 		let requests_list = [];
 		//requests_list.push(this.getCategories());
 		requests_list.push(this.getTags());
-		
+
 		if (category == "" && tag == ""/* && searchQuery == ""*/) {
 			requests_list.push(this.getPlugins());
-		} 
+		}
 		if (categories.length > 0 && categories[0] != "") {
 			for (let categ of categories) {
 				requests_list.push(this.getCategoryPlugins(categ));
@@ -46,7 +46,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPlugins() { // no filter options
-		return this.http.get('http://localhost:8000/plugins/');		
+		return this.http.get('http://localhost:8123/plugins/');
 	}
 
 	/**
@@ -55,7 +55,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByCategory(category: string) {
-		return this.http.get('http://localhost:8000/categories/' + category + '/plugins/');
+		return this.http.get('http://localhost:8123/categories/' + category + '/plugins/');
 	}
 
 	/**
@@ -64,16 +64,16 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByTag(tag: string) {
-		return this.http.get('http://localhost:8000/tags/' + tag + '/plugins/');
+		return this.http.get('http://localhost:8123/tags/' + tag + '/plugins/');
 	}
-	
+
 	/**
 	 * Returns a plugin by id
 	 * @param {number} id the id of the plugin
 	 * @returns {Observable<any>} the plugin
 	 */
 	getPlugin(id: number) {
-		const getPluginRequest = this.http.get('http://localhost:8000/plugins/' + id + '/');
+		const getPluginRequest = this.http.get('http://localhost:8123/plugins/' + id + '/');
 
 		getPluginRequest.subscribe(() => {
 			// Log the installation action to Kafka here
@@ -81,7 +81,7 @@ export class ToolService {
 		});
 
 		return getPluginRequest;
-		
+
 	}
 
 	getToolCategories(): string[] {
@@ -93,12 +93,12 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of tags
 	 */
 	getTags(){
-		return this.http.get("http://localhost:8000/tags/");
+		return this.http.get("http://localhost:8123/tags/");
 	}
 
 	installPlugin(userId: number, userName: string, pluginId: number, pluginName: string) {
 		// First, perform the HTTP request to install the plugin
-		const installRequest = this.http.post('http://localhost:8000/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
+		const installRequest = this.http.post('http://localhost:8123/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 
 		// Then, log the installation action to Kafka
 		installRequest.subscribe(() => {
@@ -107,8 +107,8 @@ export class ToolService {
 		});
 
 		return installRequest;
-	} 
-	
+	}
+
 	private logToKafka(action: string, pluginId: number, pluginName:string, userId: number, userName: string) {
 		// Perform an HTTP request to your server-side component that handles Kafka logging
 		const kafkaLogRequest = this.http.post('http://localhost:3000/log-to-kafka', { action, pluginId, pluginName, userId, userName });
@@ -138,13 +138,13 @@ export class ToolService {
 			}
 		);
 	}
-	
+
 	/**
 	 * Returns a list of all categories
 	 * @returns {Observable<any>} the list of categories
 	 */
 	getCategories(){
-		return this.http.get('http://localhost:8000/categories/');
+		return this.http.get('http://localhost:8123/categories/');
 	}
 
 	/**
@@ -153,7 +153,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getCategoryPlugins(category: string) {
-		//return this.http.get('http://localhost:8000/categories/' + plugin);
-		return this.http.get('http://localhost:8000/plugins/category/' + category );
+		//return this.http.get('http://localhost:8123/categories/' + plugin);
+		return this.http.get('http://localhost:8123/plugins/category/' + category );
 	}
 }
