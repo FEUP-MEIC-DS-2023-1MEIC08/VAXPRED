@@ -19,7 +19,7 @@ export class UserProfileService {
    * @returns User's data.
    */
   getUsers() {
-    return this.http.get('http://localhost:8000/users/');
+    return this.http.get('http://localhost:8123/users/');
   }
 
   /**
@@ -28,7 +28,7 @@ export class UserProfileService {
    * @returns User data.
    */
   getUser(id: number) {
-    return this.http.get('http://localhost:8000/users/' + id + '/');
+    return this.http.get('http://localhost:8123/users/' + id + '/');
   }
 
   /**
@@ -38,11 +38,11 @@ export class UserProfileService {
    */
   getUserPlugins(id: number): Observable<any> {
     // fetch the plugin IDs subscribed by the user.
-    return this.http.get('http://localhost:8000/users/' + id + '/plugins/').pipe(
+    return this.http.get('http://localhost:8123/users/' + id + '/plugins/').pipe(
       switchMap((pluginIds: any) => {
         var plugins = [];
         for (let plugin of pluginIds.associations) {
-          plugins.push(this.http.get('http://localhost:8000/plugins/' + plugin.id + '/'));
+          plugins.push(this.http.get('http://localhost:8123/plugins/' + plugin.id + '/'));
         }
         return forkJoin(plugins);
       })
@@ -56,6 +56,6 @@ export class UserProfileService {
    * @returns An indication for the success of the removal operation.
    */
   removePlugin(userID: number, pluginID: number){
-    return this.http.delete('http://localhost:8000/users/' + userID + '/plugins/' + pluginID + '/disassociate/');
+    return this.http.delete('http://localhost:8123/users/' + userID + '/plugins/' + pluginID + '/disassociate/');
   }
 }
