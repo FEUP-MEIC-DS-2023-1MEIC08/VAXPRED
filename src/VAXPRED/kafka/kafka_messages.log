@@ -1,4 +1,0 @@
-{"value":"{\"action\":\"Plugin installed\",\"pluginId\":2,\"timestamp\":1702410795205}","partition":0,"offset":"1"}
-{"value":"{\"action\":\"Plugin installed\",\"pluginId\":4,\"timestamp\":1702411009768}","partition":0,"offset":"2"}
-{"value":"{\"action\":\"Plugin installed\",\"pluginId\":5,\"userId\":3,\"userName\":\"John Doe\",\"timestamp\":1702421148376}","partition":0,"offset":"3"}
-{"value":"{\"action\":\"Plugin installed\",\"pluginId\":9,\"pluginName\":\"CustomerInsights\",\"userId\":3,\"userName\":\"John Doe\",\"timestamp\":1702421609030}","partition":0,"offset":"4"}

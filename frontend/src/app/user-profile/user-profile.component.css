@@ -1,0 +1,60 @@
+
+.plugins-list {
+  margin-right: 1em;
+  margin-top: 2em;
+}
+
+.plugin-container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.plugin-container {
+  margin-top: 1em;
+  float: left;
+}
+
+.plugin-icon {
+  width: 55px;
+  height: 55px;
+  background-image: url("./../../assets/plugin_image.png");
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.plugin-button-icon {
+  float: right;
+}
+
+.plugin-button-close {
+  color: red;
+}
+
+.div-with-border {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.user-profile {
+  margin: 2em;
+}
+
+.alignCenter {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user-profile img {
+  width: 35%;
+  border-radius: 50%;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
