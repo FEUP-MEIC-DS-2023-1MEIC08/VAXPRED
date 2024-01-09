@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { switchMap, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 /**
  * Service responsible for admin page operations.
@@ -18,7 +19,7 @@ export class AdminPageService {
    * @returns An array of plugins.
    */
   getAllPlugins(): Observable<any[]> {
-    return this.http.get('http://localhost:8123/plugins/').pipe(
+    return this.http.get(environment.vaxpredApiUrl + '/plugins/').pipe(
       map((response: any) => response.plugins)
     );
   }
@@ -29,7 +30,7 @@ export class AdminPageService {
    * @returns An indication for the success of the removal operation.
    */
   removePlugin(pluginID: number){
-    return this.http.delete('http://localhost:8123/plugins/' + pluginID);
+    return this.http.delete(environment.vaxpredApiUrl + '/plugins/' + pluginID);
   }
 
 
@@ -38,7 +39,7 @@ export class AdminPageService {
    * @returns An array of categories.
    */
   getAllCategories(): Observable<any[]> {
-    return this.http.get('http://localhost:8123/categories/').pipe(
+    return this.http.get(environment.vaxpredApiUrl + '/categories/').pipe(
       map((response: any) => response.categories)
     )
   }
@@ -49,7 +50,7 @@ export class AdminPageService {
    * @returns Added plugin data.
    */
   addPlugin(data: any): Observable<any> {
-    return this.http.post('http://localhost:8123/plugins/', data)
+    return this.http.post(environment.vaxpredApiUrl + '/plugins/', data)
   }
 
   /**
@@ -59,7 +60,7 @@ export class AdminPageService {
    * @returns Updated plugin data.
    */
   editPlugin(pluginID: number, data: any): Observable<any> {
-    return this.http.put('http://localhost:8123/plugins/' + pluginID, data)
+    return this.http.put(environment.vaxpredApiUrl + '/plugins/' + pluginID, data)
   }
 
 
@@ -70,7 +71,7 @@ export class AdminPageService {
    * @returns An indication for the success of the association.
    */
   associateCategory(pluginID: number, categoryID: number) {
-    return this.http.post('http://localhost:8123/categories/' + categoryID + '/plugins/' + pluginID + '/associate/', "")
+    return this.http.post(environment.vaxpredApiUrl + '/categories/' + categoryID + '/plugins/' + pluginID + '/associate/', "")
   }
 
   /**
@@ -78,7 +79,7 @@ export class AdminPageService {
    * @returns All tags.
    */
   getTags() {
-    return this.http.get('http://localhost:8123/tags/')
+    return this.http.get(environment.vaxpredApiUrl + '/tags/')
   }
 
   /**
@@ -87,7 +88,7 @@ export class AdminPageService {
    * @returns Created tag data.
    */
   createTag(data: any): Observable<any> {
-    return this.http.post('http://localhost:8123/tags/', data)
+    return this.http.post(environment.vaxpredApiUrl + '/tags/', data)
   }
 
   /**
@@ -97,7 +98,7 @@ export class AdminPageService {
    * @returns An indication of the success of the association.
    */
   associateTag(pluginID: number, tagID: number) {
-    return this.http.post('http://localhost:8123/tags/' + tagID + '/plugins/' + pluginID + '/associate/', "")
+    return this.http.post(environment.vaxpredApiUrl + '/tags/' + tagID + '/plugins/' + pluginID + '/associate/', "")
   }
 
   /**
@@ -107,7 +108,7 @@ export class AdminPageService {
    * @returns An indication of the success of the disassociation.
    */
   disassociateTag(pluginID: number, tagID: number) {
-    return this.http.delete('http://localhost:8123/tags/' + tagID + '/plugins/' + pluginID + '/disassociate/')
+    return this.http.delete(environment.vaxpredApiUrl + '/tags/' + tagID + '/plugins/' + pluginID + '/disassociate/')
   }
 
 }

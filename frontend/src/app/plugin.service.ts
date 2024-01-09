@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { forkJoin,Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 @Injectable({
 	providedIn: 'root'
 })
@@ -46,7 +48,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPlugins() { // no filter options
-		return this.http.get('http://localhost:8123/plugins/');
+		return this.http.get(environment.vaxpredApiUrl + '/plugins/');
 	}
 
 	/**
@@ -55,7 +57,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByCategory(category: string) {
-		return this.http.get('http://localhost:8123/categories/' + category + '/plugins/');
+		return this.http.get(environment.vaxpredApiUrl + '/categories/' + category + '/plugins/');
 	}
 
 	/**
@@ -64,7 +66,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getPluginsByTag(tag: string) {
-		return this.http.get('http://localhost:8123/tags/' + tag + '/plugins/');
+		return this.http.get(environment.vaxpredApiUrl + '/tags/' + tag + '/plugins/');
 	}
 
 	/**
@@ -73,7 +75,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the plugin
 	 */
 	getPlugin(id: number) {
-		const getPluginRequest = this.http.get('http://localhost:8123/plugins/' + id + '/');
+		const getPluginRequest = this.http.get(environment.vaxpredApiUrl + '/plugins/' + id + '/');
 
 		getPluginRequest.subscribe(() => {
 			// Log the installation action to Kafka here
@@ -98,7 +100,7 @@ export class ToolService {
 
 	installPlugin(userId: number, userName: string, pluginId: number, pluginName: string) {
 		// First, perform the HTTP request to install the plugin
-		const installRequest = this.http.post('http://localhost:8123/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
+		const installRequest = this.http.post(environment.vaxpredApiUrl + '/users/' + 3 + '/plugins/' + pluginId + '/associate/', {});
 
 		// Then, log the installation action to Kafka
 		installRequest.subscribe(() => {
@@ -144,7 +146,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of categories
 	 */
 	getCategories(){
-		return this.http.get('http://localhost:8123/categories/');
+		return this.http.get(environment.vaxpredApiUrl + '/categories/');
 	}
 
 	/**
@@ -153,7 +155,7 @@ export class ToolService {
 	 * @returns {Observable<any>} the list of plugins
 	 */
 	getCategoryPlugins(category: string) {
-		//return this.http.get('http://localhost:8123/categories/' + plugin);
-		return this.http.get('http://localhost:8123/plugins/category/' + category );
+		//return this.http.get(environment.vaxpredApiUrl + '/categories/' + plugin);
+		return this.http.get(environment.vaxpredApiUrl + '/plugins/category/' + category );
 	}
 }
