@@ -26,6 +26,9 @@ jobs:
     - name: Set up Docker Compose
       run: |
         sudo docker-compose -f api/docker-compose.yml build
+        sudo docker-compose -f api/docker-compose.yml up -d
+
+        sudo docker-compose -f frontend/docker-compose.yml build
         sudo docker-compose -f frontend/docker-compose.yml up -d
 
     - name: Wait for containers to be ready
