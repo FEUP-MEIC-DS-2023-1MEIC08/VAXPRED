@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  vaxpred-store-frontend:
+      container_name: vaxpred-store-frontend
+      build:
+        context: .
+      ports:
+        - 4200:4200
+      volumes:
+        - ./:/app

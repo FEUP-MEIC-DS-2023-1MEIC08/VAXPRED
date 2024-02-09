@@ -2,6 +2,7 @@ version: '3'
 
 services:
   vaxpred-store-backend:
+    container_name: vaxpred-store-backend
     restart: always
     build:
       context: .
