@@ -39,8 +39,8 @@ jobs:
 
     - name: Check if containers are running
       run: |
-        if sudo docker ps -q --filter "name=vaxpred_backend" | grep -q . && \
-           sudo docker ps -q --filter "name=vaxpred_frontend" | grep -q .; then
+        if sudo docker ps -q --filter "name=vaxpred-store-backend" | grep -q . && \
+           sudo docker ps -q --filter "name=vaxpred-store-frontend" | grep -q .; then
           echo "Containers are running."
         else
           echo "Containers failed to start."

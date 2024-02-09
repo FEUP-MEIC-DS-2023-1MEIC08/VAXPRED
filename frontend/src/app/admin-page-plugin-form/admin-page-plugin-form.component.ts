@@ -4,7 +4,6 @@ import { AdminPageService } from '../admin-page.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { LiveAnnouncer} from '@angular/cdk/a11y';
 import { MatChipInputEvent} from '@angular/material/chips';
-import { convertToObject } from 'typescript';
 
 /**
  * Component representing the form for editing or adding plugins from the store through the admin page.
@@ -71,7 +70,7 @@ export class AdminPagePluginFormComponent implements OnInit {
       this.pluginData.description = this.data.editingPlugin.description;
       this.pluginData.developer = this.data.editingPlugin.developer;
       this.pluginData.contract_duration = this.data.editingPlugin.contract_duration;
-      this.pluginData.category = this.data.editingPlugin.category; 
+      this.pluginData.category = this.data.editingPlugin.category;
       this.pluginData.changelog = this.data.editingPlugin.changelog;
       this.pluginData.dependencies = this.data.editingPlugin.dependencies;
       this.pluginData.faqs = this.data.editingPlugin.faq;
@@ -83,7 +82,7 @@ export class AdminPagePluginFormComponent implements OnInit {
         this.pluginData.supplier_name = this.data.editingPlugin.supplier_name as string;
       if ('faqs' in this.data.editingPlugin)
         this.pluginData.faqs = this.data.editingPlugin.faqs as Array<Object>;
-      
+
     }
   }
 
