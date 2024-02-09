@@ -34,7 +34,7 @@ jobs:
           Xvfb $DISPLAY -ac -screen 0 1024x768x16 > /dev/null 2>&1 &
           sleep 3  # Give xvfb some time to start
 
-      - name: Run AngularJS tests
+      - name: Run Angular tests
         run: |
           npm run test -- --browsers=ChromeHeadless --no-watch --source-map=false
 
