@@ -9,6 +9,9 @@
 /out-tsc
 /bazel-out
 
+# virtual environments
+venv_STORE/
+
 # Node
 /node_modules
 npm-debug.log

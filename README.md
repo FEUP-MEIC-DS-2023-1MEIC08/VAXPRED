@@ -6,7 +6,7 @@ VAXPRED aims to improve the field of vaccine development supplying a cloud-based
 
 Instructions on how to use this system: TODO.
 
-Complete project documentation can be generated with `Compodoc`. See the [README](src/VAXPRED/README.md) for more details.
+Complete project documentation can be generated with `Compodoc`. See the [README](frontend/README.md) for more details.
 
 ## How to contribute
 
@@ -16,7 +16,7 @@ Instructions on how to develop the system, including how to build, run and test 
 
 ## How to run and operate in a production environment
 
-Instructions on how to run and operate the system in a production environment can be found in the application's main [README](src/VAXPRED/README.md).
+Instructions on how to run and operate the system in a production environment can be found in the application's main [README](frontend/README.md).
 
 ## Contributions
 

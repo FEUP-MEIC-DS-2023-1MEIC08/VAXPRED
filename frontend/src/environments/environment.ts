@@ -5,7 +5,8 @@
 export const environment = {
     production: false,
 
-    vaxpredApiUrl: "http://10.61.10.109/turma8/backend"
+    // vaxpredApiUrl: "http://10.61.10.109/turma8/backend"
+    vaxpredApiUrl: "http://localhost:8000"
 };
 
 /*
